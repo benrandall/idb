@@ -26,8 +26,20 @@
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>Single Skill Page, {{ name }}!</h1>
+        <h1>Single Skill Page, {{ skill['name'] }}!</h1>
     </div>
-    <p> Name: {{name}} </p>
+    <p> Name: {{skill['name']}} </p>
+    <p> Items: </p>
+    <ul>
+      {% for item in skill['items'] %}
+      <li><a href={{url_for('get_item', item_id=item, _external=True)}}>Item </a></li>
+      {% endfor %}
+    </ul>
+    <p> Videos: </p>
+    <ul>
+      {% for video in skill['videos'] %}
+      <li><a href={{url_for('get_video', video_id=video, _external=True)}}>Video </a></li>
+      {% endfor %}
+    </ul>
 </div>
 {% endblock %}

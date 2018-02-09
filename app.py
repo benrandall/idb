@@ -21,7 +21,7 @@ def items(name):
 def get_item(item_id):
     for item in MOCK_DB['items']:
         if item['id'] == item_id:
-            return render_template('item.html', name=item['name'], examine_info=item['examine_info'])
+            return render_template('item.html', item=item)
     return render_template('404.html')
 
 
@@ -36,7 +36,7 @@ def skills():
 def get_skill(skill_id):
     for skill in MOCK_DB['skills']:
         if skill['id'] == skill_id:
-            return render_template('skill.html', name=skill['name'])
+            return render_template('skill.html', skill=skill)
     return render_template('404.html')
 
 @app.route('/videos')

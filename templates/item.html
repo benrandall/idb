@@ -26,9 +26,22 @@
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>Single Item Page, {{ name }}!</h1>
+        <h1>Single Item Page, {{ item['name'] }}!</h1>
     </div>
-    <p> Name: {{name}} </p>
-    <p> Examine Info: {{examine_info}} </p>
+    <p> Name: {{ item['name']}} </p>
+    <p> Examine Info: {{item['examine_info']}} </p>
+    <p> Skills: </p>
+    <ul>
+      {% for skill in item['skills'] %}
+      <li><a href={{url_for('get_skill', skill_id=skill, _external=True)}}>Skill </a></li>
+      {% endfor %}
+    </ul>
+    <p> Videos: </p>
+    <ul>
+      {% for video in item['videos'] %}
+      <li><a href={{url_for('get_video', video_id=video, _external=True)}}>Video </a></li>
+      {% endfor %}
+    </ul>
+
 </div>
 {% endblock %}
