@@ -2,8 +2,8 @@
 
 .carousel-fullscreen .carousel-inner .item {
     height: 100vh; 
-    width: 100vh;
-    max-height: 600px; 
+    width: 100vw;
+    min-height: 300px; 
     background-position: center center; 
     background-repeat: no-repeat; 
     background-size: cover;
