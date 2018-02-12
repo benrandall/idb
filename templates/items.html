@@ -26,7 +26,13 @@
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>Hello, {{ name }}!</h1>
+        <h1>List of items page</h1>
+        <p> Items: </p>
+        <ul>
+          {% for item in data %}
+          <li><a href={{url_for('get_item', item_id=item['id'], _external=True)}}>{{item['name']}}</a></li>
+          {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock %}

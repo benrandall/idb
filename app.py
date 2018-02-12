@@ -13,9 +13,9 @@ with open('fixtures/mock.json', 'r') as mock:
 def about():
     return render_template('index.html')
 
-@app.route('/items/')
-def items(name):
-    return render_template('items.html', name=name)
+@app.route('/items')
+def items():
+    return render_template('items.html', data=MOCK_DB['items'])
 
 @app.route('/items/<int:item_id>')
 def get_item(item_id):
@@ -27,10 +27,7 @@ def get_item(item_id):
 
 @app.route('/skills')
 def skills():
-    return jsonify({
-        'hello': 'skills',
-        })
-
+    return render_template('skills.html', data=MOCK_DB['skills'])
 
 @app.route('/skills/<int:skill_id>')
 def get_skill(skill_id):
@@ -41,9 +38,7 @@ def get_skill(skill_id):
 
 @app.route('/videos')
 def videos():
-    return jsonify({
-        'hello': 'video',
-        })
+    return render_template('videos.html', data=MOCK_DB['videos'])
 
 @app.route('/videos/<int:video_id>')
 def get_video(video_id):
