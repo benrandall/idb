@@ -11,7 +11,7 @@
             "name": "Dragon scimitar",
             "examine_info": "A vicious, curved sword.",
             "id": 2,
-            "skills": [2],
+            "skills": [2, 1, 3],
             "videos": [2]
         },
         {
@@ -52,7 +52,7 @@
             "name": "Dragon Scimitar vs Saradomin Sword",
             "id": 2,
             "video_url": "https://gaming.youtube.com/watch?v=QX68QDDsn7M",
-            "items": [2],
+            "items": [2, 3],
             "skills": [2]
         },
         {

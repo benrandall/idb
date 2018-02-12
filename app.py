@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
 import json
+import requests
+import os
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -10,7 +12,7 @@ with open('fixtures/mock.json', 'r') as mock:
     MOCK_DB = json.load(mock)
 
 @app.route('/')
-def about():
+def home():
     return render_template('index.html')
 
 @app.route('/items')
@@ -23,7 +25,6 @@ def get_item(item_id):
         if item['id'] == item_id:
             return render_template('item.html', item=item)
     return render_template('404.html')
-
 
 @app.route('/skills')
 def skills():
@@ -46,6 +47,29 @@ def get_video(video_id):
         if video['id'] == video_id:
             return render_template('video.html', video=video)
     return render_template('404.html')
+
+@app.route('/about')
+def about():
+    commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
+    issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?access_token=%s' % os.environ['GITHUB_API_TOKEN']
+    commits_response = requests.get(commits_endpoint)
+    issues_response = requests.get(issues_endpoint)
+    commit_data = []
+    total_commits = 0
+    for contributor in commits_response.json():
+        team_member = contributor['login']
+        num_commits = contributor['contributions']
+        total_commits += num_commits
+        commit_data.append((team_member, num_commits))
+    issue_data = {}
+    total_issues = len(issues_response.json())
+    for issue in issues_response.json():
+        team_member = issue['user']['login']
+        if team_member in issue_data:
+            issue_data[team_member] += 1
+        else:
+            issue_data[team_member] = 1
+    return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits, commit_data=commit_data)
 
 if __name__ == "__main__":
     app.run()
