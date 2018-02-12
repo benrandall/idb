@@ -14,9 +14,9 @@ with open('fixtures/mock.json', 'r') as mock:
 def about():
     return render_template('index.html')
 
-@app.route('/items/')
-def items(name):
-    return render_template('items.html', name=name)
+@app.route('/items')
+def items():
+    return render_template('items.html')
 
 @app.route('/items/<int:item_id>')
 def get_item(item_id):

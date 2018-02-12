@@ -6,7 +6,7 @@ require('../../css/CardComponent.scss');
 export default class CardGrid extends Component {
 
     render() {
-        return <CardComponent/>;
+
         let numItems = 9, itemsLeft = 9;
 
         let rows = [];
@@ -16,19 +16,21 @@ export default class CardGrid extends Component {
         for (let i = 0; i < numRows; i++) {
             let row = [];
 
-            for(let j = 0; j < 4 && itemsLeft > 0; i++) {
+            for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent/>
+                    <CardComponent key={i+j}/>
                 );
                 --itemsLeft;
+                console.log("Pushed card into row");
             }
 
-            return row;
-            // rows.push(
-            //     <div className="row">
-            //         row
-            //     </div>
-            // );
+            rows.push(
+                <div className="row gutter-8">
+                    { row }
+                </div>
+            );
+
+            console.log("Pushed row");
         }
 
         return rows;
