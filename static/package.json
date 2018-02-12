@@ -1,0 +1,13 @@
+{
+  "name": "RuneScraper",
+  "version": "1.0.0",
+  "description": "Web application to pull together various data points to assist the RuneScape community",
+  "main": "index.js",
+  "repository": "git@github.com:benrandall/idb.git",
+  "author": "Edward DeCoste <elmdecoste@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
+}
