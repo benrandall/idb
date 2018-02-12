@@ -5,11 +5,30 @@ require('../../css/CardComponent.scss');
 
 export default class CardGrid extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:5000/api/items/all')
+            .then(d => d.json())
+            .then(d => {
+                this.setState({
+                    items: d
+                })
+            })
+    }
+
     render() {
 
-        let numItems = 9, itemsLeft = 9;
+        if (!this.state.items) { return (<p>Loading...</p>) }
+
+        let numItems = this.state.items.length;
+        let itemsLeft = numItems;
 
         let rows = [];
+        let index = 0;
 
         let numRows = Math.ceil(numItems / 4);
 
@@ -18,7 +37,7 @@ export default class CardGrid extends Component {
 
             for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent key={i+j}/>
+                    <CardComponent key={i+j} item={this.state.items[index++]}/>
                 );
                 --itemsLeft;
                 console.log("Pushed card into row");
