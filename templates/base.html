@@ -2,10 +2,15 @@
 
 {% block title %}Flasky{% endblock %}
 
-{% block navbar %}
 <head>
-    <link href='static/base.css' rel='stylesheet' type='text/css'>
+    {% block head %}
+        {{ super() }}
+    {% endblock %}
+    <link href='{{ url_for('static', filename='css/base.css') }}' rel='stylesheet' type='text/css'>
 </head>
+
+{% block navbar %}
+
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -28,5 +33,5 @@
 
 {% block content %}
     {% block page_content %}{% endblock %}
-<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='dist/bundle.js') }}"></script>
 {% endblock %}

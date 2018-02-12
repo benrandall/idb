@@ -1,10 +1,13 @@
 const webpack = require('webpack');
 
 const config = {
-    entry:  __dirname + '/js/index.jsx',
+    entry:  {
+        items: __dirname + '/js/items.jsx',
+        //index: __dirname + '/js/index.jsx'
+    },
     output: {
         path: __dirname + '/dist',
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css']
@@ -15,6 +18,16 @@ const config = {
                 test: /\.jsx?/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.scss/,
+                use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "sass-loader" // compiles Sass to CSS
+            }]
             }
         ]
     }

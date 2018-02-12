@@ -6,6 +6,7 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 MOCK_DB = None
+
 with open('fixtures/mock.json', 'r') as mock:
     MOCK_DB = json.load(mock)
 
@@ -54,4 +55,6 @@ def get_video(video_id):
 
 if __name__ == "__main__":
     app.run()
+    app.config["DEBUG"] = True
+    app.config["TEMPLATES_AUTO_RELOAD"] = True
 
