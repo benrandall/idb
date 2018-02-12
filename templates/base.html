@@ -3,6 +3,9 @@
 {% block title %}Flasky{% endblock %}
 
 {% block navbar %}
+<head>
+    <link href='static/base.css' rel='stylesheet' type='text/css'>
+</head>
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -12,7 +15,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Flasky</a>
+            <a class="navbar-brand" href="/">Runescraper</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -24,7 +27,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
     {% block page_content %}{% endblock %}
-</div>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
 {% endblock %}
