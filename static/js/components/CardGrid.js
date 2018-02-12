@@ -6,7 +6,7 @@ require('../../css/CardComponent.scss');
 export default class CardGrid extends Component {
 
     render() {
-
+        return <CardComponent/>;
         let numItems = 9, itemsLeft = 9;
 
         let rows = [];
@@ -23,17 +23,14 @@ export default class CardGrid extends Component {
                 --itemsLeft;
             }
 
-            rows.push(
-                <div className="row">
-                    {{ row }}
-                </div>
-            );
+            return row;
+            // rows.push(
+            //     <div className="row">
+            //         row
+            //     </div>
+            // );
         }
 
-        return (
-          <div className="container">
-              {{ rows }}
-          </div>
-        );
+        return rows;
     }
 };
