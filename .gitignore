@@ -103,3 +103,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# IDEA
+.idea/
+
+# Node
+/static/node_modules/
+
+**/.DS_Store

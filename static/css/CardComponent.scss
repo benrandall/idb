@@ -1,0 +1,87 @@
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//10px Gutter
+.gutter-8.row {
+  margin-right: -4px;
+  margin-left: -4px;
+}
+.gutter-8 > [class^="col-"], .gutter-8 > [class^=" col-"] {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.rs-card {
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  margin-bottom: 8px;
+}
+
+.card-img-container {
+  background-color: #182329;
+  width: 100%;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  @include aspect-ratio(16, 9);
+}
+
+.card-img-top {
+  height: 70%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.card-body {
+  .card-title {
+    font-size: 23px;
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: auto;
+  }
+
+  .card-icons {
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: 8px;
+    height: 24px;
+    width: auto;
+    img {
+      height: 24px;
+      width: auto;
+      padding-right: 8px;
+    }
+  }
+
+  .card-title-contents {
+    display: flex;
+    align-items: center;
+    justify-contents: flex-end;
+  }
+}
+
+body {
+  background-color: #E1E1E1;
+}

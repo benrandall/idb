@@ -8,6 +8,7 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 MOCK_DB = None
+
 with open('fixtures/mock.json', 'r') as mock:
     MOCK_DB = json.load(mock)
 
@@ -15,9 +16,14 @@ with open('fixtures/mock.json', 'r') as mock:
 def home():
     return render_template('index.html')
 
-@app.route('/items')
+
+@app.route('/api/items/all')
+def all_items():
+    return jsonify(MOCK_DB['items'])
+
+@app.route('/items/')
 def items():
-    return render_template('items.html', data=MOCK_DB['items'])
+    return render_template('items.html')
 
 @app.route('/items/<int:item_id>')
 def get_item(item_id):
@@ -73,4 +79,6 @@ def about():
 
 if __name__ == "__main__":
     app.run()
+    app.config["DEBUG"] = True
+    app.config["TEMPLATES_AUTO_RELOAD"] = True
 
