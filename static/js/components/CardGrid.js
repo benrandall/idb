@@ -11,7 +11,7 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/api/items/all')
+        fetch('/api/items/all')
             .then(d => d.json())
             .then(d => {
                 this.setState({
