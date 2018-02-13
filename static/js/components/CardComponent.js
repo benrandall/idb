@@ -7,6 +7,7 @@ export default class CardComponent extends Component {
     render() {
         return (
             <div className="col-md-3 col-sm-12">
+                <a href={'/items/' + this.props.item.id}>
                 <div className="rs-card">
                     <div className="card-img-container">
                         <img src={ this.props.item.icon } className="card-img-top" />
@@ -21,6 +22,7 @@ export default class CardComponent extends Component {
                         </div>
                   </div>
                 </div>
+                </a>
             </div>
         );
     }
