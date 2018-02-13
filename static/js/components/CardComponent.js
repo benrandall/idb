@@ -13,7 +13,7 @@ export default class CardComponent extends Component {
                     </div>
                     <div className="card-body">
                         <div className="card-title-contents">
-                            <h5 className="card-title">{ this.props.item.name }</h5>
+                            <h5 className="card-title truncate">{ this.props.item.name }</h5>
                             <div className="card-icons">
                                 { this.props.item.reddits.length > 0 && <img src="/static/img/reddit-1.svg"/> }
                                 { this.props.item.videos.length > 0 && <img src="/static/img/YouTube-small-full_color_light.svg"/> }
