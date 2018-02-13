@@ -52,9 +52,16 @@
 
 }
 
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card-body {
   .card-title {
-    font-size: 23px;
+    width: 40%;
+    font-size: 18px;
     margin-left: 16px;
     margin-top: 24px;
     margin-bottom: 24px;
@@ -62,6 +69,7 @@
   }
 
   .card-icons {
+    width: 60%;
     margin-left: 16px;
     margin-top: 24px;
     margin-bottom: 24px;
