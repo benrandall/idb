@@ -5,8 +5,8 @@
 <head>
     {% block head %}
         {{ super() }}
-    {% endblock %}
     <link href='{{ url_for('static', filename='dist/index.bundle.css') }}' rel='stylesheet' type='text/css'>
+    {% endblock %}
 </head>
 
 {% block navbar %}
