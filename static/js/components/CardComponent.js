@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-require('../../css/CardComponent.scss');
+// require('../../css/CardComponent.scss');
 
 export default class CardComponent extends Component {
 
