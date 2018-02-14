@@ -22,7 +22,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 
@@ -30,18 +29,11 @@
   .card-title {
     width: 40%;
     font-size: 18px;
-    margin-left: 16px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-right: auto;
+    margin: 24px auto 24px 16px;
   }
 
   .card-icons {
-    width: 60%;
-    margin-left: 16px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-right: 8px;
+    margin: 24px 8px 24px 16px;
     height: 24px;
     width: auto;
     img {
