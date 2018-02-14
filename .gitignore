@@ -109,5 +109,6 @@ venv.bak/
 
 # Node
 /static/node_modules/
+/static/dist/
 
 **/.DS_Store
