@@ -3,26 +3,10 @@ import CardComponent from "./CardComponent"
 
 export default class CardGrid extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    componentDidMount() {
-        fetch('/api/' + this.props.cardType + '/all')
-            .then(d => d.json())
-            .then(d => {
-                this.setState({
-                    items: d
-                })
-            })
-    }
-
     render() {
+        let data = JSON.parse(this.props.data);
 
-        if (!this.state.items) { return (<p>Loading...</p>) }
-
-        let numItems = this.state.items.length;
+        let numItems = data.length;
         let itemsLeft = numItems;
 
         let rows = [];
@@ -35,21 +19,20 @@ export default class CardGrid extends Component {
 
             for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent key={i+j} item={this.state.items[index++]} cardType={this.props.cardType}/>
+                    <CardComponent key={i+j} item={data[index++]} cardType={this.props.cardType}/>
                 );
                 --itemsLeft;
-                console.log("Pushed card into row");
             }
 
-            rows.push(
+            rows.push(row);
+        }
+
+        return rows.map((row) => {
+            return (
                 <div className="row gutter-8">
                     { row }
                 </div>
             );
-
-            console.log("Pushed row");
-        }
-
-        return rows;
+        });
     }
 };
