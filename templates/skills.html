@@ -25,14 +25,12 @@
 
 {% block content %}
 <div class="container">
-    <div class="page-header">
-        <h1>List of skills page</h1>
-        <p> Skills: </p>
-        <ul>
-          {% for skill in data %}
-          <li><a href={{url_for('get_skill', skill_id=skill['id'], _external=True)}}>{{skill['name']}}</a></li>
-          {% endfor %}
-        </ul>
+    <div id="card-grid" >
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='dist/skills.js') }}"></script>
 {% endblock %}

@@ -21,6 +21,10 @@ def home():
 def all_items():
     return jsonify(MOCK_DB['items'])
 
+@app.route('/api/skills/all')
+def all_skills():
+    return jsonify(MOCK_DB['skills'])
+
 @app.route('/items/')
 def items():
     return render_template('items.html')
@@ -32,9 +36,9 @@ def get_item(item_id):
             return render_template('item.html', item=item)
     return render_template('404.html')
 
-@app.route('/skills')
+@app.route('/skills/')
 def skills():
-    return render_template('skills.html', data=MOCK_DB['skills'])
+    return render_template('skills.html')
 
 @app.route('/skills/<int:skill_id>')
 def get_skill(skill_id):

@@ -5,6 +5,6 @@ import CardGrid from './components/CardGrid.js'
 require('../css/index.scss');
 
 ReactDOM.render(
-    <CardGrid cardType="items"/>,
+    <CardGrid cardType="skills"/>,
     document.getElementById('card-grid')
 );
