@@ -27,7 +27,7 @@ def all_skills():
 
 @app.route('/items/')
 def items():
-    return render_template('items.html')
+    return render_template('items.html', items=json.dumps(MOCK_DB['items']))
 
 @app.route('/items/<int:item_id>')
 def get_item(item_id):
@@ -38,7 +38,7 @@ def get_item(item_id):
 
 @app.route('/skills/')
 def skills():
-    return render_template('skills.html')
+    return render_template('skills.html', skills=json.dumps(MOCK_DB['skills']))
 
 @app.route('/skills/<int:skill_id>')
 def get_skill(skill_id):
