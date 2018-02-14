@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
   entry: {
     items: __dirname + '/js/items.jsx',
-    skills: __dirname + '/js/skills.jsx'
+    skills: __dirname + '/js/skills.jsx',
+    styles: __dirname + '/js/styles.js'
   },
   output: {
     path: __dirname + '/dist',
@@ -21,15 +22,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [{
-            loader: "css-loader"
-          }, {
-            loader: "sass-loader"
-          }],
-          // use style-loader in development
-          fallback: "style-loader"
-        })
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }
     ]
   },
