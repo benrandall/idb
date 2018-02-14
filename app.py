@@ -47,7 +47,7 @@ def get_skill(skill_id):
             return render_template('skill.html', skill=skill)
     return render_template('404.html')
 
-@app.route('/videos')
+@app.route('/videos/')
 def videos():
     return render_template('videos.html', data=MOCK_DB['videos'])
 
@@ -58,7 +58,7 @@ def get_video(video_id):
             return render_template('video.html', video=video)
     return render_template('404.html')
 
-@app.route('/about')
+@app.route('/about/')
 def about():
     commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
     issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?access_token=%s' % os.environ['GITHUB_API_TOKEN']
