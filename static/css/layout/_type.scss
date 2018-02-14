@@ -1,0 +1,10 @@
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none !important;
+  color: inherit;
+}

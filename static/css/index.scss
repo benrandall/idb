@@ -1,29 +1,7 @@
-/* carousel fullscreen */
-
-.carousel-fullscreen .carousel-inner .item {
-    height: 100vh;
-    width: 100vw;
-    min-height: 300px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* carousel fullscreen - vertically centered caption*/
-
-.carousel-fullscreen .carousel-caption {
-    top: 50%;
-    bottom: auto;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.3;
-    transition: all 0.2s ease-out;
-}
+// organize sass into logical directories based on imports into a single file
+@import 'utilities/index';
+@import 'vendor/index';
+@import 'base/index';
+@import 'layout/index';
+@import 'components/index';
+@import 'pages/index';
