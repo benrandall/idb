@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import CardComponent from "./CardComponent"
 
-// require('../../css/CardComponent.scss');
-
 export default class CardGrid extends Component {
 
     constructor(props) {
