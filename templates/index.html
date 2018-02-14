@@ -7,44 +7,40 @@
 {% endblock %}
 
 {% block page_content %}
-    <div class="row">
-        <div class="col-lg-12">
-            <div id="carousel-example-generic" class="carousel carousel-fullscreen slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
+    <div id="carousel-example-generic" class="carousel carousel-fullscreen slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active" style="background-image: url('https://thepawprintdaa.files.wordpress.com/2017/11/dog.jpeg');">
-                        <div class="overlay"></div>
-                        <div class="carousel-caption">
-                            <h1>Carousel in a container</h1>
-                            <p>This is a demo for the Bootstrap Carousel Guide.</p>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg');">
-                    <div class="overlay"></div>
-                    </div>
-                    <div class="item" style="background-image: url('https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi');">
-                     <div class="overlay"></div>
-                    </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-color: #E1BB34">
+                <img class="carousel-header-icon" src="{{ url_for('static', filename='img/sword_asset.svg') }}" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Inventory of all the items available within the game</h1>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
+            <div class="item" style="background-color: #26558A">
+                <img class="carousel-header-icon" src="{{ url_for('static', filename='img/skills_asset.svg') }}" />
+                <div class="carousel-caption">
+                    <h1>Inventory of all the items available within the game</h1>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 {% endblock %}
 
