@@ -11,7 +11,7 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
-        fetch('/api/items/all')
+        fetch('/api/' + this.props.cardType + '/all')
             .then(d => d.json())
             .then(d => {
                 this.setState({
@@ -37,7 +37,7 @@ export default class CardGrid extends Component {
 
             for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent key={i+j} item={this.state.items[index++]}/>
+                    <CardComponent key={i+j} item={this.state.items[index++]} cardType={this.props.cardType}/>
                 );
                 --itemsLeft;
                 console.log("Pushed card into row");

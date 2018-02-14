@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const config = {
     entry:  {
         items: __dirname + '/js/items.jsx',
+        skills: __dirname + '/js/skills.jsx',
         //index: __dirname + '/js/index.jsx'
     },
     output: {
