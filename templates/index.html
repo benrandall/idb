@@ -18,15 +18,31 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active" style="background-color: #E1BB34">
-                <img class="carousel-header-icon" src="{{ url_for('static', filename='img/sword_asset.svg') }}" />
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Inventory of all the items available within the game</h1>
+                <div class="item-content">
+                    <img class="carousel-header-icon" src="{{ url_for('static', filename='img/sword_asset.svg') }}" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Inventory of all the items available within the game</h1>
+                        <a type="button" class="btn btn-o-light" href="/items">Explore Items</a>
+                    </div>
                 </div>
             </div>
+
             <div class="item" style="background-color: #26558A">
-                <img class="carousel-header-icon" src="{{ url_for('static', filename='img/skills_asset.svg') }}" />
-                <div class="carousel-caption">
-                    <h1>Inventory of all the items available within the game</h1>
+                <div class="item-content">
+                    <img class="carousel-header-icon" src="{{ url_for('static', filename='img/skills_asset.svg') }}" />
+                    <div class="carousel-caption">
+                        <h1>Inventory of all the items available within the game</h1>
+                        <a type="button" class="btn btn-o-light" href="/skills">Explore Skills</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-color: #282828">
+                <div class="item-content">
+                    <img class="carousel-header-icon" src="{{ url_for('static', filename='img/yt_reddit_asset.svg') }}" />
+                    <div class="carousel-caption">
+                        <h1>Community engagement like never before</h1>
+                        <a type="button" class="btn btn-o-light" href="/community">Explore The Community</a>
+                    </div>
                 </div>
             </div>
 
