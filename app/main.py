@@ -106,10 +106,9 @@ def get_video(video_id):
 
 @app.route('/about/')
 def about():
-    commits_endpoint = 'https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ[
-        'GITHUB_API_TOKEN']
-    issues_endpoint = 'https://api.github.com/repos/benrandall/idb/issues?access_token=%s' % os.environ[
-        'GITHUB_API_TOKEN']
+    commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
+    issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?state=all&access_token=%s' % os.environ['GITHUB_API_TOKEN']
+
     commits_response = requests.get(commits_endpoint)
     issues_response = requests.get(issues_endpoint)
     commit_data = []

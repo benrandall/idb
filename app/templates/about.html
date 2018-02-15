@@ -2,25 +2,110 @@
 
 {% block content %}
 <nav class="navbar navbar-default"></nav>
-<div class="container">
-    <div class="page-header">
-        <h1>About Page</h1>
-    </div>
-    <p> Contributions: </p>
-    <p> Total commits: {{ total_commits }} </p>
-    <ul>
-      {% for contributor in commit_data %}
-      <li>Team member: {{ contributor[0] }}, number of commits: {{ contributor[1]}}</li>
-      {% endfor %}
-    </ul>
-    <p> Total issues: {{ total_issues }} </p>
-    <ul>
-      {% for team_member in issue_data %}
-      <li>Team member: {{ team_member }}, number of issues: {{ issue_data[team_member] }}</li>
-      {% endfor %}
-    </ul>
+    <div class="container">
+    <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">About Us
+                    <small>Meet Me In Lumbridge</small>
+                </h1>
+                <p>Runescape is a game that was a hit in the early 2000s. This database is a collection of the skills, items, and associated youtube videos & reddit posts for attaining the desired skills/items.
+                    As of right now, there are plenty of websites that have information on the internal mechanics of the game, including skills, items, and activities. However, they're all written guides and lack a community around it. None of these websites have any curated multimedia content about the game. By merging Youtube and Reddit posts, users can now see see both the latest videos, tutorials, events AND the comments from the communities held within the Reddit posts to get a more wholesome view of the game.
+                    Intended users include all Runescape users, whether using the 2007 version or most recent version of the game. </p>
+            </div>
+        </div>
 
-    </ul>
+        <!-- Team Members Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Team</h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/claire.png') }}" alt="">
+                <h3>Claire Bingham
+                    <small>Front End, Design</small>
+                </h3>
+                <p>I'm a fourth year Computer Science major at UT. I love Runescape, wearing socks & sandals, and my dog.</p>
+                <p><b>Number of commits:</b> {{ commit_data[1][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['clairebingham'] }}</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/ben.png') }}" alt="">
+                <h3>Benji Randall
+                    <small>Data, Front End</small>
+                </h3>
+                <p>I am a junior Computer Science student. I once fixed my mom's Lenovo.</p>
+                <p><b>Number of commits:</b> {{ commit_data[4][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['benrandall'] }}</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/liam.jpg') }}" alt="">
+                <h3>Liam Decoste
+                    <small>Front End, Design</small>
+                </h3>
+                <p>I'm a second year CS major. One day I want to grow up to be Patrick Star.</p>
+                <p><b>Number of commits:</b> {{ commit_data[0][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['elmdecoste'] }}</p>
+            </div>
+            <div class="row">
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/dylan.jpg') }}" alt="">
+                <h3>Dylan Ramage
+                    <small>React, Front End</small>
+                </h3>
+                <p>I'm a second year Computer Science major. I like to dance like nobody's watching.</p>
+                <p><b>Number of commits:</b> {{ commit_data[5][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['dylanlramage'] }}</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/steven.jpg') }}" alt="">
+                <h3>Steven Diaz
+                    <small>Backend, Deployment</small>
+                </h3>
+                <p>I'm a graduating senior. <br>Selling lobsters 150gp each.</p>
+                <p><b>Number of commits:</b> {{ commit_data[2][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['stevendiaz'] }}</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/luke.jpg') }}" alt="">
+                <h3>Luke Wright
+                    <small>API, Data</small>
+                </h3>
+                <p>I'm a second year Computer Science major at UT. My hobbies include water skiing and hanging with my dog.</p>
+                <p><b>Number of commits:</b> {{ commit_data[3][1]}}</p>
+                <p><b>Number of issues:</b> {{ issue_data['simplyluke'] }}</p>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Github
+                    <small>Stats</small>
+                </h1>
+                 <p> Total commits: {{ total_commits }} </p>
+                <p> Total issues: {{ total_issues }} </p>
+                <p> Total unit tests: 0</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Data
+                    <small>Sources</small>
+                </h1>
+                 <p><b><a href="https://secure.runescape.com">Runescape Secure API</a></b>: Not scraped for phase #1  </p>
+                    <p><p> <b><a href="https://service.runescape.com">Runescape Service API</a></b>: Not scraped for phase #1  </p>
+                    <p> <b><a href="https://developers.google.com/youtube">Youtube API</a></b>: Not scraped for phase #1  </p>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tools
+                        <small>Used</small>
+                    </h1>
+                    <p><b>Tool 1</b></p>
+                    <p><p><b>Tool 2</b> </p>
+                    <p><b>Tool 3</b></p>
+                </div>
+            </div>
+        </div>
 
-</div>
 {% endblock %}
