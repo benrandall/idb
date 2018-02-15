@@ -13,11 +13,14 @@ export default class CardComponent extends Component {
                     <div className="card-body">
                         <div className="card-title-contents">
                             <h5 className="card-title truncate">{ this.props.item.name }</h5>
-                            <div className="card-icons">
-                                { this.props.item.reddits.length > 0 && <img src="/static/img/reddit-1.svg"/> }
-                                { this.props.item.videos.length > 0 && <img src="/static/img/YouTube-small-full_color_light.svg"/> }
+                            {this.props.cardType != "videos" &&
+                                <div className="card-icons">
+                                {this.props.item.reddits.length > 0 && <img src="/static/img/reddit-1.svg"/>}
+                                {this.props.item.videos.length > 0 &&
+                                <img src="/static/img/YouTube-small-full_color_light.svg"/>}
+                                </div>
+                            }
                             </div>
-                        </div>
                   </div>
                 </div>
                 </a>
