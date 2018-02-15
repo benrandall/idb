@@ -5,6 +5,7 @@ export default class VideoCard extends Component {
     render() {
         return (
             <div className="col-md-4 col-sm-12">
+                <a href={'/videos/' + this.props.id}>
                 <div className="community-card">
                     <img src={ this.props.icon } className="video-thumb" />
                     <div className="card-body">
@@ -14,6 +15,7 @@ export default class VideoCard extends Component {
                         <a href={this.props.url}>watch on YouTube <img src="/static/img/YouTube-small-full_color_light.svg"/></a>
                     </div>
                 </div>
+                </a>
             </div>
         );
     }
