@@ -67,6 +67,7 @@ def about():
     commit_data = []
     total_commits = 0
     for contributor in commits_response.json():
+        app.logger.error('here: %s' % contributor)
         team_member = contributor['login']
         num_commits = contributor['contributions']
         total_commits += num_commits
@@ -82,7 +83,7 @@ def about():
     return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits, commit_data=commit_data)
 
 if __name__ == "__main__":
-    app.run()
     app.config["DEBUG"] = True
     app.config["TEMPLATES_AUTO_RELOAD"] = True
+    app.run()
 
