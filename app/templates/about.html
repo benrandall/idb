@@ -42,7 +42,7 @@
                 <h3>Liam Decoste
                     <small>Front End, Design</small>
                 </h3>
-                <p>I'm a second year CS major. One day I want to grow up to be Patrick Star.</p>
+                <p>I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.</p>
                 <p><b>Number of commits:</b> {{ commit_data[0][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['elmdecoste'] }}</p>
             </div>
@@ -52,7 +52,7 @@
                 <h3>Dylan Ramage
                     <small>React, Front End</small>
                 </h3>
-                <p>I'm a second year Computer Science major. I like to drive with the windows down and go to scenic places with friends..</p>
+                <p>I'm a second year Computer Science major. I like to drive with the windows down and go to scenic places with friends.</p>
                 <p><b>Number of commits:</b> {{ commit_data[5][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['dylanlramage'] }}</p>
             </div>
@@ -61,7 +61,7 @@
                 <h3>Steven Diaz
                     <small>Backend, Deployment</small>
                 </h3>
-                <p>I'm a graduating senior. <br>Selling lobsters 150gp each.</p>
+                <p>I'm a graduating senior in UTCS and a coffee enthusiast.<br>Selling lobsters 150gp each.</p>
                 <p><b>Number of commits:</b> {{ commit_data[2][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['stevendiaz'] }}</p>
             </div>
@@ -101,9 +101,17 @@
                     <h1 class="page-header">Tools
                         <small>Used</small>
                     </h1>
-                    <p><b>Tool 1</b></p>
-                    <p><p><b>Tool 2</b> </p>
-                    <p><b>Tool 3</b></p>
+                    <p><h4>Flask: </h4> Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine.
+We used flask as the backend for our project. It provides a fast and minimal backing to our project and Jinja is a very robust templating engine. We were able to make use of the templating's repeat blocks and direct data injection from Flask -> Jinja to reduce code and HTML duplication.</p>
+                    <p><p><h4>Bootstrap: </h4> Bootstrap is a free and open-source front-end library for designing websites and web applications. We used the bootstrap column system, carousel, and navigation bar throughout the website. An issue that we had with Bootstrap was that we ended up using bootstrap 3 via the Flask-Bootstrap Python package, which does not have native cards. Because of this, we had to build our own card classes.</p>
+                    <p><h4>React: </h4>React is a JavaScript library for building user interfaces maintained by Facebook. It is written using a powerful JSX syntax which allows for pseudo-HTML elements within the javascript class itself. An issue we initially had was loading the main elements of the page. There is not a direct way to pass the data from Flask to React as the two do not know each other. Our initial solution was to asynchronously load the data from an endpoint upon page load, but that was not efficient and made the user wait extra time. What we ended up going with was storing the JSON used to create the components in a proprietary HTML property. This allowed instant rendering of our components and drastically sped up load times.
+
+</p>                <p><h4>Postman: </h4>Postman is a popular and easy to use HTTP Request composer that makes it easy to call web services. We used Postman to help us generate API documentation and test the API with a variety of different use cases. We also are using it across our different environments by setting up shared environments within our team. The portability of the Postman tests, collections, and documentation has been very useful in our development cycle.</p>
+                    <h3 class="page-header">Unrequired Tools:</h3>
+                    <p><h4>Adobe XD: </h4>XD is one of Adobe's newer products. It is marketed as being a simple design platform to create mockups of both web and native apps. We used it to design our project and it has helped us all to understand how the product will look and feel once it is complete. XD also allows exporting to Zeplin, instantly creating useful comps for all of the developers on our team.</p>
+                    <p><h4>Zeplin: </h4>Zeplin is a team tool that allows the distribution of comps instantly. It allows the members of the team to comment on any piece of a comp, increasing the visibility of feedback. Another key feature is that it gives the frontend developers all of the padding, margins, color classes, and even complete CSS classes that they can then use in production code. It also ties into Slack, alerting everyone once a comp has been updated, added, or someone adds a comment. It has allowed us to develop rapidly on account of every developer having access to the designs.</p>
+                    <p><h4>Docker: </h4>Docker has allowed us to quickly and easily deploy to our AWS hosting instances. It generates the whole environment, including all of the Nginx configurations for the web server. By using Docker, we can deploy our app on the cloud with minimal configuration.</p>
+
                 </div>
             </div>
         </div>
