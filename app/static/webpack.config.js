@@ -5,7 +5,9 @@ const config = {
   entry: {
     videos: __dirname + '/js/videos.jsx',
     items: __dirname + '/js/items.jsx',
+    item: __dirname + '/js/item.jsx',
     skills: __dirname + '/js/skills.jsx',
+    skill: __dirname + '/js/skill.jsx',
     styles: __dirname + '/js/styles.js'
   },
   output: {

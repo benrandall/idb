@@ -12,25 +12,63 @@ MOCK_DB = None
 with open('fixtures/mock.json', 'r') as mock:
     MOCK_DB = json.load(mock)
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
+# API
 @app.route('/api/items/all')
 def all_items():
     return jsonify(MOCK_DB['items'])
 
+
 @app.route('/api/skills/all')
 def all_skills():
     return jsonify(MOCK_DB['skills'])
+
+@app.route('/api/items/<int:item_id>/videos')
+def all_videos_for_item(item_id):
+    found = None
+    for item in MOCK_DB['items']:
+        if item['id'] == item_id:
+            found = item
+            break
+
+    videos = []
+    for video_id in found['videos']:
+        vid = video_from_id(video_id)
+        if vid is not None:
+            videos += (vid,)
+
+    return jsonify(videos)
+
+@app.route('/api/skills/<int:item_id>/videos')
+def all_videos_for_skills(item_id):
+    found = None
+    for item in MOCK_DB['skills']:
+        if item['id'] == item_id:
+            found = item
+            break
+
+    videos = []
+    for video_id in found['videos']:
+        vid = video_from_id(video_id)
+        if vid is not None:
+            videos += (vid,)
+
+    return jsonify(videos)
+
 @app.route('/api/videos/all')
 def all_videos():
     return jsonify(MOCK_DB['videos'])
 
+
 @app.route('/items/')
 def items():
     return render_template('items.html', items=json.dumps(MOCK_DB['items']))
+
 
 @app.route('/items/<int:item_id>')
 def get_item(item_id):
@@ -39,9 +77,11 @@ def get_item(item_id):
             return render_template('item.html', item=item)
     return render_template('404.html')
 
+
 @app.route('/skills/')
 def skills():
     return render_template('skills.html', skills=json.dumps(MOCK_DB['skills']))
+
 
 @app.route('/skills/<int:skill_id>')
 def get_skill(skill_id):
@@ -50,9 +90,11 @@ def get_skill(skill_id):
             return render_template('skill.html', skill=skill)
     return render_template('404.html')
 
+
 @app.route('/videos/')
 def videos():
     return render_template('videos.html', videos=json.dumps(MOCK_DB['videos']))
+
 
 @app.route('/videos/<int:video_id>')
 def get_video(video_id):
@@ -61,10 +103,12 @@ def get_video(video_id):
             return render_template('video.html', video=video)
     return render_template('404.html')
 
+
 @app.route('/about/')
 def about():
     commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
     issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?state=all&access_token=%s' % os.environ['GITHUB_API_TOKEN']
+
     commits_response = requests.get(commits_endpoint)
     issues_response = requests.get(issues_endpoint)
     commit_data = []
@@ -83,11 +127,24 @@ def about():
             issue_data[team_member] += 1
         else:
             issue_data[team_member] = 1
-    return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits, commit_data=commit_data)
+    return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
+                           commit_data=commit_data)
+
+
+def video_from_id(id: int):
+    """
+    Helper function to get a video from a given ID
+    :param id: ID of the video
+    :return: Video or None
+    """
+    for video in MOCK_DB['videos']:
+        if video['id'] == id:
+            return video
+
+    return None
 
 if __name__ == "__main__":
     app.jinja_env.auto_reload = True
     app.config["DEBUG"] = True
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.run()
-
