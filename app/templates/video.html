@@ -3,22 +3,16 @@
 {% block content %}
 <nav class="navbar navbar-default"></nav>
 <div class="container">
-    <div class="page-header">
-        <h1>Single Video Page, {{ video['name'] }}!</h1>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <p class="info">{{ video['name'] }}</p>
+            <p class="info-small">Video Category: {{ video['category'] }}</p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src={{ video['video_url'] }} frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
-    <p> Name: {{video['name']}} </p>
-    <p> Url: {{video['video_url']}} </p>
-    <p> Items: </p>
-    <ul>
-      {% for item in video['items'] %}
-      <li><a href={{url_for('get_item', item_id=item, _external=True)}}>Item </a></li>
-      {% endfor %}
-    </ul>
-    <p> Skills: </p>
-    <ul>
-      {% for skill in video['skills'] %}
-      <li><a href={{url_for('get_skill', skill_id=skill, _external=True)}}>Skill </a></li>
-      {% endfor %}
-    </ul>
 </div>
 {% endblock %}
