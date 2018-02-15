@@ -3,21 +3,26 @@
 {% block content %}
 <nav class="navbar navbar-default"></nav>
 <div class="container">
-    <div class="page-header">
-        <h1>Single Skill Page, {{ skill['name'] }}!</h1>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <p class="info">General Information</p>
+            <div class="detail-container">
+                <div class="left-side">
+                    <img src="{{skill['icon']}}"/>
+                    <h1>{{skill['name']}}</h1>
+                    <p>{{skill['description']}}</p>
+                </div>
+                <div class="right-side">
+                    <p class="medium-title">Other Information</p>
+                    <p class="small-title">Members Only</p>
+                    <p class="subtext">{{skill['members_only']}}</p>
+                    <h6>Max Level</h6>
+                    <p class="subtext">{{skill['max_level']}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
-    <p> Name: {{skill['name']}} </p>
-    <p> Items: </p>
-    <ul>
-      {% for item in skill['items'] %}
-      <li><a href={{url_for('get_item', item_id=item, _external=True)}}>Item </a></li>
-      {% endfor %}
-    </ul>
-    <p> Videos: </p>
-    <ul>
-      {% for video in skill['videos'] %}
-      <li><a href={{url_for('get_video', video_id=video, _external=True)}}>Video </a></li>
-      {% endfor %}
-    </ul>
 </div>
 {% endblock %}
