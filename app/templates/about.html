@@ -27,6 +27,7 @@
                 <p>I'm a fourth year Computer Science major at UT. I love Runescape, wearing socks & sandals, and my dog.</p>
                 <p><b>Number of commits:</b> {{ commit_data[1][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['clairebingham'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/ben.png') }}" alt="">
@@ -36,6 +37,7 @@
                 <p>I am a junior Computer Science student. I once fixed my mom's Lenovo.</p>
                 <p><b>Number of commits:</b> {{ commit_data[4][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['benrandall'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/liam.jpg') }}" alt="">
@@ -45,6 +47,7 @@
                 <p>I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.</p>
                 <p><b>Number of commits:</b> {{ commit_data[0][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['elmdecoste'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             <div class="row">
             <div class="col-lg-4 col-sm-6 text-center">
@@ -55,6 +58,7 @@
                 <p>I'm a second year Computer Science major. I like to drive with the windows down and go to scenic places with friends.</p>
                 <p><b>Number of commits:</b> {{ commit_data[5][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['dylanlramage'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/steven.jpg') }}" alt="">
@@ -64,6 +68,7 @@
                 <p>I'm a graduating senior in UTCS and a coffee enthusiast.<br>Selling lobsters 150gp each.</p>
                 <p><b>Number of commits:</b> {{ commit_data[2][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['stevendiaz'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='img/luke.jpg') }}" alt="">
@@ -73,6 +78,7 @@
                 <p>I'm a second year Computer Science major at UT. My hobbies include water skiing and hanging with my dog.</p>
                 <p><b>Number of commits:</b> {{ commit_data[3][1]}}</p>
                 <p><b>Number of issues:</b> {{ issue_data['simplyluke'] }}</p>
+                <p><b>Number of unit tests: </b>0</p>
             </div>
             </div>
         </div>
@@ -81,9 +87,9 @@
                 <h1 class="page-header">Github
                     <small>Stats</small>
                 </h1>
-                 <p> Total commits: {{ total_commits }} </p>
-                <p> Total issues: {{ total_issues }} </p>
-                <p> Total unit tests: 0</p>
+                <p> <b>Total commits:</b> {{ total_commits }} </p>
+                <p> <b>Total issues:</b> {{ total_issues }} </p>
+                <p> <b>Total unit tests:</b> 0</p>
             </div>
         </div>
         <div class="row">
@@ -114,6 +120,24 @@ We used flask as the backend for our project. It provides a fast and minimal bac
 
                 </div>
             </div>
+            <div class="row" style="margin-bottom: 20px">
+            <div class="col-lg-12">
+                <h1 class="page-header">Github
+                    <small>Links</small>
+                </h1>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <a style="color: white" href="https://www.gitbook.com/book/benrandall/report/details" type="button" class="btn btn-primary">Gitbook Report</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a style="color: white" href="https://www.gitbook.com/book/benrandall/api/details" type="button" class="btn btn-primary">Gitbook API Report</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a style="color: white" href="https://github.com/benrandall/idb" type="button" class="btn btn-primary">Github Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
 
 {% endblock %}
