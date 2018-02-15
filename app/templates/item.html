@@ -4,7 +4,7 @@
 <nav class="navbar navbar-default"></nav>
 <div class="container" id="item" data-id="{{ item['id'] }}">
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
             <p class="info">General Information</p>
             <div class="detail-container">
                 <div class="left-side">
@@ -24,10 +24,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12 col-md-8">
             <p class="info">Community Sources</p>
-            <div id="community"></div>
         </div>
+    </div>
+    <div class="row">
+        <div id="community"></div>
     </div>
 </div>
 {% endblock %}
