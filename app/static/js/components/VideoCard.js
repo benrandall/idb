@@ -11,7 +11,7 @@ export default class VideoCard extends Component {
                         <p className="name">{ this.props.description }</p>
                     </div>
                     <div className="watch-on">
-                        <a href={this.props.url}>watch on YouTube</a>
+                        <a href={this.props.url}>watch on YouTube <img src="/static/img/YouTube-small-full_color_light.svg"/></a>
                     </div>
                 </div>
             </div>
