@@ -1,24 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
+<nav class="navbar navbar-default"></nav>
 <div class="container">
-    <div class="page-header">
-        <h1>Single Item Page, {{ item['name'] }}!</h1>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <p class="info">General Information</p>
+            <div class="detail-container">
+                <div class="left-side">
+                    <img src="{{item['icon']}}" class="icon"/>
+                    <h1>{{item['name']}}</h1>
+                    <p class="subtext uppercase">{{item['type']}}</p>
+                    <p>{{item['examine_info']}}</p>
+                </div>
+                <div class="right-side">
+                    <p class="medium-title">Other Information</p>
+                    <p class="small-title">Price</p>
+                    <p class="subtext">{{item['market_price']}}</p>
+                    <h6>Weight</h6>
+                    <p class="subtext">{{item['weight']}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
-    <p> Name: {{ item['name']}} </p>
-    <p> Examine Info: {{item['examine_info']}} </p>
-    <p> Skills: </p>
-    <ul>
-      {% for skill in item['skills'] %}
-      <li><a href={{url_for('get_skill', skill_id=skill, _external=True)}}>Skill </a></li>
-      {% endfor %}
-    </ul>
-    <p> Videos: </p>
-    <ul>
-      {% for video in item['videos'] %}
-      <li><a href={{url_for('get_video', video_id=video, _external=True)}}>Video </a></li>
-      {% endfor %}
-    </ul>
-
 </div>
 {% endblock %}

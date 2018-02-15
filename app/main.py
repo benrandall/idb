@@ -24,6 +24,9 @@ def all_items():
 @app.route('/api/skills/all')
 def all_skills():
     return jsonify(MOCK_DB['skills'])
+@app.route('/api/videos/all')
+def all_videos():
+    return jsonify(MOCK_DB['videos'])
 
 @app.route('/items/')
 def items():
@@ -49,7 +52,7 @@ def get_skill(skill_id):
 
 @app.route('/videos/')
 def videos():
-    return render_template('videos.html', data=MOCK_DB['videos'])
+    return render_template('videos.html', videos=json.dumps(MOCK_DB['videos']))
 
 @app.route('/videos/<int:video_id>')
 def get_video(video_id):
@@ -83,6 +86,7 @@ def about():
     return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits, commit_data=commit_data)
 
 if __name__ == "__main__":
+    app.jinja_env.auto_reload = True
     app.config["DEBUG"] = True
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.run()

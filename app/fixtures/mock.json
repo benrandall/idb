@@ -77,6 +77,7 @@
     "videos": [{
             "name": "OSRS 99 CRAFTING GUIDE 07 RS",
             "id": 1,
+            "icon": "http://img.youtube.com/vi/EsxNUEIxDhg/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=EsxNUEIxDhg",
             "category": "RuneScape",
             "items": [1],
@@ -85,6 +86,7 @@
         {
             "name": "Dragon Scimitar vs Saradomin Sword",
             "id": 2,
+            "icon": "http://img.youtube.com/vi/QX68QDDsn7M/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=QX68QDDsn7M",
             "category": "Old School RuneScape",
             "items": [2],
@@ -93,6 +95,7 @@
         {
             "name": "Money Maker - 850k GP/H - Blast Furnace Iron Bars [OSRS]",
             "id": 3,
+            "icon": "http://img.youtube.com/vi/IwmUq7j-yQA/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=IwmUq7j-yQA",
             "category": "RuneScape",
             "items": [3],

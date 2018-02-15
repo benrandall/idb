@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "name": "Jade",
+      "examine_info": "A semi precious stone.",
+      "id": 1,
+      "skills": [1],
+      "videos": [1]
+    },
+    {
+      "name": "Dragon scimitar",
+      "examine_info": "A vicious, curved sword.",
+      "id": 2,
+      "skills": [2],
+      "videos": [2]
+    },
+    {
+      "name": "Iron bar",
+      "examine_info": "An iron bar. Used in Smithing (15) for production and training.",
+      "id": 3,
+      "skills": [3],
+      "videos": [3]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Crafting",
+      "id": 1,
+      "items": [1],
+      "videos": [1]
+    },
+    {
+      "name": "Attack",
+      "id": 2,
+      "items": [2],
+      "videos": [2]
+    },
+    {
+      "name": "Smithing",
+      "id": 3,
+      "items": [3],
+      "videos": [3]
+    }
+  ],
+  "videos": [
+    {
+      "name": "OSRS 99 CRAFTING GUIDE 07 RS",
+      "id": 1,
+      "video_url": "https://gaming.youtube.com/watch?v=EsxNUEIxDhg",
+      "items": [1],
+      "skills": [1]
+    },
+    {
+      "name": "Dragon Scimitar vs Saradomin Sword",
+      "id": 2,
+      "video_url": "https://gaming.youtube.com/watch?v=QX68QDDsn7M",
+      "items": [2],
+      "skills": [2]
+    },
+    {
+      "name": "Money Maker - 850k GP/H - Blast Furnace Iron Bars [OSRS]",
+      "id": 3,
+      "video_url": "https://gaming.youtube.com/watch?v=IwmUq7j-yQA",
+      "items": [3],
+      "skills": [3]
+    }
+  ]
+}
