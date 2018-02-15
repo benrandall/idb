@@ -24,6 +24,7 @@ export default class CommunityGrid extends Component {
 
         return this.state.videos.map((item) => {
             return <VideoCard icon={item.icon}
+                              id={item.id}
                               description={item.name}
                               url={item.video_url} />;
         });
