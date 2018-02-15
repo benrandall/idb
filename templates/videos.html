@@ -3,14 +3,11 @@
 {% block content %}
 <nav class="navbar navbar-default"></nav>
 <div class="container">
-    <div class="page-header">
-        <h1>List of videos page</h1>
-        <p> Videos: </p>
-        <ul>
-          {% for video in data %}
-          <li><a href={{url_for('get_video', video_id=video['id'], _external=True)}}>{{ video['name'] }}</a></li>
-          {% endfor %}
-        </ul>
-    </div>
+    <div id="card-grid" card-data="{{ videos }}"></div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='dist/videos.js') }}"></script>
 {% endblock %}

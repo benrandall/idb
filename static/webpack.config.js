@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   entry: {
+    videos: __dirname + '/js/videos.jsx',
     items: __dirname + '/js/items.jsx',
     skills: __dirname + '/js/skills.jsx',
     styles: __dirname + '/js/styles.js'
