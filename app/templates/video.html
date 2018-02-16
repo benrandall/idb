@@ -18,7 +18,7 @@
         </div>
         {% for item in video['items'] %}
             <div class="col-md-3 col-sm-12">
-                <a href="/items/{{ item }}">/items/{{ item }}</a>
+                <a href="/items/{{ item }}">{{ items[item-1]['name'] }}</a>
             </div>
         {% endfor %}
     </div>
@@ -28,7 +28,7 @@
         </div>
         {% for skill in video['skills'] %}
             <div class="col-md-3 col-sm-12">
-                <a href="/skills/{{ skill }}">/skills/{{ skill }}</a>
+                <a href="/skills/{{ skill }}">{{ skills[skill-1]['name'] }}</a>
             </div>
         {% endfor %}
     </div>
