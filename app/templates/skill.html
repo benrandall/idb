@@ -19,6 +19,12 @@
                     <p class="subtext">{{skill['members_only']}}</p>
                     <h6>Max Level</h6>
                     <p class="subtext">{{skill['max_level']}}</p>
+                    <p class="header">Related Items</p>
+                    <ul>
+                    {% for item in skill['items'] %}
+                    <li><a href="/items/{{ item }}">items/{{ item }}</a></li>
+                    {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>

@@ -20,6 +20,12 @@
                     <p class="subtext">{{item['market_price']}}</p>
                     <h6>Weight</h6>
                     <p class="subtext">{{item['weight']}}</p>
+                    <p class="header">Related Skills</p>
+                    <ul>
+                    {% for skill in item['skills'] %}
+                    <li><a href="/skills/{{ skill }}">skills/{{ skill }}</a></li>
+                    {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
