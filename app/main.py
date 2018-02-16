@@ -114,19 +114,33 @@ def about():
     commit_data = []
     total_commits = 0
     for contributor in commits_response.json():
-        app.logger.error('here: %s' % contributor)
         team_member = contributor['login']
         num_commits = contributor['contributions']
         total_commits += num_commits
         commit_data.append((team_member, num_commits))
     issue_data = {}
     total_issues = len(issues_response.json())
+    current_page = 1
     for issue in issues_response.json():
         team_member = issue['user']['login']
         if team_member in issue_data:
             issue_data[team_member] += 1
         else:
             issue_data[team_member] = 1
+    current_page += 1
+    try:
+        last_page = int(issues_response.headers['Link'].split(',')[1].split(';')[0][-2])
+        for page in range(current_page, last_page + 1):
+            paged_issues_endpoint = 'https://api.github.com/repos/benrandall/idb/issues?state=all&page=%d&access_token=%s' % (page, os.environ['GITHUB_API_TOKEN'])
+            paged_issue_response = requests.get(paged_issues_endpoint)
+            for issue in paged_issue_response.json():
+                team_member = issue['user']['login']
+                if team_member in issue_data:
+                    issue_data[team_member] += 1
+                else:
+                    issue_data[team_member] = 1
+    except Exception:
+        app.logger('Error processing paged issues')
     return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
                            commit_data=commit_data)
 
