@@ -21,7 +21,7 @@
                     <p class="header">Related Items</p>
                     <ul>
                     {% for item in skill['items'] %}
-                    <li><a href="/items/{{ item }}">items/{{ item }}</a></li>
+                    <li><a href="/items/{{ item }}">{{ items[item-1]['name'] }}</a></li>
                     {% endfor %}
                     </ul>
                 </div>

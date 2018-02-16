@@ -22,7 +22,7 @@
                     <p class="header">Related Skills</p>
                     <ul>
                     {% for skill in item['skills'] %}
-                    <li><a href="/skills/{{ skill }}">skills/{{ skill }}</a></li>
+                    <li><a href="/skills/{{ skill }}">{{ skills[skill-1]['name'] }}</a></li>
                     {% endfor %}
                     </ul>
                 </div>
