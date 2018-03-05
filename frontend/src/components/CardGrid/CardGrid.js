@@ -12,7 +12,7 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/api/items/all')
+        fetch('http://127.0.0.1:5000/api/' + this.props.cardType + '/all')
             .then((items) => { return items.json() })
             .then((json) => {
                 this.setState({
