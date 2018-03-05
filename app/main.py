@@ -21,12 +21,16 @@ def home():
 # API
 @app.route('/api/items/all')
 def all_items():
-    return jsonify(MOCK_DB['items'])
+    response = jsonify(MOCK_DB['items'])
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 @app.route('/api/skills/all')
 def all_skills():
-    return jsonify(MOCK_DB['skills'])
+    response = jsonify(MOCK_DB['skills'])
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route('/api/items/<int:item_id>/videos')
 def all_videos_for_item(item_id):
@@ -161,4 +165,5 @@ if __name__ == "__main__":
     app.jinja_env.auto_reload = True
     app.config["DEBUG"] = True
     app.config["TEMPLATES_AUTO_RELOAD"] = True
+    app.config['CORS_HEADERS'] = 'Content-Type'
     app.run()

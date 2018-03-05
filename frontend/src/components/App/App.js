@@ -21,7 +21,9 @@ import {
 
 import logo from './logo.svg';
 import './App.css';
+
 import Home from '../Home/Home';  
+import CardGrid from '../CardGrid/CardGrid'
 
 class App extends Component {
 
@@ -40,14 +42,6 @@ class App extends Component {
     });
   }
 
-  // ItemsCardGrid = (props) => {
-  //   return (
-  //     <CardGrid 
-  //       cardType="items"
-  //     />
-  //   );
-  // }
-
   // SkillsCardGrid = (props) => {
   //   return (
   //     <CardGrid 
@@ -57,17 +51,22 @@ class App extends Component {
   // }
 
   render() {
+    const ItemsCardGrid = (props) => {
+      return (
+        <CardGrid 
+          cardType="items"
+        />
+      );
+    }
+
     return (
       <HashRouter>
         <div>
-          <Navbar color="faded" light expand="md">
+          <Navbar color="dark" className="navbar-dark" expand="md" fixed="top">
             <NavbarBrand href="/">RuneScrape</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink tag={Link} to="/">Home</NavLink>
-                </NavItem>
                 <NavItem>
                   <NavLink tag={Link} to="/items">Items</NavLink>
                 </NavItem>
@@ -86,8 +85,8 @@ class App extends Component {
 
           <Switch>
               <Route exact path="/" component={Home}/>
-              {/* <Route exact path="/items" component={ItemsCardGrid}/>
-              <Route path="/items/:id" component={IndividualCard}/>
+              <Route exact path="/items" component={ItemsCardGrid}/>
+              {/* <Route path="/items/:id" component={IndividualCard}/>
               <Route exact path="/skills" component={SkillsCardGrid}/>
               <Route path="/skills/:id" component={IndividualCard}/>
               <Route exact path="/community" component={CommunityGrid}/>
