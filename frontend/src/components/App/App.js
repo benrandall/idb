@@ -42,14 +42,6 @@ class App extends Component {
     });
   }
 
-  // SkillsCardGrid = (props) => {
-  //   return (
-  //     <CardGrid 
-  //       cardType="skills"
-  //     />
-  //   );
-  // }
-
   render() {
     const ItemsCardGrid = (props) => {
       return (
@@ -57,7 +49,15 @@ class App extends Component {
           cardType="items"
         />
       );
-    }
+    };
+
+    const SkillsCardGrid = (props) => {
+      return (
+        <CardGrid 
+          cardType="skills"
+        />
+      );
+    };  
 
     return (
       <HashRouter>
@@ -86,9 +86,9 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/items" component={ItemsCardGrid}/>
-              {/* <Route path="/items/:id" component={IndividualCard}/>
+              {/* <Route path="/items/:id" component={IndividualCard}/> */}
               <Route exact path="/skills" component={SkillsCardGrid}/>
-              <Route path="/skills/:id" component={IndividualCard}/>
+              {/* <Route path="/skills/:id" component={IndividualCard}/>
               <Route exact path="/community" component={CommunityGrid}/>
               <Route exact path="/community/:id" component={IndividualCommunity}/>
               <Route exact path="/about" component={About}/> */}
