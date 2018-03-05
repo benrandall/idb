@@ -4,23 +4,35 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption
+    CarouselCaption,
+    Button
   } from 'reactstrap';
+
+  import { Link } from 'react-router-dom';
 
   import './Home.css';
 
 const items = [
     {
         src: 'http://www.runescrape.lol/static/img/sword_asset.svg',
-        caption: 'Inventory of all the items available within the game'
+        caption: 'Inventory of all the items available within the game',
+        color: 'yellow',
+        buttonText: 'Explore Items',
+        link: '/items'
     },
     {
         src: 'http://www.runescrape.lol/static/img/skills_asset.svg',
-        caption: 'Complete collection of skills and requirements for each'
+        caption: 'Complete collection of skills and requirements for each',
+        color: 'blue',
+        buttonText: 'Explore Videos',
+        link: '/skills'
     },
     {
         src: 'http://www.runescrape.lol/static/img/yt_reddit_asset.svg',
-        caption: 'Community engagement like never before'
+        caption: 'Community engagement like never before',
+        color: 'dark-blue',
+        buttonText: 'Explore Community',
+        link: '/community'
     }
 ];
 
@@ -70,9 +82,15 @@ export default class Home extends Component {
                 onExiting={this.onExiting}
                 onExited={this.onExited}
                 key={item.src}
+                className={ item.color }
               >
-                <img src={item.src} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                <div class="item-content">
+                    <img className='carousel-header-icon' src={item.src} />
+                    <CarouselCaption captionHeader={item.caption} />
+                    <Link className='centered-button' to={item.link}>
+                        <Button outline color="secondary">{item.buttonText}</Button>{' '}
+                    </Link>
+                </div>
               </CarouselItem>
             );
         });
@@ -83,6 +101,7 @@ export default class Home extends Component {
               activeIndex={activeIndex}
               next={this.next}
               previous={this.previous}
+              className="carousel-fullscreen"
             >
               <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
               {slides}
