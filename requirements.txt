@@ -4,6 +4,7 @@ click==6.7
 dominate==2.3.1
 Flask==0.12.2
 Flask-Bootstrap==3.3.7.1
+Flask-Cors==3.0.3
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
 idna==2.6
@@ -12,6 +13,7 @@ Jinja2==2.10
 MarkupSafe==1.0
 psycopg2==2.7.4
 requests==2.18.4
+six==1.11.0
 SQLAlchemy==1.2.4
 urllib3==1.22
 visitor==0.1.3
