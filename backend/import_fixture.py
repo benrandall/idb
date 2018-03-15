@@ -1,4 +1,4 @@
-from ..models import db, Item, Skill, Reddit, Video
+from main import db, Item, Skill, Reddit, Video
 import json
 import os
 MOCK_DB = None
