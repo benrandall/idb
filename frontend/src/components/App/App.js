@@ -23,7 +23,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Home from '../Home/Home';  
-import CardGrid from '../CardGrid/CardGrid'
+import CardGrid from '../CardGrid/CardGrid';
+import SkillDetailPage from '../SkillDetailPage/SkillDetailPage';
 
 class App extends Component {
 
@@ -88,10 +89,10 @@ class App extends Component {
               <Route exact path="/items" component={ItemsCardGrid}/>
               {/* <Route path="/items/:id" component={IndividualCard}/> */}
               <Route exact path="/skills" component={SkillsCardGrid}/>
-              {/* <Route path="/skills/:id" component={IndividualCard}/>
-              <Route exact path="/community" component={CommunityGrid}/>
-              <Route exact path="/community/:id" component={IndividualCommunity}/>
-              <Route exact path="/about" component={About}/> */}
+              <Route path="/skills/:id" component={SkillDetailPage}/>
+              {/*<Route exact path="/community" component={CommunityGrid}/>*/}
+              {/*<Route exact path="/community/:id" component={IndividualCommunity}/>*/}
+              {/*<Route exact path="/about" component={About}/>*/}
           </Switch>
         </div>
       </HashRouter>
