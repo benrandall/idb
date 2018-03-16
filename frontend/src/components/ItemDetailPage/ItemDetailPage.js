@@ -4,6 +4,8 @@ import CardComponent from '../CardComponent/CardComponent';
 import RedditCard from '../RedditCard/RedditCard';
 import VideoCard from '../VideoCard/VideoCard';
 
+import './ItemDetailPage.css';
+
 export default class SkillDetailPage extends Component {
 
     constructor() {

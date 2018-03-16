@@ -249,7 +249,7 @@ def get_video(video_id):
 def get_reddit(reddit_id):
     return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
 
-@app.route('/about/')
+@app.route('/api/about')
 def about():
     commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
     issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?state=all&access_token=%s' % os.environ['GITHUB_API_TOKEN']
@@ -286,8 +286,17 @@ def about():
                     issue_data[team_member] = 1
     except Exception:
         app.logger('Error processing paged issues')
-    return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
-                           commit_data=commit_data)
+
+    combined = {
+        'issues': issue_data,
+        'total_issues': total_issues,
+        'total_commits': total_commits,
+        'commit_data': commit_data
+    }
+
+    return jsonify(combined)
+    # return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
+    #                        commit_data=commit_data)
 
 if __name__ == "__main__":
     app.config["DEBUG"] = True
