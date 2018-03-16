@@ -42,7 +42,7 @@ export default class CardGrid extends Component {
 
             for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent key={i+j} item={data[index++]} cardType={this.props.cardType}/>
+                    <CardComponent key={i+j} item={data[index++]} cardType={this.props.cardType} showFooter={true}/>
                 );
                 --itemsLeft;
             }
