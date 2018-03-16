@@ -26,6 +26,7 @@ import Home from '../Home/Home';
 import CardGrid from '../CardGrid/CardGrid';
 import SkillDetailPage from '../SkillDetailPage/SkillDetailPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+import AboutPageComponent from '../AboutPageComponent/AboutPageComponent';
 
 class App extends Component {
 
@@ -93,7 +94,7 @@ class App extends Component {
               <Route path="/skills/:id" component={SkillDetailPage}/>
               {/*<Route exact path="/community" component={CommunityGrid}/>*/}
               {/*<Route exact path="/community/:id" component={IndividualCommunity}/>*/}
-              {/*<Route exact path="/about" component={About}/>*/}
+              <Route exact path="/about" component={AboutPageComponent}/>
           </Switch>
         </div>
       </HashRouter>
