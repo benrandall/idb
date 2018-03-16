@@ -25,6 +25,7 @@ import './App.css';
 import Home from '../Home/Home';  
 import CardGrid from '../CardGrid/CardGrid';
 import SkillDetailPage from '../SkillDetailPage/SkillDetailPage';
+import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 
 class App extends Component {
 
@@ -87,7 +88,7 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/items" component={ItemsCardGrid}/>
-              {/* <Route path="/items/:id" component={IndividualCard}/> */}
+               <Route path="/items/:id" component={ItemDetailPage}/>
               <Route exact path="/skills" component={SkillsCardGrid}/>
               <Route path="/skills/:id" component={SkillDetailPage}/>
               {/*<Route exact path="/community" component={CommunityGrid}/>*/}
