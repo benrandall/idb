@@ -249,6 +249,13 @@ def get_video(video_id):
 def get_reddit(reddit_id):
     return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
 
+@app.route('/api/community/all')
+def all_community():
+    return jsonify({
+        'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
+        'videos': [video.toJSON() for video in Video.query.all()]
+    })
+
 @app.route('/api/about')
 def about():
     commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']

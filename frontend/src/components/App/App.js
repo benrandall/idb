@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 import {
   Route,
   Link,
@@ -27,6 +29,7 @@ import CardGrid from '../CardGrid/CardGrid';
 import SkillDetailPage from '../SkillDetailPage/SkillDetailPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 import AboutPageComponent from '../AboutPageComponent/AboutPageComponent';
+import CommunityGrid from '../CommunityGrid/CommunityGrid';
 
 class App extends Component {
 
@@ -35,14 +38,35 @@ class App extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      navHeight: 50
     };
+
+    this.handleResize = this.handleResize.bind(this);
   }
 
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+        isOpen: !this.state.isOpen,
+        navHeight: this.state.navHeight
     });
+  }
+
+  handleResize(e = null) {
+    let node = ReactDOM.findDOMNode(this._navbar);
+
+    this.setState({
+        navHeight: node.offsetHeight,
+        isOpen: this.state.isOpen
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   render() {
@@ -63,9 +87,10 @@ class App extends Component {
     };  
 
     return (
+    <div style={{paddingTop: this.state.navHeight}}>
       <HashRouter>
         <div>
-          <Navbar color="dark" className="navbar-dark" expand="md" fixed="top">
+          <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
             <NavbarBrand href="/">RuneScrape</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -92,12 +117,13 @@ class App extends Component {
                <Route path="/items/:id" component={ItemDetailPage}/>
               <Route exact path="/skills" component={SkillsCardGrid}/>
               <Route path="/skills/:id" component={SkillDetailPage}/>
-              {/*<Route exact path="/community" component={CommunityGrid}/>*/}
+              <Route exact path="/community" component={CommunityGrid}/>
               {/*<Route exact path="/community/:id" component={IndividualCommunity}/>*/}
               <Route exact path="/about" component={AboutPageComponent}/>
           </Switch>
         </div>
       </HashRouter>
+    </div>
     );
   }
 }

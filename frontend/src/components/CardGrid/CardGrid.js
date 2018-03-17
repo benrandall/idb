@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Container, Row } from 'reactstrap';
+
 import CardComponent from "../CardComponent/CardComponent";
 import './CardGrid.css';
 
@@ -51,15 +53,15 @@ export default class CardGrid extends Component {
         }
 
         return (
-            <div class="container">
+            <Container>
                 {rows.map((row) => {
                     return (
-                        <div className="nav-padding row">
+                        <Row class="nav-padding">
                             { row }
-                        </div>
+                        </Row>
                     );
                 })}
-            </div>
+            </Container>
         )
     }
 };
