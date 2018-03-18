@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import {
+    Row,
+    Col
+} from 'reactstrap';
 import CardComponent from "../CardComponent/CardComponent";
-import RedditCard from "../RedditCard/RedditCard";
+import RSRedditCard from "../RSRedditCard/RSRedditCard";
+import RSVideoCard from "../RSVideoCard/RSVideoCard";
 
 import './SkillDetailPage.css';
-import VideoCard from "../VideoCard/VideoCard";
 
 export default class SkillDetailPage extends Component {
 
@@ -43,11 +46,11 @@ export default class SkillDetailPage extends Component {
         let community = [];
 
         for (let reddit of this.state.skill.reddits) {
-            community.push(<RedditCard title={reddit.title} url={reddit.url}/>)
+            community.push(<RSRedditCard title={reddit.title} url={reddit.url}/>)
         }
 
         for (let video of this.state.skill.videos) {
-            community.push(<VideoCard title={video.title} icon={video.icon} id={video.id} />);
+            community.push(<RSVideoCard title={video.title} icon={video.icon} id={video.id} />);
         }
 
         return community;

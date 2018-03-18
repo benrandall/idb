@@ -6,14 +6,13 @@ import { Col } from 'reactstrap';
 import './RSTeamMember.css';
 
 const RSTeamMember = (props) => {
-    console.log(props);
 
     return (
         <Col lg='4' sm='6' className="text-center">
-            <img className="img-circle img-responsive img-center" src={ props.icon } alt="" />
-            <h3>{ props.name }
-                <small>{ props.role }</small>
-            </h3>
+            <img className="rounded-circle img-responsive img-center" src={ props.icon } alt="" />
+            <h4>{ props.name }
+                <small className="text-muted"> { props.role }</small>
+            </h4>
             <p> { props.bio }</p>
             <p><b>Number of commits:</b> { props.commits || -1 }</p>
             <p><b>Number of issues:</b> { props.issues || -1 }</p>

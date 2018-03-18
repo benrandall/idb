@@ -8,7 +8,7 @@ const RSContainer = (props) => {
         <Row>
             <Col sm='12'>
                 <h1 className="page-header">{ props.title }
-                    { props.subtitle || <small>{ props.subtitle }</small>}
+                    { props.subtitle && <small className="text-muted"> { props.subtitle }</small>}
                 </h1>
                 { props.body }
             </Col>

@@ -7,9 +7,9 @@ import GitHubStats from '../GitHubStats/GitHubStats';
 import RSTool from '../RSTool/RSTool';
 import RSLink from '../RSLink/RSLink';
 
-import './AboutPageComponent.css';
+import './RSAboutPage.css';
 
-export default class AboutPageComponent extends Component {
+export default class RSAboutPage extends Component {
 
     constructor() {
         super();

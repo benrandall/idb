@@ -44,7 +44,7 @@ export default class CardGrid extends Component {
 
             for(let j = 0; j < 4 && itemsLeft > 0; j++) {
                 row.push(
-                    <CardComponent key={i+j} item={data[index++]} cardType={this.props.cardType} showFooter={true}/>
+                    <CardComponent key={ (i * 4) + j} item={data[index++]} cardType={this.props.cardType} showFooter={true}/>
                 );
                 --itemsLeft;
             }
@@ -56,7 +56,7 @@ export default class CardGrid extends Component {
             <Container>
                 {rows.map((row) => {
                     return (
-                        <Row class="nav-padding">
+                        <Row className="nav-padding">
                             { row }
                         </Row>
                     );

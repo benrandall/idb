@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
 
-import VideoCard from '../VideoCard/VideoCard';
-import RedditCard from "../RedditCard/RedditCard";
+import RSVideoCard from '../RSVideoCard/RSVideoCard';
+import RSRedditCard from "../RSRedditCard/RSRedditCard";
 
 export default class CommunityGrid extends Component {
 
@@ -30,13 +30,13 @@ export default class CommunityGrid extends Component {
         if (!this.state.loaded) {return <p>Loading</p>}
 
         let videos = this.state.videos.map((item) => {
-            return <VideoCard icon={item.icon}
+            return <RSVideoCard icon={item.icon}
                               id={item.id}
                               title={item.name}/>;
         });
 
         let reddits = this.state.reddits.map((item) => {
-            return <RedditCard title={item.title}
+            return <RSRedditCard title={item.title}
                               url={item.url}/>
         });
 

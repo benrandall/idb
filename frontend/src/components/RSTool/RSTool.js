@@ -5,7 +5,6 @@ const RSTool = (props) => {
     return (
         <div>
             <h4>{props.toolName}: </h4>
-            <br/>
             <p>{props.toolDesc} </p>
         </div>
     );
