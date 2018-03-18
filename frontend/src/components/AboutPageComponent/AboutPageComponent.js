@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
+import AboutConstants from './AboutConstants';
+import RSContainer from '../RSContainer/RSContainer';
+import RSTeamMember from '../RSTeamMember/RSTeamMember';
+import GitHubStats from '../GitHubStats/GitHubStats';
+import RSTool from '../RSTool/RSTool';
+import RSLink from '../RSLink/RSLink';
 
 import './AboutPageComponent.css';
 
@@ -7,8 +13,6 @@ export default class AboutPageComponent extends Component {
 
     constructor() {
         super();
-
-        this.runescape_desc = "Runescape is a game that was a hit in the early 2000s. This database is a collection of the skills, items, and associated youtube videos & reddit posts for attaining the desired skills/items.As of right now, there are plenty of websites that have information on the internal mechanics of the game, including skills, items, and activities. However, they're all written guides and lack a community around it. None of these websites have any curated multimedia content about the game. By merging Youtube and Reddit posts, users can now see see both the latest videos, tutorials, events AND the comments from the communities held within the Reddit posts to get a more wholesome view of the game. Intended users include all Runescape users, whether using the 2007 version or most recent version of the game. ";
 
         this.state = {
             loaded: false,
@@ -34,26 +38,81 @@ export default class AboutPageComponent extends Component {
     }
 
     getTeamMembers() {
-        
+        return (
+            <Row>
+                {
+                    this.state.commit_data.map((item) => {
+                        let member = AboutConstants.team.members[item[0]];
+                        return <RSTeamMember
+                        key={item[0]}
+                        icon={member.icon}
+                        name={member.name}
+                        role={member.role}
+                        bio={member.bio}
+                        commits={item[1]}
+                        issues={this.state.issues[item[0]]}
+                                />
+                    })
+                }
+            </Row>
+        );
+    }
+
+    getStats() {
+        return (
+            <Row>
+                <GitHubStats    issues={this.state.total_issues}
+                                commits={this.state.total_commits}
+                />
+            </Row>
+        );
+    }
+
+    getTools(toolList) {
+        return (
+            <Row>
+                { toolList.map((item) => <RSTool key={item.title} toolDesc={item.desc} toolName={item.title}/>) }
+            </Row>
+        );
+    }
+
+    getLinks() {
+        return (
+            <Row>
+                { AboutConstants.links.data.map((item) => <RSLink key={item.url} title={item.title} url={item.url}/>) }
+            </Row>
+        );
     }
 
     render() {
 
-        if (!this.state.loaded) { return (<div></div>); }
+        if (!this.state.loaded) { return (<div>Loading</div>); }
 
         return (
             <Container>
-                <Row>
-                    <Col sm='12'>
-                        <h1 className="page-header">About Us
-                            <small>Meet Me In Lumbridge</small>
-                        </h1>
-                        <p>{ this.runescape_desc }</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getTeamMembers()}
-                </Row>
+                <RSContainer    title={AboutConstants.about.title}
+                                subtitle={AboutConstants.about.subtitle}
+                                body={ (<p>{ AboutConstants.about.body }</p>) }/>
+
+
+                <RSContainer    title={AboutConstants.team.title}
+                                body={ this.getTeamMembers() }
+                                    />
+
+                <RSContainer    title={AboutConstants.github.title}
+                                subtitle={AboutConstants.github.subtitle}
+                                body={ this.getStats() }/>
+
+                <RSContainer    title={AboutConstants.tools.title}
+                                subtitle={AboutConstants.tools.subtitle}
+                                body={ this.getTools(AboutConstants.tools.data)}/>
+
+                <RSContainer    title={AboutConstants.extra_tools.title}
+                                subtitle={AboutConstants.extra_tools.subtitle}
+                                body={ this.getTools(AboutConstants.extra_tools.data)}/>
+                <RSContainer    title={AboutConstants.links.title}
+                                subtitle={AboutConstants.links.subtitle}
+                                body={ this.getLinks()}/>
             </Container>
         );
     }

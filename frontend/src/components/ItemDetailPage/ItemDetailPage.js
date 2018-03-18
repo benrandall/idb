@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import CardComponent from '../CardComponent/CardComponent';
 import RedditCard from '../RedditCard/RedditCard';
 import VideoCard from '../VideoCard/VideoCard';
@@ -65,7 +65,7 @@ export default class SkillDetailPage extends Component {
                         <p className="info">General Information</p>
                         <div className="detail-container">
                             <div className="left-side">
-                                <img src={ this.state.item.icon } className="icon"/>
+                                <img src={ this.state.item.icon } className="icon" alt={this.state.item.name}/>
                                 <h1>{ this.state.item.name }</h1>
                                 <p className="subtext uppercase">{ this.state.item.type }</p>
                                 <p>{ this.state.item.examine_info }</p>

@@ -64,7 +64,7 @@ export default class SkillDetailPage extends Component {
                         <p className="info">General Information</p>
                         <div className="detail-container">
                             <div className="left-side">
-                                <img src={ this.state.skill.icon } />
+                                <img src={ this.state.skill.icon } alt={this.state.skill.name} />
                                 <h1>{ this.state.skill.name }</h1>
                                 <p>{ this.state.skill.description }</p>
                             </div>

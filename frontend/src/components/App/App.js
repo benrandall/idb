@@ -15,13 +15,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink
+} from 'reactstrap';
 
-import logo from './logo.svg';
 import './App.css';
 
 import Home from '../Home/Home';  
@@ -56,7 +52,7 @@ class App extends Component {
     let node = ReactDOM.findDOMNode(this._navbar);
 
     this.setState({
-        navHeight: node.offsetHeight,
+        navHeight: (node && node.offsetHeight) || 0,
         isOpen: this.state.isOpen
     });
   }

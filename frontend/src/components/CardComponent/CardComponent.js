@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import './CardComponent.css';
 import { Link } from 'react-router-dom';
-import { Card, Button, CardHeader, CardFooter, CardBody,
-    CardTitle, CardText, CardImg, Col } from 'reactstrap';
+import {
+    Card,
+    CardFooter,
+    CardBody,
+    CardTitle,
+    Col
+} from 'reactstrap';
 
 export default class CardComponent extends Component {
 
@@ -16,12 +21,12 @@ export default class CardComponent extends Component {
                         {
                             this.props.item.reddits
                             && this.props.item.reddits.length > 0
-                            && <img src="http://www.runescrape.lol/static/img/reddit-1.svg"/>
+                            && <img src="http://www.runescrape.lol/static/img/reddit-1.svg" alt="Reddit Logo"/>
                         }
                         {
                             this.props.item.videos
                             && this.props.item.videos.length > 0
-                            && <img src="http://www.runescrape.lol/static/img/YouTube-small-full_color_light.svg"/>
+                            && <img src="http://www.runescrape.lol/static/img/YouTube-small-full_color_light.svg" alt="YouTube Logo"/>
                         }
                         </div>
                     }
@@ -34,7 +39,7 @@ export default class CardComponent extends Component {
                 <Link to={'/' + this.props.cardType + '/' + this.props.item.id}>
                     <Card>
                         <div className="card-img-container">
-                            <img className="card-img-top-custom" top width="100%" src={ this.props.item.icon }/>
+                            <img className="card-img-top-custom" top width="100%" src={ this.props.item.icon } alt={ this.props.item.name }/>
                         </div>
                         <CardBody>
                             <CardTitle>{this.props.item.name}</CardTitle>
