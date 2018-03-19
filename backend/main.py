@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, abort
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -304,6 +304,15 @@ def about():
     return jsonify(combined)
     # return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
     #                        commit_data=commit_data)
+
+# App error handling
+@app.errorhandler(404)
+def page_not_found(e):
+    return jsonify(error=404, text=str(e)), 404
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return jsonify(error=500, text=str(e)), 500
 
 if __name__ == "__main__":
     app.config["DEBUG"] = True
