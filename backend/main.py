@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+from github import GithubApiWrapper
 #from models import Item, Video, Reddit, Skill
 import json
 import requests
@@ -258,52 +259,17 @@ def all_community():
 
 @app.route('/api/about')
 def about():
-    commits_endpoint='https://api.github.com/repos/benrandall/idb/contributors?access_token=%s' % os.environ['GITHUB_API_TOKEN']
-    issues_endpoint='https://api.github.com/repos/benrandall/idb/issues?state=all&access_token=%s' % os.environ['GITHUB_API_TOKEN']
-
-    commits_response = requests.get(commits_endpoint)
-    issues_response = requests.get(issues_endpoint)
-    commit_data = []
-    total_commits = 0
-    for contributor in commits_response.json():
-        team_member = contributor['login']
-        num_commits = contributor['contributions']
-        total_commits += num_commits
-        commit_data.append((team_member, num_commits))
-    issue_data = {}
-    total_issues = len(issues_response.json())
-    current_page = 1
-    for issue in issues_response.json():
-        team_member = issue['user']['login']
-        if team_member in issue_data:
-            issue_data[team_member] += 1
-        else:
-            issue_data[team_member] = 1
-    current_page += 1
-    try:
-        last_page = int(issues_response.headers['Link'].split(',')[1].split(';')[0][-2])
-        for page in range(current_page, last_page + 1):
-            paged_issues_endpoint = 'https://api.github.com/repos/benrandall/idb/issues?state=all&page=%d&access_token=%s' % (page, os.environ['GITHUB_API_TOKEN'])
-            paged_issue_response = requests.get(paged_issues_endpoint)
-            for issue in paged_issue_response.json():
-                team_member = issue['user']['login']
-                if team_member in issue_data:
-                    issue_data[team_member] += 1
-                else:
-                    issue_data[team_member] = 1
-    except Exception:
-        app.logger('Error processing paged issues')
-
-    combined = {
-        'issues': issue_data,
-        'total_issues': total_issues,
-        'total_commits': total_commits,
-        'commit_data': commit_data
-    }
-
-    return jsonify(combined)
-    # return render_template('about.html', issue_data=issue_data, total_issues=total_issues, total_commits=total_commits,
-    #                        commit_data=commit_data)
+    gh = GithubApiWrapper(owner='benrandall', repo='idb', token=os.environ['GITHUB_API_TOKEN'])
+    repo_info = gh.repo_info()
+    with open('fixtures/about.json', 'r') as about:
+        about_json = json.load(about)
+    merged_data = [ {**about_json[teammate], **repo_info['teammates'][teammate] } for teammate in repo_info['teammates'].keys() ]
+    result = {
+            "teammates": merged_data,
+            "total_commits": repo_info['total_commits'],
+            "total_issues": repo_info['total_issues'],
+        }
+    return jsonify(result)
 
 if __name__ == "__main__":
     app.config["DEBUG"] = True
