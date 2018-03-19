@@ -39,7 +39,7 @@ export default class CardComponent extends Component {
                 <Link to={'/' + this.props.cardType + '/' + this.props.item.id}>
                     <Card>
                         <div className="card-img-container">
-                            <img className="card-img-top-custom" top width="100%" src={ this.props.item.icon } alt={ this.props.item.name }/>
+                            <img className="card-img-top-custom" top="true" width="100%" src={ this.props.item.icon } alt={ this.props.item.name }/>
                         </div>
                         <CardBody>
                             <CardTitle>{this.props.item.name}</CardTitle>

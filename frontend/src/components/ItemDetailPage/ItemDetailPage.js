@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {
     Row,
-    Col
+    Col,
+    Container
 } from "reactstrap";
 import CardComponent from '../CardComponent/CardComponent';
 import RSRedditCard from '../RSRedditCard/RSRedditCard';
@@ -62,7 +63,7 @@ export default class SkillDetailPage extends Component {
         if (!this.state.loaded) { return (<div></div>);}
 
         return (
-            <div className="container" id="item" data-id={ this.state.item.id }>
+            <Container id="item" data-id={ this.state.item.id }>
                 <Row>
                     <Col sm="12">
                         <p className="info">General Information</p>
@@ -99,7 +100,7 @@ export default class SkillDetailPage extends Component {
                 <Row>
                     { this.getCommunity() }
                 </Row>
-            </div>
+            </Container>
         );
     }
 }

@@ -26,6 +26,7 @@ import SkillDetailPage from '../SkillDetailPage/SkillDetailPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 import RSAboutPage from '../RSAboutPage/RSAboutPage';
 import CommunityGrid from '../CommunityGrid/CommunityGrid';
+import RSVideoDetailPage from '../RSVideoDetailPage/RSVideoDetailPage';
 
 class App extends Component {
 
@@ -114,7 +115,7 @@ class App extends Component {
               <Route exact path="/skills" component={SkillsCardGrid}/>
               <Route path="/skills/:id" component={SkillDetailPage}/>
               <Route exact path="/community" component={CommunityGrid}/>
-              {/*<Route exact path="/community/:id" component={IndividualCommunity}/>*/}
+              <Route exact path="/community/:id" component={RSVideoDetailPage}/>
               <Route exact path="/about" component={RSAboutPage}/>
           </Switch>
         </div>
