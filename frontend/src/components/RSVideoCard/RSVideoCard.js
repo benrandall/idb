@@ -17,7 +17,7 @@ const RSVideoCard = (props) => {
                 <CardImg top width="100%" src={props.icon} alt="Card image cap" />
                 <CardBody>
                     <CardTitle>{props.title}</CardTitle>
-                    <Link to={'/video/' + props.id}>
+                    <Link to={'/community/' + props.id}>
                         <Button>Go to video</Button>
                     </Link>
                 </CardBody>
