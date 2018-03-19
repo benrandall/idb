@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "9cc02c90-1964-4313-bae4-ba8237dc7364",
+		"name": "IDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Videos all ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "431f5b7b-dd30-472f-bf62-9ea717a270b1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data of non zero length\", function () {",
+							"    pm.expect(pm.response.json().length).not.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"first video repsonse url is correct\", function () {",
+							"   pm.expect(pm.response.json()[0].video_url).to.equal(\"https://gaming.youtube.com/embed/EsxNUEIxDhg\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/videos/all",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"videos",
+						"all"
+					]
+				},
+				"description": "Tests the response from a correct request to /api/videos/all"
+			},
+			"response": []
+		},
+		{
+			"name": "404 Errors Are Correct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b7e7bf66-a7ea-40ac-a8b7-14f0a5873c0d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Contains json error description\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"404 Not Found\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/badreq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"badreq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4adcb86-c20b-44ce-b668-2efeccabec36",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data items of size 1\", function () {",
+							"    pm.expect(pm.response.json().items.length).to.equal(1);",
+							"});",
+							"",
+							"pm.test(\"first video repsonse url is correct\", function () {",
+							"   pm.expect(pm.response.json().video_url).to.equal(\"https://gaming.youtube.com/embed/EsxNUEIxDhg\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/video/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"video",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skills all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f94b7ac-3cee-4946-be9b-c9812ce11a94",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data of non zero length\", function () {",
+							"    pm.expect(pm.response.json().length).not.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"first video name is correct\", function () {",
+							"   pm.expect(pm.response.json()[0].name).to.equal(\"Crafting\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/skills/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"skills",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skill get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41112c0f-8fef-46da-9294-8bed8451c46b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data items of size 1\", function () {",
+							"    pm.expect(pm.response.json().items.length).to.equal(1);",
+							"});",
+							"",
+							"pm.test(\"first video name is correct\", function () {",
+							"   pm.expect(pm.response.json().name).to.equal(\"Crafting\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/skill/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"skill",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reddits all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e1836c5-aa64-4c5d-a797-a1f06af7b883",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data of non zero length\", function () {",
+							"    pm.expect(pm.response.json().length).not.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"first title is correct\", function () {",
+							"   pm.expect(pm.response.json()[0].title).to.equal(\"Loot from cutting 119k semi-precious gems\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/reddits/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"reddits",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reddit get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b0bc60a-93c2-4394-bde6-f3085a37143a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains items relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
+							"});",
+							"",
+							"pm.test(\"local data items of size 1\", function () {",
+							"    pm.expect(pm.response.json().items.length).to.equal(1);",
+							"});",
+							"",
+							"pm.test(\"first title is correct\", function () {",
+							"   pm.expect(pm.response.json().title).to.equal(\"Loot from cutting 119k semi-precious gems\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/reddit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"reddit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd21aedd-6ccf-492a-9fd8-54c69f6f58be",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains skills with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"members_only\");",
+							"});",
+							"",
+							"pm.test(\"local data of non zero length\", function () {",
+							"    pm.expect(pm.response.json().length).not.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"first market price is correct\", function () {",
+							"   pm.expect(pm.response.json()[0].market_price).to.equal(433);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/items/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44a4d5a3-f9d8-486f-831c-226c27166028",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains skills relationship with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"members_only\");",
+							"});",
+							"",
+							"pm.test(\"local data reddits of size 1\", function () {",
+							"    pm.expect(pm.response.json().reddits.length).to.equal(1);",
+							"});",
+							"",
+							"pm.test(\"market price is correct\", function () {",
+							"   pm.expect(pm.response.json().market_price).to.equal(433);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bc1c0e6a-68b7-4329-b742-319738d7756f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains skills with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"commit_data\");",
+							"});",
+							"",
+							"pm.test(\"commit data of non zero length\", function () {",
+							"    pm.expect(pm.response.json().commit_data.length).not.to.equal(0);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/about",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Community all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb269f75-aaea-4cf2-adca-f158a3993a45",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contains reddits with associated data\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"market_price\");",
+							"});",
+							"",
+							"pm.test(\"local reddits of non zero length\", function () {",
+							"    pm.expect(pm.response.json().reddits.length).not.to.equal(0);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/community/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"community",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
