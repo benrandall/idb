@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "reactstrap";
+import {
+    Row,
+    Col
+} from "reactstrap";
 import CardComponent from '../CardComponent/CardComponent';
-import RedditCard from '../RedditCard/RedditCard';
-import VideoCard from '../VideoCard/VideoCard';
+import RSRedditCard from '../RSRedditCard/RSRedditCard';
+import RSVideoCard from '../RSVideoCard/RSVideoCard';
 
 import './ItemDetailPage.css';
 
@@ -44,11 +47,11 @@ export default class SkillDetailPage extends Component {
         let community = [];
 
         for (let reddit of this.state.item.reddits) {
-            community.push(<RedditCard title={reddit.title} url={reddit.url}/>)
+            community.push(<RSRedditCard title={reddit.title} url={reddit.url}/>)
         }
 
         for (let video of this.state.item.videos) {
-            community.push(<VideoCard title={video.title} icon={video.icon} id={video.id} />);
+            community.push(<RSVideoCard title={video.title} icon={video.icon} id={video.id} />);
         }
 
         return community;
@@ -65,7 +68,7 @@ export default class SkillDetailPage extends Component {
                         <p className="info">General Information</p>
                         <div className="detail-container">
                             <div className="left-side">
-                                <img src={ this.state.item.icon } className="icon"/>
+                                <img src={ this.state.item.icon } className="icon" alt={this.state.item.name}/>
                                 <h1>{ this.state.item.name }</h1>
                                 <p className="subtext uppercase">{ this.state.item.type }</p>
                                 <p>{ this.state.item.examine_info }</p>

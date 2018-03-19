@@ -28,10 +28,11 @@ $ export GITHUB_API_TOKEN=<insert token here>
 ```
 $ cd /static
 $ yarn install
+$ yarn build-css
 $ yarn build
 ```
 
-## Run
+## Run Backend
 ```
 $ (venv) python app.py
 ```

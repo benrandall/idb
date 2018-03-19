@@ -74,7 +74,7 @@ export default class Home extends Component {
     }
 
     render() {
-        const { activeIndex } = this.state
+        const { activeIndex } = this.state;
 
         const slides = items.map((item) => {
             return (
@@ -84,8 +84,8 @@ export default class Home extends Component {
                 key={item.src}
                 className={ item.color }
               >
-                <div class="item-content">
-                    <img className='carousel-header-icon' src={item.src} />
+                <div className="item-content">
+                    <img className='carousel-header-icon' src={item.src} alt={item.caption}/>
                     <CarouselCaption captionHeader={item.caption} />
                     <Link className='centered-button' to={item.link}>
                         <Button outline color="secondary">{item.buttonText}</Button>{' '}

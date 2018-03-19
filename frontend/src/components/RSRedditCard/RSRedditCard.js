@@ -1,9 +1,16 @@
-
-import { Col, CardBody, Button, CardTitle, Card } from 'reactstrap';
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import {
+    Col,
+    CardBody,
+    Button,
+    CardTitle,
+    Card
+} from 'reactstrap';
 
 
-const RedditCard = (props) => {
+const RSRedditCard = (props) => {
     return (
         <Col sm={12} md={6} lg={4}>
             <Card>
@@ -18,4 +25,9 @@ const RedditCard = (props) => {
     );
 };
 
-export default RedditCard;
+RSRedditCard.propTypes = {
+    title: PropTypes.string,
+    url: PropTypes.string
+};
+
+export default RSRedditCard;

@@ -1,8 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {Col, Card, CardBody, CardImg, CardTitle, Button} from 'reactstrap';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import {
+    Col,
+    Card,
+    CardBody,
+    CardImg,
+    CardTitle,
+    Button
+} from 'reactstrap';
 
-const VideoCard = (props) => {
+const RSVideoCard = (props) => {
     return (
         <Col sm="12" md="6" lg="4">
             <Card>
@@ -18,4 +26,10 @@ const VideoCard = (props) => {
     );
 };
 
-export default VideoCard
+RSVideoCard.propTypes = {
+    icon: PropTypes.string,
+    title: PropTypes.string,
+    id: PropTypes.number
+};
+
+export default RSVideoCard
