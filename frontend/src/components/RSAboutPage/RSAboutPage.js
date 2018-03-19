@@ -24,7 +24,7 @@ export default class RSAboutPage extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://127.0.0.1:5000/api/about`)
+        fetch(`${process.env.REACT_APP_API_HOST}/about`)
             .then((about) => { return about.json() })
             .then((json) => {
                 this.setState({

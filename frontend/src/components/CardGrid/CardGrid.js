@@ -14,7 +14,7 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/api/' + this.props.cardType + '/all')
+        fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType + '/all')
             .then((items) => { return items.json() })
             .then((json) => {
                 this.setState({
