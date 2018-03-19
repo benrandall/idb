@@ -1,6 +1,6 @@
 # idb
 
-# Install
+## Install
 
 ```
 $ virtualenv -p python3 venv
@@ -24,7 +24,15 @@ Run
 $ export GITHUB_API_TOKEN=<insert token here>
 ```
 
-## Compile the frontend
+## Run the React application
+If you want to run the application locally, you need to create the file `.env.development.local` in the frontend directory. 
+This file is already within the gitignore as it should **never** be version controlled.
+The file should contain the entry:
+```
+REACT_APP_API_HOST=http://127.0.0.1:5000/api
+```
+
+### Steps to build the React
 ```
 $ cd /static
 $ yarn install
@@ -32,7 +40,7 @@ $ yarn build-css
 $ yarn build
 ```
 
-## Run Backend
+## Running the backend
 ```
 $ (venv) python app.py
 ```

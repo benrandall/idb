@@ -14,7 +14,7 @@ export default class CommunityGrid extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/api/community/all')
+        fetch(`${process.env.REACT_APP_API_HOST}/community/all`)
             .then(d => d.json())
             .then(d => {
                 console.log(d);

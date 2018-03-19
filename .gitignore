@@ -114,3 +114,5 @@ venv.bak/
 /frontend/src/components/**/*.css
 
 **/.DS_Store
+
+**/.env*.local

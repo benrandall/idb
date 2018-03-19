@@ -22,7 +22,7 @@ export default class SkillDetailPage extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
 
-        fetch(`http://127.0.0.1:5000/api/item/${params.id}`)
+        fetch(`${process.env.REACT_APP_API_HOST}/item/${params.id}`)
             .then((item) => { return item.json() })
             .then((json) => {
                 this.setState({
