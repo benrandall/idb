@@ -7,7 +7,7 @@
     "unittests": 0
   },
   "benrandall": {
-    "bio": "I am a junior Computer Science student. I once fixed my mom's Lenovo",
+    "bio": "I am a junior Computer Science student. I once fixed my mom's Lenovo.",
     "profile": "ben.png",
     "name": "Ben Randall",
     "duties": "Data, Front End",
@@ -30,7 +30,7 @@
   "simplyluke": {
     "bio": "I'm a second year Computer Science major at UT. My hobbies include water skiing and hanging with my dog.",
     "profile": "luke.jpg",
-    "name": "Luke Ramage",
+    "name": "Luke Wright",
     "duties": "API, Data",
     "unittests": 0
   },
