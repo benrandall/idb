@@ -7,10 +7,10 @@ const RSContainer = (props) => {
     return (
         <Row>
             <Col sm='12'>
-                <h1 className="page-header">{ props.title }
+                <h1>{ props.title }
                     { props.subtitle && <small className="text-muted"> { props.subtitle }</small>}
                 </h1>
-                { props.body }
+                <p>{ props.body }</p>
             </Col>
         </Row>
     );
