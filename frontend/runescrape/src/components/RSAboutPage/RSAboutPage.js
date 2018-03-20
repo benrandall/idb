@@ -16,8 +16,6 @@ export default class RSAboutPage extends Component {
 
         this.state = {
             loaded: false,
-            //commit_data: [],
-            //issues: [],
             teammates: [],
             total_commits: 0,
             total_issues: 0
@@ -30,8 +28,6 @@ export default class RSAboutPage extends Component {
             .then((json) => {
                 this.setState({
                     loaded: true,
-                    //commit_data: json.commit_data,
-                    //issues: json.issues,
                     teammates: json.teammates,
                     total_commits: json.total_commits,
                     total_issues: json.total_issues
