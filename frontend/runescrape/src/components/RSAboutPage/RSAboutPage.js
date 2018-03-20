@@ -88,9 +88,11 @@ export default class RSAboutPage extends Component {
 
         return (
             <Container>
-                <RSContainer    title={AboutConstants.about.title}
-                                subtitle={AboutConstants.about.subtitle}
-                                body={ (<p>{ AboutConstants.about.body }</p>) }/>
+                <Row className="nav-padding">
+                    <RSContainer    title={AboutConstants.about.title}
+                                    subtitle={AboutConstants.about.subtitle}
+                                    body={ (<p>{ AboutConstants.about.body }</p>) }/>
+                </Row>
 
 
                 <RSContainer    title={AboutConstants.team.title}
