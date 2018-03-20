@@ -1,9 +1,8 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, render_template
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from github import GithubApiWrapper
-#from models import Item, Video, Reddit, Skill
 import json
 import requests
 import os
@@ -217,12 +216,17 @@ skills_reddits = db.Table('skills_reddits',
         db.Column('reddit_id', db.Integer, db.ForeignKey('reddits.id')),
     )
 
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 @app.route('/')
 def home():
-    react_route = 'react'
+    react_route = 'runescrape'
     filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
-    return render_template("model_view.html", filename=filename, css_filename=css_filename)
+    return render_template("index.html", filename=filename, css_filename=css_filename)
 
 @app.route("/react/<filename>")
 def route_react(filename):
