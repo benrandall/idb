@@ -34,10 +34,10 @@ REACT_APP_API_HOST=http://127.0.0.1:5000/api
 
 ### Steps to build the React
 ```
-$ cd /static
+$ cd frontend/
 $ yarn install
 $ yarn build-css
-$ yarn build
+$ yarn start
 ```
 
 ## Running the backend
