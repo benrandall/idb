@@ -44,7 +44,7 @@ export default class CommunityGrid extends Component {
 
         return (
             <Container>
-                <Row>
+                <Row className="nav-padding">
                     { concat }
                 </Row>
             </Container>
