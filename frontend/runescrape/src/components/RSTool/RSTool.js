@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const RSTool = (props) => {
     return (
         <div>
-            <h4>{props.toolName}: </h4>
+            <h5>{props.toolName}: </h5>
             <p>{props.toolDesc} </p>
         </div>
     );

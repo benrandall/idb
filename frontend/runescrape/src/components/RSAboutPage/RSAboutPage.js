@@ -68,9 +68,9 @@ export default class RSAboutPage extends Component {
 
     getTools(toolList) {
         return (
-            <Row>
+            <div>
                 { toolList.map((item) => <RSTool key={item.title} toolDesc={item.desc} toolName={item.title}/>) }
-            </Row>
+            </div>
         );
     }
 
