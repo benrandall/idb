@@ -17,7 +17,9 @@ def main():
 
     for project in react_scripts:
         os.chdir(project)
-        call("npm run build".split())
+        call("yarn install".split())
+        call("yarn build-css".split())
+        call("yarn build".split())
         os.chdir("..")
 
     for project in react_scripts:
