@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -216,6 +216,21 @@ skills_reddits = db.Table('skills_reddits',
         db.Column('skill_id', db.Integer, db.ForeignKey('skills.id')),
         db.Column('reddit_id', db.Integer, db.ForeignKey('reddits.id')),
     )
+
+@app.route('/')
+def home():
+    react_route = 'react'
+    filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
+    css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
+    return render_template("model_view.html", filename=filename, css_filename=css_filename)
+
+@app.route("/react/<filename>")
+def route_react(filename):
+    return send_from_directory("react", filename)
+
+@app.route("/images/<path:image_name>")
+def image(image_name):
+    return send_from_directory("static/images", image_name)
 
 # API
 @app.route('/api/items/all')
