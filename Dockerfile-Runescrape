@@ -1,0 +1,16 @@
+FROM runescrape-base
+
+ARG REACT_ENV
+
+COPY requirements.txt /tmp/
+
+RUN pip install -U pip
+RUN pip install -r /tmp/requirements.txt
+WORKDIR /frontend
+
+RUN python build.py $REACT_ENV;
+
+WORKDIR /backend
+COPY ./backend /backend
+
+CMD ["/usr/bin/supervisord"]

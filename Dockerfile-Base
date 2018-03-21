@@ -50,20 +50,7 @@ COPY ./backend /backend
 COPY ./frontend /frontend
 WORKDIR /backend
 
-CMD ["/usr/bin/supervisord"]
-
 #########################################
 
 RUN pip install flask
 COPY config/nginx.conf /etc/nginx/conf.d/
-
-COPY requirements.txt /tmp/
-
-RUN pip install -U pip
-RUN pip install -r /tmp/requirements.txt
-WORKDIR /frontend
-RUN python build.py $REACT_ENV;
-#RUN cd static/; yarn install; yarn build
-
-WORKDIR /backend
-COPY ./backend /backend
