@@ -1,8 +1,8 @@
 FROM python:3.6.1
 
-ARG REACT_ENV=PROD
-
 RUN pip install uwsgi
+
+ARG REACT_ENV
 
 # Set up Nginx
 ENV NGINX_VERSION 1.9.11-1~jessie
