@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory, render_template
+from flask import Flask, jsonify, send_from_directory, render_template, Blueprint
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -7,13 +7,20 @@ import json
 import requests
 import os
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = \
-        'postgresql://localhost/postgres'
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-CORS(app)
-db = SQLAlchemy(app)
+db = SQLAlchemy()
+idb = Blueprint('idb', __name__)
+
+def create_app(database_uri, debug=False):
+    app = Flask(__name__)
+    app.config['DEBUG'] = debug
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+    app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.register_blueprint(idb)
+    CORS(app)
+    db.init_app(app)
+    return app
+
 
 class Item(db.Model):
     __tablename__ = 'items'
@@ -217,66 +224,66 @@ skills_reddits = db.Table('skills_reddits',
     )
 
 
-@app.route("/favicon.ico")
+@idb.route("/favicon.ico")
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@app.route('/')
+@idb.route('/')
 def home():
     react_route = 'runescrape'
     filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
     return render_template("index.html", filename=filename, css_filename=css_filename)
 
-@app.route("/react/<filename>")
+@idb.route("/react/<filename>")
 def route_react(filename):
     return send_from_directory("react", filename)
 
-@app.route("/images/<path:image_name>")
+@idb.route("/images/<path:image_name>")
 def image(image_name):
     return send_from_directory("static/images", image_name)
 
 # API
-@app.route('/api/items/all')
+@idb.route('/api/items/all')
 def all_items():
     return jsonify([item.toJSON() for item in Item.query.all()])
 
-@app.route('/api/skills/all')
+@idb.route('/api/skills/all')
 def all_skills():
     return jsonify([skill.toJSON() for skill in Skill.query.all()])
 
-@app.route('/api/videos/all')
+@idb.route('/api/videos/all')
 def all_videos():
     return jsonify([video.toJSON() for video in Video.query.all()])
 
-@app.route('/api/reddits/all')
+@idb.route('/api/reddits/all')
 def all_reddits():
     return jsonify([reddit.toJSON() for reddit in Reddit.query.all()])
 
-@app.route('/api/item/<int:item_id>')
+@idb.route('/api/item/<int:item_id>')
 def get_item(item_id):
     return jsonify(Item.query.get_or_404(item_id).toJSON())
 
-@app.route('/api/skill/<int:skill_id>')
+@idb.route('/api/skill/<int:skill_id>')
 def get_skill(skill_id):
     return jsonify(Skill.query.get_or_404(skill_id).toJSON())
 
-@app.route('/api/video/<int:video_id>')
+@idb.route('/api/video/<int:video_id>')
 def get_video(video_id):
     return jsonify(Video.query.get_or_404(video_id).toJSON())
 
-@app.route('/api/reddit/<int:reddit_id>')
+@idb.route('/api/reddit/<int:reddit_id>')
 def get_reddit(reddit_id):
     return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
 
-@app.route('/api/community/all')
+@idb.route('/api/community/all')
 def all_community():
     return jsonify({
         'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
         'videos': [video.toJSON() for video in Video.query.all()]
     })
 
-@app.route('/api/about')
+@idb.route('/api/about')
 def about():
     gh = GithubApiWrapper(owner='benrandall', repo='idb', token=os.environ['GITHUB_API_TOKEN'])
     repo_info = gh.repo_info()
@@ -291,14 +298,14 @@ def about():
     return jsonify(result)
 
 # App error handling
-@app.errorhandler(404)
+@idb.errorhandler(404)
 def page_not_found(e):
     return jsonify(error=404, text=str(e)), 404
 
-@app.errorhandler(500)
+@idb.errorhandler(500)
 def internal_server_error(e):
     return jsonify(error=500, text=str(e)), 500
 
 if __name__ == "__main__":
-    app.config["DEBUG"] = True
+    app = create_app('postgresql://localhost/postgres', True)
     app.run()
