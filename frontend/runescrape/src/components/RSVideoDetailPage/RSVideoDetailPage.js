@@ -55,7 +55,7 @@ export default class RSVideoDetailPage extends Component {
 
         return (
             <Container>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <p className="info">{ this.state.name }</p>
                         <p className="info-small">Video Category: { this.state.category }</p>
