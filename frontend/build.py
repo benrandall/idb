@@ -8,43 +8,31 @@ def run(command: str) -> None:
 
 
 def main():
-    call("rm -rf output".split())
-    react_scripts = [name for name in os.listdir(".") if os.path.isdir(os.path.join(".", name))]
-    # react_scripts = ["leaguedb"]
-    call("mkdir output".split())
 
-    print(react_scripts)
+    # Build the assets down
+    call("yarn install".split())
+    call("yarn build-css".split())
+    call("yarn build".split())
 
-    for project in react_scripts:
-        os.chdir(project)
-        call("yarn install".split())
-        call("yarn build-css".split())
-        call("yarn build".split())
-        os.chdir("..")
-
-    for project in react_scripts:
-        os.chdir(os.path.join(project, "build", "static", "js"))
-        javascript_file_path = [name for name in os.listdir(".") if name[-3:] == ".js"][0]
-        os.chdir("../../../..")
-        command = "cp %s/build/static/js/%s output/%s" \
-                  % (project, javascript_file_path, javascript_file_path.replace("main", project))
-        run(command)
-
-    for project in react_scripts:
-        os.chdir(os.path.join(project, "build", "static", "css"))
-        css_file_path = [name for name in os.listdir(".") if name.endswith(".css")][0]
-        os.chdir("../../../..")
-        command = "cp %s/build/static/css/%s output/%s" \
-                  % (project, css_file_path, css_file_path.replace("main", project))
-        run(command)
-
-    run("tree output")
-
+    # Remove any old assets
     run("rm -rf ../backend/react/")
     run("mkdir ../backend/react/")
 
-    for file in os.listdir("output"):
-        run("cp output/" + file + " ../backend/react/" + file)
+    # Copy the generated JS to the backend
+    os.chdir(os.path.join("build", "static", "js"))
+    javascript_file_path = [name for name in os.listdir(".") if name[-3:] == ".js"][0]
+    os.chdir("../../..")
+    command = "cp build/static/js/%s ../backend/react/" \
+              % javascript_file_path
+    run(command)
+
+    # Copy the generated CSS to the backend
+    os.chdir(os.path.join("build", "static", "css"))
+    css_file_path = [name for name in os.listdir(".") if name.endswith(".css")][0]
+    os.chdir("../../..")
+    command = "cp build/static/css/%s ../backend/react/" \
+              % css_file_path
+    run(command)
 
 
 if __name__ == "__main__":
