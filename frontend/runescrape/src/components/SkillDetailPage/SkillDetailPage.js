@@ -62,7 +62,7 @@ export default class SkillDetailPage extends Component {
 
         return (
             <div className="container" id="skill" data-id={ this.props.id }>
-                <Row>
+                <Row className='nav-padding'>
                     <Col sm="12">
                         <p className="info">General Information</p>
                         <div className="detail-container">
