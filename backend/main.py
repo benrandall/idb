@@ -21,7 +21,6 @@ def create_app(database_uri, debug=False):
     db.init_app(idb)
     return idb
 
-
 class Item(db.Model):
     __tablename__ = 'items'
 

@@ -14,6 +14,8 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
+        console.log("card grid");
+        console.log(process.env);
         fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType + '/all')
             .then((items) => { return items.json() })
             .then((json) => {
