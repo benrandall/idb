@@ -229,7 +229,7 @@ def favicon():
 
 @app.route('/')
 def home():
-    react_route = 'runescrape'
+    react_route = 'main'
     filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
     return render_template("index.html", filename=filename, css_filename=css_filename)

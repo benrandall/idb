@@ -1,5 +1,7 @@
 FROM python:3.6.1
 
+ARG REACT_ENV=PROD
+
 RUN pip install uwsgi
 
 # Set up Nginx
@@ -60,7 +62,7 @@ COPY requirements.txt /tmp/
 RUN pip install -U pip
 RUN pip install -r /tmp/requirements.txt
 WORKDIR /frontend
-RUN python build.py;
+RUN python build.py $REACT_ENV;
 #RUN cd static/; yarn install; yarn build
 
 WORKDIR /backend

@@ -116,3 +116,7 @@ frontend/**/*.css
 
 **/.env*.local
 /backend/react
+
+# Frontend
+frontend/.env.production
+frontend/.env.development.local

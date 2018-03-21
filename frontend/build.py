@@ -1,4 +1,6 @@
 import os
+import sys
+from shutil import copyfile
 from subprocess import call
 
 
@@ -10,6 +12,25 @@ def run(command: str) -> None:
 def main():
     # Remove already built assets
     run("rm -rf ./build")
+
+    # Check that we receive an environment to build
+    if len(sys.argv) < 2:
+        raise Exception('Environment parameter required')
+
+    # Delete an already existing env
+    run('rm .env.production')
+
+    env = sys.argv[1]
+
+    # Copy the required environment to the production env
+    if env == 'PROD':
+        copyfile('.e.production', '.env.production')
+    elif env == 'DEV':
+        copyfile('.e.development', '.env.production')
+    elif env == 'LOCAL':
+        copyfile('.e.local', '.env.production')
+    else:
+        raise Exception('Invalid environment specified')
 
     # Build the assets down
     call("yarn install".split())
@@ -35,8 +56,6 @@ def main():
     command = "cp build/static/css/%s ../backend/react/" \
         % css_file_path
     run(command)
-
-
 
 
 if __name__ == "__main__":
