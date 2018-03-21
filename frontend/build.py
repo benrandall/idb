@@ -8,6 +8,9 @@ def run(command: str) -> None:
 
 
 def main():
+    # Remove already built assets
+    run("rm -rf ./build")
+
     # Build the assets down
     call("yarn install".split())
     call("yarn build-css".split())
@@ -16,7 +19,6 @@ def main():
     # Remove any old assets
     run("rm -rf ../backend/react")
     run("mkdir ../backend/react")
-    run("rm -rf ./build")
 
     # Copy the generated JS to the backend
     os.chdir(os.path.join("build", "static", "js"))

@@ -115,3 +115,4 @@ frontend/**/*.css
 **/.DS_Store
 
 **/.env*.local
+/backend/react
