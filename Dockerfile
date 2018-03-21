@@ -17,7 +17,9 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
     && sudo apt-get install apt-transport-https \
     && sudo apt-get update && sudo apt-get install yarn \
     && curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - \
-    && sudo apt-get install -y nodejs 
+    && sudo apt-get install -y nodejs \
+    && sudo apt-get install tree \
+    && sudo apt-get -y install postgresql postgresql-client
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
@@ -42,8 +44,9 @@ RUN apt-get update && apt-get install -y supervisor \
 # Custom Supervisord config
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-COPY ./app /app
-WORKDIR /app
+COPY ./backend /backend
+COPY ./frontend /frontend
+WORKDIR /backend
 
 CMD ["/usr/bin/supervisord"]
 
@@ -56,6 +59,9 @@ COPY requirements.txt /tmp/
 
 RUN pip install -U pip
 RUN pip install -r /tmp/requirements.txt
-RUN cd static/; yarn install; yarn build
+WORKDIR /frontend
+RUN python build.py;
+#RUN cd static/; yarn install; yarn build
 
-COPY ./app /app
+WORKDIR /backend
+COPY ./backend /backend
