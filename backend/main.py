@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory, render_template
+from flask import Flask, jsonify, send_from_directory, render_template, Blueprint
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -7,13 +7,20 @@ import json
 import requests
 import os
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = \
-        'postgresql://localhost/postgres'
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-CORS(app)
-db = SQLAlchemy(app)
+db = SQLAlchemy()
+app = Blueprint('app', __name__)
+
+def create_app(database_uri, debug=False):
+    idb = Flask(__name__)
+    idb.config['DEBUG'] = debug
+    idb.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+    idb.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+    idb.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    idb.register_blueprint(app)
+    CORS(idb)
+    db.init_app(idb)
+    return idb
+
 
 class Item(db.Model):
     __tablename__ = 'items'
@@ -298,7 +305,3 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return jsonify(error=500, text=str(e)), 500
-
-if __name__ == "__main__":
-    app.config["DEBUG"] = True
-    app.run()
