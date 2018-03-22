@@ -34,33 +34,52 @@ class PythonOrgSearch(unittest.TestCase):
     #     assert driver.current_url == 'http://dev.runescrape.lol/#/about'
     #     driver.back()
 
-    def test_items_page(self):
+    # def test_items_page(self):
+    #     driver = self.driver
+    #     driver.get("http://dev.runescrape.lol/#/items")
+    #     driver.implicitly_wait(10)
+    #     driver.find_element_by_class_name('card').click()
+    #     assert driver.current_url.find("items") != -1
+    #     driver.find_element_by_class_name('icon')
+    #     driver.find_element_by_class_name('medium-title')
+    #     driver.find_element_by_class_name('small-title')
+    #     driver.find_elements_by_class_name('card')
+    #     driver.find_element_by_xpath('//*[@id="item"]/div[3]/div/a/div/div[2]/h5').click()
+    #     driver.implicitly_wait(10)
+    #     assert driver.current_url.find("skills") != -1
+    #     driver.back()
+    #     driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[1]/div/div/a/button').click()
+    #     driver.implicitly_wait(10)
+    #     assert driver.current_url.find("reddit") != -1
+    #     driver.back()
+    #     driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[2]/div/div/a/button').click()
+    #     driver.implicitly_wait(10)
+    #     assert driver.current_url.find("community") != -1
+    #     driver.back()
+
+    def test_skills_page(self):
         driver = self.driver
-        driver.get("http://dev.runescrape.lol/#/items")
+        driver.get("http://dev.runescrape.lol/#/skills")
         driver.implicitly_wait(10)
         driver.find_element_by_class_name('card').click()
-        assert driver.current_url.find("items") != -1
-        driver.find_element_by_class_name('icon')
+        assert driver.current_url.find("skills") != -1
+        #driver.find_element_by_class_name('icon')
         driver.find_element_by_class_name('medium-title')
         driver.find_element_by_class_name('small-title')
         driver.find_elements_by_class_name('card')
-        driver.find_element_by_xpath('//*[@id="item"]/div[3]/div/a/div/div[2]/h5').click()
+        driver.find_element_by_xpath('//*[@id="skill"]/div[3]/div/a/div/div[1]').click()
         driver.implicitly_wait(10)
-        assert driver.current_url.find("skills") != -1
+        assert driver.current_url.find("items") != -1
         driver.back()
-        driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[1]/div/div/a/button').click()
+        driver.find_element_by_xpath('//*[@id="skill"]/div[5]/div[1]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("reddit") != -1
         driver.back()
-        driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[2]/div/div/a/button').click()
+        driver.find_element_by_xpath('//*[@id="skill"]/div[5]/div[2]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("community") != -1
         driver.back()
 
-    # def test_skills_page(self):
-    #     driver = self.driver
-    #     driver.get("http://dev.runescrape.lol/#/skills")
-    #
     # def test_community_page(self):
     #     driver = self.driver
     #     driver.get("http://dev.runescrape.lol/#/community")
