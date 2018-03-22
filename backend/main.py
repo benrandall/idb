@@ -245,10 +245,6 @@ def home():
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
     return render_template("index.html", filename=filename, css_filename=css_filename)
 
-@app.route("/react/<filename>")
-def route_react(filename):
-    return send_from_directory("react", filename)
-
 # TODO: refactor
 @app.route("/api/images/<path:image_name>")
 def image(image_name):
