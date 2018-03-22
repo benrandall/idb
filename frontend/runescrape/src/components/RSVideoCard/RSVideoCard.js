@@ -9,6 +9,7 @@ import {
     CardTitle,
     Button
 } from 'reactstrap';
+import './RSVideoCard.css';
 
 const RSVideoCard = (props) => {
     return (
@@ -16,7 +17,7 @@ const RSVideoCard = (props) => {
             <Card>
                 <CardImg top width="100%" src={props.icon} alt="Card image cap" />
                 <CardBody>
-                    <CardTitle>{props.title}</CardTitle>
+                    <CardTitle className="truncate">{props.title}</CardTitle>
                     <Link to={'/community/' + props.id}>
                         <Button>Go to video</Button>
                     </Link>
