@@ -12,6 +12,28 @@ class PythonOrgSearch(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
 
+    def test_homepage(self):
+        driver = self.driver
+        driver.get("http://dev.runescrape.lol/#/")
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[2]').click()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[1]').click()
+        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[1]/a')
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[1]/a').click()
+        assert driver.current_url == 'http://dev.runescrape.lol/#/items'
+        driver.back()
+        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[2]/a')
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[2]/a').click()
+        assert driver.current_url == 'http://dev.runescrape.lol/#/skills'
+        driver.back()
+        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[3]/a')
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[3]/a').click()
+        assert driver.current_url == 'http://dev.runescrape.lol/#/community'
+        driver.back()
+        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[4]/a')
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[4]/a').click()
+        assert driver.current_url == 'http://dev.runescrape.lol/#/about'
+        driver.back()
+
     def test_carousel(self):
         driver = self.driver
         driver.get("http://dev.runescrape.lol/#/")
