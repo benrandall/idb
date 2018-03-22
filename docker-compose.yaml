@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: runescrape:latest
+    command: /usr/bin/supervisord
+    restart: always
+    networks:
+      - db
+    volumes:
+      - /home/ubuntu/idb:/idb
+    ports:
+      - "80:80"
+    depends_on:
+      - dbpostgres
+  dbpostgres:
+    image: postgres
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5342:5342"
+    networks:
+      - db
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pguser
+      POSTGRES_DB: runescrape
+
+volumes:
+  pgdata:
+
+networks:
+  db:
+    driver: bridge

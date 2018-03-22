@@ -115,3 +115,8 @@ frontend/**/*.css
 **/.DS_Store
 
 **/.env*.local
+/backend/react
+
+# Frontend
+frontend/.env.production
+frontend/.env.development.local
