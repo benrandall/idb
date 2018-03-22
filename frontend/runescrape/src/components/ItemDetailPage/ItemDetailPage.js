@@ -10,7 +10,7 @@ import RSVideoCard from '../RSVideoCard/RSVideoCard';
 
 import './ItemDetailPage.css';
 
-export default class SkillDetailPage extends Component {
+export default class ItemDetailPage extends Component {
 
     constructor() {
         super();
@@ -64,7 +64,7 @@ export default class SkillDetailPage extends Component {
 
         return (
             <Container id="item" data-id={ this.state.item.id }>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <p className="info">General Information</p>
                         <div className="detail-container">

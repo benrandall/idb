@@ -251,9 +251,9 @@ def route_react(filename):
     return send_from_directory("react", filename)
 
 # TODO: refactor
-@app.route("/images/<path:image_name>")
+@app.route("/api/images/<path:image_name>")
 def image(image_name):
-    return send_from_directory("static/images", image_name)
+    return send_from_directory("static/img", image_name)
 
 # API
 @app.route('/api/items/all')

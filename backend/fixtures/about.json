@@ -1,42 +1,42 @@
 {
   "clairebingham": {
     "bio": "I'm a fourth year Computer Science major at UT. I love Runescape, wearing socks & sandals, and my dog.",
-    "profile": "img/claire.png",
+    "profile": "claire.png",
     "name": "Claire Bingham",
     "duties": "Front End, Design",
     "unittests": 0
   },
   "benrandall": {
-    "bio": "I am a junior Computer Science student. I once fixed my mom's Lenovo",
-    "profile": "img/ben.png",
+    "bio": "I am a junior Computer Science student. I once fixed my mom's Lenovo.",
+    "profile": "ben.png",
     "name": "Ben Randall",
     "duties": "Data, Front End",
     "unittests": 0
   },
   "elmdecoste": {
     "bio": "I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.",
-    "profile": "img/liam.jpg",
+    "profile": "liam.jpg",
     "name": "Liam Decoste",
     "duties": "Front End, Design",
     "unittests": 0
   },
   "dylanlramage": {
     "bio": "I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.",
-    "profile": "img/dylan.jpg",
+    "profile": "dylan.jpg",
     "name": "Dylan Ramage",
     "duties": "Front End",
     "unittests": 0
   },
   "simplyluke": {
     "bio": "I'm a second year Computer Science major at UT. My hobbies include water skiing and hanging with my dog.",
-    "profile": "img/luke.jpg",
-    "name": "Luke Ramage",
+    "profile": "luke.jpg",
+    "name": "Luke Wright",
     "duties": "API, Data",
     "unittests": 0
   },
   "stevendiaz": {
     "bio": "I'm a graduating senior in UTCS and a coffee enthusiast.",
-    "profile": "img/steven.jpg",
+    "profile": "steven.jpg",
     "name": "Steven Diaz",
     "duties": "Backend, Deployment",
     "unittests": 0

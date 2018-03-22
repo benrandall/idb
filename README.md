@@ -34,7 +34,7 @@ REACT_APP_API_HOST=http://127.0.0.1:5000/api
 
 ### Steps to build the React
 ```
-$ cd frontend/
+$ cd frontend/runescrape/
 $ yarn install
 $ yarn build-css
 $ yarn start
@@ -42,6 +42,7 @@ $ yarn start
 
 ## Running the backend
 ```
+$ cd backend/
 $ (venv) python app.py
 ```
 

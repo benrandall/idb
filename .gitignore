@@ -108,10 +108,9 @@ venv.bak/
 .idea/
 
 # Node
-/static/node_modules/
-/app/static/node_modules/
+**/node_modules/
 /static/dist/
-/frontend/src/components/**/*.css
+frontend/**/*.css
 
 **/.DS_Store
 

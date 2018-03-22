@@ -88,10 +88,10 @@ class App extends Component {
       <HashRouter>
         <div>
           <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
-            <NavbarBrand href="/">RuneScrape</NavbarBrand>
+            <NavbarBrand href="/" className='pl-4'>RuneScrape</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto pr-4" navbar>
                 <NavItem>
                   <NavLink tag={Link} to="/items">Items</NavLink>
                 </NavItem>
