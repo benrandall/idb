@@ -247,28 +247,40 @@ for reddit in MOCK_DB['reddits']:
     local_reddits += [reddit_row]
 
 db.session.commit()
-print('Adding relationships...')
-for index in range(len(local_items)):
-    item = local_items[index]
-    item.skills.append(local_skills[index])
-    item.videos.append(local_videos[index])
-    item.reddits.append(local_reddits[index])
 
-for index in range(len(local_skills)):
-    skill = local_skills[index]
-    skill.items.append(local_items[index])
-    skill.videos.append(local_videos[index])
-    skill.reddits.append(local_reddits[index])
 
-for index in range(len(local_videos)):
-    video = local_videos[index]
-    video.items.append(local_items[index])
-    video.skills.append(local_skills[index])
+for json_item in MOCK_DB['items']:
+    db_item = local_items[json_item['id'] - 1]
+    for skill_id in json_item['skills']:
+        db_item.skills.append(local_skills[skill_id - 1])
+    for reddit_id in json_item['reddits']:
+        db_item.reddits.append(local_reddits[reddit_id - 1])
+    for video_id in json_item['videos']:
+        db_item.videos.append(local_videos[video_id - 1])
 
-for index in range(len(local_reddits)):
-    reddit = local_reddits[index]
-    reddit.items.append(local_items[index])
-    reddit.skills.append(local_skills[index])
+for json_skill in MOCK_DB['skills']:
+    db_skill = local_skills[json_skill['id'] - 1]
+    for item_id in json_skill['items']:
+        db_skill.items.append(local_items[item_id - 1])
+    for reddit_id in json_skill['reddits']:
+        db_skill.reddits.append(local_reddits[reddit_id - 1])
+    for video_id in json_skill['videos']:
+        db_skill.videos.append(local_videos[video_id - 1])
+
+for json_video in MOCK_DB['videos']:
+    db_video = local_videos[json_video['id'] - 1]
+    for item_id in json_video['items']:
+        db_video.items.append(local_items[item_id - 1])
+    for skill_id in json_video['skills']:
+        db_video.skills.append(local_skills[skill_id - 1])
+
+for json_reddit in MOCK_DB['reddits']:
+    db_reddit = local_reddits[json_reddit['id'] - 1]
+    for item_id in json_reddit['items']:
+        db_reddit.items.append(local_items[item_id - 1])
+    for skill_id in json_reddit['skills']:
+        db_reddit.skills.append(local_skills[skill_id - 1])
 
 db.session.commit()
 print('Done.')
+
