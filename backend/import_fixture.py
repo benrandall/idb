@@ -272,4 +272,3 @@ for index in range(len(local_reddits)):
 
 db.session.commit()
 print('Done.')
-
