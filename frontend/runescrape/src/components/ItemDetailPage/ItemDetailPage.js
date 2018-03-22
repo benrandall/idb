@@ -10,7 +10,7 @@ import RSVideoCard from '../RSVideoCard/RSVideoCard';
 
 import './ItemDetailPage.css';
 
-export default class SkillDetailPage extends Component {
+export default class ItemDetailPage extends Component {
 
     constructor() {
         super();
