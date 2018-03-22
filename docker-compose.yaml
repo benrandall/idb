@@ -5,6 +5,7 @@ services:
     build: .
     image: runescrape:latest
     command: /usr/bin/supervisord
+    restart: always
     networks:
       - db
     volumes:
@@ -15,8 +16,9 @@ services:
       - dbpostgres
   dbpostgres:
     image: postgres
+    restart: always
     volumes:
-      - "dbdata:/var/lib/postgresql"
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5342:5342"
     networks:
@@ -27,7 +29,7 @@ services:
       POSTGRES_DB: runescrape
 
 volumes:
-  dbdata:
+  pgdata:
 
 networks:
   db:
