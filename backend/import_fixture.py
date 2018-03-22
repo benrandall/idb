@@ -7,13 +7,7 @@ MOCK_DB = None
 
 app = Flask(__name__)
 
-user = os.environ['POSTGRES_USER']
-pwd = os.environ['POSTGRES_PASSWORD']
-db = os.environ['POSTGRES_DB']
-host = 'dbpostgres'
-port = '5432'
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%s:%s@%s:%s/%s' % (user, pwd, host, port, db)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pguser:pguser@dbpostgres:5432/runescrape'
 
 db = SQLAlchemy(app)
 
