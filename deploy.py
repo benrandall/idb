@@ -12,6 +12,7 @@ def run(command: str) -> None:
 def main():
     print('---- Deploying Runescrape ----')
     env = os.environ.get('STAGE')
+    print('---- Using stage: %s ----' % env)
 
     if 'base' in sys.argv:
         print('---- Building Base Image ----')
