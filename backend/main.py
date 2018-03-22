@@ -19,6 +19,17 @@ def create_app(database_uri, debug=False):
     idb.register_blueprint(app)
     CORS(idb)
     db.init_app(idb)
+
+    # App error handling
+    # Not a fan of doing it in here - but necessary due to blueprints
+    @idb.errorhandler(404)
+    def page_not_found(e):
+        return jsonify(error=404, text=str(e)), 404
+
+    @idb.errorhandler(500)
+    def internal_server_error(e):
+        return jsonify(error=500, text=str(e)), 500
+
     return idb
 
 
@@ -239,6 +250,7 @@ def home():
 def route_react(filename):
     return send_from_directory("react", filename)
 
+# TODO: refactor
 @app.route("/images/<path:image_name>")
 def image(image_name):
     return send_from_directory("static/images", image_name)
@@ -296,12 +308,3 @@ def about():
             "total_issues": repo_info['total_issues'],
         }
     return jsonify(result)
-
-# App error handling
-@app.errorhandler(404)
-def page_not_found(e):
-    return jsonify(error=404, text=str(e)), 404
-
-@app.errorhandler(500)
-def internal_server_error(e):
-    return jsonify(error=500, text=str(e)), 500

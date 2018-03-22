@@ -489,7 +489,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bc1c0e6a-68b7-4329-b742-319738d7756f",
+						"id": "05f3fb96-1970-49e3-bb4b-285badbd6715",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -502,12 +502,9 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Contains skills with associated data\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"commit_data\");",
-							"});",
 							"",
 							"pm.test(\"commit data of non zero length\", function () {",
-							"    pm.expect(pm.response.json().commit_data.length).not.to.equal(0);",
+							"    pm.expect(pm.response.json().total_commits.length).not.to.equal(0);",
 							"});",
 							""
 						]
