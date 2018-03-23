@@ -9,7 +9,7 @@ const RSTeamMember = (props) => {
 
     return (
         <Col lg='4' sm='6' className="text-center">
-            <img className="rounded-circle img-responsive img-center" src={ props.icon } alt="" />
+            <img className="rounded-circle img-responsive img-center" src={`${process.env.REACT_APP_API_HOST}/images/`+ props.icon } alt="" />
             <h4>{ props.name }
                 <small className="text-muted"> { props.role }</small>
             </h4>
