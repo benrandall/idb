@@ -238,13 +238,6 @@ skills_reddits = db.Table('skills_reddits',
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@app.route('/')
-def home():
-    react_route = 'main'
-    filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
-    css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
-    return render_template("index.html", filename=filename, css_filename=css_filename)
-
 # TODO: refactor
 @app.route("/images/<path:image_name>")
 def image(image_name):
