@@ -294,5 +294,6 @@ def about():
             "teammates": merged_data,
             "total_commits": repo_info['total_commits'],
             "total_issues": repo_info['total_issues'],
+            "total_unittests": sum([about_json[teammate]['unittests'] for teammate in about_json])
         }
     return jsonify(result)
