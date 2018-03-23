@@ -246,51 +246,51 @@ def home():
     return render_template("index.html", filename=filename, css_filename=css_filename)
 
 # TODO: refactor
-@app.route("/api/images/<path:image_name>")
+@app.route("/images/<path:image_name>")
 def image(image_name):
     return send_from_directory("static/img", image_name)
 
 # API
-@app.route('/api/items/all')
+@app.route('/items/all')
 def all_items():
     return jsonify([item.toJSON() for item in Item.query.all()])
 
-@app.route('/api/skills/all')
+@app.route('/skills/all')
 def all_skills():
     return jsonify([skill.toJSON() for skill in Skill.query.all()])
 
-@app.route('/api/videos/all')
+@app.route('/videos/all')
 def all_videos():
     return jsonify([video.toJSON() for video in Video.query.all()])
 
-@app.route('/api/reddits/all')
+@app.route('/reddits/all')
 def all_reddits():
     return jsonify([reddit.toJSON() for reddit in Reddit.query.all()])
 
-@app.route('/api/item/<int:item_id>')
+@app.route('/item/<int:item_id>')
 def get_item(item_id):
     return jsonify(Item.query.get_or_404(item_id).toJSON())
 
-@app.route('/api/skill/<int:skill_id>')
+@app.route('/skill/<int:skill_id>')
 def get_skill(skill_id):
     return jsonify(Skill.query.get_or_404(skill_id).toJSON())
 
-@app.route('/api/video/<int:video_id>')
+@app.route('/video/<int:video_id>')
 def get_video(video_id):
     return jsonify(Video.query.get_or_404(video_id).toJSON())
 
-@app.route('/api/reddit/<int:reddit_id>')
+@app.route('/reddit/<int:reddit_id>')
 def get_reddit(reddit_id):
     return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
 
-@app.route('/api/community/all')
+@app.route('/community/all')
 def all_community():
     return jsonify({
         'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
         'videos': [video.toJSON() for video in Video.query.all()]
     })
 
-@app.route('/api/about')
+@app.route('/about')
 def about():
     gh = GithubApiWrapper(owner='benrandall', repo='idb', token=os.environ['GITHUB_API_TOKEN'])
     repo_info = gh.repo_info()
