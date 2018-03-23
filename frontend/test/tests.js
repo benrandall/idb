@@ -25,7 +25,7 @@ import { CommunityGrid } from '../src/components/SkillDetailPage/SkillDetailPage
 // App
 describe('<App/>', function () {
     it('should render without crashing', function () {
-        shallow(<App />);
+        shallow(<App />).render();
     });
     it('should render the navigation bard', function () {
         const wrapper = shallow(<App />);
@@ -34,9 +34,9 @@ describe('<App/>', function () {
     it ('should have 4 navigation items', function () {
         const wrapper = shallow(<App />);
         const tabs = wrapper.find('Nav').children();
-        expect(tabs.to.have.length(4);
+        expect(tabs.to.have.length(4));
 
-    })
+    });
 });
 
 // write tests below
@@ -48,4 +48,4 @@ describe('<Home />', () => {
     const wrapper = shallow(<Home />)
     expect(wrapper.find('.carousel').exists()).to.eql(true)
   });
-})
+});
