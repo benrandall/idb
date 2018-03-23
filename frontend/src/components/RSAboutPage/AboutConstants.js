@@ -49,7 +49,8 @@ const AboutConstants = {
         ]
     },
     extra_tools: {
-        title: "Unrequired Tools",
+        title: "Unrequired",
+        subtitle: "Tools",
         data: [
             {
                 title: "Adobe XD",
