@@ -21,12 +21,12 @@ export default class CardComponent extends Component {
                         {
                             this.props.item.reddits
                             && this.props.item.reddits.length > 0
-                            && <img src="http://www.runescrape.lol/static/img/reddit-1.svg" alt="Reddit Logo"/>
+                            && <img src={`${process.env.REACT_APP_API_HOST}/images/reddit.svg`} alt="Reddit Logo"/>
                         }
                         {
                             this.props.item.videos
                             && this.props.item.videos.length > 0
-                            && <img src="http://www.runescrape.lol/static/img/YouTube-small-full_color_light.svg" alt="YouTube Logo"/>
+                            && <img src={`${process.env.REACT_APP_API_HOST}/images/youtube-small.svg`} alt="YouTube Logo"/>
                         }
                         </div>
                     }

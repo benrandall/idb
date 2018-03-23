@@ -16,8 +16,7 @@ export default class RSAboutPage extends Component {
 
         this.state = {
             loaded: false,
-            commit_data: [],
-            issues: [],
+            teammates: [],
             total_commits: 0,
             total_issues: 0
         };
@@ -29,8 +28,7 @@ export default class RSAboutPage extends Component {
             .then((json) => {
                 this.setState({
                     loaded: true,
-                    commit_data: json.commit_data,
-                    issues: json.issues,
+                    teammates: json.teammates,
                     total_commits: json.total_commits,
                     total_issues: json.total_issues
                 });
@@ -41,16 +39,15 @@ export default class RSAboutPage extends Component {
         return (
             <Row>
                 {
-                    this.state.commit_data.map((item) => {
-                        let member = AboutConstants.team.members[item[0]];
+                    this.state.teammates.map((member) => {
                         return <RSTeamMember
-                        key={item[0]}
-                        icon={member.icon}
+                        key={member.profile}
+                        icon={member.profile}
                         name={member.name}
-                        role={member.role}
+                        role={member.duties}
                         bio={member.bio}
-                        commits={item[1]}
-                        issues={this.state.issues[item[0]]}
+                        commits={member.commits}
+                        issues={member.issues}
                                 />
                     })
                 }
@@ -70,9 +67,9 @@ export default class RSAboutPage extends Component {
 
     getTools(toolList) {
         return (
-            <Row>
+            <div>
                 { toolList.map((item) => <RSTool key={item.title} toolDesc={item.desc} toolName={item.title}/>) }
-            </Row>
+            </div>
         );
     }
 
@@ -90,7 +87,8 @@ export default class RSAboutPage extends Component {
 
         return (
             <Container>
-                <RSContainer    title={AboutConstants.about.title}
+                <RSContainer    className="nav-padding"
+                                title={AboutConstants.about.title}
                                 subtitle={AboutConstants.about.subtitle}
                                 body={ (<p>{ AboutConstants.about.body }</p>) }/>
 
