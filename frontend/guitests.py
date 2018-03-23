@@ -1,8 +1,7 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 class PythonOrgSearch(unittest.TestCase):
 
@@ -11,34 +10,18 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_homepage(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/#/")
+        driver.get("http://runescrape.lol")
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[2]').click()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[1]').click()
-        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[1]/a')
-        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[1]/a').click()
-        assert driver.current_url == 'http://runescrape.lol/#/items'
-        driver.back()
-        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[2]/a')
-
-        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[2]/a').click()
-        assert driver.current_url == 'http://runescrape.lol/#/skills'
-        driver.back()
-        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[3]/a')
-
-        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[3]/a').click()
-        assert driver.current_url == 'http://runescrape.lol/#/community'
-        driver.back()
-        self.waitForPageLoad('//*[@id="root"]/div/div/nav/div/ul/li[4]/a')
-
-        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[4]/a').click()
-        assert driver.current_url == 'http://runescrape.lol/#/about'
-        driver.back()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div')
 
     def test_items_page(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/#/items")
-        driver.implicitly_wait(10)
+        driver.get("http://runescrape.lol")
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[1]/a').click()
+        driver.implicitly_wait(60)
         driver.find_element_by_class_name('card').click()
+        driver.implicitly_wait(10)
         assert driver.current_url.find("items") != -1
         driver.find_element_by_class_name('icon')
         driver.find_element_by_class_name('medium-title')
@@ -48,10 +31,12 @@ class PythonOrgSearch(unittest.TestCase):
         driver.implicitly_wait(10)
         assert driver.current_url.find("skills") != -1
         driver.back()
+        driver.implicitly_wait(10)
         driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[1]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("reddit") != -1
         driver.back()
+        driver.implicitly_wait(10)
         driver.find_element_by_xpath('//*[@id="item"]/div[5]/div[2]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("community") != -1
@@ -59,9 +44,11 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_skills_page(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/#/skills")
-        driver.implicitly_wait(10)
+        driver.get("http://runescrape.lol")
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[2]/a').click()
+        driver.implicitly_wait(60)
         driver.find_element_by_class_name('card').click()
+        driver.implicitly_wait(10)
         assert driver.current_url.find("skills") != -1
         driver.find_element_by_class_name('medium-title')
         driver.find_element_by_class_name('small-title')
@@ -70,10 +57,12 @@ class PythonOrgSearch(unittest.TestCase):
         driver.implicitly_wait(10)
         assert driver.current_url.find("items") != -1
         driver.back()
+        driver.implicitly_wait(10)
         driver.find_element_by_xpath('//*[@id="skill"]/div[5]/div[1]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("reddit") != -1
         driver.back()
+        driver.implicitly_wait(10)
         driver.find_element_by_xpath('//*[@id="skill"]/div[5]/div[2]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("community") != -1
@@ -81,9 +70,11 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_community_page(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/#/community")
-        driver.implicitly_wait(10)
+        driver.get("http://runescrape.lol")
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[3]/a').click()
+        driver.implicitly_wait(40)
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[1]/div/div/a/button').click()
+        driver.implicitly_wait(10)
         assert driver.current_url.find("community") != -1
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[1]/div/div/iframe')
         driver.find_elements_by_class_name('card-img-top-custom')
@@ -92,19 +83,44 @@ class PythonOrgSearch(unittest.TestCase):
         driver.implicitly_wait(10)
         assert driver.current_url.find("items") != -1
         driver.back()
+        driver.implicitly_wait(10)
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[3]/div[2]/a/div').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("skills") != -1
 
     def test_carousel(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/#/")
+        driver.get("http://runescrape.lol/items/#/")
         assert len(driver.find_elements_by_class_name('carousel-header-icon')) == 3
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[1]/div/a').click()
-        assert driver.current_url == 'http://runescrape.lol/#/items'
+        assert driver.current_url == 'http://runescrape.lol/items/#/items'
         driver.back()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[2]').click()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[1]').click()
+
+    def test_about(self):
+        driver = self.driver
+        driver.get("http://runescrape.lol")
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[4]/a').click()
+        driver.implicitly_wait(60)
+        assert driver.current_url.find("about") != -1
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[1]/div/p/p').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/h4/text()').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/h4/small').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/p[1]/text()').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/p[2]/b').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/p[3]/b').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/p/div/div[1]/p[4]/b').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[3]/div/p/div/div/p[1]/b').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[3]/div/p/div/div/p[2]/b').is_displayed()
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[3]/div/p/div/div/p[3]/b').is_displayed()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[6]/div/p/div/div[1]/a').click()
+        assert driver.current_url.find("report") != -1
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[6]/div/p/div/div[2]/a').click()
+        assert driver.current_url.find("api") != -1
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[6]/div/p/div/div[3]/a').click()
+        assert driver.current_url.find("idb") != -1
 
     def tearDown(self):
         self.driver.close()
