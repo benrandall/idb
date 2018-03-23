@@ -16,15 +16,15 @@ def main():
 
     if 'base' in sys.argv:
         print('---- Building Base Image ----')
-        run('sudo docker build --no-cache -f Dockerfile-Base -t runescrape-base:latest .')
+        run('docker build --no-cache -f Dockerfile-Base -t runescrape-base:latest .')
 
     if 'app' in sys.argv:
         print('---- Building Application Image ----')
-        run('sudo docker build --no-cache -f Dockerfile-Runescrape -t runescrape:latest . --build-arg REACT_ENV=%s' % env)
+        run('docker build --no-cache -f Dockerfile-Runescrape -t runescrape:latest . --build-arg REACT_ENV=%s' % env)
 
     if 'install-schema' in sys.argv:
         print('---- Installing Database Schema ----')
-        run('sudo docker exec -it idb_web_1 sh -c "python3 import_fixture.py"')
+        run('docker exec -it idb_web_1 sh -c "python3 import_fixture.py"')
 
 if __name__ == "__main__":
     main()

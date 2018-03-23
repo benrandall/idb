@@ -120,3 +120,4 @@ frontend/**/*.css
 # Frontend
 frontend/.env.production
 frontend/.env.development.local
+.env

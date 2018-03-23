@@ -14,6 +14,8 @@ services:
       - "80:80"
     depends_on:
       - dbpostgres
+    env_file:
+      - .env
   dbpostgres:
     image: postgres
     restart: always
