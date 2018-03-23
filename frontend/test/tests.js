@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import * as sinon from 'sinon'
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 
-import { App } from './src/components/App';
+import App from '../src/components/App';
 import { Home } from './src/components/Home';
 import { RSAboutPage } from '../src/components/RSAboutPage/RSAboutPage';
 import { RSContainer } from '../src/components/RSContainer/RSContainer';
