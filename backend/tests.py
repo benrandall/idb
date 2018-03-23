@@ -93,67 +93,67 @@ class IdbTests(TestCase):
     #     self.assert200(response)
 
     def test_all_items(self):
-        response = self.client.get('/api/items/all')
+        response = self.client.get('/items/all')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json[0]['market_price'], 433)
 
     def test_all_skills(self):
-        response = self.client.get('/api/skills/all')
+        response = self.client.get('/skills/all')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json[0]['max_level'], 99)
 
     def test_all_videos(self):
-        response = self.client.get('/api/videos/all')
+        response = self.client.get('/videos/all')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json[0]['category'], 'RuneScape')
 
     def test_all_reddits(self):
-        response = self.client.get('/api/reddits/all')
+        response = self.client.get('/reddits/all')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json[0]['title'], 'Loot from cutting 119k semi-precious gems')
 
     def test_get_item(self):
-        response = self.client.get('/api/item/1')
+        response = self.client.get('/item/1')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['name'], 'Jade')
 
     def test_get_skill(self):
-        response = self.client.get('/api/skill/1')
+        response = self.client.get('/skill/1')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['name'], 'Crafting')
 
     def test_get_video(self):
-        response = self.client.get('/api/video/1')
+        response = self.client.get('/video/1')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['name'], 'OSRS 99 CRAFTING GUIDE 07 RS')
 
     def test_get_reddit(self):
-        response = self.client.get('/api/reddit/1')
+        response = self.client.get('/reddit/1')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['title'], 'Loot from cutting 119k semi-precious gems')
 
     def test_get_community(self):
-        response = self.client.get('/api/community/all')
+        response = self.client.get('/community/all')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['reddits'][0]['title'], 'Loot from cutting 119k semi-precious gems')
 
     def test_get_about(self):
-        response = self.client.get('/api/about')
+        response = self.client.get('/about')
         self.assert200(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(len(response.json['teammates']), 6)
 
     def test_404(self):
-        response = self.client.get('/api/badendpoint')
+        response = self.client.get('/badendpoint')
         self.assert404(response)
         self.assertIn("json", str(response.headers))
         self.assertEqual(response.json['error'], 404)
