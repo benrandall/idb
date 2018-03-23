@@ -36,7 +36,7 @@ export default class CardComponent extends Component {
     render() {
         return (
             <Col sm="12" md="3">
-                <Link to={'/' + this.props.cardType + '/' + this.props.item.id}>
+                <Link to={'/' + this.props.cardType + '/' + this.props.item.id} style={{ textDecoration: 'none', color: '#182329' }}>
                     <Card>
                         <div className="card-img-container">
                             <img className="card-img-top-custom" top="true" width="100%" src={ this.props.item.icon } alt={ this.props.item.name }/>
