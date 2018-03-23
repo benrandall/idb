@@ -8,9 +8,9 @@
     "babel-register": "^6.26.0",
     "bootstrap": "^4.0.0",
     "chai": "^4.1.2",
-    "enzyme": "^3.2.0",
-    "jsdom": "^11.5.1",
-    "mocha": "^5.0.4",
+    "enzyme": "^3.3.0",
+    "jsdom": "^11.6.2",
+    "mocha": "^5.0.5",
     "node-sass-chokidar": "^0.0.3",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -18,7 +18,7 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
-    "reactstrap": "^5.0.0-beta.2",
+    "reactstrap": "5.0.0-beta",
     "sinon": "^4.4.8"
   },
   "scripts": {

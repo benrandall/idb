@@ -51,7 +51,7 @@ describe('<Home />', () => {
 describe('<RSAboutPage/>', function () {
     it('should render successfully', function () {
         shallow(<RSAboutPage />);
-    })
+    });
 });
 
 describe('<RSContainer/>', function () {
