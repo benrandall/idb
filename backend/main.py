@@ -2,6 +2,7 @@ from flask import Flask, jsonify, send_from_directory, render_template, Blueprin
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+from flask_restless import APIManager
 from github import GithubApiWrapper
 import json
 import requests
@@ -10,27 +11,6 @@ import os
 db = SQLAlchemy()
 app = Blueprint('app', __name__)
 
-def create_app(database_uri, debug=False):
-    idb = Flask(__name__)
-    idb.config['DEBUG'] = debug
-    idb.config['SQLALCHEMY_DATABASE_URI'] = database_uri
-    idb.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-    idb.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    idb.register_blueprint(app)
-    CORS(idb)
-    db.init_app(idb)
-
-    # App error handling
-    # Not a fan of doing it in here - but necessary due to blueprints
-    @idb.errorhandler(404)
-    def page_not_found(e):
-        return jsonify(error=404, text=str(e)), 404
-
-    @idb.errorhandler(500)
-    def internal_server_error(e):
-        return jsonify(error=500, text=str(e)), 500
-
-    return idb
 
 class Item(db.Model):
     __tablename__ = 'items'
@@ -233,55 +213,33 @@ skills_reddits = db.Table('skills_reddits',
         db.Column('reddit_id', db.Integer, db.ForeignKey('reddits.id')),
     )
 
+def create_app(database_uri, debug=False):
+    idb = Flask(__name__)
+    idb.config['DEBUG'] = debug
+    idb.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+    idb.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+    idb.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    idb.register_blueprint(app)
 
-@app.route("/favicon.ico")
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    manager = APIManager(idb, flask_sqlalchemy_db=db)
+    manager.create_api(Item, methods=['GET'], url_prefix='')
+    manager.create_api(Skill, methods=['GET'], url_prefix='', results_per_page=2)
+    manager.create_api(Video, methods=['GET'], url_prefix='')
+    manager.create_api(Reddit, methods=['GET'], url_prefix='')
+    CORS(idb)
+    db.init_app(idb)
 
-# TODO: refactor
-@app.route("/images/<path:image_name>")
-def image(image_name):
-    return send_from_directory("static/img", image_name)
+    # About error handling
+    # Not a fan of doing it in here - but necessary due to blueprints
+    @idb.errorhandler(404)
+    def page_not_found(e):
+        return jsonify(error=404, text=str(e)), 404
 
-# API
-@app.route('/items/all')
-def all_items():
-    return jsonify([item.toJSON() for item in Item.query.all()])
+    @idb.errorhandler(500)
+    def internal_server_error(e):
+        return jsonify(error=500, text=str(e)), 500
 
-@app.route('/skills/all')
-def all_skills():
-    return jsonify([skill.toJSON() for skill in Skill.query.all()])
-
-@app.route('/videos/all')
-def all_videos():
-    return jsonify([video.toJSON() for video in Video.query.all()])
-
-@app.route('/reddits/all')
-def all_reddits():
-    return jsonify([reddit.toJSON() for reddit in Reddit.query.all()])
-
-@app.route('/item/<int:item_id>')
-def get_item(item_id):
-    return jsonify(Item.query.get_or_404(item_id).toJSON())
-
-@app.route('/skill/<int:skill_id>')
-def get_skill(skill_id):
-    return jsonify(Skill.query.get_or_404(skill_id).toJSON())
-
-@app.route('/video/<int:video_id>')
-def get_video(video_id):
-    return jsonify(Video.query.get_or_404(video_id).toJSON())
-
-@app.route('/reddit/<int:reddit_id>')
-def get_reddit(reddit_id):
-    return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
-
-@app.route('/community/all')
-def all_community():
-    return jsonify({
-        'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
-        'videos': [video.toJSON() for video in Video.query.all()]
-    })
+    return idb
 
 @app.route('/about')
 def about():
@@ -297,3 +255,12 @@ def about():
             "total_unittests": sum([about_json[teammate]['unittests'] for teammate in about_json])
         }
     return jsonify(result)
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+@app.route("/images/<path:image_name>")
+def image(image_name):
+    return send_from_directory("static/img", image_name)
+
