@@ -77,7 +77,7 @@ def register(app):
             for skill_id in json_reddit['skills']:
                 db_reddit.skills.append(local_skills[skill_id - 1])
             db.session.add(db_reddit)
-        click.echo('Before commit')
+        click.echo('Reindexing for elasticsearch...')
         db.session.commit()
         Item.reindex()
         Skill.reindex()
