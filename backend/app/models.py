@@ -1,18 +1,45 @@
-#test
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-import json
-import os
-MOCK_DB = None
+from flask import current_app
+from app import db
+from app.search import add_to_index, remove_from_index, query_index
 
-app = Flask(__name__)
+class SearchableMixin(object):
+    @classmethod
+    def search(cls, expression, page, per_page):
+        print('query index args: %s %s %s %s' % (cls.__tablename__, expression, page, per_page))
+        ids, total = query_index(cls.__tablename__, expression, page, per_page)
+        if total == 0:
+            return cls.query.filter_by(id=0), 0
+        when = []
+        for i in range(len(ids)):
+            when.append((ids[i], i))
+        return cls.query.filter(cls.id.in_(ids)).order_by(
+            db.case(when, value=cls.id)), total
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pguser:pguser@dbpostgres:5432/runescrape'
+    @classmethod
+    def before_commit(cls, session):
+        session._changes = {
+                'add': [obj for obj in session.new if isinstance(obj, cls)],
+                'update': [obj for obj in session.dirty if isinstance(obj, cls)],
+                'delete': [obj for obj in session.deleted if isinstance(obj, cls)],
+              }
 
-db = SQLAlchemy(app)
+    @classmethod
+    def after_commit(cls, session):
+        for obj in session._changes.get('add', []):
+            add_to_index(cls.__tablename__, obj)
+        for obj in session._changes.get('update', []):
+            add_to_index(cls.__tablename__, obj)
+        for obj in session._changes.get('delete', []):
+            remove_from_index(cls.__tablename__, obj)
 
-class Item(db.Model):
+    @classmethod
+    def reindex(cls):
+        for obj in cls.query:
+            add_to_index(cls.__tablename__, obj)
+
+class Item(SearchableMixin, db.Model):
     __tablename__ = 'items'
+    __searchable__ = ['name', 'examine_info', 'icon', 'item_type']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -63,8 +90,9 @@ class Item(db.Model):
             result['videos'] = [video.toJSON(get_children=False) for video in self.videos]
         return result
 
-class Reddit(db.Model):
+class Reddit(SearchableMixin, db.Model):
     __tablename__ = 'reddits'
+    __searchable__ = ['url', 'title']
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.Text, unique=True, nullable=False)
@@ -97,8 +125,9 @@ class Reddit(db.Model):
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
         return result
 
-class Video(db.Model):
+class Video(SearchableMixin, db.Model):
     __tablename__ = 'videos'
+    __searchable__ = ['name', 'category', 'video_url']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
@@ -137,8 +166,9 @@ class Video(db.Model):
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
         return result
 
-class Skill(db.Model):
+class Skill(SearchableMixin, db.Model):
     __tablename__ = 'skills'
+    __searchable__ = ['name', 'description']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -210,77 +240,18 @@ skills_videos = db.Table('skills_videos',
 skills_reddits = db.Table('skills_reddits',
         db.Column('skill_id', db.Integer, db.ForeignKey('skills.id')),
         db.Column('reddit_id', db.Integer, db.ForeignKey('reddits.id')),
-)
+    )
 
-with open('fixtures/mock.json', 'r') as mock:
-    MOCK_DB = json.load(mock)
+db.event.listen(db.session, 'before_commit', Item.before_commit)
+db.event.listen(db.session, 'after_commit', Item.after_commit)
 
-# Reset DB
-print('Resetting db...')
-db.reflect()
-db.drop_all()
-db.create_all()
+db.event.listen(db.session, 'before_commit', Skill.before_commit)
+db.event.listen(db.session, 'after_commit', Skill.after_commit)
 
-print('Adding items...')
-local_items = []
-for item in MOCK_DB['items']:
-    item_row = Item(item)
-    db.session.add(item_row)
-    local_items += [item_row]
+db.event.listen(db.session, 'before_commit', Reddit.before_commit)
+db.event.listen(db.session, 'after_commit', Reddit.after_commit)
 
-local_skills = []
-for skill in MOCK_DB['skills']:
-    skill_row = Skill(skill)
-    db.session.add(skill_row)
-    local_skills += [skill_row]
+db.event.listen(db.session, 'before_commit', Video.before_commit)
+db.event.listen(db.session, 'after_commit', Video.after_commit)
 
-local_videos = []
-for video in MOCK_DB['videos']:
-    video_row = Video(video)
-    db.session.add(video_row)
-    local_videos += [video_row]
-
-local_reddits = []
-for reddit in MOCK_DB['reddits']:
-    reddit_row = Reddit(reddit)
-    db.session.add(reddit_row)
-    local_reddits += [reddit_row]
-
-db.session.commit()
-
-
-for json_item in MOCK_DB['items']:
-    db_item = local_items[json_item['id'] - 1]
-    for skill_id in json_item['skills']:
-        db_item.skills.append(local_skills[skill_id - 1])
-    for reddit_id in json_item['reddits']:
-        db_item.reddits.append(local_reddits[reddit_id - 1])
-    for video_id in json_item['videos']:
-        db_item.videos.append(local_videos[video_id - 1])
-
-for json_skill in MOCK_DB['skills']:
-    db_skill = local_skills[json_skill['id'] - 1]
-    for item_id in json_skill['items']:
-        db_skill.items.append(local_items[item_id - 1])
-    for reddit_id in json_skill['reddits']:
-        db_skill.reddits.append(local_reddits[reddit_id - 1])
-    for video_id in json_skill['videos']:
-        db_skill.videos.append(local_videos[video_id - 1])
-
-for json_video in MOCK_DB['videos']:
-    db_video = local_videos[json_video['id'] - 1]
-    for item_id in json_video['items']:
-        db_video.items.append(local_items[item_id - 1])
-    for skill_id in json_video['skills']:
-        db_video.skills.append(local_skills[skill_id - 1])
-
-for json_reddit in MOCK_DB['reddits']:
-    db_reddit = local_reddits[json_reddit['id'] - 1]
-    for item_id in json_reddit['items']:
-        db_reddit.items.append(local_items[item_id - 1])
-    for skill_id in json_reddit['skills']:
-        db_reddit.skills.append(local_skills[skill_id - 1])
-
-db.session.commit()
-print('Done.')
 
