@@ -189,7 +189,7 @@
             "id": 7,
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/b/bf/Herblore.png/revision/latest?cb=20131026214930",
             "description": "Herblore is a members only skill that involves making potions from herbs. Using this skill requires completion of the Druidic Ritual quest.",
-            "members_only": false,
+            "members_only": true,
             "max_level": 99,
             "items": [8],
             "videos": [6],
@@ -216,7 +216,117 @@
             "items": [3],
             "videos": [10],
             "reddits": [4]
-        }
+        },
+        {
+            "name": "Agility",
+            "id": 10,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Agility.png/revision/latest?cb=20150328194018",
+            "description": "Agility is a members only skill which gives access to various shortcuts around RuneScape. Apart from the shortcuts, Agility also has several other uses, such as obtaining the graceful outfit and fighting Commander Zilyana. A higher Agility level allows for faster run energy restoration. At level 1 Agility, a player recovers 1% of their run energy every 7.5 seconds. At level 50 Agility, a player recovers the same amount in only 4 seconds.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Farming",
+            "id": 11,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/18/Farming.png/revision/latest?cb=20131026214928",
+            "description": "Farming is a skill in which players grow crops using seeds and harvest useful items from them, or more commonly, harvest the plant itself. The crops grown range from the standard staples of vegetables, fruit trees, herbs, hops, to more exotic and unusual crops such as wood-bearing trees, cacti, and mushrooms. The harvested items have wide range of uses, but are mostly used to train Herblore or Cooking, or simply eaten as food. Many players sell their harvest for a significant profit. Once players have reached the intermediate level range and beyond, they can begin to plant wood-bearing trees. Player grown trees function just like their standard equivalents, which can be chopped down and regenerate after a short period of time to yield Woodcutting experience and logs. Player grown woodcutting trees have the added benefit of being only accessible to the player who grew them, which means that players will not need to compete to gather their own tree's wood.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Thieving",
+            "id": 12,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/f/f4/Thieving.png/revision/latest?cb=20131026214938",
+            "description": "Thieving is a members-only skill which allows players to obtain coins and items by stealing from market stalls, chests, or by pickpocketing non-player characters. This skill also allows players to unlock doors and disarm traps. ",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Prayer",
+            "id": 13,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/3/32/Prayer.png/revision/latest?cb=20131026214931",
+            "description": "Prayer is a non-members combat skill. Prayer is trained by burying bones, using them on an altar in a player-owned house, by praying at the Ectofuntus with bonemeal and buckets of slime or killing reanimated monsters summoned via the Arceuus spellbook. Different bones give different amounts of experience. Prayers are unlocked as the level in the skill goes up, which are used to aid the player in combat. The prayers can help with Attack, Defence, Strength, Ranged, Magic, and Hitpoints; among other uses. When prayers are activated, they drain the player's Prayer points until the prayer is turned off or all Prayer points are used. Most prayers can be activated immediately before the attack hits and promptly deactivated in order to gain buffs and/or protection with minimal to no expenditure of prayer points. This is called Prayer flicking.",
+            "members_only": false,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Ranged",
+            "id": 14,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/c/c8/Ranged.png/revision/latest?cb=20131026214931",
+            "description": "Ranged is one of the three Combat classes in Old School RuneScape. It involves using bows, crossbows, and thrown weapons to damage opponents from a distance, and Ranged armour can mostly be made from animal hides. Players who specialise in this skill are known as rangers or archers. Rangers are capable of having the highest accuracy of any combat type, boasting a maximum of +234 to Ranged attack, beating both Magic with a maximum of +152, and melee with a maximum of +170 to slash. For this reason, it is often used against monsters with very high Defence. The combat triangle dictates that Rangers are strong against mages but weak against Melee fighters. The ability to attack from a distance means that a player can safespot a melee monster while fighting from safety. Keep in mind that some melee monsters have high Ranged Defence, so a high Ranged level may be needed. Crossbows are useful against monsters with high Defence, as they are very accurate.",
+            "members_only": false,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Construction",
+            "id": 15,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/3/37/Construction.png/revision/latest?cb=20131026214927",
+            "description": "Construction is a members-only skill that allows players to build their own houses and provide furniture for them. To begin Construction, players must buy a house from one of the estate agents. A starter house will cost 1,000 coins, and will be in Rimmington. A level 40 Magic spell can then be used to teleport to the house, or players can walk to Rimmington, where there is a portal (Player-owned house icon icon on the map) that will teleport players to their house. The house starts off with only a small room and garden, but more can be built. To build, go to the options menu, select house options, and set the build mode to on. Players will then see what looks like ghost-like Hot Spots where new objects can be built. See the Constructed items list for details on what you can build at what level. Players can also visit a friend's house if they are home and using the same portal. Construction is widely regarded as one of the most costly skills to level up.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Runecrafting",
+            "id": 16,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/5/5a/Runecrafting.png/revision/latest?cb=20131026214932",
+            "description": "Runecraft (also known as Runecrafting) is a skill that allows players to craft their own runes for Magic spells. The experience earned from making runes is small, making Runecraft a very slow skill to train, on par with Slayer, and due to the need for constant running and banking, it is fairly click and attention intensive. However, due to the constant demand for different types of runes, it can create a very generous profit.",
+            "members_only": false,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Slayer",
+            "id": 17,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/6/6e/Slayer.png/revision/latest?cb=20131026214932",
+            "description": "Slayer is a skill that allows players to kill monsters that may otherwise be immune to damage. Players must visit a Slayer master, who will assign them a task to kill certain monsters based on the player's Combat level. Slayer experience roughly equal to a slain monster's Hitpoints is awarded each time the player kills an assigned monster. Many players primarily train Combat by completing Slayer tasks, as Combat experience is still given as normal while fighting Slayer monsters. Slayer is a very profitable skill to train, as high leveled slayer monsters such as slayer bosses have a multitude of both rare and valuable drops.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Hunter",
+            "id": 18,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/6/6e/Slayer.png/revision/latest?cb=20131026214932",
+            "description": "Hunter is a members'-only skill where players catch different animals and creatures in RuneScape. Although Hunter is a non-combat skill, players can still be damaged while hunting. Using hunting equipment bought from hunter stores, players can hunt specific creatures obtaining rewards such as spotted kebbit fur for spotted cape, chinchompa ammunition, black salamanders, and the fabled dragon impling jar.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Fletching",
+            "id": 19,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/0/0c/Fletching.png/revision/latest?cb=20131026214929",
+            "description": "Fletching is a skill which allows the player to create various types of ranged weapons and their ammunition. The products of this skill are primarily used in the combat skill, Ranged. It also provides some of the most popular materials used for High Alchemy, which is one of the main methods for training the Magic skill.",
+            "members_only": true,
+            "max_level": 99,
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
     ],
     "videos": [{
             "name": "OSRS 99 CRAFTING GUIDE 07 RS",
@@ -378,6 +488,6 @@
             "title": "PSA: The shark outfit is insanely epic for AFK fishing at barbarian fishing",
             "items": [4],
             "skills": [4]
-	}     
+		}     
     ]
 }
