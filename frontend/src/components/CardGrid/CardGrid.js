@@ -14,11 +14,11 @@ export default class CardGrid extends Component {
     }
 
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType + '/all')
+        fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType)
             .then((items) => { return items.json() })
             .then((json) => {
                 this.setState({
-                    items: json
+                    items: json.objects
                 });
             });
     }
