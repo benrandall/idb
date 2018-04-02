@@ -1,7 +1,9 @@
+import json
 from flask import request, jsonify, current_app, send_from_directory
 from app import db
 from app.models import Item, Skill, Video, Reddit
 from app.api import bp
+from app.api.github import GithubApiWrapper
 
 @bp.route("/favicon.ico")
 def favicon():

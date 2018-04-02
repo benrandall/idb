@@ -1,6 +1,7 @@
 import logging
 import os
 from flask import Flask, request, current_app
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_restless import APIManager
 from flask_migrate import Migrate
@@ -20,7 +21,6 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
-    print('es here: %s' % app.elasticsearch is not None)
 
     api_manager = APIManager(app, flask_sqlalchemy_db=db)
     api_manager.create_api(models.Item, methods=['GET'], url_prefix='')
@@ -33,6 +33,8 @@ def create_app(config_class=Config):
 
     from app.api import bp as main_bp
     app.register_blueprint(main_bp)
+
+    CORS(app)
 
     return app
 
