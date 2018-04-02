@@ -113,6 +113,7 @@ venv.bak/
 frontend/**/*.css
 
 **/.DS_Store
+**/.flask_environment
 
 **/.env*.local
 /backend/react

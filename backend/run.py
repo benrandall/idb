@@ -1,7 +1,13 @@
-from main import create_app
+from app import create_app, db, cli
+from app.models import Item, Skill, Reddit, Video
 
+app = create_app()
+cli.register(app)
 
-app = create_app('postgresql://pguser:pguser@dbpostgres:5432/runescrape', debug=True)
-
-if __name__ == "__main__":
-    app.run()
+@app.shell_context_processor
+def make_shell_context():
+    return {'db': db,
+            'Item': Item,
+            'Skill': Skill,
+            'Reddit': Reddit,
+            'Video': Video }
