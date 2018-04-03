@@ -26,7 +26,7 @@ export default class RSVideoDetailPage extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
 
-        fetch(`${process.env.REACT_APP_API_HOST}/video/${params.id}`)
+        fetch(`${process.env.REACT_APP_API_HOST}/videos/${params.id}`)
             .then((video) => video.json())
             .then((video) => {
                 this.setState({
