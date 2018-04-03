@@ -107,7 +107,7 @@
         {
             "name": "Necromancer hood",
             "examine_info": "A hood worn by twisted necromancers.",
-            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/1d/Potato_cactus_detail.png/revision/latest/scale-to-width-down/130?cb=20160528062655",
+            "icon": "https://vignette.wikia.nocookie.net/runescape2/images/1/12/Necromancer_hood_detail.png/revision/latest/scale-to-width-down/160?cb=20110921233043",
             "type": "",
             "market_price": 10000,
             "location": "",
@@ -165,7 +165,7 @@
         {
             "name": "Magic",
             "id": 5,
-            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/8/84/Smithing.png/revision/latest?cb=20131026214932",
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/f/f7/Magic.png/revision/latest?cb=20131026214930",
             "description": "Magic is a skill that uses the energy released by runes for a variety of subjects such as combat, enchantment, teleportation, and alchemy. While it is possible to play the game without being skilled in Magic, there are advantages gained when a player is highly leveled. This is especially true with beneficial spells such as High level alchemy and various teleports.",
             "members_only": false,
             "max_level": 99,
