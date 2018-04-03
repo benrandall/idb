@@ -1,6 +1,5 @@
-{
-    "items": [
-       	{
+export const ITEMS_JSON = {
+    items: [{
             "name": "Jade",
             "examine_info": "A semi precious stone.",
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Jade_detail.png/revision/latest/scale-to-width-down/130?cb=20170203200834",
@@ -39,7 +38,7 @@
             "videos": [3],
             "reddits": [3]
         },
-		{
+        {
             "name": "Shark",
             "examine_info": "I'd better be careful eating this.",
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/0/0b/Shark_detail.png/revision/latest/scale-to-width-down/120?cb=20160214063425",
@@ -117,8 +116,12 @@
             "videos": [7, 8],
             "reddits": [5]
         }
-    ],
-    "skills": [{
+    ]
+    count: 9
+}
+
+export const SKILLS_JSON = {
+    items: [{
             "name": "Crafting",
             "id": 1,
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/f/ff/Crafting.png/revision/latest?cb=20131026214928",
@@ -327,167 +330,20 @@
             "videos": [],
             "reddits": []
         }
-    ],
-    "videos": [{
-            "name": "OSRS 99 CRAFTING GUIDE 07 RS",
-            "id": 1,
-            "icon": "http://img.youtube.com/vi/EsxNUEIxDhg/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/embed/EsxNUEIxDhg",
-            "category": "RuneScape",
-            "items": [1],
-            "skills": [1]
-        },
-        {
-            "name": "Dragon Scimitar vs Saradomin Sword",
-            "id": 2,
-            "icon": "http://img.youtube.com/vi/QX68QDDsn7M/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/embed/QX68QDDsn7M",
-            "category": "Old School RuneScape",
-            "items": [2],
-            "skills": [2]
-        },
-        {
-            "name": "Money Maker - 850k GP/H - Blast Furnace Iron Bars [OSRS]",
-            "id": 3,
-            "icon": "http://img.youtube.com/vi/IwmUq7j-yQA/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/embed/IwmUq7j-yQA",
-            "category": "RuneScape",
-            "items": [3],
-            "skills": [3]
-        },
-        {
-            "name": "Runescape-Fishing Sharks in Old School!",
-            "id": 4,
-            "icon": "https://img.youtube.com/vi/nwS_-UtgWPs/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=nwS_-UtgWPs",
-            "category": "Old School RuneScape",
-            "items": [4],
-            "skills": [4]
-        },
-        {
-            "name": "Runescape 2016 | 1-99 Fishing Guide",
-            "id": 5,
-            "icon": "https://img.youtube.com/vi/DIp15-b2HIU/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=DIp15-b2HIU",
-            "category": "Old School RuneScape",
-            "items": [4],
-            "skills": [4]
-        },
-        {
-            "name": "Runescape Money making Guide - Potato Cactus",
-            "id": 6,
-            "icon": "https://img.youtube.com/vi/2x3uDIia3-s/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=2x3uDIia3-s",
-            "category": "Old School RuneScape",
-            "items": [8],
-            "skills": [4, 7]
-        },
-        {
-            "name": "8 Good Ways to Get 99 Magic",
-            "id": 7,
-            "icon": "https://img.youtube.com/vi/2P3MaOh8Jzo/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=2P3MaOh8Jzo",
-            "category": "Old School RuneScape",
-            "items": [6, 9],
-            "skills": [5]
-        },
-        {
-            "name": "RS3 1-99 Magic guide fastest way 2017",
-            "id": 8,
-            "icon": "https://img.youtube.com/vi/B_1_0bmV3CQ/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=B_1_0bmV3CQ",
-            "category": "Old School RuneScape",
-            "items": [6, 9],
-            "skills": [5]
-        },
-        {
-            "name": "How Defence Works in OSRS",
-            "id": 9,
-            "icon": "https://img.youtube.com/vi/Ucvn8hQEs2A/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=Ucvn8hQEs2A",
-            "category": "Old School RuneScape",
-            "items": [9],
-            "skills": [8]
-        },
-        {
-            "name": "NEW Mining Guild EXPANSION",
-            "id": 10,
-            "icon": "https://img.youtube.com/vi/ORB08buxyQo/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=ORB08buxyQo",
-            "category": "Old School RuneScape",
-            "items": [1],
-            "skills": [9]
-        }
-    ],
-    "reddits": [{
-            "url": "https://www.reddit.com/r/2007scape/comments/5o05le/loot_from_cutting_119k_semiprecious_gems/",
-            "id": 1,
-            "title": "Loot from cutting 119k semi-precious gems",
-            "items": [1],
-            "skills": [1]
-        },
-        {
-            "url": "https://www.reddit.com/r/2007scape/comments/6spnq0/dragon_scimitar_dragon_defender_vs_saradomin/",
-            "id": 2,
-            "title": "Dragon scimitar + dragon defender vs Saradomin sword DPS for general training/slayer",
-            "items": [2],
-            "skills": [2]
-        },
-        {
-            "url": "https://www.reddit.com/r/2007scape/comments/5mi5tg/just_failed_28_iron_bar_smelts_in_a_row_ama/",
-            "id": 3,
-            "title": "Just failed 28 iron bar smelts in a row AMA",
-            "items": [3],
-            "skills": [3]
-        },
-        {
-            "url": "https://www.reddit.com/r/2007scape/comments/85cb1w/gamebreaking_mining_exp/",
-            "id": 4,
-            "title": "Gamebreaking mining exp",
-            "items": [1],
-            "skills": [3]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/4xni9h/is_there_any_chance_the_necromancer_gear_could/",
-            "id": 5,
-            "title": "Is there any chance the Necromancer gear could get a graphical update closer to the original concept art?",
-            "items": [9],
-            "skills": [5]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/2ye6k6/as_your_cooking_levels_go_up_will_you_burn_less/",
-            "id": 6,
-            "title": "As your cooking levels go up, will you burn less food?",
-            "items": [4, 8],
-            "skills": [4]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/52ohuc/what_happened_to_the_price_of_potato_cacti/",
-            "id": 7,
-            "title": "What happened to the price of potato cacti?",
-            "items": [8],
-            "skills": [7]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/7ke9s3/tldr_360_mining_and_smithing_faqs/",
-            "id": 8,
-            "title": "TL;DR 360 - Mining and Smithing FAQs",
-            "items": [1, 3],
-            "skills": [3, 9]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/5p313k/herblore_guide_for_cheap_scrubs_like_me/",
-            "id": 9,
-            "title": "Herblore Guide (for cheap scrubs like me)",
-            "items": [8],
-            "skills": [7]
-        },
-        {
-            "url": "https://www.reddit.com/r/runescape/comments/67axc3/psa_the_shark_outfit_is_insanely_epic_for_afk/",
-            "id": 10,
-            "title": "PSA: The shark outfit is insanely epic for AFK fishing at barbarian fishing",
-            "items": [4],
-            "skills": [4]
-	}     
     ]
+    count: 19
+}
+
+export const JADE_JSON = {
+    "name": "Jade",
+    "examine_info": "A semi precious stone.",
+    "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Jade_detail.png/revision/latest/scale-to-width-down/130?cb=20170203200834",
+    "type": "gems",
+    "market_price": 433,
+    "location": "",
+    "weight": 0,
+    "id": 1,
+    "skills": ["Crafting", "Mining"],
+    "videos": ["OSRS 99 CRAFTING GUIDE 07 RS", "NEW Mining Guild EXPANSION"],
+    "reddits": ["Loot from cutting 119k semi-precious gems"]
 }
