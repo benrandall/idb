@@ -326,7 +326,7 @@
             "items": [],
             "videos": [],
             "reddits": []
-        },
+        }
     ],
     "videos": [{
             "name": "OSRS 99 CRAFTING GUIDE 07 RS",
@@ -488,6 +488,6 @@
             "title": "PSA: The shark outfit is insanely epic for AFK fishing at barbarian fishing",
             "items": [4],
             "skills": [4]
-		}     
+	}     
     ]
 }
