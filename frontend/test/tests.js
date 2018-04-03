@@ -1,16 +1,23 @@
-import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { expect } from 'chai';
-import * as sinon from 'sinon'
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
+// import React from 'react';
+// import { shallow, mount } from 'enzyme';
+// import { expect } from 'chai';
+// import * as sinon from 'sinon'
+// import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 
-import App from '../src/components/App';
-import Home from '../src/components/Home';
+import React from 'react';
+import { expect, assert } from 'chai';
+import Enzyme from 'enzyme';
+import { mount, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+
+import App from '../src/components/App/App';
+import Home from '../src/components/Home/Home';
 import RSAboutPage from '../src/components/RSAboutPage/RSAboutPage';
 import RSContainer from '../src/components/RSContainer/RSContainer';
 import RSLink from '../src/components/RSLink/RSLink';
 import RSRedditCard from '../src/components/RSRedditCard/RSRedditCard';
-import RSTeamMemeber from '../src/components/RSTeamMemeber/RSTeamMemeber';
+import RSTeamMember from '../src/components/RSTeamMember/RSTeamMember';
 import RSTool from '../src/components/RSTool/RSTool';
 import RSVideoCard from '../src/components/RSVideoCard/RSVideoCard';
 import RSVideoDetailPage from '../src/components/RSVideoDetailPage/RSVideoDetailPage';
@@ -19,6 +26,7 @@ import ItemDetailPage from '../src/components/SkillDetailPage/SkillDetailPage';
 import GitHubStats from '../src/components/SkillDetailPage/SkillDetailPage';
 import CommunityGrid from '../src/components/SkillDetailPage/SkillDetailPage';
 
+// configure({ adapter: new Adapter() });
 
 // App
 describe('<App/>', function () {
@@ -72,9 +80,9 @@ describe('<RSRedditCard/>', function () {
     })
 });
 
-describe('<RSTeamMemeber/>', function () {
+describe('<RSTeamMember/>', function () {
     it('should render successfully', function () {
-        shallow(<RSTeamMemeber />);
+        shallow(<RSTeamMember />);
     })
 });
 
