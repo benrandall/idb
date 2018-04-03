@@ -100,7 +100,7 @@ describe('<RSVideoCard/>', function () {
 
 describe('<RSVideoDetailPage/>', function () {
     it('should render successfully', function () {
-       shallow(<RSVideoDetailPage />);
+        shallow(<RSVideoDetailPage name="a" category="a" id="1" url="a"/>);
     })
 });
 
