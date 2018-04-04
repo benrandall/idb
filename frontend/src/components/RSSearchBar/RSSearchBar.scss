@@ -1,0 +1,88 @@
+react-search-bar__input {
+  font-size: 18px;
+  outline: 0;
+}
+
+.react-search-bar__field {
+  border: 1px solid #ddd;
+  display: flex;
+  position: relative;
+}
+
+.react-search-bar__field:focus {
+  border-color: #ccc;
+}
+
+.react-search-bar__input {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  width: 100%;
+}
+
+.react-search-bar__clear,
+.react-search-bar__submit {
+  border: 0;
+  cursor: pointer;
+  font-size: 0;
+  outline: 0;
+  padding: 0;
+  width: 25px;
+}
+
+.react-search-bar__clear {
+  background: url(./clear.svg) transparent no-repeat center;
+  background-size: 30%;
+  right: 0;
+  width: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.react-search-bar__submit {
+  background: #e5e5e5 url(./search.svg) no-repeat center;
+  background-size: 35%;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  opacity: .8;
+  width: 40px;
+  cursor: pointer;
+  font-size: 0;
+  outline: 0;
+}
+
+.react-search-bar__submit:hover {
+  opacity: 1;
+}
+
+.react-search-bar__suggestions {
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  max-height: 240px;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  top: -1px;
+  user-select: none;
+}
+
+.react-search-bar__suggestion {
+  cursor: pointer;
+  height: 40px;
+  letter-spacing: 0.03em;
+  line-height: 40px;
+  padding: 0 7px 0 10px;
+}
+
+.react-search-bar__suggestion:focus {
+  background: #f5f5f5;
+}
+
+.react-search-bar__suggestion:last-child {
+  border: none;
+}

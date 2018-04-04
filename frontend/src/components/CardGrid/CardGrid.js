@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row } from 'reactstrap';
+import ReactPaginate from 'react-paginate';
 
 import CardComponent from "../CardComponent/CardComponent";
 import './CardGrid.css';
@@ -9,8 +10,13 @@ export default class CardGrid extends Component {
     constructor() {
         super();
         this.state = {
-            items: []
+            items: [],
+            currentPage: 0,
+            visiblePage: 3,
+            totalPages: 0
         };
+
+        this.ITEMS_PER_PAGE = 3;
     }
 
     componentDidMount() {
@@ -18,24 +24,27 @@ export default class CardGrid extends Component {
             .then((items) => { return items.json() })
             .then((json) => {
                 this.setState({
-                    items: json.objects
+                    items: json.objects,
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
                 });
             });
     }
 
-    render() {
+    handlePageChanged(newPage) {
+        this.setState({
+            currentPage: newPage
+        });
+    }
 
-        if (this.state.items.length === 0) {
-            return (<div></div>);
-        }
-
+    itemsForPage() {
+        let page = this.state.currentPage;
         let data = this.state.items;
 
-        let numItems = data.length;
-        let itemsLeft = numItems;
+        let numItems = this.ITEMS_PER_PAGE;
+        let itemsLeft = Math.min(this.ITEMS_PER_PAGE, this.state.items.length - (page * this.ITEMS_PER_PAGE));
 
         let rows = [];
-        let index = 0;
+        let index = (page) * this.ITEMS_PER_PAGE;
 
         let numRows = Math.ceil(numItems / 4);
 
@@ -52,15 +61,43 @@ export default class CardGrid extends Component {
             rows.push(row);
         }
 
+        return rows;
+    }
+
+    render() {
+
+        if (this.state.items.length === 0) {
+            return (<div></div>);
+        }
+
         return (
             <Container>
-                {rows.map((row) => {
+                {this.itemsForPage().map((row) => {
                     return (
                         <Row className="nav-padding">
                             { row }
                         </Row>
                     );
                 })}
+                <ReactPaginate
+                       initialPage={0}
+                       previousLabel={"previous"}
+                       nextLabel={"next"}
+                       breakLabel={<button>...</button>}
+                       breakClassName={"break-me"}
+                       pageCount={this.state.totalPages}
+                       marginPagesDisplayed={2}
+                       pageRangeDisplayed={5}
+                       onPageChange={(data) => this.handlePageChanged(data.selected)}
+                       containerClassName={"pagination"}
+                       pageClassName={"page-item"}
+                       pageLinkClassName={"page-link"}
+                       activeClassName={"active"}
+                       previousClassName={"page-item"}
+                       nextClassName={"page-item"}
+                       previousLinkClassName={"page-link"}
+                       nextLinkClassName={"page-link"}
+                />
             </Container>
         )
     }

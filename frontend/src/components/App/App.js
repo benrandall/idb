@@ -27,6 +27,7 @@ import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 import RSAboutPage from '../RSAboutPage/RSAboutPage';
 import CommunityGrid from '../CommunityGrid/CommunityGrid';
 import RSVideoDetailPage from '../RSVideoDetailPage/RSVideoDetailPage';
+import RSSearchDetailPage from "../RSSearchDetailPage/RSSearchDetailPage";
 
 class App extends Component {
 
@@ -104,6 +105,9 @@ class App extends Component {
                 <NavItem>
                   <NavLink tag={Link} to="/about">About</NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/search">Search</NavLink>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
@@ -117,6 +121,8 @@ class App extends Component {
               <Route exact path="/community" component={CommunityGrid}/>
               <Route exact path="/community/:id" component={RSVideoDetailPage}/>
               <Route exact path="/about" component={RSAboutPage}/>
+              <Route exact path="/search" component={RSSearchDetailPage}/>
+              <Route path="/search/:query" component={RSSearchDetailPage} />
           </Switch>
         </div>
       </HashRouter>
