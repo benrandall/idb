@@ -19,9 +19,11 @@ a token from Github and set it in your environment.
 - Give it repo permissions
 - Copy the token
 
-Run
+## Add `.flask_environment` to backend/ folder
 ```
-$ export GITHUB_API_TOKEN=<insert token here>
+DATABASE_URL=<url>
+ELASTICSEARCH_URL=<url>
+GITHUB_API_TOKEN=<url>
 ```
 
 ## Run the React application

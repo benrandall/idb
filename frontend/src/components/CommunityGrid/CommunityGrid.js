@@ -14,16 +14,21 @@ export default class CommunityGrid extends Component {
     }
 
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_HOST}/community/all`)
-            .then(d => d.json())
-            .then(d => {
-                console.log(d);
-                this.setState({
-                    videos: d.videos,
-                    reddits: d.reddits,
-                    loaded: true,
-                })
-            });
+        fetch(`${process.env.REACT_APP_API_HOST}/videos`)
+        .then(response => response.json())
+        .then(response => {
+          this.setState({
+            videos: response.objects
+          })
+        })
+        fetch(`${process.env.REACT_APP_API_HOST}/reddits`)
+        .then(response => response.json())
+        .then(response => {
+          this.setState({
+            reddits: response.objects,
+            loaded: true
+          })
+        })
     }
 
     render() {

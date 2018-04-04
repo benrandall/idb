@@ -1,39 +1,45 @@
-from flask import Flask, jsonify, send_from_directory, render_template, Blueprint
-from flask_bootstrap import Bootstrap
-from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
-from github import GithubApiWrapper
-import json
-import requests
-import os
+from flask import current_app
+from app import db
+from app.search import add_to_index, remove_from_index, query_index
 
-db = SQLAlchemy()
-app = Blueprint('app', __name__)
+class SearchableMixin(object):
+    @classmethod
+    def search(cls, expression, page, per_page):
+        print('query index args: %s %s %s %s' % (cls.__tablename__, expression, page, per_page))
+        ids, total = query_index(cls.__tablename__, expression, page, per_page)
+        if total == 0:
+            return cls.query.filter_by(id=0), 0
+        when = []
+        for i in range(len(ids)):
+            when.append((ids[i], i))
+        return cls.query.filter(cls.id.in_(ids)).order_by(
+            db.case(when, value=cls.id)), total
 
-def create_app(database_uri, debug=False):
-    idb = Flask(__name__)
-    idb.config['DEBUG'] = debug
-    idb.config['SQLALCHEMY_DATABASE_URI'] = database_uri
-    idb.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-    idb.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    idb.register_blueprint(app)
-    CORS(idb)
-    db.init_app(idb)
+    @classmethod
+    def before_commit(cls, session):
+        session._changes = {
+                'add': [obj for obj in session.new if isinstance(obj, cls)],
+                'update': [obj for obj in session.dirty if isinstance(obj, cls)],
+                'delete': [obj for obj in session.deleted if isinstance(obj, cls)],
+              }
 
-    # App error handling
-    # Not a fan of doing it in here - but necessary due to blueprints
-    @idb.errorhandler(404)
-    def page_not_found(e):
-        return jsonify(error=404, text=str(e)), 404
+    @classmethod
+    def after_commit(cls, session):
+        for obj in session._changes.get('add', []):
+            add_to_index(cls.__tablename__, obj)
+        for obj in session._changes.get('update', []):
+            add_to_index(cls.__tablename__, obj)
+        for obj in session._changes.get('delete', []):
+            remove_from_index(cls.__tablename__, obj)
 
-    @idb.errorhandler(500)
-    def internal_server_error(e):
-        return jsonify(error=500, text=str(e)), 500
+    @classmethod
+    def reindex(cls):
+        for obj in cls.query:
+            add_to_index(cls.__tablename__, obj)
 
-    return idb
-
-class Item(db.Model):
+class Item(SearchableMixin, db.Model):
     __tablename__ = 'items'
+    __searchable__ = ['name', 'examine_info', 'icon', 'item_type']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -84,8 +90,9 @@ class Item(db.Model):
             result['videos'] = [video.toJSON(get_children=False) for video in self.videos]
         return result
 
-class Reddit(db.Model):
+class Reddit(SearchableMixin, db.Model):
     __tablename__ = 'reddits'
+    __searchable__ = ['url', 'title']
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.Text, unique=True, nullable=False)
@@ -118,8 +125,9 @@ class Reddit(db.Model):
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
         return result
 
-class Video(db.Model):
+class Video(SearchableMixin, db.Model):
     __tablename__ = 'videos'
+    __searchable__ = ['name', 'category', 'video_url']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
@@ -158,8 +166,9 @@ class Video(db.Model):
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
         return result
 
-class Skill(db.Model):
+class Skill(SearchableMixin, db.Model):
     __tablename__ = 'skills'
+    __searchable__ = ['name', 'description']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -233,66 +242,16 @@ skills_reddits = db.Table('skills_reddits',
         db.Column('reddit_id', db.Integer, db.ForeignKey('reddits.id')),
     )
 
+db.event.listen(db.session, 'before_commit', Item.before_commit)
+db.event.listen(db.session, 'after_commit', Item.after_commit)
 
-@app.route("/favicon.ico")
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+db.event.listen(db.session, 'before_commit', Skill.before_commit)
+db.event.listen(db.session, 'after_commit', Skill.after_commit)
 
-# TODO: refactor
-@app.route("/images/<path:image_name>")
-def image(image_name):
-    return send_from_directory("static/img", image_name)
+db.event.listen(db.session, 'before_commit', Reddit.before_commit)
+db.event.listen(db.session, 'after_commit', Reddit.after_commit)
 
-# API
-@app.route('/items/all')
-def all_items():
-    return jsonify([item.toJSON() for item in Item.query.all()])
+db.event.listen(db.session, 'before_commit', Video.before_commit)
+db.event.listen(db.session, 'after_commit', Video.after_commit)
 
-@app.route('/skills/all')
-def all_skills():
-    return jsonify([skill.toJSON() for skill in Skill.query.all()])
 
-@app.route('/videos/all')
-def all_videos():
-    return jsonify([video.toJSON() for video in Video.query.all()])
-
-@app.route('/reddits/all')
-def all_reddits():
-    return jsonify([reddit.toJSON() for reddit in Reddit.query.all()])
-
-@app.route('/item/<int:item_id>')
-def get_item(item_id):
-    return jsonify(Item.query.get_or_404(item_id).toJSON())
-
-@app.route('/skill/<int:skill_id>')
-def get_skill(skill_id):
-    return jsonify(Skill.query.get_or_404(skill_id).toJSON())
-
-@app.route('/video/<int:video_id>')
-def get_video(video_id):
-    return jsonify(Video.query.get_or_404(video_id).toJSON())
-
-@app.route('/reddit/<int:reddit_id>')
-def get_reddit(reddit_id):
-    return jsonify(Reddit.query.get_or_404(reddit_id).toJSON())
-
-@app.route('/community/all')
-def all_community():
-    return jsonify({
-        'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
-        'videos': [video.toJSON() for video in Video.query.all()]
-    })
-
-@app.route('/about')
-def about():
-    gh = GithubApiWrapper(owner='benrandall', repo='idb', token=os.environ['GITHUB_API_TOKEN'])
-    repo_info = gh.repo_info()
-    with open('fixtures/about.json', 'r') as about:
-        about_json = json.load(about)
-    merged_data = [ {**about_json[teammate], **repo_info['teammates'][teammate] } for teammate in repo_info['teammates'].keys() ]
-    result = {
-            "teammates": merged_data,
-            "total_commits": repo_info['total_commits'],
-            "total_issues": repo_info['total_issues'],
-        }
-    return jsonify(result)
