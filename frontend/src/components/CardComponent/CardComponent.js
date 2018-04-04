@@ -56,13 +56,6 @@ class CardComponent extends Component {
 
 CardComponent.propTypes = {
     cardType: PropTypes.string,
-    item: {
-        reddits: PropTypes.array,
-        videos: PropTypes.array,
-        id: PropTypes.number,
-        icon: PropTypes.string,
-        name: PropTypes.string
-    }
 };
 
 export default CardComponent;

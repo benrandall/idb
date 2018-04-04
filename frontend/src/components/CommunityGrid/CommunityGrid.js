@@ -4,21 +4,40 @@ import ReactPaginate from 'react-paginate';
 
 import RSVideoCard from '../RSVideoCard/RSVideoCard';
 import RSRedditCard from "../RSRedditCard/RSRedditCard";
+import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
+import RSSearchUtils from "../../utilities/RSSearchUtils";
 
 export default class CommunityGrid extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            videos: [],
-            reddits: [],
-            video_loaded: false,
-            reddit_loaded: false,
+            items: [],
+            loaded: false,
             currentPage: 0,
             totalPages: 0
         };
 
         this.ITEMS_PER_PAGE = 9;
+
+        this.availableSorts = [
+            {
+                label: `Name (Ascending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true)
+            },
+            {
+                label: `Name (Descending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false)
+            },
+            {
+                label: `Type (Ascending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, true)
+            },
+            {
+                label: `Type (Descending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, false)
+            }
+        ]
     }
 
     componentDidMount() {
@@ -26,34 +45,32 @@ export default class CommunityGrid extends Component {
         .then(response => response.json())
         .then(response => {
           this.setState({
-            videos: response.objects,
-            video_loaded: true
+            items: response.objects
           });
           return fetch(`${process.env.REACT_APP_API_HOST}/reddits`)
         })
         .then(response => response.json())
         .then(response => {
           this.setState({
-            reddits: response.objects,
-            reddit_loaded: true,
-            totalPages: Math.ceil((this.state.videos.length + response.objects.length) / this.ITEMS_PER_PAGE)
+            items: this.state.items.concat(response.objects),
+            loaded: true,
+            totalPages: Math.ceil((this.state.items.length + response.objects.length) / this.ITEMS_PER_PAGE)
           })
         });
     }
 
     itemsForCurrentPage() {
-        let videos = this.state.videos.map((item) => {
-            return <RSVideoCard icon={item.icon}
-                              id={item.id}
-                              title={item.name}/>;
-        });
 
-        let reddits = this.state.reddits.map((item) => {
+        let data = this.state.items.map((item) => {
+            if (item.video_url) {
+                return <RSVideoCard icon={item.icon}
+                              id={item.id}
+                              title={item.name}/>
+            }
             return <RSRedditCard title={item.title}
                               url={item.url}/>
         });
 
-        let data = videos.concat(reddits);
         let page = this.state.currentPage;
 
         let numItems = this.ITEMS_PER_PAGE;
@@ -84,12 +101,20 @@ export default class CommunityGrid extends Component {
         });
     }
 
+    handleSort(sorter) {
+        let temp = this.state.items;
+        temp.sort(sorter.value);
+        this.setState({ items: temp})
+    }
+
     render() {
-        if (!this.state.video_loaded && !this.state.reddit_loaded) {return <p>Loading</p>}
+        if (!this.state.loaded) {return <p>Loading</p>}
 
         return (
             <Container>
-                <Row className="nav-padding">
+                <Row className="nav-padding"/>
+                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}/>
+                <Row>
                     { this.itemsForCurrentPage() }
                 </Row>
                 <Row>
@@ -111,7 +136,7 @@ export default class CommunityGrid extends Component {
                        nextClassName={"page-item"}
                        previousLinkClassName={"page-link"}
                        nextLinkClassName={"page-link"}
-                />
+                        />
                 </Row>
             </Container>
         );

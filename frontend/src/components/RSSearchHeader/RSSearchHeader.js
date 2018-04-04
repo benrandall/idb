@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import { Col, Row } from 'reactstrap';
 import PropTypes from 'prop-types';
 import RSSearchBar from '../RSSearchBar/RSSearchBar';
 import Select from "react-virtualized-select";
@@ -14,7 +14,8 @@ export default class RSSearchHeader extends Component {
         super(props);
 
         this.state = {
-            modelFilters: []
+            modelFilters: [],
+            sorter: {}
         };
     }
 
@@ -34,45 +35,49 @@ export default class RSSearchHeader extends Component {
 
     render() {
         return (
-            <div>
-            <RSSearchBar onSearch={(value) => {
-                    this.props.handler ? this.props.handler(value) : this.fieldDidSearch(value)
+            <Row>
+                {   this.props.search &&
+                    <Col sm={12} md={4}>
+                        <RSSearchBar onSearch={ (value) => this.props.handler
+                                                            ? this.props.handler(value)
+                                                            : this.fieldDidSearch(value) }
+                                     onClear={this.fieldDidClear}
+                                     onChange={this.fieldDidChange}
+                        />
+                    </Col>
                 }
-            }
-                         onClear={this.fieldDidClear}
-                         onChange={this.fieldDidChange}
-            />
-            <Select options={[
-                {
-                    label: `Reddit Posts`,
-                    value: 'reddits'
-                },
-                {
-                    label: `YouTube Videos`,
-                    value: 'videos'
-                },
-                {
-                    label: `Skills`,
-                    value: `skills`
-                },
-                {
-                    label: `Items`,
-                    value: `items`
+                {   this.props.filter &&
+                    <Col sm={12} md={4}>
+                        <Select options={this.props.availableFilters}
+                            onChange={(values) => this.setState({modelFilters: values}) }
+                            multi
+                            value={this.state.modelFilters}
+                        />
+                    </Col>
                 }
-                ]}
-                onChange={(values) => {
-                    this.setState({modelFilters: values});
-                    console.log(this.state);
-                }}
-                multi
-                value={this.state.modelFilters}
-            />
-
-            </div>
+                {
+                    this.props.sort &&
+                    <Col sm={12} md={4}>
+                        <Select options={this.props.availableSorts}
+                            onChange={(values) => {
+                                this.setState({sorter: values});
+                                this.props.onSortChange(values);
+                            }}
+                            value={this.state.sorter}
+                            placeholder="Sort"
+                        />
+                    </Col>
+                }
+            </Row>
         );
     }
 };
 
 RSSearchHeader.propTypes = {
-
+    sort: PropTypes.bool,
+    filter: PropTypes.bool,
+    search: PropTypes.bool,
+    onSortChange: PropTypes.func,
+    availableSorts: PropTypes.array,
+    availableFilters: PropTypes.array,
 };

@@ -3,6 +3,9 @@ import { Container, Row } from 'reactstrap';
 import ReactPaginate from 'react-paginate';
 
 import CardComponent from "../CardComponent/CardComponent";
+import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
+import RSSearchUtils from "../../utilities/RSSearchUtils";
+
 import './CardGrid.css';
 
 export default class CardGrid extends Component {
@@ -16,7 +19,17 @@ export default class CardGrid extends Component {
             totalPages: 0
         };
 
-        this.ITEMS_PER_PAGE = 3;
+        this.ITEMS_PER_PAGE = 6;
+        this.availableSorts = [
+            {
+                label: `Name (Ascending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true)
+            },
+            {
+                label: `Name (Descending)`,
+                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false)
+            },
+        ]
     }
 
     componentDidMount() {
@@ -64,6 +77,12 @@ export default class CardGrid extends Component {
         return rows;
     }
 
+    handleSort(sorter) {
+        let temp = this.state.items;
+        temp.sort(sorter.value);
+        this.setState({ items: temp})
+    }
+
     render() {
 
         if (this.state.items.length === 0) {
@@ -72,6 +91,7 @@ export default class CardGrid extends Component {
 
         return (
             <Container>
+                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}/>
                 {this.itemsForPage().map((row) => {
                     return (
                         <Row className="nav-padding">
