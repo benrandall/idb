@@ -42,7 +42,7 @@ If you want to run the application locally, you need to create the file `.env.de
 This file is already within the gitignore as it should **never** be version controlled.
 The file should contain the entry:
 ```
-REACT_APP_API_HOST=http://127.0.0.1:5000/api
+REACT_APP_API_HOST=http://127.0.0.1:5000
 ```
 
 ### Steps to build the React
