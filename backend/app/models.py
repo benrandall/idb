@@ -5,7 +5,6 @@ from app.search import add_to_index, remove_from_index, query_index
 class SearchableMixin(object):
     @classmethod
     def search(cls, expression, page, per_page):
-        print('query index args: %s %s %s %s' % (cls.__tablename__, expression, page, per_page))
         ids, total = query_index(cls.__tablename__, expression, page, per_page)
         if total == 0:
             return cls.query.filter_by(id=0), 0
@@ -39,7 +38,7 @@ class SearchableMixin(object):
 
 class Item(SearchableMixin, db.Model):
     __tablename__ = 'items'
-    __searchable__ = ['name', 'examine_info', 'icon', 'item_type']
+    __searchable__ = ['name', 'examine_info']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -92,7 +91,7 @@ class Item(SearchableMixin, db.Model):
 
 class Reddit(SearchableMixin, db.Model):
     __tablename__ = 'reddits'
-    __searchable__ = ['url', 'title']
+    __searchable__ = ['title']
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.Text, unique=True, nullable=False)
@@ -127,7 +126,7 @@ class Reddit(SearchableMixin, db.Model):
 
 class Video(SearchableMixin, db.Model):
     __tablename__ = 'videos'
-    __searchable__ = ['name', 'category', 'video_url']
+    __searchable__ = ['name']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
