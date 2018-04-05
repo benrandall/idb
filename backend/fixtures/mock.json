@@ -120,7 +120,7 @@
             "market_price": 3007,
             "members_only": true,
             "quest_item": false,
-            "equibale": false,
+            "equipable": false,
             "location": "Kalphite Dungen",
             "weight": 0,
             "id": 8,
