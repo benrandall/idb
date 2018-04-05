@@ -1,6 +1,8 @@
 # idb
 
-## Install
+## Backend (Flask App) Setup
+
+### Install
 
 ```
 $ virtualenv -p python3 venv
@@ -8,7 +10,7 @@ $ source venv/bin/activate
 $ (venv) pip install -r requirements.txt
 ```
 
-## Environment variables
+### Environment variables
 
 In order to set the Github Token API in the environment
 so that the About page can load, you must obtain
@@ -19,14 +21,7 @@ a token from Github and set it in your environment.
 - Give it repo permissions
 - Copy the token
 
-## Add `.flask_environment` to backend/ folder
-```
-DATABASE_URL=postgres://localhost/db_name
-ELASTICSEARCH_URL=<url>
-GITHUB_API_TOKEN=<url>
-```
-
-## Set up elasticsearch
+### Set up elasticsearch
 ```
 $ brew install elasticsearch
 $ brew services start elasticsearch
@@ -37,7 +32,22 @@ Elasticsearch should be running on http://localhost:9200. You can confirm this w
 $ curl localhost:9200
 ```
 
-## Run the React application
+### Add `.flask_environment` to backend/ folder
+```
+DATABASE_URL=postgres://localhost/db_name
+ELASTICSEARCH_URL=<url>
+GITHUB_API_TOKEN=<token>
+```
+
+### Running the backend
+```
+$ cd backend/
+$ export FLASK_APP=run.py
+$ flask db_import
+$ flask run
+```
+
+## Frontend (React App) Setup
 If you want to run the application locally, you need to create the file `.env.development.local` in the frontend directory. 
 This file is already within the gitignore as it should **never** be version controlled.
 The file should contain the entry:
@@ -46,19 +56,12 @@ REACT_APP_API_HOST=http://127.0.0.1:5000
 ```
 
 ### Steps to build the React
+In a new terminal window from your running backend app:
 ```
 $ cd frontend/
 $ yarn install
 $ yarn build-css
 $ yarn start
-```
-
-## Running the backend
-```
-$ cd backend/
-$ export FLASK_APP=run.py
-$ flask db_import
-$ flask run
 ```
 
 ## Deployment

@@ -5,7 +5,6 @@ from app.search import add_to_index, remove_from_index, query_index
 class SearchableMixin(object):
     @classmethod
     def search(cls, expression, page, per_page):
-        print('query index args: %s %s %s %s' % (cls.__tablename__, expression, page, per_page))
         ids, total = query_index(cls.__tablename__, expression, page, per_page)
         if total == 0:
             return cls.query.filter_by(id=0), 0
@@ -39,7 +38,7 @@ class SearchableMixin(object):
 
 class Item(SearchableMixin, db.Model):
     __tablename__ = 'items'
-    __searchable__ = ['name', 'examine_info', 'icon', 'item_type']
+    __searchable__ = ['name', 'examine_info']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, unique=True, nullable=False)
@@ -48,6 +47,9 @@ class Item(SearchableMixin, db.Model):
     item_type = db.Column(db.Text, nullable=False)
     market_price = db.Column(db.Integer, nullable=False)
     weight = db.Column(db.Integer, nullable=False)
+    members_only = db.Column(db.Boolean, nullable=False)
+    equipable = db.Column(db.Boolean, nullable=False)
+    quest_item = db.Column(db.Boolean, nullable=False)
 
     videos = db.relationship('Video',
                 secondary='items_videos',
@@ -71,6 +73,9 @@ class Item(SearchableMixin, db.Model):
         self.item_type = item['type']
         self.market_price = item['market_price']
         self.weight = item['weight']
+        self.members_only = item['members_only']
+        self.equipable = item['equipable']
+        self.quest_item = item['quest_item']
 
     def __repr__(self):
         return '<Item %r>' % self.name
@@ -92,11 +97,13 @@ class Item(SearchableMixin, db.Model):
 
 class Reddit(SearchableMixin, db.Model):
     __tablename__ = 'reddits'
-    __searchable__ = ['url', 'title']
+    __searchable__ = ['title']
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.Text, unique=True, nullable=False)
     title = db.Column(db.Text, nullable=False)
+    category = db.Column(db.Text, nullable=False)
+    community_type = db.Column(db.Text, nullable=False)
 
     skills = db.relationship('Skill',
                 secondary='skills_reddits',
@@ -111,6 +118,8 @@ class Reddit(SearchableMixin, db.Model):
     def __init__(self, reddit):
         self.url = reddit['url']
         self.title = reddit['title']
+        self.category = reddit['category']
+        self.community_type = reddit['community_type']
 
     def __repr__(self):
         return '<Reddits %r>' % self.title
@@ -120,6 +129,8 @@ class Reddit(SearchableMixin, db.Model):
         result['id'] = self.id
         result['url'] = self.url
         result['title'] = self.title
+        result['category'] = self.category
+        result['community_type'] = self.community_type
         if get_children:
             result['skills'] = [skill.toJSON(get_children=False) for skill in self.skills]
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
@@ -127,13 +138,14 @@ class Reddit(SearchableMixin, db.Model):
 
 class Video(SearchableMixin, db.Model):
     __tablename__ = 'videos'
-    __searchable__ = ['name', 'category', 'video_url']
+    __searchable__ = ['name']
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
     icon = db.Column(db.Text, nullable=False)
     video_url = db.Column(db.Text, unique=True, nullable=False)
     category = db.Column(db.Text, nullable=False)
+    community_type = db.Column(db.Text, nullable=False)
 
     skills = db.relationship('Skill',
                 secondary='skills_videos',
@@ -150,6 +162,7 @@ class Video(SearchableMixin, db.Model):
         self.icon = video['icon']
         self.category = video['category']
         self.video_url = video['video_url']
+        self.community_type = video['community_type']
 
     def __repr__(self):
         return '<Video %r>' % self.name
@@ -161,6 +174,7 @@ class Video(SearchableMixin, db.Model):
         result['icon'] = self.icon
         result['video_url'] = self.video_url
         result['category'] = self.category
+        result['community_type'] = self.community_type
         if get_children:
             result['skills'] = [skill.toJSON(get_children=False) for skill in self.skills]
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
@@ -176,6 +190,7 @@ class Skill(SearchableMixin, db.Model):
     description = db.Column(db.Text, nullable=False)
     members_only = db.Column(db.Boolean, nullable=False)
     max_level = db.Column(db.Integer, nullable=False)
+    skill_type = db.Column(db.Text, nullable=False)
 
     videos = db.relationship('Video',
                 secondary='skills_videos',
@@ -198,6 +213,7 @@ class Skill(SearchableMixin, db.Model):
         self.description = skill['description']
         self.members_only = skill['members_only']
         self.max_level = skill['max_level']
+        self.skill_type = skill['skill_type']
 
     def __repr__(self):
         return '<Skill %r>' % self.name

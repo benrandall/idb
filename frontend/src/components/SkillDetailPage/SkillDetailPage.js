@@ -77,6 +77,8 @@ export default class SkillDetailPage extends Component {
                                 <p className="subtext">{ this.state.skill.members_only ? "Yes" : "No" }</p>
                                 <h6>Max Level</h6>
                                 <p className="subtext">{ this.state.skill.max_level }</p>
+                                <h6>Skill Type</h6>
+                                <p className="subtext">{ this.state.skill.skill_type }</p>
                             </div>
                         </div>
                     </Col>
