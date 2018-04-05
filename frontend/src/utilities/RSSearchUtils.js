@@ -48,12 +48,20 @@ const RSSearchUtils = {
 
     getSkillFilters() {
         return [
-            { label: 'Members Only', value: RSSearchUtils.genericFlaskFilter("members_only", "==", true) }
+            { label: 'Members Only', value: RSSearchUtils.genericFlaskFilter("members_only", "==", true) },
+            { label: 'Artisan Skills', value: RSSearchUtils.genericFlaskFilter("skill_type", "==", "Artisan") },
+            { label: 'Support Skills', value: RSSearchUtils.genericFlaskFilter("skill_type", "==", "Support") },
+            { label: 'Combat Skills', value: RSSearchUtils.genericFlaskFilter("skill_type", "==", "Combat") },
+            { label: 'Gathering Skills', value: RSSearchUtils.genericFlaskFilter("skill_type", "==", "Gathering") }
         ]
     },
 
     getItemFilters() {
-        return []
+        return [
+            { label: 'Members Only', value: RSSearchUtils.genericFlaskFilter("members_only", "==", true) },
+            { label: 'Quest Items', value: RSSearchUtils.genericFlaskFilter("quest_item", "==", true) },
+            { label: 'Equipable Items', value: RSSearchUtils.genericFlaskFilter("equipable", "==", true) }
+        ]
     }
 };
 
