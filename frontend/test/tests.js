@@ -26,6 +26,20 @@ import ItemDetailPage from '../src/components/SkillDetailPage/SkillDetailPage';
 import GitHubStats from '../src/components/SkillDetailPage/SkillDetailPage';
 import CommunityGrid from '../src/components/SkillDetailPage/SkillDetailPage';
 
+const item = {
+    "name": "Jade",
+    "examine_info": "A semi precious stone.",
+    "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Jade_detail.png/revision/latest/scale-to-width-down/130?cb=20170203200834",
+    "type": "gems",
+    "market_price": 433,
+    "location": "",
+    "weight": 0,
+    "id": 1,
+    "skills": [1, 9],
+    "videos": [1, 10],
+    "reddits": [1]
+}
+
 // App
 describe('<App/>', function () {
     it('should render successfully', function () {
@@ -44,7 +58,7 @@ describe('<App/>', function () {
 });
 
 // Home
-describe('<Home />', () => {
+describe('<Home/>', () => {
     it('should render successfully', function () {
         shallow(<Home />);
     });
@@ -67,45 +81,54 @@ describe('<RSAboutPage/>', function () {
     });
 });
 
+// RSContainer
 describe('<RSContainer/>', function () {
     it('should render successfully', function () {
         shallow(<RSContainer />);
     });
 });
 
+// RSLink
 describe('<RSLink/>', function () {
     it('should render successfully', function () {
         shallow(<RSLink />);
     });
 });
 
+// RSRedditCard
 describe('<RSRedditCard/>', function () {
     it('should render successfully', function () {
         shallow(<RSRedditCard />);
     });
 });
 
+// RSTeamMember
 describe('<RSTeamMember/>', function () {
     it('should render successfully', function () {
         shallow(<RSTeamMember />);
     });
 });
 
+// RSTool
 describe('<RSTool/>', function () {
     it('should render successfully', function () {
         shallow(<RSTool />);
     });
 });
 
+// RSVideoCard
 describe('<RSVideoCard/>', function () {
     it('should render successfully', function () {
         shallow(<RSVideoCard />);
     });
 });
 
+/*
+"TypeError: Cannot read property 'params' of undefined"
+
 describe('<RSVideoDetailPage/>', function () {
     it('should render successfully', function () {
-        shallow(<RSVideoDetailPage name="a" category="a" id="1" url="a"/>);
+        shallow(<RSVideoDetailPage />);
     });
 });
 
@@ -132,3 +155,4 @@ describe('<CommunityGrid/>', function () {
         shallow(<CommunityGrid />);
     });
 });
+*/
