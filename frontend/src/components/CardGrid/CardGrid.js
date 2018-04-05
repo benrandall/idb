@@ -19,7 +19,7 @@ export default class CardGrid extends Component {
             totalPages: 0
         };
 
-        this.ITEMS_PER_PAGE = 6;
+        this.ITEMS_PER_PAGE = 8;
         this.availableSorts = [
             {
                 label: `Name (Ascending)`,

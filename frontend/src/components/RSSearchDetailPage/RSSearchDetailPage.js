@@ -155,9 +155,9 @@ export default class RSSearchDetailPage extends Component {
     }
 
     render() {
-            const masonryOptions = {
-    transitionDuration: 0
-};
+        const masonryOptions = {
+            transitionDuration: 0
+        };
 
         if (!this.state.loaded) {
             return (<p>Loading</p>);
