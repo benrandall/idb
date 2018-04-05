@@ -37,4 +37,3 @@ def create_app(config_class=Config):
     CORS(app)
 
     return app
-

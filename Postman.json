@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "431f5b7b-dd30-472f-bf62-9ea717a270b1",
+						"id": "14a41fca-db4e-4d1e-9c6f-7ef6241edb72",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -33,7 +33,7 @@
 							"});",
 							"",
 							"pm.test(\"first video repsonse url is correct\", function () {",
-							"   pm.expect(pm.response.json()[0].video_url).to.equal(\"https://gaming.youtube.com/embed/EsxNUEIxDhg\");",
+							"   pm.expect(pm.response.json().objects[0].video_url).to.equal(\"https://gaming.youtube.com/embed/EsxNUEIxDhg\");",
 							"});"
 						]
 					}
@@ -44,15 +44,13 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "localhost:5000/api/videos/all",
+					"raw": "localhost:5000/videos",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"videos",
-						"all"
+						"videos"
 					]
 				},
 				"description": "Tests the response from a correct request to /api/videos/all"
@@ -91,14 +89,13 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/badreq",
+					"raw": "http://localhost:5000/badreq",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
 						"badreq"
 					]
 				}
@@ -144,15 +141,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/video/1",
+					"raw": "http://localhost:5000/videos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"video",
+						"videos",
 						"1"
 					]
 				}
@@ -165,7 +161,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9f94b7ac-3cee-4946-be9b-c9812ce11a94",
+						"id": "bbf575fb-3567-4e93-bba8-dbfe441d725e",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -186,8 +182,8 @@
 							"    pm.expect(pm.response.json().length).not.to.equal(0);",
 							"});",
 							"",
-							"pm.test(\"first video name is correct\", function () {",
-							"   pm.expect(pm.response.json()[0].name).to.equal(\"Crafting\");",
+							"pm.test(\"first skill name is correct\", function () {",
+							"   pm.expect(pm.response.json().objects[0].name).to.equal(\"Crafting\");",
 							"});"
 						]
 					}
@@ -198,16 +194,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/skills/all",
+					"raw": "http://localhost:5000/skills",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"skills",
-						"all"
+						"skills"
 					]
 				}
 			},
@@ -219,7 +213,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "41112c0f-8fef-46da-9294-8bed8451c46b",
+						"id": "75429526-4b9a-43be-9a2a-fd91bc63ab40",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -236,11 +230,11 @@
 							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
 							"});",
 							"",
-							"pm.test(\"local data items of size 1\", function () {",
-							"    pm.expect(pm.response.json().items.length).to.equal(1);",
+							"pm.test(\"local data items exist\", function () {",
+							"    pm.expect(pm.response.json().items.length).not.to.equal(0);",
 							"});",
 							"",
-							"pm.test(\"first video name is correct\", function () {",
+							"pm.test(\"first skill name is correct\", function () {",
 							"   pm.expect(pm.response.json().name).to.equal(\"Crafting\");",
 							"});"
 						]
@@ -252,15 +246,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/skill/1",
+					"raw": "http://localhost:5000/skills/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"skill",
+						"skills",
 						"1"
 					]
 				}
@@ -273,7 +266,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3e1836c5-aa64-4c5d-a797-a1f06af7b883",
+						"id": "b45aed94-2713-449b-9abf-e271416a861f",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -295,7 +288,7 @@
 							"});",
 							"",
 							"pm.test(\"first title is correct\", function () {",
-							"   pm.expect(pm.response.json()[0].title).to.equal(\"Loot from cutting 119k semi-precious gems\");",
+							"   pm.expect(pm.response.json().objects[0].title).to.equal(\"Loot from cutting 119k semi-precious gems\");",
 							"});"
 						]
 					}
@@ -306,16 +299,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/reddits/all",
+					"raw": "http://localhost:5000/reddits",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"reddits",
-						"all"
+						"reddits"
 					]
 				}
 			},
@@ -327,7 +318,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5b0bc60a-93c2-4394-bde6-f3085a37143a",
+						"id": "833173b4-ed7a-47c9-9673-21414298afff",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -344,8 +335,8 @@
 							"    pm.expect(pm.response.text()).to.include(\"examine_info\");",
 							"});",
 							"",
-							"pm.test(\"local data items of size 1\", function () {",
-							"    pm.expect(pm.response.json().items.length).to.equal(1);",
+							"pm.test(\"local data items exist\", function () {",
+							"    pm.expect(pm.response.json().items.length).not.to.equal(0);",
 							"});",
 							"",
 							"pm.test(\"first title is correct\", function () {",
@@ -360,15 +351,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/reddit/1",
+					"raw": "http://localhost:5000/reddits/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"reddit",
+						"reddits",
 						"1"
 					]
 				}
@@ -381,7 +371,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bd21aedd-6ccf-492a-9fd8-54c69f6f58be",
+						"id": "a960b439-4a0a-4e0a-a643-f7231f063087",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -403,7 +393,7 @@
 							"});",
 							"",
 							"pm.test(\"first market price is correct\", function () {",
-							"   pm.expect(pm.response.json()[0].market_price).to.equal(433);",
+							"   pm.expect(pm.response.json().objects[0].market_price).to.equal(433);",
 							"});"
 						]
 					}
@@ -414,16 +404,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/items/all",
+					"raw": "http://localhost:5000/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"items",
-						"all"
+						"items"
 					]
 				}
 			},
@@ -435,7 +423,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "44a4d5a3-f9d8-486f-831c-226c27166028",
+						"id": "3d776271-c064-425e-ac18-c86caf54130e",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -452,8 +440,8 @@
 							"    pm.expect(pm.response.text()).to.include(\"members_only\");",
 							"});",
 							"",
-							"pm.test(\"local data reddits of size 1\", function () {",
-							"    pm.expect(pm.response.json().reddits.length).to.equal(1);",
+							"pm.test(\"local data reddits exist\", function () {",
+							"    pm.expect(pm.response.json().reddits.length).not.to.equal(0);",
 							"});",
 							"",
 							"pm.test(\"market price is correct\", function () {",
@@ -468,15 +456,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/item/1",
+					"raw": "http://localhost:5000/items/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"item",
+						"items",
 						"1"
 					]
 				}
@@ -516,14 +503,13 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/about",
+					"raw": "http://localhost:5000/about",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
 						"about"
 					]
 				}
@@ -565,16 +551,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/community/all",
+					"raw": "http://localhost:5000/community",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"api",
-						"community",
-						"all"
+						"community"
 					]
 				}
 			},

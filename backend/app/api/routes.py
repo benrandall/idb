@@ -47,3 +47,10 @@ def about():
         }
     return jsonify(result)
 
+@bp.route('/community')
+def community():
+    return jsonify({
+        'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
+        'videos': [video.toJSON() for video in Video.query.all()]
+    })
+    
