@@ -17,6 +17,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import SearchBar from 'react-search-bar';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ import RSAboutPage from '../RSAboutPage/RSAboutPage';
 import CommunityGrid from '../CommunityGrid/CommunityGrid';
 import RSVideoDetailPage from '../RSVideoDetailPage/RSVideoDetailPage';
 import RSSearchDetailPage from "../RSSearchDetailPage/RSSearchDetailPage";
+import RSSearchBar from "../RSSearchBar/RSSearchBar";
 
 class App extends Component {
 
@@ -106,7 +108,7 @@ class App extends Component {
                   <NavLink tag={Link} to="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/search">Search</NavLink>
+                    <RSSearchBar onChange={() => {}} onClear={() => {}} onSearch={() => {}}/>
                 </NavItem>
               </Nav>
             </Collapse>

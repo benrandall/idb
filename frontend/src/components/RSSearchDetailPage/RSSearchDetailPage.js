@@ -44,11 +44,13 @@ export default class RSSearchDetailPage extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
         this.search(params.query);
+
     }
 
     itemsForCurrentPage() {
 
         let data = this.state.results;
+
         let page = this.state.currentPage;
 
         let numItems = this.ITEMS_PER_PAGE;
@@ -121,14 +123,13 @@ export default class RSSearchDetailPage extends Component {
     };
 
     render() {
-
         if (!this.state.loaded) {
             return (<p>Loading</p>);
         }
 
         return (
             <Container>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <RSSearchHeader search sort
                                         handler={(value) => this.handleSearch(value)}
@@ -140,25 +141,27 @@ export default class RSSearchDetailPage extends Component {
                     { this.itemsForCurrentPage() }
                 </Row>
                 <Row>
+
                     <ReactPaginate
-                       initialPage={0}
-                       previousLabel={"previous"}
-                       nextLabel={"next"}
-                       breakLabel={<button>...</button>}
-                       breakClassName={"break-me"}
-                       pageCount={this.state.totalPages}
-                       marginPagesDisplayed={2}
-                       pageRangeDisplayed={5}
-                       onPageChange={(data) => this.handlePageChanged(data.selected)}
-                       containerClassName={"pagination"}
-                       pageClassName={"page-item"}
-                       pageLinkClassName={"page-link"}
-                       activeClassName={"active"}
-                       previousClassName={"page-item"}
-                       nextClassName={"page-item"}
-                       previousLinkClassName={"page-link"}
-                       nextLinkClassName={"page-link"}
-                        />
+                        initialPage={0}
+                        previousLabel={"previous"}
+                        nextLabel={"next"}
+                        breakLabel={<button>...</button>}
+                        breakClassName={"break-me"}
+                        pageCount={this.state.totalPages}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
+                        onPageChange={(data) => this.handlePageChanged(data.selected)}
+                        containerClassName={"pagination mx-auto"}
+                        pageClassName={"page-item"}
+                        pageLinkClassName={"page-link"}
+                        activeClassName={"active"}
+                        previousClassName={"page-item"}
+                        nextClassName={"page-item"}
+                        previousLinkClassName={"page-link"}
+                        nextLinkClassName={"page-link"}
+                    />
+
                 </Row>
             </Container>
         );
