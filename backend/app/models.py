@@ -47,6 +47,9 @@ class Item(SearchableMixin, db.Model):
     item_type = db.Column(db.Text, nullable=False)
     market_price = db.Column(db.Integer, nullable=False)
     weight = db.Column(db.Integer, nullable=False)
+    members_only = db.Column(db.Boolean, nullable=False)
+    equipable = db.Column(db.Boolean, nullable=False)
+    quest_item = db.Column(db.Boolean, nullable=False)
 
     videos = db.relationship('Video',
                 secondary='items_videos',
@@ -70,6 +73,9 @@ class Item(SearchableMixin, db.Model):
         self.item_type = item['type']
         self.market_price = item['market_price']
         self.weight = item['weight']
+        self.members_only = item['members_only']
+        self.equipable = item['equipable']
+        self.quest_item = item['quest_item']
 
     def __repr__(self):
         return '<Item %r>' % self.name
@@ -175,6 +181,7 @@ class Skill(SearchableMixin, db.Model):
     description = db.Column(db.Text, nullable=False)
     members_only = db.Column(db.Boolean, nullable=False)
     max_level = db.Column(db.Integer, nullable=False)
+    skill_type = db.Column(db.Text, nullable=False)
 
     videos = db.relationship('Video',
                 secondary='skills_videos',
@@ -197,6 +204,7 @@ class Skill(SearchableMixin, db.Model):
         self.description = skill['description']
         self.members_only = skill['members_only']
         self.max_level = skill['max_level']
+        self.skill_type = skill['skill_type']
 
     def __repr__(self):
         return '<Skill %r>' % self.name
