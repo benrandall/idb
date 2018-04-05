@@ -112,17 +112,17 @@ export default class CommunityGrid extends Component {
     }
 
     searchWithFilters(filters) {
-        let anded = {filters: filters.map((item) => item.value)};
-        let stringified = JSON.stringify(anded);
-
-        fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
-            .then((items) => { return items.json() })
-            .then((json) => {
-                this.setState({
-                    items: json.objects,
-                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
-                });
-            });
+        // let anded = {filters: filters.map((item) => item.value)};
+        // let stringified = JSON.stringify(anded);
+        //
+        // fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
+        //     .then((items) => { return items.json() })
+        //     .then((json) => {
+        //         this.setState({
+        //             items: json.objects,
+        //             totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+        //         });
+        //     });
     }
 
     render() {

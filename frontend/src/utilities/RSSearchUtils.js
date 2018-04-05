@@ -65,7 +65,12 @@ const RSSearchUtils = {
     },
 
     getCommunityFilters() {
-        return []
+        return [
+            { label: 'Youtube Videos', value: RSSearchUtils.genericFlaskFilter("community_type", "==", "youtube") },
+            { label: 'Reddit Posts', value: RSSearchUtils.genericFlaskFilter("community_type", "==", "reddit") },
+            { label: 'Old School Runescape', value: RSSearchUtils.genericFlaskFilter("category", "==", "Old School Runescape") },
+            { label: 'New Runescape', value: RSSearchUtils.genericFlaskFilter("community_type", "==", "Runescape") }
+        ]
     }
 };
 
