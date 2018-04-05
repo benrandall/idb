@@ -97,6 +97,13 @@ export default class CardGrid extends Component {
         this.setState({ items: temp})
     }
 
+    getFilters() {
+        if (this.props.cardType === 'items')
+            return RSSearchUtils.getItemFilters();
+
+        return RSSearchUtils.getSkillFilters();
+    }
+
     render() {
 
         if (this.state.items.length === 0) {
@@ -108,7 +115,7 @@ export default class CardGrid extends Component {
         return (
             <Container>
                 <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                                filter availableFilters={RSSearchUtils.getItemFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
+                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
                 {this.itemsForPage().map((row) => {
                     return (
                         <Row className="nav-padding">

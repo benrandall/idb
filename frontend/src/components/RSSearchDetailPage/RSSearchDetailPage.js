@@ -126,10 +126,6 @@ export default class RSSearchDetailPage extends Component {
         });
     };
 
-    handleFilter(filters) {
-        this.searchWithFilters(this.state.query, filters)
-    }
-
     handleSearch(value) {
         this.props.history.push(`/search/${value}`);
     }
@@ -157,29 +153,7 @@ export default class RSSearchDetailPage extends Component {
             })
     }
 
-    searchWithFilters(value, filters) {
-        fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
-            .then((response) => response.json())
-            .then((json) => {
-
-                let results = json.result.filter((item) => {
-                    return filters.reduce(true, (prev, filter) => {
-                        return prev && filter(item);
-                    });
-                });
-
-                this.setState({
-                    results: results,
-                    hasMore: json.has_more,
-                    loaded: true,
-                    query: value,
-                    totalPages: Math.ceil(results / this.ITEMS_PER_PAGE)
-                });
-            })
-    }
-
     render() {
-        console.log('RENDERING');
         console.log(this.state);
 
         if (!this.state.loaded) {
@@ -190,10 +164,9 @@ export default class RSSearchDetailPage extends Component {
             <Container>
                 <Row className="nav-padding">
                     <Col sm="12">
-                        <RSSearchHeader sort filter
+                        <RSSearchHeader sort
                                         onSearch={(value) => this.handleSearch(value)}
                                         onSortChange={(sorters) => this.handleSort(sorters)}
-                                        onFilterChange={(filters) => this.handleFilter(filters)}
                                         availableSorts={this.availableSorts}
                                         availableFilters={RSSearchUtils.getModelFilters()}
                                         />

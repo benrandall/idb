@@ -2,6 +2,7 @@ const RSSearchUtils = {
     directionalSort(func, asc) {
         return (left, right) => func(left, right, asc ? 1 : -1);
     },
+
     sortTitle(left, right, asc) {
         let leftStr = left.title ? left.title : left.name;
         let rightStr = right.title ? right.title : right.name;
@@ -32,7 +33,7 @@ const RSSearchUtils = {
         }
     },
 
-    genericFilter(field, op, value) {
+    genericFlaskFilter(field, op, value) {
         return {"name": field, "op":op, "val": value}
     },
 
@@ -45,10 +46,14 @@ const RSSearchUtils = {
         ]
     },
 
-    getItemFilters() {
+    getSkillFilters() {
         return [
-            { label: 'Members Only', value: RSSearchUtils.genericFilter("members_only", "==", true) }
+            { label: 'Members Only', value: RSSearchUtils.genericFlaskFilter("members_only", "==", true) }
         ]
+    },
+
+    getItemFilters() {
+        return []
     }
 };
 
