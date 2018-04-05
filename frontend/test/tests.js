@@ -26,20 +26,18 @@ import ItemDetailPage from '../src/components/SkillDetailPage/SkillDetailPage';
 import GitHubStats from '../src/components/SkillDetailPage/SkillDetailPage';
 import CommunityGrid from '../src/components/SkillDetailPage/SkillDetailPage';
 
-// configure({ adapter: new Adapter() });
-
 // App
 describe('<App/>', function () {
-    it('should render successfully', () => {
+    it('should render successfully', function () {
         shallow(<App />);
     });
-    it('should render the navigation bar', () => {
+    it('should render the navigation bar', function () {
         const wrapper = shallow(<App />);
         const navbar = wrapper.find('Nav');
         expect(navbar.exists()).to.equal(true);
     });
-    it('should have 4 navigation items', () => {
-        const wrapper = shallow(<App/>);
+    it('should have 4 navigation items', function () {
+        const wrapper = shallow(<App />);
         const tabs = wrapper.find('Nav').children();
         expect(tabs).to.have.length(4);
     });
@@ -47,21 +45,22 @@ describe('<App/>', function () {
 
 // Home
 describe('<Home />', () => {
-    it('should render successfully', () => {
+    it('should render successfully', function () {
         shallow(<Home />);
     });
-    it('should render the carousel item', () => {
+    it('should render the carousel item', function () {
         const wrapper = shallow(<Home />);
         const carousel = wrapper.find('Carousel');
         expect(carousel.exists()).to.equal(true);
     });
-    it('should render 3 carousel images', () => {
+    it('should render 3 carousel images', function () {
         const wrapper = shallow(<Home />);
         const carousel = wrapper.find('Carousel');
         expect(carousel.find('img')).to.have.length(3);
   })
 });
 
+// RSAboutPage
 describe('<RSAboutPage/>', function () {
     it('should render successfully', function () {
         shallow(<RSAboutPage />);
