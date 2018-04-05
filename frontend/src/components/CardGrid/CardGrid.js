@@ -111,7 +111,7 @@ export default class CardGrid extends Component {
         }
 
         return (
-            <Container>
+            <Container className="nav-padding">
                 <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
                                 filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
                 {this.itemsForPage().map((row) => {
@@ -131,7 +131,7 @@ export default class CardGrid extends Component {
                        marginPagesDisplayed={2}
                        pageRangeDisplayed={5}
                        onPageChange={(data) => this.handlePageChanged(data.selected)}
-                       containerClassName={"pagination"}
+                       containerClassName={"pagination mx-auto nav-padding"}
                        pageClassName={"page-item"}
                        pageLinkClassName={"page-link"}
                        activeClassName={"active"}

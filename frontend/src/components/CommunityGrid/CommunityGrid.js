@@ -117,7 +117,7 @@ export default class CommunityGrid extends Component {
                 <Row>
                     { this.itemsForCurrentPage() }
                 </Row>
-                <Row>
+                <Row className>
                     <ReactPaginate
                        initialPage={0}
                        previousLabel={"previous"}
@@ -128,7 +128,7 @@ export default class CommunityGrid extends Component {
                        marginPagesDisplayed={2}
                        pageRangeDisplayed={5}
                        onPageChange={(data) => this.handlePageChanged(data.selected)}
-                       containerClassName={"pagination"}
+                       containerClassName={"pagination mx-auto nav-padding"}
                        pageClassName={"page-item"}
                        pageLinkClassName={"page-link"}
                        activeClassName={"active"}
