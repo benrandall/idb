@@ -50,10 +50,10 @@ describe('<App/>', function () {
         const navbar = wrapper.find('Nav');
         expect(navbar.exists()).to.equal(true);
     });
-    it('should have 4 navigation items', function () {
+    it('should have 5 navigation items', function () {
         const wrapper = shallow(<App />);
         const tabs = wrapper.find('Nav').children();
-        expect(tabs).to.have.length(4);
+        expect(tabs).to.have.length(5);
     });
 });
 
