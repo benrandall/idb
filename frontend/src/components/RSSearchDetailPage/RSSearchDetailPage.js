@@ -4,6 +4,7 @@ import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
 import RSSearchCard from "../RSSearchCard/RSSearchCard";
 import ReactPaginate from 'react-paginate';
 import RSSearchUtils from '../../utilities/RSSearchUtils';
+import Masonry from 'react-masonry-component';
 
 export default class RSSearchDetailPage extends Component {
 
@@ -154,6 +155,9 @@ export default class RSSearchDetailPage extends Component {
     }
 
     render() {
+        const masonryOptions = {
+            transitionDuration: 0
+        };
 
         if (!this.state.loaded) {
             return (<p>Loading</p>);
@@ -161,6 +165,12 @@ export default class RSSearchDetailPage extends Component {
 
         return (
             <Container>
+                {this.state.results.length == 0 ? (<Row className='nav-padding'>
+                    <h4 className='mx-auto'>No search results for '{ this.state.query }'</h4>
+                </Row>) : (<div>
+                <Row className='nav-padding'>
+                    <h4 className='mx-auto'>Search results for '{ this.state.query }'</h4>
+                </Row>
                 <Row className="nav-padding">
                     <Col sm="12">
                         <RSSearchHeader sort
@@ -171,9 +181,16 @@ export default class RSSearchDetailPage extends Component {
                                         />
                     </Col>
                 </Row>
-                <Row>
+                <hr/>
+                <Masonry
+                    className={'masonry-grid'}
+                    elementType={'div'}
+                    options={masonryOptions}
+                    disableImagesLoaded={false}
+                    updateOnEachImageLoad={false}
+                >
                     { this.itemsForCurrentPage() }
-                </Row>
+                </Masonry>
                 <Row>
 
                     <ReactPaginate
@@ -186,7 +203,7 @@ export default class RSSearchDetailPage extends Component {
                         marginPagesDisplayed={2}
                         pageRangeDisplayed={5}
                         onPageChange={(data) => this.handlePageChanged(data.selected)}
-                        containerClassName={"pagination mx-auto"}
+                        containerClassName={"pagination mx-auto nav-padding"}
                         pageClassName={"page-item"}
                         pageLinkClassName={"page-link"}
                         activeClassName={"active"}
@@ -196,7 +213,7 @@ export default class RSSearchDetailPage extends Component {
                         nextLinkClassName={"page-link"}
                     />
 
-                </Row>
+                </Row></div>)}
             </Container>
         );
 

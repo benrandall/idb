@@ -107,13 +107,32 @@ export default class CommunityGrid extends Component {
         this.setState({ items: temp})
     }
 
+    getFilters() {
+        return RSSearchUtils.getCommunityFilters();
+    }
+
+    searchWithFilters(filters) {
+        let anded = {filters: filters.map((item) => item.value)};
+        let stringified = JSON.stringify(anded);
+
+        fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
+            .then((items) => { return items.json() })
+            .then((json) => {
+                this.setState({
+                    items: json.objects,
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+                });
+            });
+    }
+
     render() {
         if (!this.state.loaded) {return <p>Loading</p>}
 
         return (
             <Container>
                 <Row className="nav-padding"/>
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}/>
+                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
                 <Row>
                     { this.itemsForCurrentPage() }
                 </Row>
@@ -128,7 +147,7 @@ export default class CommunityGrid extends Component {
                        marginPagesDisplayed={2}
                        pageRangeDisplayed={5}
                        onPageChange={(data) => this.handlePageChanged(data.selected)}
-                       containerClassName={"pagination"}
+                       containerClassName={"pagination mx-auto nav-padding"}
                        pageClassName={"page-item"}
                        pageLinkClassName={"page-link"}
                        activeClassName={"active"}

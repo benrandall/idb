@@ -19,7 +19,7 @@ export default class CardGrid extends Component {
             totalPages: 0
         };
 
-        this.ITEMS_PER_PAGE = 6;
+        this.ITEMS_PER_PAGE = 8;
         this.availableSorts = [
             {
                 label: `Name (Ascending)`,
@@ -106,22 +106,28 @@ export default class CardGrid extends Component {
 
     render() {
 
-        if (this.state.items.length === 0) {
-            return (<div></div>);
-        }
-
         return (
-            <Container>
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
-                {this.itemsForPage().map((row) => {
+            <Container className="nav-padding">
+                { this.state.items.length == 0 ? (
+                    <div>
+                        <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                                    filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
+                        <Row className='nav-padding'>
+                            <h4 className='mx-auto'>No results for selected filters</h4>
+                        </Row>
+                    </div>
+                ) : (<div>
+                    <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
+                    {this.itemsForPage().map((row) => {
                     return (
-                        <Row className="nav-padding">
+                        <Row>
                             { row }
                         </Row>
                     );
                 })}
-                <ReactPaginate
+                <Row>
+                    <ReactPaginate
                        initialPage={0}
                        previousLabel={"previous"}
                        nextLabel={"next"}
@@ -131,7 +137,7 @@ export default class CardGrid extends Component {
                        marginPagesDisplayed={2}
                        pageRangeDisplayed={5}
                        onPageChange={(data) => this.handlePageChanged(data.selected)}
-                       containerClassName={"pagination"}
+                       containerClassName={"pagination mx-auto nav-padding"}
                        pageClassName={"page-item"}
                        pageLinkClassName={"page-link"}
                        activeClassName={"active"}
@@ -139,7 +145,9 @@ export default class CardGrid extends Component {
                        nextClassName={"page-item"}
                        previousLinkClassName={"page-link"}
                        nextLinkClassName={"page-link"}
-                />
+                        />
+                </Row>
+                </div>)}
             </Container>
         )
     }
