@@ -5,7 +5,9 @@ import {
   Route,
   Link,
   HashRouter,
-  Switch
+  BrowserRouter,
+  Switch,
+  Redirect
 } from "react-router-dom";
 
 import {
@@ -88,7 +90,7 @@ class App extends Component {
 
     return (
     <div style={{paddingTop: this.state.navHeight}}>
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
             <NavbarBrand href="/" className="pl-4">RuneScrape</NavbarBrand>
@@ -108,7 +110,7 @@ class App extends Component {
                   <NavLink tag={Link} to="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                    <RSSearchBar onChange={() => {}} onClear={() => {}} onSearch={() => {}}/>
+                    <RSSearchBar onChange={() => {}} onClear={() => {}} />
                 </NavItem>
               </Nav>
             </Collapse>
@@ -127,7 +129,7 @@ class App extends Component {
               <Route path="/search/:query" component={RSSearchDetailPage} />
           </Switch>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
     );
   }

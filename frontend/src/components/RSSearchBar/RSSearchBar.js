@@ -13,7 +13,11 @@ const RSSearchBar = (props) => {
                       onClear={props.onClear}
                       onChange={props.onChange}
                       onSearch={(value) => {
-                          props.history.push(`/search/${value}`)
+                          if (props.onSearch) {
+                              props.onSearch(value);
+                          } else {
+                              props.history.push(`/search/${value}`)
+                          }
                       }}
     />
 };
@@ -24,5 +28,5 @@ RSSearchBar.propTypes = {
     onChange: PropTypes.func
 };
 
-const RSSearchBarWithRouter = withRouter(RSSearchBar);
-export default RSSearchBarWithRouter;
+
+export default withRouter(RSSearchBar);

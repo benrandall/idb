@@ -43,6 +43,20 @@ export default class CardGrid extends Component {
             });
     }
 
+    searchWithFilters(filters) {
+        let anded = {filters: filters.map((item) => item.value)};
+        let stringified = JSON.stringify(anded);
+        console.log(stringified);
+        fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
+            .then((items) => { return items.json() })
+            .then((json) => {
+                this.setState({
+                    items: json.objects,
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+                });
+            });
+    }
+
     handlePageChanged(newPage) {
         this.setState({
             currentPage: newPage
@@ -89,9 +103,12 @@ export default class CardGrid extends Component {
             return (<div></div>);
         }
 
+        console.log(RSSearchUtils.getItemFilters());
+
         return (
             <Container>
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}/>
+                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                                filter availableFilters={RSSearchUtils.getItemFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
                 {this.itemsForPage().map((row) => {
                     return (
                         <Row className="nav-padding">

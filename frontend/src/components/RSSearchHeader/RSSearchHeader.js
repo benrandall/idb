@@ -38,8 +38,8 @@ export default class RSSearchHeader extends Component {
             <Row>
                 {   this.props.search &&
                     <Col sm={12} md={4}>
-                        <RSSearchBar onSearch={ (value) => this.props.handler
-                                                            ? this.props.handler(value)
+                        <RSSearchBar onSearch={ (value) => this.props.onSearch
+                                                            ? this.props.onSearch(value)
                                                             : this.fieldDidSearch(value) }
                                      onClear={this.fieldDidClear}
                                      onChange={this.fieldDidChange}
@@ -49,7 +49,9 @@ export default class RSSearchHeader extends Component {
                 {   this.props.filter &&
                     <Col sm={12} md={4}>
                         <Select options={this.props.availableFilters}
-                            onChange={(values) => this.setState({modelFilters: values}) }
+                            onChange={(values) => this.setState({modelFilters: values}, () => {
+                                this.props.onFilterChange && this.props.onFilterChange(this.state.modelFilters);
+                            })}
                             multi
                             value={this.state.modelFilters}
                         />
@@ -78,6 +80,8 @@ RSSearchHeader.propTypes = {
     filter: PropTypes.bool,
     search: PropTypes.bool,
     onSortChange: PropTypes.func,
+    onFilterChange: PropTypes.func,
+    onSearch: PropTypes.func,
     availableSorts: PropTypes.array,
     availableFilters: PropTypes.array,
 };

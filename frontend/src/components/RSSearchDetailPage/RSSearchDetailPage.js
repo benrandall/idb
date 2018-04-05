@@ -38,13 +38,17 @@ export default class RSSearchDetailPage extends Component {
                 label: `Type (Descending)`,
                 value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, false)
             }
-        ]
+        ];
     }
 
     componentDidMount() {
         const { match: { params } } = this.props;
         this.search(params.query);
+    }
 
+    componentWillReceiveProps(props) {
+        const { match: { params } } = props;
+        this.search(params.query);
     }
 
     itemsForCurrentPage() {
@@ -122,7 +126,62 @@ export default class RSSearchDetailPage extends Component {
         });
     };
 
+    handleFilter(filters) {
+        this.searchWithFilters(this.state.query, filters)
+    }
+
+    handleSearch(value) {
+        this.props.history.push(`/search/${value}`);
+    }
+
+    handleSort(sorter) {
+        let temp = this.state.results;
+        temp.sort(sorter.value);
+
+        this.setState({
+            results: temp
+        });
+    }
+
+    search(value) {
+        fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
+            .then((response) => response.json())
+            .then((json) => {
+                this.setState({
+                    results: json.result,
+                    hasMore: json.has_more,
+                    loaded: true,
+                    query: value,
+                    totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE)
+                });
+            })
+    }
+
+    searchWithFilters(value, filters) {
+        fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
+            .then((response) => response.json())
+            .then((json) => {
+
+                let results = json.result.filter((item) => {
+                    return filters.reduce(true, (prev, filter) => {
+                        return prev && filter(item);
+                    });
+                });
+
+                this.setState({
+                    results: results,
+                    hasMore: json.has_more,
+                    loaded: true,
+                    query: value,
+                    totalPages: Math.ceil(results / this.ITEMS_PER_PAGE)
+                });
+            })
+    }
+
     render() {
+        console.log('RENDERING');
+        console.log(this.state);
+
         if (!this.state.loaded) {
             return (<p>Loading</p>);
         }
@@ -131,10 +190,13 @@ export default class RSSearchDetailPage extends Component {
             <Container>
                 <Row className="nav-padding">
                     <Col sm="12">
-                        <RSSearchHeader search sort
-                                        handler={(value) => this.handleSearch(value)}
+                        <RSSearchHeader sort filter
+                                        onSearch={(value) => this.handleSearch(value)}
                                         onSortChange={(sorters) => this.handleSort(sorters)}
-                                        availableSorts={this.availableSorts}/>
+                                        onFilterChange={(filters) => this.handleFilter(filters)}
+                                        availableSorts={this.availableSorts}
+                                        availableFilters={RSSearchUtils.getModelFilters()}
+                                        />
                     </Col>
                 </Row>
                 <Row>
@@ -166,33 +228,5 @@ export default class RSSearchDetailPage extends Component {
             </Container>
         );
 
-    }
-
-    handleSearch(value) {
-        this.props.history.push(`/search/${value}`);
-        this.search(value);
-    }
-
-    handleSort(sorter) {
-        let temp = this.state.results;
-        temp.sort(sorter.value);
-
-        this.setState({
-            results: temp
-        });
-    }
-
-    search(value) {
-        fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
-            .then((response) => response.json())
-            .then((json) => {
-                this.setState({
-                    results: json.result,
-                    hasMore: json.has_more,
-                    loaded: true,
-                    query: value,
-                    totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE)
-                });
-            })
     }
 }

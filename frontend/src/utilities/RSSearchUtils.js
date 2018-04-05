@@ -30,6 +30,25 @@ const RSSearchUtils = {
         else {
             return "reddit"
         }
+    },
+
+    genericFilter(field, op, value) {
+        return {"name": field, "op":op, "val": value}
+    },
+
+    getModelFilters() {
+        return [
+            {label: 'Skills', value: 'skills'},
+            {label: 'Items', value: 'items'},
+            {label: 'YouTube Videos', value: 'videos'},
+            {label: 'Reddit', value: 'reddits'}
+        ]
+    },
+
+    getItemFilters() {
+        return [
+            { label: 'Members Only', value: RSSearchUtils.genericFilter("members_only", "==", true) }
+        ]
     }
 };
 
