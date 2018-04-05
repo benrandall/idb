@@ -168,7 +168,7 @@ export default class RSSearchDetailPage extends Component {
                 <Row className='nav-padding'>
                     <h4 className='mx-auto'>Search results for '{ this.state.query }'</h4>
                 </Row>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <RSSearchHeader sort
                                         onSearch={(value) => this.handleSearch(value)}
@@ -178,6 +178,7 @@ export default class RSSearchDetailPage extends Component {
                                         />
                     </Col>
                 </Row>
+                <hr/>
                 <Masonry
                 className={'masonry-grid'}
                 elementType={'div'} // default 'div'

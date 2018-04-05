@@ -32,7 +32,7 @@ react-search-bar__input {
 }
 
 .react-search-bar__clear {
-  background: url(./clear.svg) transparent no-repeat center;
+  background: url(./clear.svg) white no-repeat center;
   background-size: 30%;
   right: 0;
   width: 40px;
@@ -85,4 +85,11 @@ react-search-bar__input {
 
 .react-search-bar__suggestion:last-child {
   border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
