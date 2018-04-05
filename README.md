@@ -21,9 +21,20 @@ a token from Github and set it in your environment.
 
 ## Add `.flask_environment` to backend/ folder
 ```
-DATABASE_URL=<url>
+DATABASE_URL=postgres://localhost/db_name
 ELASTICSEARCH_URL=<url>
 GITHUB_API_TOKEN=<url>
+```
+
+## Set up elasticsearch
+```
+$ brew install elasticsearch
+$ brew services start elasticsearch
+```
+
+Elasticsearch should be running on http://localhost:9200. You can confirm this works with
+```
+$ curl localhost:9200
 ```
 
 ## Run the React application
@@ -31,12 +42,12 @@ If you want to run the application locally, you need to create the file `.env.de
 This file is already within the gitignore as it should **never** be version controlled.
 The file should contain the entry:
 ```
-REACT_APP_API_HOST=http://127.0.0.1:5000/api
+REACT_APP_API_HOST=http://127.0.0.1:5000
 ```
 
 ### Steps to build the React
 ```
-$ cd frontend/runescrape/
+$ cd frontend/
 $ yarn install
 $ yarn build-css
 $ yarn start
@@ -45,7 +56,9 @@ $ yarn start
 ## Running the backend
 ```
 $ cd backend/
-$ (venv) python app.py
+$ export FLASK_APP=run.py
+$ flask db_import
+$ flask run
 ```
 
 ## Deployment
