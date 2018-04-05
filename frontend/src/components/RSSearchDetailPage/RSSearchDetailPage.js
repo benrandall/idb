@@ -186,7 +186,7 @@ export default class RSSearchDetailPage extends Component {
                         marginPagesDisplayed={2}
                         pageRangeDisplayed={5}
                         onPageChange={(data) => this.handlePageChanged(data.selected)}
-                        containerClassName={"pagination mx-auto"}
+                        containerClassName={"pagination mx-auto nav-padding"}
                         pageClassName={"page-item"}
                         pageLinkClassName={"page-link"}
                         activeClassName={"active"}

@@ -48,6 +48,7 @@ export default class RSSearchHeader extends Component {
                 }
                 {   this.props.filter &&
                     <Col sm={12} md={4}>
+                        <h5>Apply filters:</h5>
                         <Select options={this.props.availableFilters}
                             onChange={(values) => this.setState({modelFilters: values}, () => {
                                 this.props.onFilterChange && this.props.onFilterChange(this.state.modelFilters);
@@ -60,6 +61,7 @@ export default class RSSearchHeader extends Component {
                 {
                     this.props.sort &&
                     <Col sm={12} md={4}>
+                        <h5>Sort by:</h5>
                         <Select options={this.props.availableSorts}
                             onChange={(values) => {
                                 this.setState({sorter: values});
