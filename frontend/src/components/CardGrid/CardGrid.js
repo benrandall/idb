@@ -121,7 +121,8 @@ export default class CardGrid extends Component {
                         </Row>
                     );
                 })}
-                <ReactPaginate
+                <Row>
+                    <ReactPaginate
                        initialPage={0}
                        previousLabel={"previous"}
                        nextLabel={"next"}
@@ -139,7 +140,8 @@ export default class CardGrid extends Component {
                        nextClassName={"page-item"}
                        previousLinkClassName={"page-link"}
                        nextLinkClassName={"page-link"}
-                />
+                        />
+                </Row>
             </Container>
         )
     }

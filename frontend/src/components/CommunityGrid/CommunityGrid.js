@@ -117,7 +117,7 @@ export default class CommunityGrid extends Component {
                 <Row>
                     { this.itemsForCurrentPage() }
                 </Row>
-                <Row className>
+                <Row>
                     <ReactPaginate
                        initialPage={0}
                        previousLabel={"previous"}
