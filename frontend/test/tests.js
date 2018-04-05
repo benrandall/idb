@@ -26,20 +26,6 @@ import ItemDetailPage from '../src/components/SkillDetailPage/SkillDetailPage';
 import GitHubStats from '../src/components/SkillDetailPage/SkillDetailPage';
 import CommunityGrid from '../src/components/SkillDetailPage/SkillDetailPage';
 
-const item = {
-    "name": "Jade",
-    "examine_info": "A semi precious stone.",
-    "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Jade_detail.png/revision/latest/scale-to-width-down/130?cb=20170203200834",
-    "type": "gems",
-    "market_price": 433,
-    "location": "",
-    "weight": 0,
-    "id": 1,
-    "skills": [1, 9],
-    "videos": [1, 10],
-    "reddits": [1]
-}
-
 // App
 describe('<App/>', function () {
     it('should render successfully', function () {
