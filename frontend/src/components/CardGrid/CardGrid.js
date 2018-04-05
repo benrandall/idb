@@ -46,7 +46,7 @@ export default class CardGrid extends Component {
     searchWithFilters(filters) {
         let anded = {filters: filters.map((item) => item.value)};
         let stringified = JSON.stringify(anded);
-        console.log(stringified);
+
         fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
             .then((items) => { return items.json() })
             .then((json) => {
@@ -109,8 +109,6 @@ export default class CardGrid extends Component {
         if (this.state.items.length === 0) {
             return (<div></div>);
         }
-
-        console.log(RSSearchUtils.getItemFilters());
 
         return (
             <Container>

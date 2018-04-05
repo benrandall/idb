@@ -154,7 +154,6 @@ export default class RSSearchDetailPage extends Component {
     }
 
     render() {
-        console.log(this.state);
 
         if (!this.state.loaded) {
             return (<p>Loading</p>);
