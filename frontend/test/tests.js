@@ -1,9 +1,3 @@
-// import React from 'react';
-// import { shallow, mount } from 'enzyme';
-// import { expect } from 'chai';
-// import * as sinon from 'sinon'
-// import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
-
 import React from 'react';
 import { expect, assert } from 'chai';
 import Enzyme from 'enzyme';
