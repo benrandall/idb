@@ -62,6 +62,10 @@ const RSSearchUtils = {
             { label: 'Quest Items', value: RSSearchUtils.genericFlaskFilter("quest_item", "==", true) },
             { label: 'Equipable Items', value: RSSearchUtils.genericFlaskFilter("equipable", "==", true) }
         ]
+    },
+
+    getCommunityFilters() {
+        return []
     }
 };
 

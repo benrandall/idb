@@ -106,6 +106,24 @@ export default class CommunityGrid extends Component {
         temp.sort(sorter.value);
         this.setState({ items: temp})
     }
+    
+    getFilters() {
+        return RSSearchUtils.getCommunityFilters();
+    }
+
+    searchWithFilters(filters) {
+        let anded = {filters: filters.map((item) => item.value)};
+        let stringified = JSON.stringify(anded);
+
+        fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
+            .then((items) => { return items.json() })
+            .then((json) => {
+                this.setState({
+                    items: json.objects,
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+                });
+            });
+    }
 
     render() {
         if (!this.state.loaded) {return <p>Loading</p>}
@@ -113,7 +131,8 @@ export default class CommunityGrid extends Component {
         return (
             <Container>
                 <Row className="nav-padding"/>
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}/>
+                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/>
                 <Row>
                     { this.itemsForCurrentPage() }
                 </Row>
