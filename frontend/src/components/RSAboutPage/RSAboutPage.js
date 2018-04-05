@@ -48,6 +48,7 @@ export default class RSAboutPage extends Component {
                         bio={member.bio}
                         commits={member.commits}
                         issues={member.issues}
+                        tests={member.unittests}
                                 />
                     })
                 }
