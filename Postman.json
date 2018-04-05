@@ -371,7 +371,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a960b439-4a0a-4e0a-a643-f7231f063087",
+						"id": "0ad4071a-0cb0-42fc-848f-776dcebdaee9",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -393,7 +393,7 @@
 							"});",
 							"",
 							"pm.test(\"first market price is correct\", function () {",
-							"   pm.expect(pm.response.json().objects[0].market_price).to.equal(433);",
+							"   pm.expect(pm.response.json().objects[0].market_price).to.equal(150);",
 							"});"
 						]
 					}
@@ -423,7 +423,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3d776271-c064-425e-ac18-c86caf54130e",
+						"id": "0415af07-1a50-435a-ab57-f09c436f7e8e",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Content-Type is present and correct\", function () {",
@@ -445,7 +445,7 @@
 							"});",
 							"",
 							"pm.test(\"market price is correct\", function () {",
-							"   pm.expect(pm.response.json().market_price).to.equal(433);",
+							"   pm.expect(pm.response.json().market_price).to.equal(150);",
 							"});"
 						]
 					}
@@ -559,6 +559,133 @@
 					"port": "5000",
 					"path": [
 						"community"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Image get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a0399d3-7646-434f-a16c-70e890f63e13",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Content-Type is correct\"] = postman.getResponseHeader(\"Content-Type\") === \"image/jpeg\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/images/luke.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"images",
+						"luke.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d24aa327-4327-4453-909f-9fa8195fb01e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"basic query has many results\", function () {",
+							"    pm.expect(pm.response.json().result.length).not.to.equal(0);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/search?q=sword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "sword"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filtering results works",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ac138ae-0ce9-480e-a1c0-a80f7693f95c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"7 results from query\", function () {",
+							"    pm.expect(pm.response.json().num_results).to.equal(7);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/items?q=%7B%22filters%22%3A+%5B%7B%22name%22%3A+%22members_only%22%2C+%22op%22%3A+%22%3D%3D%22%2C+%22val%22%3A+true%7D%5D%7D",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"items"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "%7B%22filters%22%3A+%5B%7B%22name%22%3A+%22members_only%22%2C+%22op%22%3A+%22%3D%3D%22%2C+%22val%22%3A+true%7D%5D%7D"
+						}
 					]
 				}
 			},
