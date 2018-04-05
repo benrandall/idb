@@ -4,6 +4,7 @@ import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
 import RSSearchCard from "../RSSearchCard/RSSearchCard";
 import ReactPaginate from 'react-paginate';
 import RSSearchUtils from '../../utilities/RSSearchUtils';
+import Masonry from 'react-masonry-component';
 
 export default class RSSearchDetailPage extends Component {
 
@@ -154,6 +155,9 @@ export default class RSSearchDetailPage extends Component {
     }
 
     render() {
+            const masonryOptions = {
+    transitionDuration: 0
+};
 
         if (!this.state.loaded) {
             return (<p>Loading</p>);
@@ -161,7 +165,10 @@ export default class RSSearchDetailPage extends Component {
 
         return (
             <Container>
-                <Row className="nav-padding">
+                <Row className='nav-padding'>
+                    <h4 className='mx-auto'>Search results for '{ this.state.query }'</h4>
+                </Row>
+                <Row>
                     <Col sm="12">
                         <RSSearchHeader sort
                                         onSearch={(value) => this.handleSearch(value)}
@@ -171,9 +178,15 @@ export default class RSSearchDetailPage extends Component {
                                         />
                     </Col>
                 </Row>
-                <Row>
+                <Masonry
+                className={'masonry-grid'}
+                elementType={'div'} // default 'div'
+                options={masonryOptions} // default {}
+                disableImagesLoaded={false} // default false
+                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+            >
                     { this.itemsForCurrentPage() }
-                </Row>
+                </Masonry>
                 <Row>
 
                     <ReactPaginate
