@@ -106,15 +106,20 @@ export default class CardGrid extends Component {
 
     render() {
 
-        if (this.state.items.length === 0) {
-            return (<div></div>);
-        }
-
         return (
             <Container className="nav-padding">
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                { this.state.items.length == 0 ? (
+                    <div>
+                        <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
+                                    filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
+                        <Row className='nav-padding'>
+                            <h4 className='mx-auto'>No results for selected filters</h4>
+                        </Row>
+                    </div>
+                ) : (<div>
+                    <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
                                 filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
-                {this.itemsForPage().map((row) => {
+                    {this.itemsForPage().map((row) => {
                     return (
                         <Row>
                             { row }
@@ -142,6 +147,7 @@ export default class CardGrid extends Component {
                        nextLinkClassName={"page-link"}
                         />
                 </Row>
+                </div>)}
             </Container>
         )
     }
