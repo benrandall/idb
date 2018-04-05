@@ -102,6 +102,8 @@ class Reddit(SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.Text, unique=True, nullable=False)
     title = db.Column(db.Text, nullable=False)
+    category = db.Column(db.Text, nullable=False)
+    community_type = db.Column(db.Text, nullable=False)
 
     skills = db.relationship('Skill',
                 secondary='skills_reddits',
@@ -116,6 +118,8 @@ class Reddit(SearchableMixin, db.Model):
     def __init__(self, reddit):
         self.url = reddit['url']
         self.title = reddit['title']
+        self.category = reddit['category']
+        self.community_type = reddit['community_type']
 
     def __repr__(self):
         return '<Reddits %r>' % self.title
@@ -125,6 +129,8 @@ class Reddit(SearchableMixin, db.Model):
         result['id'] = self.id
         result['url'] = self.url
         result['title'] = self.title
+        result['category'] = self.category
+        result['community_type'] = self.community_type
         if get_children:
             result['skills'] = [skill.toJSON(get_children=False) for skill in self.skills]
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
@@ -139,6 +145,7 @@ class Video(SearchableMixin, db.Model):
     icon = db.Column(db.Text, nullable=False)
     video_url = db.Column(db.Text, unique=True, nullable=False)
     category = db.Column(db.Text, nullable=False)
+    community_type = db.Column(db.Text, nullable=False)
 
     skills = db.relationship('Skill',
                 secondary='skills_videos',
@@ -155,6 +162,7 @@ class Video(SearchableMixin, db.Model):
         self.icon = video['icon']
         self.category = video['category']
         self.video_url = video['video_url']
+        self.community_type = video['community_type']
 
     def __repr__(self):
         return '<Video %r>' % self.name
@@ -166,6 +174,7 @@ class Video(SearchableMixin, db.Model):
         result['icon'] = self.icon
         result['video_url'] = self.video_url
         result['category'] = self.category
+        result['community_type'] = self.community_type
         if get_children:
             result['skills'] = [skill.toJSON(get_children=False) for skill in self.skills]
             result['items'] = [item.toJSON(get_children=False) for item in self.items]
