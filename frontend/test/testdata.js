@@ -116,7 +116,7 @@ export const ITEMS_JSON = {
             "videos": [7, 8],
             "reddits": [5]
         }
-    ]
+    ],
     count: 9
 }
 
@@ -330,7 +330,7 @@ export const SKILLS_JSON = {
             "videos": [],
             "reddits": []
         }
-    ]
+    ],
     count: 19
 }
 

@@ -30,30 +30,36 @@ import CommunityGrid from '../src/components/SkillDetailPage/SkillDetailPage';
 
 // App
 describe('<App/>', function () {
-    it('should render successfully', function () {
+    it('should render successfully', () => {
         shallow(<App />);
     });
-    it('should render the navigation bar', function () {
+    it('should render the navigation bar', () => {
         const wrapper = shallow(<App />);
-        expect(wrapper.find('.navbar').exists()).to.be.equal(true)
+        const navbar = wrapper.find('Nav');
+        expect(navbar.exists()).to.equal(true);
     });
-    it ('should have 4 navigation items', function () {
-        const wrapper = shallow(<App />);
+    it('should have 4 navigation items', () => {
+        const wrapper = shallow(<App/>);
         const tabs = wrapper.find('Nav').children();
-        expect(tabs.to.have.length(4));
-
+        expect(tabs).to.have.length(4);
     });
 });
 
-// write tests below
+// Home
 describe('<Home />', () => {
-  it('should render successfully', () => {
-    shallow(<Home />);
-  });
-  it('should render the carousel item', () => {
-    const wrapper = shallow(<Home />)
-    expect(wrapper.find('.carousel').exists()).to.eql(true)
-  });
+    it('should render successfully', () => {
+        shallow(<Home />);
+    });
+    it('should render the carousel item', () => {
+        const wrapper = shallow(<Home />);
+        const carousel = wrapper.find('Carousel');
+        expect(carousel.exists()).to.equal(true);
+    });
+    it('should render 3 carousel images', () => {
+        const wrapper = shallow(<Home />);
+        const carousel = wrapper.find('Carousel');
+        expect(carousel.find('img')).to.have.length(3);
+  })
 });
 
 describe('<RSAboutPage/>', function () {
@@ -65,65 +71,65 @@ describe('<RSAboutPage/>', function () {
 describe('<RSContainer/>', function () {
     it('should render successfully', function () {
         shallow(<RSContainer />);
-    })
+    });
 });
 
 describe('<RSLink/>', function () {
     it('should render successfully', function () {
         shallow(<RSLink />);
-    })
+    });
 });
 
 describe('<RSRedditCard/>', function () {
     it('should render successfully', function () {
         shallow(<RSRedditCard />);
-    })
+    });
 });
 
 describe('<RSTeamMember/>', function () {
     it('should render successfully', function () {
         shallow(<RSTeamMember />);
-    })
+    });
 });
 
 describe('<RSTool/>', function () {
     it('should render successfully', function () {
         shallow(<RSTool />);
-    })
+    });
 });
 
 describe('<RSVideoCard/>', function () {
     it('should render successfully', function () {
         shallow(<RSVideoCard />);
-    })
+    });
 });
 
 describe('<RSVideoDetailPage/>', function () {
     it('should render successfully', function () {
         shallow(<RSVideoDetailPage name="a" category="a" id="1" url="a"/>);
-    })
+    });
 });
 
 describe('<SkillDetailPage/>', function () {
     it('should render successfully', function () {
         shallow(<SkillDetailPage />);
-    })
+    });
 });
 
 describe('<ItemDetailPage/>', function () {
     it('should render successfully', function () {
         shallow(<ItemDetailPage />);
-    })
+    });
 });
 
 describe('<GitHubStats/>', function () {
     it('should render successfully', function () {
         shallow(<GitHubStats />);
-    })
+    });
 });
 
 describe('<CommunityGrid/>', function () {
     it('should render successfully', function () {
         shallow(<CommunityGrid />);
-    })
+    });
 });
