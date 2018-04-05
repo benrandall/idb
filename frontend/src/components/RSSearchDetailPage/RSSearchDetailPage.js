@@ -165,6 +165,9 @@ export default class RSSearchDetailPage extends Component {
 
         return (
             <Container>
+                {this.state.results.length == 0 ? (<Row className='nav-padding'>
+                    <h4 className='mx-auto'>No search results for '{ this.state.query }'</h4>
+                </Row>) : (<div>
                 <Row className='nav-padding'>
                     <h4 className='mx-auto'>Search results for '{ this.state.query }'</h4>
                 </Row>
@@ -180,12 +183,12 @@ export default class RSSearchDetailPage extends Component {
                 </Row>
                 <hr/>
                 <Masonry
-                className={'masonry-grid'}
-                elementType={'div'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-            >
+                    className={'masonry-grid'}
+                    elementType={'div'}
+                    options={masonryOptions}
+                    disableImagesLoaded={false}
+                    updateOnEachImageLoad={false}
+                >
                     { this.itemsForCurrentPage() }
                 </Masonry>
                 <Row>
@@ -210,7 +213,7 @@ export default class RSSearchDetailPage extends Component {
                         nextLinkClassName={"page-link"}
                     />
 
-                </Row>
+                </Row></div>)}
             </Container>
         );
 
