@@ -38,7 +38,8 @@ export default class CardGrid extends Component {
             .then((json) => {
                 this.setState({
                     items: json.objects,
-                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
+                    currentPage: 0
                 });
             });
     }
@@ -52,7 +53,8 @@ export default class CardGrid extends Component {
             .then((json) => {
                 this.setState({
                     items: json.objects,
-                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
+                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
+                    currentPage: 0
                 });
             });
     }
