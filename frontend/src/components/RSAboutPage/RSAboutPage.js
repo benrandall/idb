@@ -19,7 +19,8 @@ export default class RSAboutPage extends Component {
             loaded: false,
             teammates: [],
             total_commits: 0,
-            total_issues: 0
+            total_issues: 0,
+            total_unittests: 0
         };
     }
 
@@ -31,7 +32,8 @@ export default class RSAboutPage extends Component {
                     loaded: true,
                     teammates: json.teammates,
                     total_commits: json.total_commits,
-                    total_issues: json.total_issues
+                    total_issues: json.total_issues,
+                    total_unittests: json.total_unittests
                 });
             });
     }
@@ -62,6 +64,7 @@ export default class RSAboutPage extends Component {
             <Row>
                 <GitHubStats    issues={this.state.total_issues}
                                 commits={this.state.total_commits}
+                                tests={this.state.total_unittests}
                 />
             </Row>
         );
@@ -88,9 +91,8 @@ export default class RSAboutPage extends Component {
         if (!this.state.loaded) { return (<div>Loading</div>); }
 
         return (
-            <Container>
-                <RSContainer    className="nav-padding"
-                                title={AboutConstants.about.title}
+            <Container className="nav-padding">
+                <RSContainer    title={AboutConstants.about.title}
                                 subtitle={AboutConstants.about.subtitle}
                                 body={ (<p>{ AboutConstants.about.body }</p>) }/>
 
