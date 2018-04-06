@@ -132,12 +132,11 @@ export default class RSSearchDetailPage extends Component {
     }
 
     handleSort(sorter) {
-        let temp = this.state.results;
-        temp.sort(sorter.value);
-
-        this.setState({
-            results: temp
-        });
+        if (sorter) {
+            let temp = this.state.results;
+            temp.sort(sorter.value);
+            this.setState({ results: temp });
+        }
     }
 
     search(value) {
