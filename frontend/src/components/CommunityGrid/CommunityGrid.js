@@ -102,9 +102,11 @@ export default class CommunityGrid extends Component {
     }
 
     handleSort(sorter) {
-        let temp = this.state.items;
-        temp.sort(sorter.value);
-        this.setState({ items: temp})
+        if (sorter) {
+            let temp = this.state.items;
+            temp.sort(sorter.value);
+            this.setState({ items: temp})
+        }
     }
 
     getFilters() {

@@ -92,11 +92,13 @@ export default class CardGrid extends Component {
 
         return rows;
     }
-
+    
     handleSort(sorter) {
-        let temp = this.state.items;
-        temp.sort(sorter.value);
-        this.setState({ items: temp})
+        if (sorter) {
+            let temp = this.state.items;
+            temp.sort(sorter.value);
+            this.setState({ items: temp})
+        }
     }
 
     getFilters() {
