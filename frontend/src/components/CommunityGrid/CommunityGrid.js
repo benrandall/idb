@@ -112,30 +112,48 @@ export default class CommunityGrid extends Component {
     }
 
     searchWithFilters(filters) {
-        // let anded = {filters: filters.map((item) => item.value)};
-        // let stringified = JSON.stringify(anded);
-        //
-        // fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
-        //     .then((items) => { return items.json() })
-        //     .then((json) => {
-        //         this.setState({
-        //             items: json.objects,
-        //             totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE)
-        //         });
-        //     });
+        let anded = {filters: filters.map((item) => item.value)};
+        let stringified = JSON.stringify(anded);
+
+        fetch(`${process.env.REACT_APP_API_HOST}/videos?q=${stringified}`)
+            .then(response => response.json())
+            .then(response => {
+              this.setState({
+                items: response.objects
+              });
+              return fetch(`${process.env.REACT_APP_API_HOST}/reddits?q=${stringified}`)
+            })
+            .then(response => response.json())
+            .then(response => {
+              this.setState({
+                items: this.state.items.concat(response.objects),
+                loaded: true,
+                totalPages: Math.ceil((this.state.items.length + response.objects.length) / this.ITEMS_PER_PAGE),
+                currentPage: 0
+              })
+            });
     }
 
     render() {
         if (!this.state.loaded) {return <p>Loading</p>}
 
         return (
-            <Container>
-                <Row className="nav-padding"/>
+            <Container className="nav-padding">
                 <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
+                    filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
                 <Row>
-                    { this.itemsForCurrentPage() }
+                    {  this.state.items.length > 0
+                        ? (
+                            <Row>
+                                { this.itemsForCurrentPage() }
+                            </Row>
+                        ) : (
+                        <Row>
+                            <h4 className='mx-auto'>No results for selected filters</h4>
+                        </Row>
+                    ) }
                 </Row>
+
                 <Row>
                     <ReactPaginate
                        initialPage={0}

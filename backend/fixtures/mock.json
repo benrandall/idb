@@ -389,7 +389,7 @@
             "id": 2,
             "icon": "http://img.youtube.com/vi/QX68QDDsn7M/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/QX68QDDsn7M",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [2],
             "skills": [2]
@@ -409,7 +409,7 @@
             "id": 4,
             "icon": "https://img.youtube.com/vi/nwS_-UtgWPs/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=nwS_-UtgWPs",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [4],
             "skills": [4]
@@ -419,7 +419,7 @@
             "id": 5,
             "icon": "https://img.youtube.com/vi/DIp15-b2HIU/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=DIp15-b2HIU",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [4],
             "skills": [4]
@@ -429,7 +429,7 @@
             "id": 6,
             "icon": "https://img.youtube.com/vi/2x3uDIia3-s/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=2x3uDIia3-s",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [8],
             "skills": [4, 7]
@@ -439,7 +439,7 @@
             "id": 7,
             "icon": "https://img.youtube.com/vi/2P3MaOh8Jzo/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=2P3MaOh8Jzo",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [6, 9],
             "skills": [5]
@@ -449,7 +449,7 @@
             "id": 8,
             "icon": "https://img.youtube.com/vi/B_1_0bmV3CQ/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=B_1_0bmV3CQ",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [6, 9],
             "skills": [5]
@@ -459,7 +459,7 @@
             "id": 9,
             "icon": "https://img.youtube.com/vi/Ucvn8hQEs2A/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=Ucvn8hQEs2A",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [9],
             "skills": [8]
@@ -469,7 +469,7 @@
             "id": 10,
             "icon": "https://img.youtube.com/vi/ORB08buxyQo/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/watch?v=ORB08buxyQo",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "youtube",
             "items": [1],
             "skills": [9]
@@ -479,7 +479,7 @@
             "url": "https://www.reddit.com/r/2007scape/comments/5o05le/loot_from_cutting_119k_semiprecious_gems/",
             "id": 1,
             "title": "Loot from cutting 119k semi-precious gems",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "reddit",
             "items": [1],
             "skills": [1]
@@ -488,7 +488,7 @@
             "url": "https://www.reddit.com/r/2007scape/comments/6spnq0/dragon_scimitar_dragon_defender_vs_saradomin/",
             "id": 2,
             "title": "Dragon scimitar + dragon defender vs Saradomin sword DPS for general training/slayer",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "reddit",
             "items": [2],
             "skills": [2]
@@ -497,7 +497,7 @@
             "url": "https://www.reddit.com/r/2007scape/comments/5mi5tg/just_failed_28_iron_bar_smelts_in_a_row_ama/",
             "id": 3,
             "title": "Just failed 28 iron bar smelts in a row AMA",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "reddit",
             "items": [3],
             "skills": [3]
@@ -506,7 +506,7 @@
             "url": "https://www.reddit.com/r/2007scape/comments/85cb1w/gamebreaking_mining_exp/",
             "id": 4,
             "title": "Gamebreaking mining exp",
-            "category": "Old School RuneScape",
+            "category": "old_runescape",
             "community_type": "reddit",
             "items": [1],
             "skills": [3]
@@ -515,7 +515,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/4xni9h/is_there_any_chance_the_necromancer_gear_could/",
             "id": 5,
             "title": "Is there any chance the Necromancer gear could get a graphical update closer to the original concept art?",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [9],
             "skills": [5]
@@ -524,7 +524,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/2ye6k6/as_your_cooking_levels_go_up_will_you_burn_less/",
             "id": 6,
             "title": "As your cooking levels go up, will you burn less food?",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [4, 8],
             "skills": [4]
@@ -533,7 +533,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/52ohuc/what_happened_to_the_price_of_potato_cacti/",
             "id": 7,
             "title": "What happened to the price of potato cacti?",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [8],
             "skills": [7]
@@ -542,7 +542,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/7ke9s3/tldr_360_mining_and_smithing_faqs/",
             "id": 8,
             "title": "TL;DR 360 - Mining and Smithing FAQs",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [1, 3],
             "skills": [3, 9]
@@ -551,7 +551,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/5p313k/herblore_guide_for_cheap_scrubs_like_me/",
             "id": 9,
             "title": "Herblore Guide (for cheap scrubs like me)",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [8],
             "skills": [7]
@@ -560,7 +560,7 @@
             "url": "https://www.reddit.com/r/runescape/comments/67axc3/psa_the_shark_outfit_is_insanely_epic_for_afk/",
             "id": 10,
             "title": "PSA: The shark outfit is insanely epic for AFK fishing at barbarian fishing",
-            "category": "RuneScape",
+            "category": "runescape",
             "community_type": "reddit",
             "items": [4],
             "skills": [4]

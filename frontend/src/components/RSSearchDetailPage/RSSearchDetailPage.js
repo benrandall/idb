@@ -96,7 +96,7 @@ export default class RSSearchDetailPage extends Component {
                                          imageURL={result.icon}
                                          title={result.name}
                                          searchWords={this.state.query.split(' ')}
-                                         type="videos"/>);
+                                         type="community"/>);
 
                     //return <RSVideoCard title={result.name} icon={result.icon} id={result.id}/>
                 }
@@ -149,7 +149,8 @@ export default class RSSearchDetailPage extends Component {
                     hasMore: json.has_more,
                     loaded: true,
                     query: value,
-                    totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE)
+                    totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE),
+                    currentPage: 0
                 });
             })
     }

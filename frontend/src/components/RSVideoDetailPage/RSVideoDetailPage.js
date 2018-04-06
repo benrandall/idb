@@ -58,7 +58,9 @@ export default class RSVideoDetailPage extends Component {
                 <Row className="nav-padding">
                     <Col sm="12">
                         <p className="info">{ this.state.name }</p>
-                        <p className="info-small">Video Category: { this.state.category }</p>
+                        <p className="info-small">Video Category: { this.state.category === 'runescape' ?
+                                                                                                'Runescape' :
+                                                                                                'Old School Runescape' }</p>
                         <div className="embed-responsive embed-responsive-16by9">
                             <iframe className="embed-responsive-item" title={this.state.name} src={ this.state.video_url } frameBorder="0" allowFullScreen />
                         </div>
