@@ -352,7 +352,7 @@
         {
             "name": "Hunter",
             "id": 18,
-            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/6/6e/Slayer.png/revision/latest?cb=20131026214932",
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/4/4b/Hunter.png/revision/latest?cb=20131026214930",
             "description": "Hunter is a members'-only skill where players catch different animals and creatures in RuneScape. Although Hunter is a non-combat skill, players can still be damaged while hunting. Using hunting equipment bought from hunter stores, players can hunt specific creatures obtaining rewards such as spotted kebbit fur for spotted cape, chinchompa ammunition, black salamanders, and the fabled dragon impling jar.",
             "members_only": true,
             "max_level": 99,

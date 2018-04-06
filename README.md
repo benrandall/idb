@@ -47,6 +47,13 @@ $ flask db_import
 $ flask run
 ```
 
+### Running the backend tests
+You *must* have a Github API Token in your local environment
+```
+$ cd backend/
+$ python tests.py
+```
+
 ## Frontend (React App) Setup
 If you want to run the application locally, you need to create the file `.env.development.local` in the frontend directory. 
 This file is already within the gitignore as it should **never** be version controlled.
@@ -62,6 +69,11 @@ $ cd frontend/
 $ yarn install
 $ yarn build-css
 $ yarn start
+```
+
+### Running the frontend tests
+```
+$ yarn test
 ```
 
 ## Deployment
