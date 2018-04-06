@@ -1,4 +1,5 @@
 import json
+import os
 from flask import request, jsonify, current_app, send_from_directory
 from app import db
 from app.models import Item, Skill, Video, Reddit
@@ -47,3 +48,10 @@ def about():
         }
     return jsonify(result)
 
+@bp.route('/community')
+def community():
+    return jsonify({
+        'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
+        'videos': [video.toJSON() for video in Video.query.all()]
+    })
+    

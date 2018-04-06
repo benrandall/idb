@@ -5,7 +5,9 @@ import {
   Route,
   Link,
   HashRouter,
-  Switch
+  BrowserRouter,
+  Switch,
+  Redirect
 } from "react-router-dom";
 
 import {
@@ -17,6 +19,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import SearchBar from 'react-search-bar';
 
 import './App.css';
 
@@ -27,6 +30,8 @@ import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 import RSAboutPage from '../RSAboutPage/RSAboutPage';
 import CommunityGrid from '../CommunityGrid/CommunityGrid';
 import RSVideoDetailPage from '../RSVideoDetailPage/RSVideoDetailPage';
+import RSSearchDetailPage from "../RSSearchDetailPage/RSSearchDetailPage";
+import RSSearchBar from "../RSSearchBar/RSSearchBar";
 
 class App extends Component {
 
@@ -85,7 +90,7 @@ class App extends Component {
 
     return (
     <div style={{paddingTop: this.state.navHeight}}>
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
             <NavbarBrand href="/" className="pl-4">RuneScrape</NavbarBrand>
@@ -104,6 +109,9 @@ class App extends Component {
                 <NavItem>
                   <NavLink tag={Link} to="/about">About</NavLink>
                 </NavItem>
+                <NavItem>
+                    <RSSearchBar onChange={() => {}} onClear={() => {}} />
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
@@ -117,9 +125,11 @@ class App extends Component {
               <Route exact path="/community" component={CommunityGrid}/>
               <Route exact path="/community/:id" component={RSVideoDetailPage}/>
               <Route exact path="/about" component={RSAboutPage}/>
+              <Route exact path="/search" component={RSSearchDetailPage}/>
+              <Route path="/search/:query" component={RSSearchDetailPage} />
           </Switch>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
     );
   }
