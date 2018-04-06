@@ -71,6 +71,11 @@ $ yarn build-css
 $ yarn start
 ```
 
+### Running the frontend tests
+```
+$ yarn test
+```
+
 ## Deployment
 
 ### Docker
