@@ -13,7 +13,7 @@ COPY config/uwsgi.ini /etc/uwsgi/
 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-COPY requirements.txt /tmp/
+COPY backend/requirements.txt /tmp/
 
 RUN pip install -U pip
 RUN pip install -r /tmp/requirements.txt
