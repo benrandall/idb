@@ -6,6 +6,7 @@ import RSTeamMember from '../RSTeamMember/RSTeamMember';
 import GitHubStats from '../GitHubStats/GitHubStats';
 import RSTool from '../RSTool/RSTool';
 import RSLink from '../RSLink/RSLink';
+import "isomorphic-fetch";
 
 import './RSAboutPage.css';
 
