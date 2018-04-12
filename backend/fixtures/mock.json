@@ -372,6 +372,54 @@
             "items": [],
             "videos": [],
             "reddits": []
+        },
+        {
+            "name": "Strength",
+            "id": 20,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/8/8b/Strength.png/revision/latest?cb=20131026214938",
+            "description": "Strength is a player's power in melee combat. As a player raises their Strength level, they can deal more damage against opponents. A high Strength level is often favoured by player-killers over their Attack level because it raises max hit, helping to generate the burst damage necessary to kill other players faster than they can heal themselves.",
+            "members_only": true,
+            "max_level": 99,
+			"skill_type": "Combat",
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Hitpoints",
+            "id": 21,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/2/2e/Hitpoints.png/revision/latest?cb=20131026214930",
+            "description": "Hitpoints (also known as health or HP, or Constitution in RuneScape 3) represents a player's health. If it reaches 0, the player will die. Hitpoints is the only skill to start out as level 10 on Tutorial Island, where the player starts out with exactly 1154 experience.",
+            "members_only": true,
+            "max_level": 99,
+			"skill_type": "Combat",
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Woodcutting",
+            "id": 22,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/d/df/Woodcutting.png/revision/latest?cb=20131026214939",
+            "description": "Woodcutting is a gathering skill that primarily involves chopping trees to obtain logs used in the Fletching, Firemaking, and Construction skills. Players with a higher Woodcutting level can chop down new types of trees and cut down trees quicker. As levels increase, players can use better axes to chop trees faster. Players with high enough Attack levels can equip the axes that match the respective metals, but you don't need to equip an axe to use it to cut down a tree. Having it in your inventory will suffice. Woodcutting is a useful skill for a low-leveled player to make money early in the game.",
+            "members_only": true,
+            "max_level": 99,
+			"skill_type": "Gathering",
+            "items": [],
+            "videos": [],
+            "reddits": []
+        },
+        {
+            "name": "Firemaking",
+            "id": 23,
+            "icon": "https://vignette.wikia.nocookie.net/2007scape/images/2/2c/Firemaking.png/revision/latest?cb=20131026214929",
+            "description": "Firemaking is a skill used to light fires, among other things. It is the companion skill of Woodcutting, often trained by players to complete quests or minigames that require a certain level of Firemaking. A number of quests with good rewards require Firemaking skills, such as Recipe for Disaster and Desert Treasure. Similarly, Firemaking-oriented minigames with good rewards include Shades of Mort'ton and the Wintertodt boss. Another use for Firemaking is the ability to make a fire and cook things like meat and fish on the spot; when low-level players fight Giant rats, they can then cook the rat meat and consume it to heal life points. Finally, the more recently released Wintertodt is a solid way to level Firemaking while also being profitable. Killing the Wintertodt is the only way to obtain the pyromancer outfit.",
+            "members_only": true,
+            "max_level": 99,
+			"skill_type": "Artisan",
+            "items": [],
+            "videos": [],
+            "reddits": []
         }
     ],
     "videos": [{
