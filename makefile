@@ -13,6 +13,7 @@ selenium:
 
 mocha:
 	cd frontend && yarn install
+	cd frontend && yarn build-css
 	cd frontend && yarn test
 
 backend:
