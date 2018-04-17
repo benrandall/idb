@@ -29,7 +29,7 @@ frontend:
 
 # make backend  - runs backend tests
 backend:
-
+	cd backend/ && python tests.py
 
 # make website  - prints link to a website
 website:
