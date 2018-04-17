@@ -65,19 +65,27 @@ export default class RSVideoDetailPage extends Component {
                             <iframe className="embed-responsive-item" title={this.state.name} src={ this.state.video_url } frameBorder="0" allowFullScreen />
                         </div>
                     </Col>
-                </Row><hr/>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Related Items</p>
-                    </Col>
-                    { this.getItems() }
-                </Row><hr/>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Related Skills</p>
-                    </Col>
-                    { this.getSkills() }
                 </Row>
+                { this.getItems().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Items</p>
+                            </Col>
+                            { this.getItems() }
+                        </Row>
+                    </div>}
+                { this.getSkills().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Skills</p>
+                            </Col>
+                            { this.getSkills() }
+                        </Row>
+                    </div>}
             </Container>
         );
     }

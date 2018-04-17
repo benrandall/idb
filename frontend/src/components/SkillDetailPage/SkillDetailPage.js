@@ -83,23 +83,30 @@ export default class SkillDetailPage extends Component {
                             </div>
                         </div>
                     </Col>
-                </Row><hr/>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Related Items</p>
-                    </Col>
                 </Row>
-                <Row>
-                    { this.getItems() }
-                </Row><hr/>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Community Sources</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getCommunity() }
-                </Row>
+                { this.getItems().length > 0 &&
+                    <div>
+                        <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Items</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            { this.getItems() }
+                        </Row><hr/>
+                    </div> }
+                {this.getCommunity().length > 0 &&
+                    <div>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Community Sources</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            { this.getCommunity() }
+                        </Row>
+                    </div>}
             </div>
         );
     }

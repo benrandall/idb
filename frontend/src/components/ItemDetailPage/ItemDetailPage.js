@@ -91,22 +91,30 @@ export default class SkillDetailPage extends Component {
                         </div>
                     </Col>
                 </Row>
-                <Row className="nav-padding">
-                    <Col sm="12">
-                        <p className="info">Related Skills</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getSkills() }
-                </Row>
-                <Row className="nav-padding">
-                    <Col sm="12">
-                        <p className="info">Community Sources</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getCommunity() }
-                </Row>
+                { this.getSkills().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Skills</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                                { this.getSkills() }
+                        </Row>
+                    </div>}
+                { this.getCommunity().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Community Sources</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            { this.getCommunity() }
+                        </Row>
+                    </div>}
             </Container>
         );
     }
