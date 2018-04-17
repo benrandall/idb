@@ -158,7 +158,7 @@
             "id": 10,
             "skills": [5],
             "videos": [],
-            "reddits": []
+            "reddits": [13]
           },
           {
             "name": "Stake",
@@ -173,7 +173,7 @@
             "weight": 0.085,
             "id": 11,
             "skills": [20, 2],
-            "videos": [],
+            "videos": [11],
             "reddits": []
           },
           {
@@ -190,7 +190,7 @@
             "id": 12,
             "skills": [1, 5],
             "videos": [],
-            "reddits": []
+            "reddits": [14]
           },
           {
             "name": "Silverlight",
@@ -205,8 +205,8 @@
             "weight": 1.814,
             "id": 13,
             "skills": [2, 8, 20],
-            "videos": [],
-            "reddits": []
+            "videos": [12],
+            "reddits": [12]
           },
           {
             "name": "Kayle's chargebow",
@@ -221,7 +221,7 @@
             "weight": 0.25,
             "id": 14,
             "skills": [14],
-            "videos": [],
+            "videos": [13],
             "reddits": []
           },
           {
@@ -238,7 +238,7 @@
             "id": 15,
             "skills": [8],
             "videos": [],
-            "reddits": []
+            "reddits": [11]
           }
     ],
     "skills": [{
@@ -262,7 +262,7 @@
             "max_level": 99,
 			"skill_type": "Combat",
             "items": [2],
-            "videos": [2],
+            "videos": [2, 11, 12],
             "reddits": [2]
         },
         {
@@ -299,7 +299,7 @@
 			"skill_type": "Combat",
             "items": [6, 9],
             "videos": [7, 8],
-            "reddits": []
+            "reddits": [13, 14]
         },
         {
             "name": "Fishing",
@@ -334,7 +334,7 @@
             "max_level": 99,
 			"skill_type": "Combat",
             "items": [9],
-            "videos": [9],
+            "videos": [9, 12],
             "reddits": []
         },
         {
@@ -395,7 +395,7 @@
 			"skill_type": "Combat",
             "items": [],
             "videos": [],
-            "reddits": []
+            "reddits": [11]
         },
         {
             "name": "Ranged",
@@ -406,7 +406,7 @@
             "max_level": 99,
 			"skill_type": "Combat",
             "items": [],
-            "videos": [],
+            "videos": [13],
             "reddits": []
         },
         {
@@ -478,7 +478,7 @@
             "max_level": 99,
 			"skill_type": "Combat",
             "items": [],
-            "videos": [],
+            "videos": [12],
             "reddits": []
         },
         {
@@ -552,7 +552,7 @@
             "name": "Runescape-Fishing Sharks in Old School!",
             "id": 4,
             "icon": "https://img.youtube.com/vi/nwS_-UtgWPs/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=nwS_-UtgWPs",
+            "video_url": "https://gaming.youtube.com/embed/nwS_-UtgWPs",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [4],
@@ -562,7 +562,7 @@
             "name": "Runescape 2016 | 1-99 Fishing Guide",
             "id": 5,
             "icon": "https://img.youtube.com/vi/DIp15-b2HIU/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=DIp15-b2HIU",
+            "video_url": "https://gaming.youtube.com/embed/DIp15-b2HIU",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [4],
@@ -572,7 +572,7 @@
             "name": "Runescape Money making Guide - Potato Cactus",
             "id": 6,
             "icon": "https://img.youtube.com/vi/2x3uDIia3-s/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=2x3uDIia3-s",
+            "video_url": "https://gaming.youtube.com/embed/2x3uDIia3-s",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [8],
@@ -582,7 +582,7 @@
             "name": "8 Good Ways to Get 99 Magic",
             "id": 7,
             "icon": "https://img.youtube.com/vi/2P3MaOh8Jzo/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=2P3MaOh8Jzo",
+            "video_url": "https://gaming.youtube.com/embed/2P3MaOh8Jzo",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [6, 9],
@@ -592,7 +592,7 @@
             "name": "RS3 1-99 Magic guide fastest way 2017",
             "id": 8,
             "icon": "https://img.youtube.com/vi/B_1_0bmV3CQ/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=B_1_0bmV3CQ",
+            "video_url": "https://gaming.youtube.com/embed/B_1_0bmV3CQ",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [6, 9],
@@ -602,7 +602,7 @@
             "name": "How Defence Works in OSRS",
             "id": 9,
             "icon": "https://img.youtube.com/vi/Ucvn8hQEs2A/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=Ucvn8hQEs2A",
+            "video_url": "https://gaming.youtube.com/embed/Ucvn8hQEs2A",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [9],
@@ -612,11 +612,41 @@
             "name": "NEW Mining Guild EXPANSION",
             "id": 10,
             "icon": "https://img.youtube.com/vi/ORB08buxyQo/mqdefault.jpg",
-            "video_url": "https://gaming.youtube.com/watch?v=ORB08buxyQo",
+            "video_url": "https://gaming.youtube.com/embed/ORB08buxyQo",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [1],
             "skills": [9]
+        },
+        {
+            "name": "RuneScape - 2007 - Vampire Slayer",
+            "id": 11,
+            "icon": "https://i.ytimg.com/an_webp/xAAsSFp-dlY/mqdefault_6s.webp?du=3000&sqp=CMKC2dYF&rs=AOn4CLBW5dYKkbqscuTUZEG6GOog4bsOJg",
+            "video_url": "https://www.youtube.com/embed/xAAsSFp-dlY",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [11],
+            "skills": [2]
+        },
+        {
+            "name": "[OSRS] Demon slayer quest guide",
+            "id": 12,
+            "icon": "https://i.ytimg.com/an_webp/W6CpBVMlSx8/mqdefault_6s.webp?du=3000&sqp=CKPa2NYF&rs=AOn4CLBJIq46hgsKzGmfyCU1stn_3p3Tzw",
+            "video_url": "https://www.youtube.com/embed/W6CpBVMlSx8",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [13],
+            "skills": [2, 8, 20]
+        },
+        {
+            "name": "Runescape Shenanigans",
+            "id": 13,
+            "icon": "https://i.ytimg.com/vi/G9KlG4gaO_s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDmysX0_wF8dLTaBJoRvKiIPGnu6g",
+            "video_url": "https://www.youtube.com/embed/G9KlG4gaO_s",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [14],
+            "skills": [14]
         }
     ],
     "reddits": [{
@@ -708,6 +738,42 @@
             "community_type": "reddit",
             "items": [4],
             "skills": [4]
-	}     
+	    },
+        {
+            "url": "https://www.reddit.com/r/2007scape/comments/3jwf0z/cant_regain_bearhead/",
+            "id": 11,
+            "title": "Can't Regain Bearhead?",
+            "category": "old_runescape",
+            "community_type": "reddit",
+            "items": [15],
+            "skills": [13]
+	    },
+        {
+            "url": "https://www.reddit.com/r/runescape/comments/6gpkh3/how_do_i_make_my_silverlight_weapon_black_instead/",
+            "id": 12,
+            "title": "How do I make my Silverlight weapon black instead of dyed?",
+            "category": "runescape",
+            "community_type": "reddit",
+            "items": [13],
+            "skills": []
+	    },
+        {
+            "url": "https://www.reddit.com/r/2007scape/comments/3joe08/is_iban_staff_really_worth_it/",
+            "id": 13,
+            "title": "Is Iban Staff REALLY worth it????",
+            "category": "old_runescape",
+            "community_type": "reddit",
+            "items": [10],
+            "skills": [5]
+	    },
+        {
+            "url": "https://www.reddit.com/r/runescape/comments/143cqv/dramen_staffs_are_magical/",
+            "id": 14,
+            "title": "Dramen staffs ARE magical",
+            "category": "runescape",
+            "community_type": "reddit",
+            "items": [12],
+            "skills": [5]
+	    }
     ]
 }
