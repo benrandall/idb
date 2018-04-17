@@ -53,7 +53,7 @@ export default class SkillDetailPage extends Component {
         }
 
         for (let video of this.state.item.videos) {
-            community.push(<RSVideoCard title={video.title} icon={video.icon} id={video.id} />);
+            community.push(<RSVideoCard title={video.name} icon={video.icon} id={video.id} />);
         }
 
         return community;
@@ -91,7 +91,7 @@ export default class SkillDetailPage extends Component {
                         </div>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <p className="info">Related Skills</p>
                     </Col>
@@ -99,7 +99,7 @@ export default class SkillDetailPage extends Component {
                 <Row>
                     { this.getSkills() }
                 </Row>
-                <Row>
+                <Row className="nav-padding">
                     <Col sm="12">
                         <p className="info">Community Sources</p>
                     </Col>

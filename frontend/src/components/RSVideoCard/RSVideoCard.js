@@ -14,15 +14,14 @@ import './RSVideoCard.css';
 const RSVideoCard = (props) => {
     return (
         <Col sm="12" md="6" lg="4">
-            <Card>
-                <CardImg top width="100%" src={props.icon} alt="Card image cap" />
-                <CardBody>
-                    <CardTitle className="truncate">{props.title}</CardTitle>
-                    <Link to={'/community/' + props.id}>
-                        <Button>Go to video</Button>
-                    </Link>
-                </CardBody>
-            </Card>
+            <Link to={'/community/' + props.id} style={{ textDecoration: 'none', color: '#182329' }}>
+                <Card>
+                    <CardImg top width="100%" src={props.icon} alt="Card image cap" />
+                    <CardBody>
+                        <CardTitle className="truncate">{props.title}</CardTitle>
+                    </CardBody>
+                </Card>
+            </Link>
         </Col>
     );
 };
