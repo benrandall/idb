@@ -50,7 +50,6 @@ export default class SkillDetailPage extends Component {
         }
 
         for (let video of this.state.skill.videos) {
-            console.log(video)
             community.push(<RSVideoCard title={video.name} icon={video.icon} id={video.id} />);
         }
 
