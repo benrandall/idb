@@ -141,8 +141,10 @@ export default class CommunityGrid extends Component {
 
         return (
             <Container className="nav-padding">
+                <Row><h1 className="mx-auto">Runescape Community Resources</h1></Row>
+                <div className="nav-padding">
                 <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                    filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
+                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/></div>
                 <Row>
                     {  this.state.items.length > 0
                         ? (
