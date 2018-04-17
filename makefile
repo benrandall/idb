@@ -19,7 +19,7 @@ uml:
 
 # make selenium - runs selenium tests
 selenium:
-
+	cd frontend && python guitests.py
 
 # make frontend - runs frontend tests
 frontend:
