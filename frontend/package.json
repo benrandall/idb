@@ -38,7 +38,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require ignore-styles test/.setup.js test/tests.js",
+    "test": "mocha --require ignore-styles .setup.js test.js",
     "eject": "react-scripts eject"
   }
 }

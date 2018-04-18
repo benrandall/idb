@@ -23,8 +23,8 @@ selenium:
 
 # make frontend - runs frontend tests
 frontend:
-	cd frontend && yarn install
-	cd frontend && yarn build-css
+	$(cd frontend && yarn install)
+	$(cd frontend && yarn build-css)
 	cd frontend && yarn test
 
 # make backend  - runs backend tests
