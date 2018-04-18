@@ -19,11 +19,12 @@ class PythonOrgSearch(unittest.TestCase):
     def test_items_page(self):
         driver = self.driver
         driver.get("http://runescrape.lol/items")
+        driver.implicitly_wait(10)
         assert driver.current_url.find("items") != -1
         assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div[1]/a/div/div[1]').is_displayed()
         assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[4]/ul/li[4]/a').is_displayed()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div[1]/a/div/div[1]').click()
-        driver.implicitly_wait(30)
+        driver.implicitly_wait(10)
         assert driver.current_url.find("items/1")
         assert driver.find_element_by_xpath('//*[@id="item"]/div[1]/div/div/div[1]/img').is_displayed()
         assert driver.find_element_by_xpath('//*[@id="item"]/div[1]/div/div/div[2]').is_displayed()
@@ -33,7 +34,7 @@ class PythonOrgSearch(unittest.TestCase):
         assert driver.find_element_by_xpath('//*[@id="item"]/div[5]').is_displayed()
 
     def test_skills_page(self):
-        driver = self.driver
+        driver = self.drivergi
         driver.get("http://runescrape.lol/skills")
         assert driver.current_url.find("skills") != -1
         assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div[1]/a/div/div[1]').is_displayed()
@@ -52,8 +53,8 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://runescrape.lol/community")
         driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[3]/a').click()
-        driver.implicitly_wait(40)
-        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[1]/div/div/a/button').click()
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[2]/div/div[1]/div/div/a/button').click()
         driver.implicitly_wait(10)
         assert driver.current_url.find("community") != -1
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[1]/div/div/iframe')
@@ -70,13 +71,15 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_carousel(self):
         driver = self.driver
-        driver.get("http://runescrape.lol/items/#/")
+        driver.get("http://runescrape.lol")
         assert len(driver.find_elements_by_class_name('carousel-header-icon')) == 3
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[1]/div/a').click()
-        assert driver.current_url == 'http://runescrape.lol/items/#/items'
+        assert driver.current_url == 'http://runescrape.lol/items'
         driver.back()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[2]').click()
+        driver.implicitly_wait(2)
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/a[1]').click()
+
 
     def test_about(self):
         driver = self.driver
