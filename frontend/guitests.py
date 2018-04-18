@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
@@ -108,8 +109,63 @@ class PythonOrgSearch(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div[6]/div/p/div/div[3]/a').click()
         assert driver.current_url.find("idb") != -1
 
+    def test_search(self):
+        driver = self.driver
+        driver.get('http://runescrape.lol')
+        driver.implicitly_wait(10)
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[5]/div/div/input').is_displayed()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[5]/div/div').click()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[5]/div/div/input').send_keys('a')
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/nav/div/ul/li[5]/div/div/input').send_keys(Keys.ENTER)
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/search/a'
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[3]/div[1]/a').is_displayed()
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[3]/div[1]/a/div/div[1]').click()
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/items/2'
+        driver.back()
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div/div/div/div/div/span[2]/span').click()
+        input_box = driver.find_element_by_xpath('//div[@class="Select-input"]/input')
+        input_box.send_keys('Name (Ascending)')
+        input_box.send_keys(Keys.ENTER)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[3]/div[1]/a').click()
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/skills/10'
+        driver.back()
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div/div/div/div/div/span[2]/span').click()
+        input_box = driver.find_element_by_xpath('//div[@class="Select-input"]/input')
+        input_box.send_keys('Name (Descending)')
+        input_box.send_keys(Keys.ENTER)
+        driver.find_element_by_xpath('//*[@id="root"]//div[3]/div[1]/a/div/div[1]/img').click()
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/items/7'
+        driver.back()
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div/div/div/div/div/span[2]/span').click()
+        input_box = driver.find_element_by_xpath('//div[@class="Select-input"]/input')
+        input_box.send_keys('Type (Ascending)')
+        input_box.send_keys(Keys.ENTER)
+        driver.find_element_by_xpath('//*[@id="root"]//div[3]/div[1]/a/div/div[1]/img').click()
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/items/2'
+        driver.back()
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div/div/div/div/div/span[2]/span').click()
+        input_box = driver.find_element_by_xpath('//div[@class="Select-input"]/input')
+        input_box.send_keys('Type (Descending)')
+        input_box.send_keys(Keys.ENTER)
+        driver.find_element_by_xpath('//*[@id="root"]//div[3]/div[1]/a/div/div[1]/img').click()
+        driver.implicitly_wait(10)
+        assert driver.current_url == 'http://runescrape.lol/skills/4'
+        driver.back()
+        driver.implicitly_wait(10)
+        assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[4]/ul/li[2]').is_displayed()
+
     def tearDown(self):
         self.driver.close()
+
 
 if __name__ == "__main__":
     unittest.main()
