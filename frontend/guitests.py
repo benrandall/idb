@@ -34,13 +34,14 @@ class PythonOrgSearch(unittest.TestCase):
         assert driver.find_element_by_xpath('//*[@id="item"]/div[5]').is_displayed()
 
     def test_skills_page(self):
-        driver = self.drivergi
+        driver = self.driver
         driver.get("http://runescrape.lol/skills")
+        driver.implicitly_wait(10)
         assert driver.current_url.find("skills") != -1
         assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div[1]/a/div/div[1]').is_displayed()
         assert driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[4]/ul/li[4]/a').is_displayed()
         driver.find_element_by_xpath('//*[@id="root"]/div/div/div/div/div[2]/div[1]/a/div/div[1]').click()
-        driver.implicitly_wait(30)
+        driver.implicitly_wait(10)
         assert driver.current_url.find("skills/1")
         assert driver.find_element_by_xpath('//*[@id="skill"]/div[1]/div/div/div[1]/img').is_displayed()
         assert driver.find_element_by_xpath('//*[@id="skill"]/div[1]/div/div/div[2]').is_displayed()
