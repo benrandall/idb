@@ -88,7 +88,7 @@ export default class RSAboutPage extends Component {
 
     render() {
 
-        if (!this.state.loaded) { return (<div>Loading</div>); }
+        if (!this.state.loaded) { return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>); }
 
         return (
             <Container className="nav-padding">

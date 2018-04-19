@@ -58,7 +58,7 @@ export default class SkillDetailPage extends Component {
 
     render() {
 
-        if (!this.state.loaded) { return (<div>Loading</div>) }
+        if (!this.state.loaded) { return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>) }
 
         return (
             <div className="container" id="skill" data-id={ this.props.id }>

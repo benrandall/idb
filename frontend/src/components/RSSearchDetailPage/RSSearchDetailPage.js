@@ -171,7 +171,7 @@ export default class RSSearchDetailPage extends Component {
         };
 
         if (!this.state.loaded) {
-            return (<h4 className='mx-auto'>Loading</h4>);
+            return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);
         }
 
         return (
