@@ -27,8 +27,9 @@
     "react-paginate": "^5.2.2",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
-    "react-test-renderer": "15.6.1",
     "react-search-bar": "^2.2.0",
+    "react-select": "^1.2.1",
+    "react-test-renderer": "15.6.1",
     "react-virtualized-select": "^3.1.3",
     "reactstrap": "5.0.0-beta",
     "sinon": "^4.4.8"

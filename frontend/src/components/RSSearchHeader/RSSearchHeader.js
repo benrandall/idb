@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Col, Row } from 'reactstrap';
 import PropTypes from 'prop-types';
 import RSSearchBar from '../RSSearchBar/RSSearchBar';
-import Select from "react-virtualized-select";
+import Select from 'react-select';
 
 import "react-select/dist/react-select.css";
 import "react-virtualized/styles.css";
@@ -14,6 +14,8 @@ export default class RSSearchHeader extends Component {
         super(props);
 
         this.state = {
+            availableFilters: props.availableFilters,
+            availableSorts: props.availableSorts,
             modelFilters: [],
             sorter: {}
         };
@@ -49,11 +51,14 @@ export default class RSSearchHeader extends Component {
                 {   this.props.filter &&
                     <Col sm={12} md={4}>
                         <h5>Filter by:</h5>
-                        <Select options={this.props.availableFilters}
-                            onChange={(values) => this.setState({modelFilters: values}, () => {
+                        <Select options={this.state.availableFilters}
+                            onChange={(modelFilters) => this.setState({modelFilters}, () => {
                                 this.props.onFilterChange && this.props.onFilterChange(this.state.modelFilters);
                             })}
                             multi
+                            searchable
+                            placeholder="Filters"
+                            removeSelected
                             value={this.state.modelFilters}
                         />
                     </Col>
@@ -62,13 +67,14 @@ export default class RSSearchHeader extends Component {
                     this.props.sort &&
                     <Col sm={12} md={4}>
                         <h5>Sort by:</h5>
-                        <Select options={this.props.availableSorts}
-                            onChange={(values) => {
-                                this.setState({sorter: values});
-                                this.props.onSortChange(values);
+                        <Select options={this.state.availableSorts}
+                            onChange={(sorter) => {
+                                this.setState({sorter}, () => {
+                                    this.props.onSortChange(sorter);
+                                });
                             }}
                             value={this.state.sorter}
-                            placeholder="Sort"
+                            placeholder="Sorting"
                         />
                     </Col>
                 }
