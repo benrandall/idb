@@ -102,37 +102,3 @@ describe('<RSVideoCard/>', function () {
         shallow(<RSVideoCard />);
     });
 });
-
-/*
-"TypeError: Cannot read property 'params' of undefined"
-
-describe('<RSVideoDetailPage/>', function () {
-    it('should render successfully', function () {
-        shallow(<RSVideoDetailPage />);
-    });
-});
-
-describe('<SkillDetailPage/>', function () {
-    it('should render successfully', function () {
-        shallow(<SkillDetailPage />);
-    });
-});
-
-describe('<ItemDetailPage/>', function () {
-    it('should render successfully', function () {
-        shallow(<ItemDetailPage />);
-    });
-});
-
-describe('<GitHubStats/>', function () {
-    it('should render successfully', function () {
-        shallow(<GitHubStats />);
-    });
-});
-
-describe('<CommunityGrid/>', function () {
-    it('should render successfully', function () {
-        shallow(<CommunityGrid />);
-    });
-});
-*/
