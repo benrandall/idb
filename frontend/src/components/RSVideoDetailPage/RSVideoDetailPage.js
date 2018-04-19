@@ -51,7 +51,7 @@ export default class RSVideoDetailPage extends Component {
 
     render() {
 
-        if (!this.state.loaded) return (<p>Loading</p>);
+        if (!this.state.loaded) return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);
 
         return (
             <Container>
