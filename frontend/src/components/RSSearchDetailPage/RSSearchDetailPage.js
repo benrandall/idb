@@ -174,12 +174,12 @@ export default class RSSearchDetailPage extends Component {
         };
 
         if (!this.state.loaded) {
-            return (<p>Loading</p>);
+            return (<h4 className='mx-auto'>Loading</h4>);
         }
 
         return (
             <Container>
-                {this.state.results.length == 0 ? (<Row className='nav-padding'>
+                {this.state.results.length === 0 ? (<Row className='nav-padding'>
                     <h4 className='mx-auto'>No search results for '{ this.state.query }'</h4>
                 </Row>) : (<div>
                 <Row className='nav-padding'>
