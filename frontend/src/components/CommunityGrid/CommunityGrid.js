@@ -15,7 +15,8 @@ export default class CommunityGrid extends Component {
             items: [],
             loaded: false,
             currentPage: 0,
-            totalPages: 0
+            totalPages: 0,
+            sorter: null,
         };
 
         this.ITEMS_PER_PAGE = 9;
@@ -44,18 +45,24 @@ export default class CommunityGrid extends Component {
         fetch(`${process.env.REACT_APP_API_HOST}/videos`)
         .then(response => response.json())
         .then(response => {
-          this.setState({
-            items: response.objects
-          });
-          return fetch(`${process.env.REACT_APP_API_HOST}/reddits`)
+              this.setState({
+                    items: response.objects
+              });
+              return fetch(`${process.env.REACT_APP_API_HOST}/reddits`)
         })
         .then(response => response.json())
         .then(response => {
-          this.setState({
-            items: this.state.items.concat(response.objects),
-            loaded: true,
-            totalPages: Math.ceil((this.state.items.length + response.objects.length) / this.ITEMS_PER_PAGE)
-          })
+
+            let results = this.state.items.concat(response.objects);
+            if (this.state.sorter) {
+                results.sort(this.state.sorter.value);
+            }
+
+            this.setState({
+                items: results,
+                loaded: true,
+                totalPages: Math.ceil(results.length / this.ITEMS_PER_PAGE)
+            })
         });
     }
 
@@ -102,11 +109,13 @@ export default class CommunityGrid extends Component {
     }
 
     handleSort(sorter) {
-        if (sorter) {
-            let temp = this.state.items;
-            temp.sort(sorter.value);
-            this.setState({ items: temp})
-        }
+        this.setState({sorter: sorter}, () => {
+            if (sorter) {
+                let temp = this.state.items;
+                temp.sort(sorter.value);
+                this.setState({items: temp});
+            }
+        });
     }
 
     getFilters() {
@@ -127,12 +136,18 @@ export default class CommunityGrid extends Component {
             })
             .then(response => response.json())
             .then(response => {
-              this.setState({
-                items: this.state.items.concat(response.objects),
-                loaded: true,
-                totalPages: Math.ceil((this.state.items.length + response.objects.length) / this.ITEMS_PER_PAGE),
-                currentPage: 0
-              })
+
+                let results = this.state.items.concat(response.objects);
+                if (this.state.sorter) {
+                    results.sort(this.state.sorter.value);
+                }
+
+                this.setState({
+                    items: results,
+                    loaded: true,
+                    totalPages: Math.ceil(results.length / this.ITEMS_PER_PAGE),
+                    currentPage: 0
+                })
             });
     }
 
