@@ -1,6 +1,6 @@
 {
     "items": [
-       	{
+        {
             "name": "Jade",
             "examine_info": "A semi precious stone.",
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/1/14/Jade_detail.png/revision/latest/scale-to-width-down/130?cb=20170203200834",
@@ -29,7 +29,7 @@
             "weight": 1.8,
             "id": 2,
             "skills": [2, 17],
-            "videos": [2],
+            "videos": [2, 14, 21, 25],
             "reddits": [2]
         },
         {
@@ -48,7 +48,7 @@
             "videos": [3],
             "reddits": [3]
         },
-		{
+        {
             "name": "Shark",
             "examine_info": "I'd better be careful eating this.",
             "icon": "https://vignette.wikia.nocookie.net/2007scape/images/0/0b/Shark_detail.png/revision/latest/scale-to-width-down/120?cb=20160214063425",
@@ -109,7 +109,7 @@
             "weight": 10,
             "id": 7,
             "skills": [2],
-            "videos": [7],
+            "videos": [7, 14],
             "reddits": []
         },
         {
@@ -141,7 +141,7 @@
             "weight": 0.25,
             "id": 9,
             "skills": [1, 5, 8, 13],
-            "videos": [7, 8],
+            "videos": [7, 8, 18],
             "reddits": [5]
         },
         {
@@ -157,7 +157,7 @@
             "weight": 2.267,
             "id": 10,
             "skills": [5],
-            "videos": [],
+            "videos": [7],
             "reddits": [13]
           },
           {
@@ -173,7 +173,7 @@
             "weight": 0.085,
             "id": 11,
             "skills": [20, 2],
-            "videos": [11],
+            "videos": [11, 14],
             "reddits": []
           },
           {
@@ -189,7 +189,7 @@
             "weight": 1.184,
             "id": 12,
             "skills": [1, 5],
-            "videos": [],
+            "videos": [7],
             "reddits": [14]
           },
           {
@@ -205,7 +205,7 @@
             "weight": 1.814,
             "id": 13,
             "skills": [2, 8, 20],
-            "videos": [12],
+            "videos": [12, 14],
             "reddits": [12]
           },
           {
@@ -221,7 +221,7 @@
             "weight": 0.25,
             "id": 14,
             "skills": [14],
-            "videos": [13],
+            "videos": [13, 20],
             "reddits": []
           },
           {
@@ -253,7 +253,7 @@
             "weight": 6,
             "id": 16,
             "skills": [14],
-            "videos": [],
+            "videos": [20],
             "reddits": []
           },
           {
@@ -269,7 +269,7 @@
             "weight": 0,
             "id": 17,
             "skills": [5, 1, 9, 16, 13],
-            "videos": [10],
+            "videos": [10, 7, 18, 13],
             "reddits": []
           },
           {
@@ -285,7 +285,7 @@
             "weight": 0,
             "id": 18,
             "skills": [1, 5, 9, 16, 13],
-            "videos": [10],
+            "videos": [10, 7, 18, 13],
             "reddits": []
           },
           {
@@ -301,7 +301,7 @@
             "weight": 0,
             "id": 19,
             "skills": [1, 5, 9, 16, 13],
-            "videos": [10],
+            "videos": [10, 7, 18, 13],
             "reddits": []
           },
           {
@@ -317,7 +317,7 @@
             "weight": 1.36,
             "id": 20,
             "skills": [3, 22, 2],
-            "videos": [],
+            "videos": [14, 26],
             "reddits": []
           },
           {
@@ -333,7 +333,7 @@
             "weight": 1.587,
             "id": 21,
             "skills": [2, 3],
-            "videos": [],
+            "videos": [14],
             "reddits": []
           },
           {
@@ -349,7 +349,7 @@
             "weight": 0.34,
             "id": 22,
             "skills": [12],
-            "videos": [],
+            "videos": [17],
             "reddits": [15]
           },
           {
@@ -365,7 +365,7 @@
             "weight": 0.453,
             "id": 23,
             "skills": [11],
-            "videos": [],
+            "videos": [16],
             "reddits": [16]
           },
           {
@@ -381,7 +381,7 @@
             "weight": 2.267,
             "id": 24,
             "skills": [2, 9],
-            "videos": [10],
+            "videos": [10, 14],
             "reddits": []
           },
           {
@@ -397,7 +397,7 @@
             "weight": 0.453,
             "id": 25,
             "skills": [10],
-            "videos": [],
+            "videos": [15],
             "reddits": []
           },
           {
@@ -413,7 +413,7 @@
             "weight": 0.007,
             "id": 26,
             "skills": [15],
-            "videos": [],
+            "videos": [19],
             "reddits": []
           },
           {
@@ -429,7 +429,7 @@
             "weight": 2,
             "id": 27,
             "skills": [22, 23],
-            "videos": [],
+            "videos": [26, 27],
             "reddits": []
           },
           {
@@ -445,7 +445,7 @@
             "weight": 0.035,
             "id": 28,
             "skills": [23, 22],
-            "videos": [],
+            "videos": [26, 27],
             "reddits": []
           },
           {
@@ -461,7 +461,7 @@
             "weight": 0.453,
             "id": 29,
             "skills": [21],
-            "videos": [],
+            "videos": [24, 25],
             "reddits": []
           },
           {
@@ -477,7 +477,7 @@
             "weight": 0.06,
             "id": 30,
             "skills": [19, 1],
-            "videos": [],
+            "videos": [23],
             "reddits": []
           },
           {
@@ -509,7 +509,7 @@
             "weight": 0.028,
             "id": 32,
             "skills": [17],
-            "videos": [],
+            "videos": [21, 25],
             "reddits": []
           },
           {
@@ -525,7 +525,7 @@
             "weight": 0.453,
             "id": 33,
             "skills": [18],
-            "videos": [],
+            "videos": [22],
             "reddits": []
           },
           {
@@ -557,7 +557,7 @@
             "weight": 0.1,
             "id": 35,
             "skills": [11, 7],
-            "videos": [],
+            "videos": [16],
             "reddits": []
           },
           {
@@ -573,7 +573,7 @@
             "weight": 0.1,
             "id": 36,
             "skills": [10],
-            "videos": [],
+            "videos": [15],
             "reddits": []
           },
           {
@@ -589,7 +589,7 @@
             "weight": 0.453,
             "id": 37,
             "skills": [12],
-            "videos": [],
+            "videos": [17],
             "reddits": [15]
           },
           {
@@ -621,7 +621,7 @@
             "weight": 0,
             "id": 39,
             "skills": [2, 14, 19],
-            "videos": [],
+            "videos": [14, 20, 23],
             "reddits": []
           },
           {
@@ -637,7 +637,7 @@
             "weight": 0.113,
             "id": 40,
             "skills": [8],
-            "videos": [9],
+            "videos": [9, 28],
             "reddits": []
           },
           {
@@ -653,7 +653,7 @@
             "weight": 5.443,
             "id": 41,
             "skills": [5, 8],
-            "videos": [9],
+            "videos": [9, 7],
             "reddits": []
           }
     ],
@@ -679,7 +679,7 @@
             "max_level": 99,
             "skill_type": "Combat",
             "items": [2, 7, 11, 13, 20, 21, 24, 39],
-            "videos": [2, 11, 12],
+            "videos": [2, 11, 12, 14],
             "reddits": [2]
         },
         {
@@ -775,7 +775,7 @@
             "max_level": 99,
             "skill_type": "Support",
             "items": [25, 36],
-            "videos": [],
+            "videos": [15],
             "reddits": []
         },
         {
@@ -787,7 +787,7 @@
             "max_level": 99,
             "skill_type": "Gathering",
             "items": [23, 35],
-            "videos": [],
+            "videos": [16],
             "reddits": [16]
         },
         {
@@ -811,7 +811,7 @@
             "max_level": 99,
             "skill_type": "Combat",
             "items": [9, 17, 18, 19],
-            "videos": [],
+            "videos": [18],
             "reddits": [11]
         },
         {
@@ -823,7 +823,7 @@
             "max_level": 99,
             "skill_type": "Combat",
             "items": [16, 14, 39],
-            "videos": [13],
+            "videos": [13, 20],
             "reddits": []
         },
         {
@@ -835,7 +835,7 @@
             "max_level": 99,
             "skill_type": "Artisan",
             "items": [26],
-            "videos": [],
+            "videos": [19],
             "reddits": []
         },
         {
@@ -847,7 +847,7 @@
             "max_level": 99,
             "skill_type": "Artisan",
             "items": [17, 18, 19],
-            "videos": [],
+            "videos": [13],
             "reddits": []
         },
         {
@@ -859,7 +859,7 @@
             "max_level": 99,
             "skill_type": "Support",
             "items": [2, 32],
-            "videos": [2],
+            "videos": [2, 21, 25],
             "reddits": [2]
         },
         {
@@ -871,7 +871,7 @@
             "max_level": 99,
             "skill_type": "Gathering",
             "items": [33],
-            "videos": [],
+            "videos": [22],
             "reddits": []
         },
         {
@@ -883,7 +883,7 @@
             "max_level": 99,
             "skill_type": "Artisan",
             "items": [30, 39],
-            "videos": [],
+            "videos": [23],
             "reddits": []
         },
         {
@@ -907,7 +907,7 @@
             "max_level": 99,
             "skill_type": "Combat",
             "items": [29],
-            "videos": [],
+            "videos": [24, 25],
             "reddits": []
         },
         {
@@ -919,7 +919,7 @@
             "max_level": 99,
             "skill_type": "Gathering",
             "items": [20, 27, 28],
-            "videos": [],
+            "videos": [26],
             "reddits": []
         },
         {
@@ -931,7 +931,7 @@
             "max_level": 99,
             "skill_type": "Artisan",
             "items": [27, 28],
-            "videos": [],
+            "videos": [27],
             "reddits": []
         }
     ],
@@ -982,7 +982,7 @@
             "video_url": "https://gaming.youtube.com/embed/DIp15-b2HIU",
             "category": "old_runescape",
             "community_type": "youtube",
-            "items": [4],
+            "items": [4, 31],
             "skills": [4]
         },
         {
@@ -1002,7 +1002,7 @@
             "video_url": "https://gaming.youtube.com/embed/2P3MaOh8Jzo",
             "category": "old_runescape",
             "community_type": "youtube",
-            "items": [6, 9],
+            "items": [6, 9, 19, 18, 17, 12, 10, 41],
             "skills": [5]
         },
         {
@@ -1036,10 +1036,10 @@
             "skills": [9]
         },
         {
-            "name": "RuneScape - 2007 - Vampire Slayer",
+            "name": "[OSRS] Vampire slayer quest guide",
             "id": 11,
-            "icon": "https://i.ytimg.com/an_webp/xAAsSFp-dlY/mqdefault_6s.webp?du=3000&sqp=CMKC2dYF&rs=AOn4CLBW5dYKkbqscuTUZEG6GOog4bsOJg",
-            "video_url": "https://www.youtube.com/embed/xAAsSFp-dlY",
+            "icon": "https://i.ytimg.com/an_webp/shnEQdloGzc/mqdefault_6s.webp?du=3000&sqp=CMvR49YF&rs=AOn4CLDA-FAT-4SYFywsF5lj3YzTKhpC5w",
+            "video_url": "https://www.youtube.com/embed/shnEQdloGzc",
             "category": "old_runescape",
             "community_type": "youtube",
             "items": [11],
@@ -1048,7 +1048,7 @@
         {
             "name": "[OSRS] Demon slayer quest guide",
             "id": 12,
-            "icon": "https://i.ytimg.com/an_webp/W6CpBVMlSx8/mqdefault_6s.webp?du=3000&sqp=CKPa2NYF&rs=AOn4CLBJIq46hgsKzGmfyCU1stn_3p3Tzw",
+            "icon": "https://i.ytimg.com/an_webp/W6CpBVMlSx8/mqdefault_6s.webp?du=3000&sqp=CNHR49YF&rs=AOn4CLAzMsJ5EtQd8nlSHG7BOvAkuBR5zQ",
             "video_url": "https://www.youtube.com/embed/W6CpBVMlSx8",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1074,6 +1074,156 @@
             "community_type": "youtube",
             "items": [17, 18, 19],
             "skills": [16]
+        },
+        {
+            "name": "RuneScape 3 - Detailed 1-99/120 Melee Guide",
+            "id": 14,
+            "icon": "https://i.ytimg.com/an_webp/FFoPEm482A0/mqdefault_6s.webp?du=3000&sqp=CLXU49YF&rs=AOn4CLDA9lafftwrIn_5YAdOqkyvN_h56g",
+            "video_url": "https://gaming.youtube.com/embed/FFoPEm482A0",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [2, 7, 11, 13, 20, 21, 24, 39],
+            "skills": [2]
+        },
+        {
+            "name": "Runescape 2016 | 1-99 Agility Guide",
+            "id": 15,
+            "icon": "https://i.ytimg.com/an_webp/WkyFq3Cw9Hg/mqdefault_6s.webp?du=3000&sqp=CMjL49YF&rs=AOn4CLAatQoiPlCL3hRzb6_hz7Cj-X7ROg",
+            "video_url": "https://gaming.youtube.com/embed/WkyFq3Cw9Hg",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [25, 36],
+            "skills": [10]
+        },
+        {
+            "name": "Runescape 2016 | 1-99 Farming Guide",
+            "id": 16,
+            "icon": "https://i.ytimg.com/an_webp/YNPTCN9dcKE/mqdefault_6s.webp?du=3000&sqp=CNvh49YF&rs=AOn4CLCKC1zMs2WyiFybjyQt83dSaywGkg",
+            "video_url": "https://gaming.youtube.com/embed/YNPTCN9dcKE",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [23, 35],
+            "skills": [11]
+        },
+        {
+            "name": "1-99 Thieving Guide! [Runescape 3] Up to 800k xp/hr",
+            "id": 17,
+            "icon": "https://i.ytimg.com/an_webp/zBUW8blIr-8/mqdefault_6s.webp?du=3000&sqp=CIPH49YF&rs=AOn4CLCkTW7Ra1jx1LEMGYxNl0ykvrgDEw",
+            "video_url": "https://gaming.youtube.com/embed/zBUW8blIr-8",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [22, 37],
+            "skills": [12]
+        },
+        {
+            "name": "[OSRS] Ultimate 1-99 Prayer Guide (All Cheapest & Fastest Methods)",
+            "id": 18,
+            "icon": "https://i.ytimg.com/an_webp/RgFINUBdK40/mqdefault_6s.webp?du=3000&sqp=CNvh49YF&rs=AOn4CLBdNeYCyn2f5gqovIYWVAfJ8iUJFw",
+            "video_url": "https://gaming.youtube.com/embed/RgFINUBdK40",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [9, 17, 18, 19],
+            "skills": [13]
+        },
+        {
+            "name": "[Runescape 3] 1-99 Construction Guide 2017 | FAST, AFK & Cheap Methods | No Mouse Keys Required",
+            "id": 19,
+            "icon": "https://i.ytimg.com/an_webp/RDly2KUnGgg/mqdefault_6s.webp?du=3000&sqp=CLjB49YF&rs=AOn4CLDlUaetZKXkbeK8oSmPymiktMfCcw",
+            "video_url": "https://gaming.youtube.com/embed/RDly2KUnGgg",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [26],
+            "skills": [15]
+        },
+        {
+            "name": "Complete 1-99 Ranged Training Guide [OSRS] - Best Training Spots, Gear Upgrades and Quests!",
+            "id": 20,
+            "icon": "https://i.ytimg.com/an_webp/ZpO-g-ORb0U/mqdefault_6s.webp?du=3000&sqp=CL3J49YF&rs=AOn4CLCWBv2d-8ufjk__8oske3r_WG4vcw",
+            "video_url": "https://gaming.youtube.com/embed/ZpO-g-ORb0U",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [16, 14, 39],
+            "skills": [14]
+        },
+        {
+            "name": "[OSRS] In-Depth 1-99 SLAYER Guide (2018 Best Methods)",
+            "id": 21,
+            "icon": "https://i.ytimg.com/an_webp/UwvnEXMTsho/mqdefault_6s.webp?du=3000&sqp=CPjU49YF&rs=AOn4CLBuZr2exZca5JVVAl7sk0CN1usYTQ",
+            "video_url": "https://gaming.youtube.com/embed/UwvnEXMTsho",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [32, 2],
+            "skills": [17]
+        },
+        {
+            "name": "1-99 Hunter Guide Fastest Way Possible Up To 800k Xp Per Hour",
+            "id": 22,
+            "icon": "https://i.ytimg.com/an_webp/adnzS_BHqeQ/mqdefault_6s.webp?du=3000&sqp=CITO49YF&rs=AOn4CLDPzGfmFGaTBVWY8CS9iUjiEWaNOQ",
+            "video_url": "https://www.youtube.com/embed/adnzS_BHqeQ",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [33],
+            "skills": [18]
+        },
+        {
+            "name": "[OSRS] Ultimate 1-99 Fletching Guide (Profitable & Fast Methods)",
+            "id": 23,
+            "icon": "https://i.ytimg.com/an_webp/s0FKYqngArE/mqdefault_6s.webp?du=3000&sqp=CM7K49YF&rs=AOn4CLBRld_0jGx_EkCLoQLY9Ef7y1OZBA",
+            "video_url": "https://www.youtube.com/embed/s0FKYqngArE",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [30, 39],
+            "skills": [19]
+        },
+        {
+            "name": "Runescape 2016 | 1-99 Melee Guide",
+            "id": 24,
+            "icon": "https://i.ytimg.com/an_webp/6dwpmPJPvKs/mqdefault_6s.webp?du=3000&sqp=CMbh49YF&rs=AOn4CLBh_3peCAjvi2D91hij2g8cPu-_4Q",
+            "video_url": "https://www.youtube.com/embed/6dwpmPJPvKs",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [29],
+            "skills": [21]
+        },
+        {
+            "name": "25 Combat with.. 99 HP & SLAYER?!?",
+            "id": 25,
+            "icon": "https://i.ytimg.com/an_webp/Qg8zP6cA87E/mqdefault_6s.webp?du=3000&sqp=CKi-49YF&rs=AOn4CLBqT2t3hBw5pTrccuOy5U5G2YmZwA",
+            "video_url": "https://www.youtube.com/embed/v=Qg8zP6cA87E",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [29, 2, 32],
+            "skills": [21, 17]
+        },
+        {
+            "name": "[Runescape 3] 1-99 Woodcutting Guide 2017 | Fast & AFK Methods",
+            "id": 26,
+            "icon": "https://i.ytimg.com/an_webp/LkzLoWLBoOY/mqdefault_6s.webp?du=3000&sqp=CLzR49YF&rs=AOn4CLAzZSpM6z85l9xRl1-yn-rZaM9ZmA",
+            "video_url": "https://www.youtube.com/embed/LkzLoWLBoOY",
+            "category": "runescape",
+            "community_type": "youtube",
+            "items": [20, 27, 28],
+            "skills": [22]
+        },
+        {
+            "name": "Runescape 2007 1-99 Firemaking Guide | OSRS 99 FM Guide",
+            "id": 27,
+            "icon": "https://i.ytimg.com/an_webp/xJUMAevoHeU/mqdefault_6s.webp?du=3000&sqp=CLr_49YF&rs=AOn4CLBhFnR-yGtKFiTdiB1OEqgcV9ScfQ",
+            "video_url": "https://www.youtube.com/embed/xJUMAevoHeU",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [27, 28],
+            "skills": [23]
+        },
+        {
+            "name": "Runescape rare item prices in 2009 VS 2016",
+            "id": 28,
+            "icon": "https://i.ytimg.com/an_webp/gItt-YNlNB4/mqdefault_6s.webp?du=3000&sqp=CM7R49YF&rs=AOn4CLAOWzNNkWN28COtbdwtcdLPP0p62g",
+            "video_url": "https://www.youtube.com/embed/gItt-YNlNB4",
+            "category": "old_runescape",
+            "community_type": "youtube",
+            "items": [40],
+            "skills": []
         }
     ],
     "reddits": [{
@@ -1165,7 +1315,7 @@
             "community_type": "reddit",
             "items": [4],
             "skills": [4]
-	    },
+        },
         {
             "url": "https://www.reddit.com/r/2007scape/comments/3jwf0z/cant_regain_bearhead/",
             "id": 11,
@@ -1174,7 +1324,7 @@
             "community_type": "reddit",
             "items": [15],
             "skills": [13]
-	    },
+        },
         {
             "url": "https://www.reddit.com/r/runescape/comments/6gpkh3/how_do_i_make_my_silverlight_weapon_black_instead/",
             "id": 12,
@@ -1183,7 +1333,7 @@
             "community_type": "reddit",
             "items": [13],
             "skills": []
-	    },
+        },
         {
             "url": "https://www.reddit.com/r/2007scape/comments/3joe08/is_iban_staff_really_worth_it/",
             "id": 13,
@@ -1192,7 +1342,7 @@
             "community_type": "reddit",
             "items": [10],
             "skills": [5]
-	    },
+        },
         {
             "url": "https://www.reddit.com/r/runescape/comments/143cqv/dramen_staffs_are_magical/",
             "id": 14,
@@ -1201,7 +1351,7 @@
             "community_type": "reddit",
             "items": [12],
             "skills": [5]
-	    },
+        },
         {
             "url": "https://www.reddit.com/r/runescape/comments/88fyz6/loot_from_99_120_thieving/",
             "id": 15,
