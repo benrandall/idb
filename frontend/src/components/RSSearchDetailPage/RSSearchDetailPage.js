@@ -136,10 +136,8 @@ export default class RSSearchDetailPage extends Component {
     }
 
     handleSort(sorter) {
-        console.log('Applying New sorter');
         this.setState({sorter: sorter}, () => {
             if (sorter) {
-                console.log(`Sorter is:${sorter}`);
                 let temp = this.state.results;
                 temp.sort(sorter.value);
                 this.setState({results: temp});
@@ -151,14 +149,13 @@ export default class RSSearchDetailPage extends Component {
         fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
             .then((response) => response.json())
             .then((json) => {
-                let results = json.results;
+                let result = json.result;
                 if (this.state.sorter) {
-                    console.log('THERES A SORTER');
-                    results.sort(this.state.sorter.value);
+                    result.sort(this.state.sorter.value);
                 }
 
                 this.setState({
-                    results: results,
+                    results: result,
                     hasMore: json.has_more,
                     loaded: true,
                     query: value,
