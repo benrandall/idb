@@ -17,7 +17,8 @@ export default class RSSearchDetailPage extends Component {
             loaded: false,
             query: '',
             currentPage: 0,
-            totalPages: 0
+            totalPages: 0,
+            sorter: null
         };
 
         this.ITEMS_PER_PAGE = 9;
@@ -49,6 +50,9 @@ export default class RSSearchDetailPage extends Component {
 
     componentWillReceiveProps(props) {
         const { match: { params } } = props;
+        this.setState({
+            sorter: null
+        });
         this.search(params.query);
     }
 
@@ -132,19 +136,29 @@ export default class RSSearchDetailPage extends Component {
     }
 
     handleSort(sorter) {
-        if (sorter) {
-            let temp = this.state.results;
-            temp.sort(sorter.value);
-            this.setState({ results: temp });
-        }
+        console.log('Applying New sorter');
+        this.setState({sorter: sorter}, () => {
+            if (sorter) {
+                console.log(`Sorter is:${sorter}`);
+                let temp = this.state.results;
+                temp.sort(sorter.value);
+                this.setState({results: temp});
+            }
+        });
     }
 
     search(value) {
         fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
             .then((response) => response.json())
             .then((json) => {
+                let results = json.results;
+                if (this.state.sorter) {
+                    console.log('THERES A SORTER');
+                    results.sort(this.state.sorter.value);
+                }
+
                 this.setState({
-                    results: json.result,
+                    results: results,
                     hasMore: json.has_more,
                     loaded: true,
                     query: value,
