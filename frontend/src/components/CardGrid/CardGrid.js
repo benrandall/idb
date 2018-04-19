@@ -16,7 +16,8 @@ export default class CardGrid extends Component {
             items: [],
             currentPage: 0,
             visiblePage: 3,
-            totalPages: 0
+            totalPages: 0,
+            sorter: null
         };
 
         this.ITEMS_PER_PAGE = 8;
@@ -36,8 +37,15 @@ export default class CardGrid extends Component {
         fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType)
             .then((items) => { return items.json() })
             .then((json) => {
+
+                let result = json.objects;
+                if (this.state.sorter) {
+                    result.sort(this.state.sorter.value);
+                }
+
+
                 this.setState({
-                    items: json.objects,
+                    items: result,
                     totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
                     currentPage: 0
                 });
@@ -51,8 +59,14 @@ export default class CardGrid extends Component {
         fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
             .then((items) => { return items.json() })
             .then((json) => {
+
+                let result = json.objects;
+                if (this.state.sorter) {
+                    result.sort(this.state.sorter.value);
+                }
+
                 this.setState({
-                    items: json.objects,
+                    items: result,
                     totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
                     currentPage: 0
                 });
@@ -92,13 +106,15 @@ export default class CardGrid extends Component {
 
         return rows;
     }
-    
+
     handleSort(sorter) {
-        if (sorter) {
-            let temp = this.state.items;
-            temp.sort(sorter.value);
-            this.setState({ items: temp})
-        }
+        this.setState({sorter: sorter}, () => {
+            if (sorter) {
+                let temp = this.state.items;
+                temp.sort(sorter.value);
+                this.setState({items: temp});
+            }
+        });
     }
 
     getFilters() {

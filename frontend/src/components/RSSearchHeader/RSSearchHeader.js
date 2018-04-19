@@ -17,14 +17,13 @@ export default class RSSearchHeader extends Component {
             availableFilters: props.availableFilters,
             availableSorts: props.availableSorts,
             modelFilters: [],
-            sorter: {}
+            sorter: null
         };
     }
 
 
     fieldDidSearch(value) {
         this.props.history.push(`/search/${value}`);
-        //this.search(value);
     }
 
     fieldDidClear() {
@@ -73,6 +72,7 @@ export default class RSSearchHeader extends Component {
                                     this.props.onSortChange(sorter);
                                 });
                             }}
+                            clearable={false}
                             value={this.state.sorter}
                             placeholder="Sorting"
                         />
