@@ -1,7 +1,7 @@
 import json
 import os
 from flask import request, jsonify, current_app, send_from_directory
-from app import db
+from app import db, cached
 from app.models import Item, Skill, Video, Reddit
 from app.api import bp
 from app.api.github import GithubApiWrapper
@@ -34,6 +34,7 @@ def search():
     return jsonify(result)
 
 @bp.route('/about')
+@cached()
 def about():
     gh = GithubApiWrapper(owner='benrandall', repo='idb', token=current_app.config['GITHUB_API_TOKEN'])
     repo_info = gh.repo_info()
@@ -54,4 +55,3 @@ def community():
         'reddits': [reddit.toJSON() for reddit in Reddit.query.all()],
         'videos': [video.toJSON() for video in Video.query.all()]
     })
-    
