@@ -26,6 +26,7 @@ export default class SkillDetailPage extends Component {
         fetch(`${process.env.REACT_APP_API_HOST}/items/${params.id}`)
             .then((item) => { return item.json() })
             .then((json) => {
+                console.log(json)
                 this.setState({
                     item: json,
                     loaded: true
@@ -52,7 +53,7 @@ export default class SkillDetailPage extends Component {
         }
 
         for (let video of this.state.item.videos) {
-            community.push(<RSVideoCard title={video.title} icon={video.icon} id={video.id} />);
+            community.push(<RSVideoCard title={video.name} icon={video.icon} id={video.id} />);
         }
 
         return community;
@@ -76,30 +77,44 @@ export default class SkillDetailPage extends Component {
                             </div>
                             <div className="right-side">
                                 <p className="medium-title">Other Information</p>
-                                <p className="small-title">Price</p>
+                                <h6>Price</h6>
                                 <p className="subtext">{ this.state.item.market_price }</p>
                                 <h6>Weight</h6>
-                                <p className="subtext">{ this.state.item.weight }</p>
+                                <p className="subtext">{ this.state.item.weight } kg</p>
+                                <h6>Member's Only</h6>
+                                <p className="subtext">{ this.state.item.members_only ? 'Yes' : 'No' }</p>
+                                <h6>Quest Item</h6>
+                                <p className="subtext">{ this.state.item.quest_item ? 'Yes' : 'No' }</p>
+                                <h6>Equipable</h6>
+                                <p className="subtext">{ this.state.item.equipable ? 'Yes' : 'No' }</p>
                             </div>
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Related Skills</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getSkills() }
-                </Row>
-                <Row>
-                    <Col sm="12">
-                        <p className="info">Community Sources</p>
-                    </Col>
-                </Row>
-                <Row>
-                    { this.getCommunity() }
-                </Row>
+                { this.getSkills().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Skills</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                                { this.getSkills() }
+                        </Row>
+                    </div>}
+                { this.getCommunity().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Community Sources</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            { this.getCommunity() }
+                        </Row>
+                    </div>}
             </Container>
         );
     }

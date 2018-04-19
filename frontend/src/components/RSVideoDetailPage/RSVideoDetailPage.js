@@ -51,31 +51,41 @@ export default class RSVideoDetailPage extends Component {
 
     render() {
 
-        if (!this.state.loaded) return (<p>Loading</p>);
+        if (!this.state.loaded) return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);
 
         return (
             <Container>
                 <Row className="nav-padding">
                     <Col sm="12">
-                        <p className="info">{ this.state.name }</p>
-                        <p className="info-small">Video Category: { this.state.category }</p>
+                        <h2>{ this.state.name }</h2>
+                        <p className="info-small">Video Category: { this.state.category === 'runescape' ?
+                                                                                                'Runescape' :
+                                                                                                'Old School Runescape' }</p><hr/>
                         <div className="embed-responsive embed-responsive-16by9">
                             <iframe className="embed-responsive-item" title={this.state.name} src={ this.state.video_url } frameBorder="0" allowFullScreen />
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col sm="12">
-                        <h3>Related Items</h3>
-                    </Col>
-                    { this.getItems() }
-                </Row>
-                <Row>
-                    <Col sm="12">
-                        <h3>Related Skills</h3>
-                    </Col>
-                    { this.getSkills() }
-                </Row>
+                { this.getItems().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Items</p>
+                            </Col>
+                            { this.getItems() }
+                        </Row>
+                    </div>}
+                { this.getSkills().length > 0 &&
+                    <div>
+                    <hr/>
+                        <Row>
+                            <Col sm="12">
+                                <p className="info">Related Skills</p>
+                            </Col>
+                            { this.getSkills() }
+                        </Row>
+                    </div>}
             </Container>
         );
     }

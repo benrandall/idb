@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import './CardComponent.css';
 import { Link } from 'react-router-dom';
 import {
@@ -9,7 +10,7 @@ import {
     Col
 } from 'reactstrap';
 
-export default class CardComponent extends Component {
+class CardComponent extends Component {
 
     getFooter() {
         if (!this.props.showFooter) { return null }
@@ -51,4 +52,10 @@ export default class CardComponent extends Component {
             </Col>
         );
     }
+}
+
+CardComponent.propTypes = {
+    cardType: PropTypes.string,
 };
+
+export default CardComponent;

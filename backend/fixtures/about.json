@@ -11,7 +11,7 @@
     "profile": "ben.png",
     "name": "Ben Randall",
     "duties": "Data, Front End",
-    "unittests": 0
+    "unittests": 13
   },
   "elmdecoste": {
     "bio": "I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.",
@@ -21,7 +21,7 @@
     "unittests": 0
   },
   "dylanlramage": {
-    "bio": "I'm a second year CS major. I enjoy video games, reading, and finding new tea/coffee shops around Austin.",
+    "bio": "I'm a second year Computer Science major. I like to drive with the windows down and go to scenic places with friends.",
     "profile": "dylan.jpg",
     "name": "Dylan Ramage",
     "duties": "Front End",
@@ -32,14 +32,14 @@
     "profile": "luke.jpg",
     "name": "Luke Wright",
     "duties": "API, Data",
-    "unittests": 0
+    "unittests": 62
   },
   "stevendiaz": {
     "bio": "I'm a graduating senior in UTCS and a coffee enthusiast.",
     "profile": "steven.jpg",
     "name": "Steven Diaz",
     "duties": "Backend, Deployment",
-    "unittests": 0
+    "unittests": 4
   }
 }
 
