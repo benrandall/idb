@@ -5,13 +5,14 @@ import ReactPaginate from 'react-paginate';
 import CardComponent from "../CardComponent/CardComponent";
 import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
 import RSSearchUtils from "../../utilities/RSSearchUtils";
+import RSDataUtils from "../../utilities/RSDataUtils";
 
 import './CardGrid.css';
 
 export default class CardGrid extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             items: [],
             currentPage: 0,
@@ -21,56 +22,33 @@ export default class CardGrid extends Component {
         };
 
         this.ITEMS_PER_PAGE = 8;
-        this.availableSorts = [
-            {
-                label: `Name (Ascending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true)
-            },
-            {
-                label: `Name (Descending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false)
-            },
-        ]
+        this.PATH = props.cardType;
     }
 
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_HOST}/` + this.props.cardType)
-            .then((items) => { return items.json() })
-            .then((json) => {
+        RSSearchUtils.request(this.PATH)
+            .then((json) => this.updateFromRequest(json));
+    }
 
-                let result = json.objects;
-                if (this.state.sorter) {
-                    result.sort(this.state.sorter.value);
-                }
+    /** MARK: - State Handling  */
+
+    updateFromRequest(json) {
+        let result = json.objects;
+        if (this.state.sorter) {
+            result.sort(this.state.sorter.value);
+        }
 
 
-                this.setState({
-                    items: result,
-                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
-                    currentPage: 0
-                });
-            });
+        this.setState({
+            items: result,
+            totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
+            currentPage: 0
+        });
     }
 
     searchWithFilters(filters) {
-        let anded = {filters: filters.map((item) => item.value)};
-        let stringified = JSON.stringify(anded);
-
-        fetch(`${process.env.REACT_APP_API_HOST}/${this.props.cardType}?q=${stringified}`)
-            .then((items) => { return items.json() })
-            .then((json) => {
-
-                let result = json.objects;
-                if (this.state.sorter) {
-                    result.sort(this.state.sorter.value);
-                }
-
-                this.setState({
-                    items: result,
-                    totalPages: Math.ceil(json.objects.length / this.ITEMS_PER_PAGE),
-                    currentPage: 0
-                });
-            });
+        RSSearchUtils.requestWithFilters(this.PATH, filters)
+            .then((json) => this.updateFromRequest(json));
     }
 
     handlePageChanged(newPage) {
@@ -80,31 +58,17 @@ export default class CardGrid extends Component {
     }
 
     itemsForPage() {
-        let page = this.state.currentPage;
-        let data = this.state.items;
+        let data = this.state.items.map((item) => {
+            return <CardComponent key={item.id} item={item} cardType={this.props.cardType} showFooter={true}/>
+        });
 
-        let numItems = this.ITEMS_PER_PAGE;
-        let itemsLeft = Math.min(this.ITEMS_PER_PAGE, this.state.items.length - (page * this.ITEMS_PER_PAGE));
-
-        let rows = [];
-        let index = (page) * this.ITEMS_PER_PAGE;
-
-        let numRows = Math.ceil(numItems / 4);
-
-        for (let i = 0; i < numRows; i++) {
-            let row = [];
-
-            for(let j = 0; j < 4 && itemsLeft > 0; j++) {
-                row.push(
-                    <CardComponent key={ (i * 4) + j} item={data[index++]} cardType={this.props.cardType} showFooter={true}/>
-                );
-                --itemsLeft;
-            }
-
-            rows.push(row);
-        }
-
-        return rows;
+        return RSDataUtils.groupItems(data, this.ITEMS_PER_PAGE, this.state.currentPage).map((row, index) => {
+            return (
+                <Row key={`gridrow${index}`}>
+                    { row }
+                </Row>
+            );
+        });
     }
 
     handleSort(sorter) {
@@ -124,29 +88,58 @@ export default class CardGrid extends Component {
         return RSSearchUtils.getSkillFilters();
     }
 
-    render() {
+    /** MARK: - UI Creation */
+
+    getTitle() {
+        return (
+            <Row>
+                {
+                this.props.cardType === 'items'
+                    ? (<h1 className="mx-auto">Runescape Items</h1>)
+                    : (<h1 className="mx-auto">Runescape Skills</h1>)
+                }
+            </Row>
+        )
+    }
+
+    getSearchHeader() {
+        return (
+            <RSSearchHeader sort
+                            availableSorts={RSSearchUtils.getStandardSorts()}
+                            onSortChange={(sorter) => this.handleSort(sorter)}
+                            filter
+                            availableFilters={this.getFilters()}
+                            onFilterChange={(filters) => this.searchWithFilters(filters)}/>
+        );
+    }
+
+    getContent() {
+        if (this.state.items.length === 0) {
+            return (
+                <div className="nav-padding">
+                    { this.getSearchHeader() }
+                    <hr/>
+                    <Row className='nav-padding'>
+                        <h4 className='mx-auto'>No results for selected filters</h4>
+                    </Row>
+                </div>
+            )
+        }
 
         return (
+            <div className="nav-padding">
+                { this.getSearchHeader() }
+                <hr/>
+                { this.itemsForPage() }
+            </div>
+        )
+    }
+
+    render() {
+        return (
             <Container className="nav-padding">
-                <Row> {this.props.cardType === 'items' ? (<h1 className="mx-auto">Runescape Items</h1>) : (<h1 className="mx-auto">Runescape Skills</h1>)}</Row>
-                { this.state.items.length === 0 ? (
-                    <div className="nav-padding">
-                        <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                                    filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
-                        <Row className='nav-padding'>
-                            <h4 className='mx-auto'>No results for selected filters</h4>
-                        </Row>
-                    </div>
-                ) : (<div className="nav-padding">
-                    <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/>
-                    {this.itemsForPage().map((row) => {
-                    return (
-                        <Row>
-                            { row }
-                        </Row>
-                    );
-                })}
+                { this.getTitle() }
+                { this.getContent() }
                 <Row>
                     <ReactPaginate
                        initialPage={0}
@@ -168,7 +161,6 @@ export default class CardGrid extends Component {
                        nextLinkClassName={"page-link"}
                         />
                 </Row>
-                </div>)}
             </Container>
         )
     }

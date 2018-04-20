@@ -6,6 +6,7 @@ import RSVideoCard from '../RSVideoCard/RSVideoCard';
 import RSRedditCard from "../RSRedditCard/RSRedditCard";
 import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
 import RSSearchUtils from "../../utilities/RSSearchUtils";
+import RSDataUtils from '../../utilities/RSDataUtils';
 
 export default class CommunityGrid extends Component {
 
@@ -20,87 +21,23 @@ export default class CommunityGrid extends Component {
         };
 
         this.ITEMS_PER_PAGE = 9;
-
-        this.availableSorts = [
-            {
-                label: `Name (Ascending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true)
-            },
-            {
-                label: `Name (Descending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false)
-            },
-            {
-                label: `Type (Ascending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, true)
-            },
-            {
-                label: `Type (Descending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, false)
-            }
-        ]
+        this.ROW_SIZE = 3;
     }
 
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_HOST}/videos`)
-        .then(response => response.json())
-        .then(response => {
-              this.setState({
-                    items: response.objects
-              });
-              return fetch(`${process.env.REACT_APP_API_HOST}/reddits`)
-        })
-        .then(response => response.json())
-        .then(response => {
-
-            let results = this.state.items.concat(response.objects);
-            if (this.state.sorter) {
-                results.sort(this.state.sorter.value);
-            }
-
-            this.setState({
-                items: results,
-                loaded: true,
-                totalPages: Math.ceil(results.length / this.ITEMS_PER_PAGE)
+        RSSearchUtils.request(`videos`)
+            .then((json) => {
+                this.setState({
+                    items: json.objects
+                });
+                return RSSearchUtils.request(`reddits`);
             })
-        });
+            .then((json) => {
+                this.updateFromRequest(json);
+            });
     }
 
-    itemsForCurrentPage() {
-
-        let data = this.state.items.map((item) => {
-            if (item.video_url) {
-                return <RSVideoCard icon={item.icon}
-                              id={item.id}
-                              title={item.name}/>
-            }
-            return <RSRedditCard title={item.title}
-                              url={item.url}/>
-        });
-
-        let page = this.state.currentPage;
-
-        let numItems = this.ITEMS_PER_PAGE;
-        let itemsLeft = Math.min(this.ITEMS_PER_PAGE, data.length - (page * this.ITEMS_PER_PAGE));
-
-        let rows = [];
-        let index = (page) * this.ITEMS_PER_PAGE;
-
-        let numRows = Math.ceil(numItems / 4);
-
-        for (let i = 0; i < numRows; i++) {
-            let row = [];
-
-            for(let j = 0; j < 4 && itemsLeft > 0; j++) {
-                row.push(data[index++]);
-                --itemsLeft;
-            }
-
-            rows.push(row);
-        }
-
-        return rows;
-    }
+    /** MARK: - State Handling  */
 
     handlePageChanged(page) {
         this.setState({
@@ -118,60 +55,93 @@ export default class CommunityGrid extends Component {
         });
     }
 
-    getFilters() {
-        return RSSearchUtils.getCommunityFilters();
+    updateFromRequest(response) {
+        let results = this.state.items.concat(response.objects);
+        if (this.state.sorter) {
+            results.sort(this.state.sorter.value);
+        }
+
+        this.setState({
+            items: results,
+            loaded: true,
+            totalPages: Math.ceil(results.length / this.ITEMS_PER_PAGE),
+            currentPage: 0
+        })
     }
 
     searchWithFilters(filters) {
-        let anded = {filters: filters.map((item) => item.value)};
-        let stringified = JSON.stringify(anded);
-
-        fetch(`${process.env.REACT_APP_API_HOST}/videos?q=${stringified}`)
-            .then(response => response.json())
-            .then(response => {
-              this.setState({
-                items: response.objects
-              });
-              return fetch(`${process.env.REACT_APP_API_HOST}/reddits?q=${stringified}`)
-            })
-            .then(response => response.json())
-            .then(response => {
-
-                let results = this.state.items.concat(response.objects);
-                if (this.state.sorter) {
-                    results.sort(this.state.sorter.value);
-                }
-
+        RSSearchUtils.requestWithFilters(`videos`, filters)
+            .then((json) => {
                 this.setState({
-                    items: results,
-                    loaded: true,
-                    totalPages: Math.ceil(results.length / this.ITEMS_PER_PAGE),
-                    currentPage: 0
-                })
+                    items: json.objects
+                });
+                return RSSearchUtils.requestWithFilters(`reddits`, filters);
+            })
+            .then((json) => {
+                this.updateFromRequest(json);
             });
     }
 
+    getSearchHeader() {
+        return (
+            <div className="nav-padding">
+                <RSSearchHeader sort
+                                availableSorts={RSSearchUtils.getAdvancedSorts()}
+                                onSortChange={(sorter) => this.handleSort(sorter)}
+                                filter
+                                availableFilters={RSSearchUtils.getCommunityFilters()}
+                                onFilterChange={(filters) => this.searchWithFilters(filters)}/>
+                <hr/>
+            </div>
+        );
+    }
+
+    itemsForCurrentPage() {
+        let data = this.state.items.map((item) => {
+            if (item.video_url) {
+                return <RSVideoCard icon={item.icon}
+                                    key={`${item.id}.${item.name}`}
+                                    id={item.id}
+                                    title={item.name}/>
+            }
+            return <RSRedditCard title={item.title}
+                                 key={item.url}
+                                 url={item.url}/>
+        });
+
+        return RSDataUtils.groupItems(data, this.ITEMS_PER_PAGE, this.state.currentPage, this.ROW_SIZE);
+    }
+
+    /** MARK: - UI Creation */
+
+    getContent() {
+        return (
+            <Row>
+            {  this.state.items.length > 0
+                ? (
+                    <Row>
+                        { this.itemsForCurrentPage() }
+                    </Row>
+                ) : (
+                    <Row>
+                        <h4 className='mx-auto'>No results for selected filters</h4>
+                    </Row>
+                )
+            }
+            </Row>
+        );
+    }
+
     render() {
-        if (!this.state.loaded) {return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);}
+        if (!this.state.loaded) {
+            return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);
+        }
 
         return (
             <Container className="nav-padding">
                 <Row><h1 className="mx-auto">Runescape Community Resources</h1></Row>
-                <div className="nav-padding">
-                <RSSearchHeader sort availableSorts={this.availableSorts} onSortChange={(sorter) => this.handleSort(sorter)}
-                                filter availableFilters={this.getFilters()} onFilterChange={(filters) => this.searchWithFilters(filters)}/><hr/></div>
-                <Row>
-                    {  this.state.items.length > 0
-                        ? (
-                            <Row>
-                                { this.itemsForCurrentPage() }
-                            </Row>
-                        ) : (
-                        <Row>
-                            <h4 className='mx-auto'>No results for selected filters</h4>
-                        </Row>
-                    ) }
-                </Row>
+                { this.getSearchHeader() }
+                { this.getContent() }
 
                 <Row>
                     <ReactPaginate
