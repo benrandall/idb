@@ -4,10 +4,8 @@ import ReactDOM from 'react-dom';
 import {
   Route,
   Link,
-  HashRouter,
   BrowserRouter,
   Switch,
-  Redirect
 } from "react-router-dom";
 
 import {
@@ -19,7 +17,6 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import SearchBar from 'react-search-bar';
 
 import './App.css';
 
@@ -43,6 +40,13 @@ class App extends Component {
       isOpen: false,
       navHeight: 50
     };
+
+    this.links = [
+        { slug: 'items', title: 'Items' },
+        { slug: 'skills', title: 'Skills' },
+        { slug: 'community', title: 'Community' },
+        { slug: 'about', title: 'About' },
+    ];
 
     this.handleResize = this.handleResize.bind(this);
   }
@@ -71,6 +75,31 @@ class App extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
+  getNavigation() {
+      return (
+        <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
+            <NavbarBrand href="/" className="pl-4">RuneScrape</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto pr-4" navbar>
+                {
+                    this.links.map((link) => {
+                        return (
+                            <NavItem key={link.slug} >
+                                <NavLink tag={Link} to={`/${link.slug}`}>{link.title}</NavLink>
+                            </NavItem>
+                        )
+                    })
+                }
+                <NavItem>
+                    <RSSearchBar onChange={() => {}} onClear={() => {}} />
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+      );
+  }
+
   render() {
     const ItemsCardGrid = (props) => {
       return (
@@ -92,29 +121,7 @@ class App extends Component {
     <div style={{paddingTop: this.state.navHeight}}>
       <BrowserRouter>
         <div>
-          <Navbar color="dark" className="navbar-dark" ref={(e) => this._navbar = e} expand="md" fixed="top">
-            <NavbarBrand href="/" className="pl-4">RuneScrape</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto pr-4" navbar>
-                <NavItem>
-                  <NavLink tag={Link} to="/items">Items</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} to="/skills">Skills</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} to="/community">Community</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} to="/about">About</NavLink>
-                </NavItem>
-                <NavItem>
-                    <RSSearchBar onChange={() => {}} onClear={() => {}} />
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
+            { this.getNavigation() }
 
           <Switch>
               <Route exact path="/" component={Home}/>

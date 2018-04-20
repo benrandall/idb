@@ -7,16 +7,15 @@ import {
     CardBody,
     CardImg,
     CardTitle,
-    Button
 } from 'reactstrap';
 import './RSVideoCard.css';
 
 const RSVideoCard = (props) => {
     return (
         <Col sm="12" md="6" lg="4">
-            <Link to={'/community/' + props.id} style={{ textDecoration: 'none', color: '#182329' }}>
+            <Link to={'/community/' + props.id} className="rs-video-card">
                 <Card>
-                    <CardImg top width="100%" src={props.icon} alt="Card image cap" />
+                    <CardImg top width="100%" src={props.icon} alt={props.title} />
                     <CardBody>
                         <CardTitle className="truncate">{props.title}</CardTitle>
                     </CardBody>

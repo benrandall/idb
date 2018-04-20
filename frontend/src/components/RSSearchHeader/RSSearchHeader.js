@@ -26,58 +26,77 @@ export default class RSSearchHeader extends Component {
         this.props.history.push(`/search/${value}`);
     }
 
-    fieldDidClear() {
+    /*  We don't have a need to monitor, but the props are required  */
+    fieldDidClear() {}
+    fieldDidChange() {}
 
+    getSearchBar() {
+        if (!this.props.search) {
+            return null;
+        }
+
+        return (
+            <Col sm={12} md={4}>
+                <RSSearchBar onSearch={ (value) => this.props.onSearch
+                                                    ? this.props.onSearch(value)
+                                                    : this.fieldDidSearch(value) }
+                             onClear={this.fieldDidClear}
+                             onChange={this.fieldDidChange}
+                />
+            </Col>
+        )
     }
 
-    fieldDidChange() {
+    getFilter() {
+        if (!this.props.filter) {
+            return null;
+        }
 
+        return (
+            <Col sm={12} md={4}>
+                <h5>Filter by:</h5>
+                <Select options={this.state.availableFilters}
+                    onChange={(modelFilters) => this.setState({modelFilters}, () => {
+                        this.props.onFilterChange && this.props.onFilterChange(this.state.modelFilters);
+                    })}
+                    multi
+                    searchable
+                    placeholder="Filters"
+                    removeSelected
+                    value={this.state.modelFilters}
+                />
+            </Col>
+        );
+    }
+
+    getSort() {
+        if (!this.props.sort) {
+            return null;
+        }
+
+        return (
+            <Col sm={12} md={4}>
+                <h5>Sort by:</h5>
+                <Select options={this.state.availableSorts}
+                    onChange={(sorter) => {
+                        this.setState({sorter}, () => {
+                            this.props.onSortChange(sorter);
+                        });
+                    }}
+                    clearable={false}
+                    value={this.state.sorter}
+                    placeholder="Sorting"
+                />
+            </Col>
+        );
     }
 
     render() {
         return (
             <Row>
-                {   this.props.search &&
-                    <Col sm={12} md={4}>
-                        <RSSearchBar onSearch={ (value) => this.props.onSearch
-                                                            ? this.props.onSearch(value)
-                                                            : this.fieldDidSearch(value) }
-                                     onClear={this.fieldDidClear}
-                                     onChange={this.fieldDidChange}
-                        />
-                    </Col>
-                }
-                {   this.props.filter &&
-                    <Col sm={12} md={4}>
-                        <h5>Filter by:</h5>
-                        <Select options={this.state.availableFilters}
-                            onChange={(modelFilters) => this.setState({modelFilters}, () => {
-                                this.props.onFilterChange && this.props.onFilterChange(this.state.modelFilters);
-                            })}
-                            multi
-                            searchable
-                            placeholder="Filters"
-                            removeSelected
-                            value={this.state.modelFilters}
-                        />
-                    </Col>
-                }
-                {
-                    this.props.sort &&
-                    <Col sm={12} md={4}>
-                        <h5>Sort by:</h5>
-                        <Select options={this.state.availableSorts}
-                            onChange={(sorter) => {
-                                this.setState({sorter}, () => {
-                                    this.props.onSortChange(sorter);
-                                });
-                            }}
-                            clearable={false}
-                            value={this.state.sorter}
-                            placeholder="Sorting"
-                        />
-                    </Col>
-                }
+                { this.getSearchBar() }
+                { this.getFilter() }
+                { this.getSort() }
             </Row>
         );
     }

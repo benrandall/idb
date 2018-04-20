@@ -71,6 +71,35 @@ const RSSearchUtils = {
             { label: 'Old School Runescape', value: RSSearchUtils.genericFlaskFilter("category", "==", "old_runescape") },
             { label: 'New Runescape', value: RSSearchUtils.genericFlaskFilter("category", "==", "runescape") }
         ]
+    },
+
+    getStandardSorts() {
+        return [
+            { label: `Name (Ascending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true) },
+            { label: `Name (Descending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false) },
+        ]
+    },
+
+    getAdvancedSorts() {
+        return [
+            { label: `Name (Ascending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true) },
+            { label: `Name (Descending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false) },
+            { label: `Type (Ascending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, true) },
+            { label: `Type (Descending)`, value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, false) }
+        ]
+    },
+
+    requestWithFilters(path, filters) {
+        let anded = {filters: filters.map((item) => item.value)};
+        let stringified = JSON.stringify(anded);
+
+        return fetch(`${process.env.REACT_APP_API_HOST}/${path}?q=${stringified}`)
+            .then((items) => { return items.json() })
+    },
+
+    request(path) {
+        return fetch(`${process.env.REACT_APP_API_HOST}/${path}`)
+            .then((items) => { return items.json() })
     }
 };
 
