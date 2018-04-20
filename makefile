@@ -35,8 +35,20 @@ frontend: yarn-install yarn-build-css
 	@cd frontend \
 	&& yarn test
 
+# create and source a virtual environment
+create-virtualenv:
+	@python3 -m venv virtualenv
+
+source-venv: create-virtualenv
+	@cd virtualenv/bin \
+	&& source activate
+
+backend-pip-install: source-venv
+	@cd backend \
+	&& pip install -r requirements.txt
+
 # make backend  - runs backend tests
-backend:
+backend: source-venv backend-pip-install
 	cd backend \
 	&& python tests.py
 
