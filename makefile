@@ -19,17 +19,26 @@ uml:
 
 # make selenium - runs selenium tests
 selenium:
-	cd frontend && python guitests.py
+	cd frontend \
+	&& python guitests.py
+
+yarn-install:
+	@cd frontend    \
+	&& yarn install
+
+yarn-build-css:
+	@cd frontend \
+	&& yarn build-css
 
 # make frontend - runs frontend tests
-frontend:
-	$(cd frontend && yarn install)
-	$(cd frontend && yarn build-css)
-	cd frontend && yarn test
+frontend: yarn-install yarn-build-css
+	@cd frontend \
+	&& yarn test
 
 # make backend  - runs backend tests
 backend:
-	cd backend/ && python tests.py
+	cd backend \
+	&& python tests.py
 
 # make website  - prints link to a website
 website:
