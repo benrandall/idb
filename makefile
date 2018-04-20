@@ -18,7 +18,7 @@ uml:
 	@echo "https://benrandall.gitbooks.io/report/content/uml-diagram.html"
 
 # make selenium - runs selenium tests
-selenium:
+selenium: source-venv
 	cd frontend \
 	&& python guitests.py
 
