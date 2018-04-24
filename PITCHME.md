@@ -3,7 +3,7 @@
 
 ---
 
-## Meet the Team
+# Meet the Team
 @fa[arrow-down]
 
 +++
@@ -56,11 +56,11 @@
 
 ---
 
-## Demonstration
+# Demonstration
 
 ---
 
-## Self Critique
+# Self Critique
 
 ---
 
@@ -96,7 +96,7 @@
 
 ---
 
-## Other Critique
+# Parkd.us Critique
 
 ---
 
