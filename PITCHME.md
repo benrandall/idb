@@ -86,7 +86,7 @@
 ---
 
 ### What did we learn?
-@fa[@fa[angle-down fa-2x]
+@fa[angle-down fa-2x]
 +++
 * **Debugging**
   * Despite having knowledge of the individual tools required for the project, we had a lot of learning to do for debugging
@@ -104,7 +104,7 @@
 ---
 
 ### What can we do better?
-@fa[@fa[angle-down fa-2x]
+@fa[angle-down fa-2x]
 +++
 * **Loading times**
   * Some react components/various pages do still have a noticeable loading time
