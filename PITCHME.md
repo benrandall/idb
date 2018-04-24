@@ -66,20 +66,21 @@
 ---
 
 ### What did we do well?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
-* Thing #1
+* 
 +++
 * Thing #2
 +++
 * Thing #3
 +++
-* Thing #4
+* As-we-go refactoring
+⋅⋅* We refactored throughout each phase which reduced the amount of refactoring we had to do at the end. 
 
 ---
 
 ### What did we learn?
-@fa[arrow-down]
+@fa[@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
@@ -92,7 +93,7 @@
 ---
 
 ### What can we do better?
-@fa[arrow-down]
+@fa[@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
@@ -105,7 +106,7 @@
 ---
 
 ### What puzzles us?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
@@ -122,7 +123,7 @@
 ---
 
 ### What did they do well?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
 
 * Thing #1
@@ -136,7 +137,7 @@
 ---
 
 ### What did we learn from them?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
@@ -149,7 +150,7 @@
 ---
 
 ### What can they do better?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
@@ -162,7 +163,7 @@
 ---
 
 ### What puzzles us about their site?
-@fa[arrow-down]
+@fa[angle-down fa-2x]
 +++
 * Thing #1
 +++
