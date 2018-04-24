@@ -5,3 +5,8 @@
   box-shadow: none;
   background: none;
 }
+
+li {
+  color: #d3d3d3;
+  font-size: 35px;
+}
