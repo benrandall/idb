@@ -59,14 +59,14 @@
 
 ---
 
-# What did we do well?
+### What did we do well?
 
 * Thing #1
 * Thing #2
 * Thing #3
 * Thing #4
 
-# What did we learn?
+### What did we learn?
 
 * Thing #1
 * Thing #2
