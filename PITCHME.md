@@ -36,7 +36,7 @@
 ![Luke](backend/app/static/img/luke.jpg)
 
 ### Duties:
-###### Backend, API
+###### Backend, API, Data visualization
 
 +++
 
@@ -44,7 +44,7 @@
 ![Ben](backend/app/static/img/ben.png)
 
 ### Duties:
-###### Front end, Mocha testing, Data Collection, Gitpitch
+###### Front end, Mocha testing, Data Collection, Documentation
 
 +++
 
