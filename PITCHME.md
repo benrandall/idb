@@ -75,14 +75,14 @@
 
 ---
 
-#### What can we do better?
+### What can we do better?
 
 * Thing #1
 * Thing #2
 * Thing #3
 * Thing #4
 
-#### What puzzles us?
+### What puzzles us?
 
 * Thing #1
 * Thing #2
@@ -95,14 +95,14 @@
 
 ---
 
-#### What did they do well?
+### What did they do well?
 
 * Thing #1
 * Thing #2
 * Thing #3
 * Thing #4
 
-#### What did we learn from them?
+### What did we learn from them?
 
 * Thing #1
 * Thing #2
@@ -111,14 +111,14 @@
 
 ---
 
-#### What can they do better?
+### What can they do better?
 
 * Thing #1
 * Thing #2
 * Thing #3
 * Thing #4
 
-#### What puzzles us about their site?
+### What puzzles us about their site?
 
 * Thing #1
 * Thing #2
