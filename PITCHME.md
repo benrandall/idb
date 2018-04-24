@@ -4,7 +4,7 @@
 ---
 
 # Meet the Team
-@fa[arrow-down]
+@fa[angle-down]
 
 +++
 
