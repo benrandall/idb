@@ -57,6 +57,7 @@
 ---
 
 # Demonstration
+[Runescrape](http://www.runescrape.lol/)
 
 ---
 
@@ -65,33 +66,53 @@
 ---
 
 ### What did we do well?
-
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
-### What did we learn?
+---
 
+### What did we learn?
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
 ---
 
 ### What can we do better?
-
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
-### What puzzles us?
+---
 
+### What puzzles us?
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
 ---
@@ -101,34 +122,56 @@
 ---
 
 ### What did they do well?
+@fa[arrow-down]
++++
 
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
-### What did we learn from them?
+---
 
+### What did we learn from them?
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
 
 ---
 
 ### What can they do better?
-
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
+
+---
 
 ### What puzzles us about their site?
-
+@fa[arrow-down]
++++
 * Thing #1
++++
 * Thing #2
++++
 * Thing #3
++++
 * Thing #4
++++
 
 ---
 
