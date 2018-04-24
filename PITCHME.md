@@ -65,7 +65,7 @@
 
 ---
 
-### What did we do well?
+## What did we do well?
 @fa[angle-down fa-2x]
 +++
 ### Communication
@@ -85,7 +85,7 @@
 
 ---
 
-### What did we learn?
+## What did we learn?
 @fa[angle-down fa-2x]
 +++
 ### Debugging
@@ -103,7 +103,7 @@
   * Six people on one project can be quite a lot, so we learned how to efficiently leverage everyone's skills
 ---
 
-### What can we do better?
+## What can we do better?
 @fa[angle-down fa-2x]
 +++
 ### Loading times
@@ -126,7 +126,7 @@
 
 ---
 
-### What puzzles us?
+## What puzzles us?
 @fa[angle-down fa-2x]
 +++
 ### Designing a site with so many interconnected data points
@@ -145,7 +145,7 @@
 
 ---
 
-### What did they do well?
+## What did they do well?
 @fa[angle-down fa-2x]
 +++
 ### Elegant UI
@@ -165,7 +165,7 @@
  * Communicated consistently with us via Github
 ---
 
-### What did we learn from them?
+## What did we learn from them?
 @fa[angle-down fa-2x]
 +++
 ### Flexibility & Positivity
@@ -179,7 +179,7 @@
  * Once again, the UI design of Parkd.us is very well done and we took some pointers from them when designing our site
 ---
 
-### What can they do better?
+## What can they do better?
 @fa[angle-down fa-2x]
 +++
 ### Large images 
@@ -193,7 +193,7 @@
 
 ---
 
-### What puzzles us about their site?
+## What puzzles us about their site?
 @fa[angle-down fa-2x]
 +++
 ### Web Scraping/Data Collection
