@@ -68,19 +68,19 @@
 ### What did we do well?
 @fa[angle-down fa-2x]
 +++
-* ### Communication
+### Communication
   * Divying up roles and communicating effectively allowed us to smoothly transition from phase to phase.
   * Prevented us from stepping on each other's toes
 +++
-* ### Focused concept
+### Focused concept
   * Our project concept was very narrowed down and specific, eliminating confusion for a customer and increasing ease of use 
 +++
-* ### Version control, issue tracking, Github organization
+### Version control, issue tracking, Github organization
   * Maintained efficient, consistent issue tracking throughout the project
   * Peer reviewed all pull requests
   * Project boards updated constantly so everyone could be on the same page
 +++
-* ### As-we-go refactoring
+### As-we-go refactoring
   * Refactoring throughout each phase reduced the amount of refactoring we had to do at the end
 
 ---
