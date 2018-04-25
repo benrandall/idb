@@ -108,7 +108,7 @@
 +++
 ### Loading times
   * Some react components/various pages do still have a noticeable loading time
-  * Adjusted with caching, but some initial load times still noticeable +++
+  * Adjusted with caching, but some initial load times still noticeable
 +++
 ### Increase filter & search capabilities
   * i.e. allow filtering by model type on Search results
