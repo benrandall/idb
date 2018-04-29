@@ -7,48 +7,42 @@
 
 +++
 
-### Claire Bingham
-![Claire](backend/app/static/img/claire.png)
+## Claire Bingham
 
 ### Duties:
 ###### Front end, Design, Data Collection, Gitpitch
 
 +++
 
-### Steven Diaz
-![Steven](backend/app/static/img/steven.jpg)
+## Steven Diaz
 
 ### Duties:
 ###### Backend, API, Deployment
 
 +++
 
-### Liam Decoste
-![Liam](backend/app/static/img/liam.jpg)
+## Liam Decoste
 
 ### Duties:
 ###### Front end, Design, Deployment
 
 +++
 
-### Luke Wright
-![Luke](backend/app/static/img/luke.jpg)
+## Luke Wright
 
 ### Duties:
 ###### Backend, API, Data visualization
 
 +++
 
-### Ben Randall
-![Ben](backend/app/static/img/ben.png)
+## Ben Randall
 
 ### Duties:
 ###### Front end, Mocha testing, Data Collection, Documentation
 
 +++
 
-### Dylan Ramage
-![Dyan](backend/app/static/img/dylan.jpg)
+## Dylan Ramage
 
 ### Duties: 
 ###### Front end, Selenium testing
