@@ -2,7 +2,6 @@
 ### Meet Me in Lumbridge
 
 ---
-<div class="teammate">
 # Meet the Team
 @fa[angle-down fa-3x]
 
@@ -53,7 +52,6 @@
 
 ### Duties: 
 ###### Front end, Selenium testing
-</div>
 ---
 
 # Demonstration
