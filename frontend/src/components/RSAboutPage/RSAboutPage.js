@@ -6,6 +6,8 @@ import RSTeamMember from '../RSTeamMember/RSTeamMember';
 import GitHubStats from '../GitHubStats/GitHubStats';
 import RSTool from '../RSTool/RSTool';
 import RSLink from '../RSLink/RSLink';
+import RSSearchUtils from '../../utilities/RSSearchUtils';
+
 import "isomorphic-fetch";
 
 import './RSAboutPage.css';
@@ -25,8 +27,7 @@ export default class RSAboutPage extends Component {
     }
 
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_HOST}/about`)
-            .then((about) => { return about.json() })
+        RSSearchUtils.request(`about`)
             .then((json) => {
                 this.setState({
                     loaded: true,
@@ -88,7 +89,7 @@ export default class RSAboutPage extends Component {
 
     render() {
 
-        if (!this.state.loaded) { return (<div>Loading</div>); }
+        if (!this.state.loaded) { return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>); }
 
         return (
             <Container className="nav-padding">

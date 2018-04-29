@@ -8,31 +8,48 @@ import './RSSearchCard.css';
 
 const RSSearchCard = (props) => {
 
-    const createCard = (props) => {
-        return (<Card>
-            <div className="card-img-container">
-                <img className="card-img-top-custom" top="true" width="100%" src={ props.imageURL } alt={ props.title }/>
-            </div>
-            <CardBody>
-                <CardTitle>
+    const getTitle = (props) => {
+        return (
+            <CardTitle>
+                <Highlighter
+                    highlightClassName="highlight"
+                    searchWords={props.searchWords}
+                    autoEscape={true}
+                    textToHighlight={props.title}
+                  />
+            </CardTitle>
+        )
+    };
+
+    const getBody = (props) => {
+        if (props.body) {
+            return (
+                <CardText>
                     <Highlighter
                         highlightClassName="highlight"
                         searchWords={props.searchWords}
                         autoEscape={true}
-                        textToHighlight={props.title}
+                        textToHighlight={props.body}
                       />
-                </CardTitle>
-                {
-                    props.body &&
-                    <CardText>
-                        <Highlighter
-                            highlightClassName="highlight"
-                            searchWords={props.searchWords}
-                            autoEscape={true}
-                            textToHighlight={props.body}
-                          />
-                    </CardText>
-                }
+                </CardText>
+            )
+        }
+
+        return null;
+    };
+
+    const createCard = (props) => {
+        return (<Card>
+            <div className="card-img-container">
+                <img className="card-img-top-custom"
+                     top="true"
+                     width="100%"
+                     src={ props.imageURL }
+                     alt={ props.title }/>
+            </div>
+            <CardBody>
+                { getTitle(props) }
+                { getBody(props) }
             </CardBody>
         </Card>)
     };
@@ -40,7 +57,7 @@ const RSSearchCard = (props) => {
     if (props.externalURL) {
         return (
             <Col sm="12" md="6" lg="4">
-                <a href={props.externalURL} style={{ textDecoration: 'none', color: '#182329' }}>
+                <a href={props.externalURL} className="external-card">
                     { createCard(props) }
                 </a>
             </Col>
@@ -49,7 +66,7 @@ const RSSearchCard = (props) => {
 
     return (
         <Col sm="12" md="6" lg="4">
-            <Link to={'/' + props.type + '/' + props.id} style={{ textDecoration: 'none', color: '#182329' }}>
+            <Link to={'/' + props.type + '/' + props.id} className="external-card">
                 { createCard(props) }
             </Link>
         </Col>

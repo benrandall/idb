@@ -8,6 +8,7 @@ import RSRedditCard from "../RSRedditCard/RSRedditCard";
 import RSVideoCard from "../RSVideoCard/RSVideoCard";
 
 import './SkillDetailPage.css';
+import RSSearchUtils from "../../utilities/RSSearchUtils";
 
 export default class SkillDetailPage extends Component {
 
@@ -22,8 +23,7 @@ export default class SkillDetailPage extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
 
-        fetch(`${process.env.REACT_APP_API_HOST}/skills/${params.id}`)
-            .then((skill) => { return skill.json() })
+        RSSearchUtils.request(`skills/${params.id}`)
             .then((json) => {
                 this.setState({
                     skill: json,
@@ -33,79 +33,99 @@ export default class SkillDetailPage extends Component {
     }
 
     getItems() {
-        let items = [];
+        let items = this.state.skill.items.map((item) => {
+            return <CardComponent key={`item${item.id}`}
+                                  cardType="items"
+                                  item={item}
+                                  showFooter={false}/>;
+        });
 
-        for (let item of this.state.skill.items) {
-            items.push(<CardComponent cardType="items" item={item} showFooter={false}/>);
+        if (items.length === 0) {
+            return null
         }
 
-        return items;
+        return (
+            <div>
+                <hr/>
+                <Row>
+                    <Col sm="12">
+                        <p className="info">Related Items</p>
+                    </Col>
+                </Row>
+                <Row>
+                    { items }
+                </Row>
+            </div>
+        )
     }
 
     getCommunity() {
-        let community = [];
+        let community = this.state.skill.reddits.map((reddit) => {
+            return <RSRedditCard key={reddit.url}
+                                 title={reddit.title}
+                                 url={reddit.url}/>;
+        })
+        .concat(this.state.skill.videos.map((video) => {
+            return <RSVideoCard key={`video${video.id}`}
+                                title={video.name}
+                                icon={video.icon}
+                                id={video.id} />;
+        }));
 
-        for (let reddit of this.state.skill.reddits) {
-            community.push(<RSRedditCard title={reddit.title} url={reddit.url}/>)
+        if (community.length === 0) {
+            return null;
         }
 
-        for (let video of this.state.skill.videos) {
-            community.push(<RSVideoCard title={video.name} icon={video.icon} id={video.id} />);
-        }
+        return (
+            <div>
+                <hr/>
+                <Row>
+                    <Col sm="12">
+                        <p className="info">Community Sources</p>
+                    </Col>
+                </Row>
+                <Row>
+                    { community }
+                </Row>
+            </div>
+        )
+    }
 
-        return community;
+    getGeneralInfo() {
+        return (
+            <Row className="nav-padding">
+                <Col sm="12">
+                    <p className="info">General Information</p>
+                    <div className="detail-container">
+                        <div className="left-side">
+                            <img src={ this.state.skill.icon } alt={this.state.skill.name} />
+                            <h1>{ this.state.skill.name }</h1>
+                            <p>{ this.state.skill.description }</p>
+                        </div>
+                        <div className="right-side">
+                            <p className="medium-title">Other Information</p>
+                            <p className="small-title">Members Only</p>
+                            <p className="subtext">{ this.state.skill.members_only ? "Yes" : "No" }</p>
+                            <h6>Max Level</h6>
+                            <p className="subtext">{ this.state.skill.max_level }</p>
+                            <h6>Skill Type</h6>
+                            <p className="subtext">{ this.state.skill.skill_type }</p>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+        )
     }
 
     render() {
 
-        if (!this.state.loaded) { return (<div>Loading</div>) }
+        if (!this.state.loaded) { return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>) }
 
         return (
             <div className="container" id="skill" data-id={ this.props.id }>
-                <Row className="nav-padding">
-                    <Col sm="12">
-                        <p className="info">General Information</p>
-                        <div className="detail-container">
-                            <div className="left-side">
-                                <img src={ this.state.skill.icon } alt={this.state.skill.name} />
-                                <h1>{ this.state.skill.name }</h1>
-                                <p>{ this.state.skill.description }</p>
-                            </div>
-                            <div className="right-side">
-                                <p className="medium-title">Other Information</p>
-                                <p className="small-title">Members Only</p>
-                                <p className="subtext">{ this.state.skill.members_only ? "Yes" : "No" }</p>
-                                <h6>Max Level</h6>
-                                <p className="subtext">{ this.state.skill.max_level }</p>
-                                <h6>Skill Type</h6>
-                                <p className="subtext">{ this.state.skill.skill_type }</p>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-                { this.getItems().length > 0 &&
-                    <div>
-                        <hr/>
-                        <Row>
-                            <Col sm="12">
-                                <p className="info">Related Items</p>
-                            </Col>
-                        </Row>
-                        <Row>
-                            { this.getItems() }
-                        </Row><hr/>
-                    </div> }
-                {this.getCommunity().length > 0 &&
-                    <div>
-                        <Row>
-                            <Col sm="12">
-                                <p className="info">Community Sources</p>
-                            </Col>
-                        </Row>
-                        <Row>
-                            { this.getCommunity() }
-                        </Row>
-                    </div>}
+                { this.getGeneralInfo() }
+                { this.getItems() }
+                { this.getCommunity() }
             </div>
         );
     }

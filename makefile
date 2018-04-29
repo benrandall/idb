@@ -18,18 +18,39 @@ uml:
 	@echo "https://benrandall.gitbooks.io/report/content/uml-diagram.html"
 
 # make selenium - runs selenium tests
-selenium:
-	cd frontend && python guitests.py
+selenium: source-venv
+	cd frontend \
+	&& python guitests.py
+
+yarn-install:
+	@cd frontend    \
+	&& yarn install
+
+yarn-build-css:
+	@cd frontend \
+	&& yarn build-css
 
 # make frontend - runs frontend tests
-frontend:
-	$(cd frontend && yarn install)
-	$(cd frontend && yarn build-css)
-	cd frontend && yarn test
+frontend: yarn-install yarn-build-css
+	@cd frontend \
+	&& yarn test
+
+# create and source a virtual environment
+create-virtualenv:
+	@python3 -m venv virtualenv
+
+source-venv: create-virtualenv
+	@cd virtualenv/bin \
+	&& source activate
+
+backend-pip-install: source-venv
+	@cd backend \
+	&& pip install -r requirements.txt
 
 # make backend  - runs backend tests
-backend:
-	cd backend/ && python tests.py
+backend: source-venv backend-pip-install
+	cd backend \
+	&& python tests.py
 
 # make website  - prints link to a website
 website:

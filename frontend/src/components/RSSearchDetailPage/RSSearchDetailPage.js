@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import RSSearchHeader from "../RSSearchHeader/RSSearchHeader";
-import RSSearchCard from "../RSSearchCard/RSSearchCard";
 import ReactPaginate from 'react-paginate';
 import RSSearchUtils from '../../utilities/RSSearchUtils';
 import Masonry from 'react-masonry-component';
+import RSDataUtils from "../../utilities/RSDataUtils";
 
 export default class RSSearchDetailPage extends Component {
 
@@ -22,25 +22,6 @@ export default class RSSearchDetailPage extends Component {
         };
 
         this.ITEMS_PER_PAGE = 9;
-
-        this.availableSorts = [
-            {
-                label: `Name (Ascending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, true)
-            },
-            {
-                label: `Name (Descending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortTitle, false)
-            },
-            {
-                label: `Type (Ascending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, true)
-            },
-            {
-                label: `Type (Descending)`,
-                value: RSSearchUtils.directionalSort(RSSearchUtils.sortType, false)
-            }
-        ];
     }
 
     componentDidMount() {
@@ -56,73 +37,13 @@ export default class RSSearchDetailPage extends Component {
         this.search(params.query);
     }
 
-    itemsForCurrentPage() {
+    /** MARK: - State Handling  */
 
-        let data = this.state.results;
-
-        let page = this.state.currentPage;
-
-        let numItems = this.ITEMS_PER_PAGE;
-        let itemsLeft = Math.min(this.ITEMS_PER_PAGE, data.length - (page * this.ITEMS_PER_PAGE));
-
-        let rows = [];
-        let index = (page) * this.ITEMS_PER_PAGE;
-
-        let numRows = Math.ceil(numItems / 4);
-
-        for (let i = 0; i < numRows; i++) {
-            let row = [];
-
-            for(let j = 0; j < 4 && itemsLeft > 0; j++) {
-                let result = data[index++];
-
-                if (result.reddits && result.videos && result.skills) {
-                row.push(<RSSearchCard id={result.id}
-                                     title={result.name}
-                                     body={result.examine_info}
-                                     searchWords={this.state.query.split(' ')}
-                                     imageURL={result.icon}
-                                     type="items"
-                                        />)
-                }
-                // Is a Skill
-                else if (result.reddits && result.videos && result.items) {
-                    row.push(<RSSearchCard id={result.id}
-                                          imageURL={result.icon}
-                                          searchWords={this.state.query.split(' ')}
-                                          body={result.description}
-                                          title={result.name}
-                                          type="skills"/>)
-                }
-                else if (result.video_url) {
-
-                    row.push(<RSSearchCard id={result.id}
-                                         imageURL={result.icon}
-                                         title={result.name}
-                                         searchWords={this.state.query.split(' ')}
-                                         type="community"/>);
-
-                    //return <RSVideoCard title={result.name} icon={result.icon} id={result.id}/>
-                }
-                // Is a reddit item
-                else if (result.skills && result.items) {
-
-                    row.push(<RSSearchCard id={result.id}
-                                         imageURL={`${process.env.REACT_APP_API_HOST}/images/reddit-logo.jpg`}
-                                         searchWords={this.state.query.split(' ')}
-                                         title={result.title}
-                                         externalURL={result.url}/>);
-                } else {
-                    row.push(<h1>ERROR</h1>);
-                }
-
-                --itemsLeft;
-            }
-
-            rows.push(row);
-        }
-
-        return rows;
+    search(query) {
+        RSSearchUtils.request(`search?q=${query}&`)
+            .then((json) => {
+                this.updateFromRequest(json, query)
+            });
     }
 
     handlePageChanged(newPage) {
@@ -145,40 +66,59 @@ export default class RSSearchDetailPage extends Component {
         });
     }
 
-    search(value) {
-        fetch(`${process.env.REACT_APP_API_HOST}/search?q=${value}&`)
-            .then((response) => response.json())
-            .then((json) => {
-                let result = json.result;
-                if (this.state.sorter) {
-                    result.sort(this.state.sorter.value);
-                }
 
-                this.setState({
-                    results: result,
-                    hasMore: json.has_more,
-                    loaded: true,
-                    query: value,
-                    totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE),
-                    currentPage: 0
-                });
-            })
+    updateFromRequest(json, query) {
+        let result = json.result;
+        if (this.state.sorter) {
+            result.sort(this.state.sorter.value);
+        }
+
+        this.setState({
+            results: result,
+            hasMore: json.has_more,
+            loaded: true,
+            query: query,
+            totalPages: Math.ceil(json.result.length / this.ITEMS_PER_PAGE),
+            currentPage: 0
+        });
     }
 
-    render() {
+    itemsForCurrentPage() {
+        let data = this.state.results.map((data) => {
+            return RSDataUtils.createComponentFromData(data, this.state.query)
+        });
+
+        let page = RSDataUtils.groupItems(data, this.ITEMS_PER_PAGE, this.state.currentPage);
         const masonryOptions = {
             transitionDuration: 0
         };
 
-        if (!this.state.loaded) {
-            return (<h4 className='mx-auto'>Loading</h4>);
+        return (
+            <Masonry
+                    className={'masonry-grid'}
+                    elementType={'div'}
+                    options={masonryOptions}
+                    disableImagesLoaded={false}
+                    updateOnEachImageLoad={false}
+                >
+                    { page }
+            </Masonry>
+        )
+    }
+
+    /** MARK: - UI Creation */
+
+    getContent() {
+        if (this.state.results.length === 0) {
+            return (
+                <Row className='nav-padding'>
+                    <h4 className='mx-auto'>No search results for '{ this.state.query }'</h4>
+                </Row>
+            );
         }
 
         return (
-            <Container>
-                {this.state.results.length === 0 ? (<Row className='nav-padding'>
-                    <h4 className='mx-auto'>No search results for '{ this.state.query }'</h4>
-                </Row>) : (<div>
+            <div>
                 <Row className='nav-padding'>
                     <h4 className='mx-auto'>Search results for '{ this.state.query }'</h4>
                 </Row>
@@ -187,23 +127,14 @@ export default class RSSearchDetailPage extends Component {
                         <RSSearchHeader sort
                                         onSearch={(value) => this.handleSearch(value)}
                                         onSortChange={(sorters) => this.handleSort(sorters)}
-                                        availableSorts={this.availableSorts}
+                                        availableSorts={RSSearchUtils.getAdvancedSorts()}
                                         availableFilters={RSSearchUtils.getModelFilters()}
                                         />
                     </Col>
                 </Row>
                 <hr/>
-                <Masonry
-                    className={'masonry-grid'}
-                    elementType={'div'}
-                    options={masonryOptions}
-                    disableImagesLoaded={false}
-                    updateOnEachImageLoad={false}
-                >
-                    { this.itemsForCurrentPage() }
-                </Masonry>
+                { this.itemsForCurrentPage() }
                 <Row>
-
                     <ReactPaginate
                         initialPage={0}
                         previousLabel={"previous"}
@@ -223,8 +154,19 @@ export default class RSSearchDetailPage extends Component {
                         previousLinkClassName={"page-link"}
                         nextLinkClassName={"page-link"}
                     />
+                </Row>
+            </div>
+        );
+    }
 
-                </Row></div>)}
+    render() {
+        if (!this.state.loaded) {
+            return (<Row className="nav-padding"><h2 className="mx-auto">Loading...</h2></Row>);
+        }
+
+        return (
+            <Container>
+                { this.getContent() }
             </Container>
         );
 

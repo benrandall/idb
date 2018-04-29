@@ -8,33 +8,11 @@ import {
     Button
   } from 'reactstrap';
 
-  import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import CarouselItems from './CarouselItems.const';
 
-  import './Home.css';
+import './Home.css';
 
-const items = [
-    {
-        src: `${process.env.REACT_APP_API_HOST}/images/sword_asset.svg`,
-        caption: 'Inventory of all the items available within the game',
-        color: 'yellow',
-        buttonText: 'Explore Items',
-        link: '/items'
-    },
-    {
-        src: `${process.env.REACT_APP_API_HOST}/images/skills_asset.svg`,
-        caption: 'Complete collection of skills and requirements for each',
-        color: 'blue',
-        buttonText: 'Explore Skills',
-        link: '/skills'
-    },
-    {
-        src: `${process.env.REACT_APP_API_HOST}/images/yt_reddit_asset.svg`,
-        caption: 'Community engagement like never before',
-        color: 'dark-blue',
-        buttonText: 'Explore Community',
-        link: '/community'
-    }
-];
 
 export default class Home extends Component {
 
@@ -58,13 +36,13 @@ export default class Home extends Component {
 
     next() {
         if (this.animating) return;
-        const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+        const nextIndex = this.state.activeIndex === CarouselItems.length - 1 ? 0 : this.state.activeIndex + 1;
         this.setState({ activeIndex: nextIndex });
     }
 
     previous() {
         if (this.animating) return;
-        const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+        const nextIndex = this.state.activeIndex === 0 ? CarouselItems.length - 1 : this.state.activeIndex - 1;
         this.setState({ activeIndex: nextIndex });
     }
 
@@ -76,7 +54,7 @@ export default class Home extends Component {
     render() {
         const { activeIndex } = this.state;
 
-        const slides = items.map((item) => {
+        const slides = CarouselItems.map((item) => {
             return (
               <CarouselItem
                 onExiting={this.onExiting}
@@ -86,7 +64,7 @@ export default class Home extends Component {
               >
                 <div className="item-content">
                     <img className='carousel-header-icon' src={item.src} alt={item.caption}/>
-                    <CarouselCaption captionHeader={item.caption} />
+                    <CarouselCaption  captionText="" captionHeader={item.caption} />
                     <Link className='centered-button' to={item.link}>
                         <Button outline color="secondary">{item.buttonText}</Button>{' '}
                     </Link>
@@ -103,7 +81,7 @@ export default class Home extends Component {
               previous={this.previous}
               className="carousel-fullscreen"
             >
-              <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+              <CarouselIndicators items={CarouselItems} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
               {slides}
               <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
               <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
