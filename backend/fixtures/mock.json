@@ -1038,7 +1038,7 @@
         {
             "name": "[OSRS] Vampire slayer quest guide",
             "id": 11,
-            "icon": "https://i.ytimg.com/an_webp/shnEQdloGzc/mqdefault_6s.webp?du=3000&sqp=CMvR49YF&rs=AOn4CLDA-FAT-4SYFywsF5lj3YzTKhpC5w",
+            "icon": "http://img.youtube.com/vi/shnEQdloGzc/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/shnEQdloGzc",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1048,7 +1048,7 @@
         {
             "name": "[OSRS] Demon slayer quest guide",
             "id": 12,
-            "icon": "https://i.ytimg.com/an_webp/W6CpBVMlSx8/mqdefault_6s.webp?du=3000&sqp=CNHR49YF&rs=AOn4CLAzMsJ5EtQd8nlSHG7BOvAkuBR5zQ",
+            "icon": "http://img.youtube.com/vi/W6CpBVMlSx8/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/W6CpBVMlSx8",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1058,7 +1058,7 @@
         {
             "name": "Runescape Shenanigans",
             "id": 13,
-            "icon": "https://i.ytimg.com/vi/G9KlG4gaO_s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDmysX0_wF8dLTaBJoRvKiIPGnu6g",
+            "icon": "http://img.youtube.com/vi/G9KlG4gaO_s/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/G9KlG4gaO_s",
             "category": "runescape",
             "community_type": "youtube",
@@ -1068,7 +1068,7 @@
         {
             "name": "[OSRS] In-Depth 1-99 RUNECRAFTING Guide (2018 Best Methods)",
             "id": 13,
-            "icon": "https://i.ytimg.com/an_webp/67pYXf5jEgo/mqdefault_6s.webp?du=3000&sqp=CLqb49YF&rs=AOn4CLBukAGpn-AUX96wgG1yavuORaBCCQ",
+            "icon": "http://img.youtube.com/vi/67pYXf5jEgo/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/67pYXf5jEgo",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1078,7 +1078,7 @@
         {
             "name": "RuneScape 3 - Detailed 1-99/120 Melee Guide",
             "id": 14,
-            "icon": "https://i.ytimg.com/an_webp/FFoPEm482A0/mqdefault_6s.webp?du=3000&sqp=CLXU49YF&rs=AOn4CLDA9lafftwrIn_5YAdOqkyvN_h56g",
+            "icon": "http://img.youtube.com/vi/FFoPEm482A0/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/FFoPEm482A0",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1088,7 +1088,7 @@
         {
             "name": "Runescape 2016 | 1-99 Agility Guide",
             "id": 15,
-            "icon": "https://i.ytimg.com/an_webp/WkyFq3Cw9Hg/mqdefault_6s.webp?du=3000&sqp=CMjL49YF&rs=AOn4CLAatQoiPlCL3hRzb6_hz7Cj-X7ROg",
+            "icon": "http://img.youtube.com/vi/WkyFq3Cw9Hg/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/WkyFq3Cw9Hg",
             "category": "runescape",
             "community_type": "youtube",
@@ -1098,7 +1098,7 @@
         {
             "name": "Runescape 2016 | 1-99 Farming Guide",
             "id": 16,
-            "icon": "https://i.ytimg.com/an_webp/YNPTCN9dcKE/mqdefault_6s.webp?du=3000&sqp=CNvh49YF&rs=AOn4CLCKC1zMs2WyiFybjyQt83dSaywGkg",
+            "icon": "http://img.youtube.com/vi/YNPTCN9dcKE/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/YNPTCN9dcKE",
             "category": "runescape",
             "community_type": "youtube",
@@ -1108,7 +1108,7 @@
         {
             "name": "1-99 Thieving Guide! [Runescape 3] Up to 800k xp/hr",
             "id": 17,
-            "icon": "https://i.ytimg.com/an_webp/zBUW8blIr-8/mqdefault_6s.webp?du=3000&sqp=CIPH49YF&rs=AOn4CLCkTW7Ra1jx1LEMGYxNl0ykvrgDEw",
+            "icon": "http://img.youtube.com/vi/zBUW8blIr/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/zBUW8blIr-8",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1118,7 +1118,7 @@
         {
             "name": "[OSRS] Ultimate 1-99 Prayer Guide (All Cheapest & Fastest Methods)",
             "id": 18,
-            "icon": "https://i.ytimg.com/an_webp/RgFINUBdK40/mqdefault_6s.webp?du=3000&sqp=CNvh49YF&rs=AOn4CLBdNeYCyn2f5gqovIYWVAfJ8iUJFw",
+            "icon": "http://img.youtube.com/vi/RgFINUBdK40/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/RgFINUBdK40",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1128,7 +1128,7 @@
         {
             "name": "[Runescape 3] 1-99 Construction Guide 2017 | FAST, AFK & Cheap Methods | No Mouse Keys Required",
             "id": 19,
-            "icon": "https://i.ytimg.com/an_webp/RDly2KUnGgg/mqdefault_6s.webp?du=3000&sqp=CLjB49YF&rs=AOn4CLDlUaetZKXkbeK8oSmPymiktMfCcw",
+            "icon": "http://img.youtube.com/vi/RDly2KUnGgg/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/RDly2KUnGgg",
             "category": "runescape",
             "community_type": "youtube",
@@ -1138,7 +1138,7 @@
         {
             "name": "Complete 1-99 Ranged Training Guide [OSRS] - Best Training Spots, Gear Upgrades and Quests!",
             "id": 20,
-            "icon": "https://i.ytimg.com/an_webp/ZpO-g-ORb0U/mqdefault_6s.webp?du=3000&sqp=CL3J49YF&rs=AOn4CLCWBv2d-8ufjk__8oske3r_WG4vcw",
+            "icon": "http://img.youtube.com/vi/ZpO-g-ORb0U/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/ZpO-g-ORb0U",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1148,7 +1148,7 @@
         {
             "name": "[OSRS] In-Depth 1-99 SLAYER Guide (2018 Best Methods)",
             "id": 21,
-            "icon": "https://i.ytimg.com/an_webp/UwvnEXMTsho/mqdefault_6s.webp?du=3000&sqp=CPjU49YF&rs=AOn4CLBuZr2exZca5JVVAl7sk0CN1usYTQ",
+            "icon": "http://img.youtube.com/vi/UwvnEXMTsho/mqdefault.jpg",
             "video_url": "https://gaming.youtube.com/embed/UwvnEXMTsho",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1158,7 +1158,7 @@
         {
             "name": "1-99 Hunter Guide Fastest Way Possible Up To 800k Xp Per Hour",
             "id": 22,
-            "icon": "https://i.ytimg.com/an_webp/adnzS_BHqeQ/mqdefault_6s.webp?du=3000&sqp=CITO49YF&rs=AOn4CLDPzGfmFGaTBVWY8CS9iUjiEWaNOQ",
+            "icon": "http://img.youtube.com/vi/adnzS_BHqeQ/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/adnzS_BHqeQ",
             "category": "runescape",
             "community_type": "youtube",
@@ -1168,7 +1168,7 @@
         {
             "name": "[OSRS] Ultimate 1-99 Fletching Guide (Profitable & Fast Methods)",
             "id": 23,
-            "icon": "https://i.ytimg.com/an_webp/s0FKYqngArE/mqdefault_6s.webp?du=3000&sqp=CM7K49YF&rs=AOn4CLBRld_0jGx_EkCLoQLY9Ef7y1OZBA",
+            "icon": "http://img.youtube.com/vi/s0FKYqngArE/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/s0FKYqngArE",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1178,7 +1178,7 @@
         {
             "name": "Runescape 2016 | 1-99 Melee Guide",
             "id": 24,
-            "icon": "https://i.ytimg.com/an_webp/6dwpmPJPvKs/mqdefault_6s.webp?du=3000&sqp=CMbh49YF&rs=AOn4CLBh_3peCAjvi2D91hij2g8cPu-_4Q",
+            "icon": "http://img.youtube.com/vi/6dwpmPJPvKs/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/6dwpmPJPvKs",
             "category": "runescape",
             "community_type": "youtube",
@@ -1188,8 +1188,8 @@
         {
             "name": "25 Combat with.. 99 HP & SLAYER?!?",
             "id": 25,
-            "icon": "https://i.ytimg.com/an_webp/Qg8zP6cA87E/mqdefault_6s.webp?du=3000&sqp=CKi-49YF&rs=AOn4CLBqT2t3hBw5pTrccuOy5U5G2YmZwA",
-            "video_url": "https://www.youtube.com/embed/v=Qg8zP6cA87E",
+            "icon": "http://img.youtube.com/vi/Qg8zP6cA87E/mqdefault.jpg",
+            "video_url": "https://www.youtube.com/embed/Qg8zP6cA87E",
             "category": "runescape",
             "community_type": "youtube",
             "items": [29, 2, 32],
@@ -1198,7 +1198,7 @@
         {
             "name": "[Runescape 3] 1-99 Woodcutting Guide 2017 | Fast & AFK Methods",
             "id": 26,
-            "icon": "https://i.ytimg.com/an_webp/LkzLoWLBoOY/mqdefault_6s.webp?du=3000&sqp=CLzR49YF&rs=AOn4CLAzZSpM6z85l9xRl1-yn-rZaM9ZmA",
+            "icon": "http://img.youtube.com/vi/LkzLoWLBoOY/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/LkzLoWLBoOY",
             "category": "runescape",
             "community_type": "youtube",
@@ -1208,7 +1208,7 @@
         {
             "name": "Runescape 2007 1-99 Firemaking Guide | OSRS 99 FM Guide",
             "id": 27,
-            "icon": "https://i.ytimg.com/an_webp/xJUMAevoHeU/mqdefault_6s.webp?du=3000&sqp=CLr_49YF&rs=AOn4CLBhFnR-yGtKFiTdiB1OEqgcV9ScfQ",
+            "icon": "http://img.youtube.com/vi/xJUMAevoHeU/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/xJUMAevoHeU",
             "category": "old_runescape",
             "community_type": "youtube",
@@ -1218,7 +1218,7 @@
         {
             "name": "Runescape rare item prices in 2009 VS 2016",
             "id": 28,
-            "icon": "https://i.ytimg.com/an_webp/gItt-YNlNB4/mqdefault_6s.webp?du=3000&sqp=CM7R49YF&rs=AOn4CLAOWzNNkWN28COtbdwtcdLPP0p62g",
+            "icon": "http://img.youtube.com/vi/gItt-YNlNB4/mqdefault.jpg",
             "video_url": "https://www.youtube.com/embed/gItt-YNlNB4",
             "category": "old_runescape",
             "community_type": "youtube",
