@@ -17,7 +17,7 @@
 +++
 
 ### Steven Diaz
-![Steven](backend/app/static/img/steven.jpg)
+<div class="teammate">![Steven](backend/app/static/img/steven.jpg)</div>
 
 ### Duties:
 ###### Backend, API, Deployment
