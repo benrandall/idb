@@ -2,7 +2,7 @@
 ### Meet Me in Lumbridge
 
 ---
-
+<div class="teammate">
 # Meet the Team
 @fa[angle-down fa-3x]
 
@@ -17,7 +17,7 @@
 +++
 
 ### Steven Diaz
-<span class="teammate">![Steven](backend/app/static/img/steven.jpg)</span>
+![Steven](backend/app/static/img/steven.jpg)
 
 ### Duties:
 ###### Backend, API, Deployment
@@ -53,7 +53,7 @@
 
 ### Duties: 
 ###### Front end, Selenium testing
-
+</div>
 ---
 
 # Demonstration
