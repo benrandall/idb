@@ -1,0 +1,4271 @@
+[
+    {
+      "address": "2100 Barton Springs Rd, Austin, TX 78704, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJT-TyHTq1RIYRrV8umxkqGGI",
+      "id": 0,
+      "latitude": -97.772857666016,
+      "longitude": 30.266962051392,
+      "name": "Zilker Metropolitan Park",
+      "photos": [
+        {
+          "description": "Polly, Zeva & Sid, the ZilkerBark mutts. Trying real hard to be majestic, failing beautifully.",
+          "id": 0,
+          "likes": 10100,
+          "park_id": 0,
+          "tag": "#zilker",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/d1c7601ccec6c81cd6603743f59b2ac7/5B327A31/t51.2885-15/e35/26287490_156991528418812_1298286437971525632_n.jpg"
+        },
+        {
+          "description": "Let the river take you where it flows",
+          "id": 1,
+          "likes": 30,
+          "park_id": 0,
+          "tag": "#zilkerpark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/f85fcf4a50d98752391c9b383709de96/5B555B14/t51.2885-15/e35/29401493_1876866265681381_3154965315012526080_n.jpg"
+        },
+        {
+          "description": "Austin life!",
+          "id": 2,
+          "likes": 56,
+          "park_id": 0,
+          "tag": "#zilkerpark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/6febfa05a165fc45f82163812712923c/5B514D2F/t51.2885-15/e35/29400876_2052344735090477_6818937993231859712_n.jpg"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "content": "We had a wonderful time at the Festival of Lights. Despite it being brutally cold, there were so many fun activities to do along the way and lots of hot cocoa and warm food to keep us toasty. The price was extremely reasonable I wouldnt even have been upset if it would have been more. The money went to a great cause something if Im ever back in the area again would totally do!",
+          "id": 0,
+          "park_id": 0
+        },
+        {
+          "content": "This is a really nice park. There are trails with beautiful views of the water that are great for walking or jogging. Theres plenty of large open space for playing sports or playing with the dogs. You can rent kayaks or canoes to take on the river. There are good places to relax in the shade. Pretty much something for anyone that enjoys the outdoors.",
+          "id": 1,
+          "park_id": 0
+        },
+        {
+          "content": "Zilker park and the accompanying trails are one of my favorite reasons to return to Austin every year to visit family. The trails are spacious and hug both sides of the river. There are a few nice bridges for crossing and there are even several spots with bathrooms for those that want to stop before getting back in your car. The views are wonderful for Austin and the trails are easy on the knees. One of the best running trails in the country and really offers gorgeous views of downtown Austin. A must visit for anyone in town who is seeking outdoor time.",
+          "id": 2,
+          "park_id": 0
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "1100 Kingsbury St, Austin, TX 78705, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJva0k12-1RIYRWWvusUoiw_4",
+      "id": 1,
+      "latitude": -97.75407409668,
+      "longitude": 30.284456253052,
+      "name": "Pease District Park",
+      "photos": [
+        {
+          "description": "Patrick Dougherty\u2019s Stickwork sculptures in Pease Park #perfectday #Pease District Park",
+          "id": 3,
+          "likes": 761,
+          "park_id": 1,
+          "tag": "# perfectday Pease District Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/c615343abd4e3f697fc45df82f45b54c/5B59771A/t51.2885-15/e35/30593318_372108896637602_1477067586993651712_n.jpg"
+        },
+        {
+          "description": "Me h\u00f4nt skwirrelz reel g\u00fcd. Pease District Park",
+          "id": 4,
+          "likes": 709,
+          "park_id": 1,
+          "tag": "# District Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/fda60a0eff830c85e33cbd09b3b2f600/5B5EF262/t51.2885-15/e35/30084615_346067072582067_6254792355275079680_n.jpg"
+        },
+        {
+          "description": "Austin art Pease District Park",
+          "id": 5,
+          "likes": 736,
+          "park_id": 1,
+          "tag": "# Common Paper Wasp District Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/9b75dab0f1045aafcb6d789aa8d39639/5B50BFD1/t51.2885-15/e35/30087929_204758570124633_349622342327992320_n.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "My 4-yr old loves this place. They\u2019ve got swings, basketball courts, up-to-date playground equipment and water features active in the summer months. Plenty of shade and room for all ages. Every time we\u2019ve been, it\u2019s active with kids, but never super busy. If you\u2019re a big kid at heart, there\u2019s a big field to toss a frisbee or kick a ball around.",
+          "id": 3,
+          "park_id": 1
+        },
+        {
+          "content": "Cool place Id never visited before!!  And the branch shelters were too cool!!  The only problem was finding the bathroom.  There are only on set of bathrooms on one side of the park.  Granted its not extremely huge, but you will wet your pants if you dont know where it is or you wait too long!!",
+          "id": 4,
+          "park_id": 1
+        },
+        {
+          "content": "A really beautiful park. Filled with trails that wander around Shoal Creek, which you can follow to Town Lake. Little play areas and a water park, basketball courts and large fields. Children and dog walkers everywhere. Hard to notice N Lamar right along the park because the trees and bushes block out the noise. There are some hills and some really nices houses along some of the edges of the park.",
+          "id": 5,
+          "park_id": 1
+        }
+      ],
+      "trucks": [
+        {
+          "address": "1109 S Lamar Blvd, Austin, TX 78704, USA",
+          "city": "Austin",
+          "cuisine": "Sandwich",
+          "description": null,
+          "google_id": "ChIJQYmVCx-1RIYRi0ofskT4uK4",
+          "id": 2,
+          "latitude": -97.761871337891,
+          "longitude": 30.255151748657,
+          "name": "Lukes Inside Out",
+          "park_id": 1,
+          "rating": 4.6,
+          "website": null
+        },
+        {
+          "address": "1309 Rosewood Ave, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Barbecue",
+          "description": null,
+          "google_id": "ChIJB0cJf7m1RIYRLWbiT_M6QXM",
+          "id": 7,
+          "latitude": -97.725135803223,
+          "longitude": 30.268562316895,
+          "name": "Micklethwait Craft Meats",
+          "park_id": 1,
+          "rating": 4.7,
+          "website": null
+        },
+        {
+          "address": "2716 Guadalupe St, Austin, TX 78705, USA",
+          "city": "Austin",
+          "cuisine": "Japanese",
+          "description": null,
+          "google_id": "ChIJgcQf6Xe1RIYR8Wf2_LGoTk4",
+          "id": 11,
+          "latitude": -97.741752624512,
+          "longitude": 30.292890548706,
+          "name": "Don Japanese Kitchen",
+          "park_id": 1,
+          "rating": 4.7,
+          "website": null
+        },
+        {
+          "address": "2324 E Cesar Chavez St, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Taco",
+          "description": null,
+          "google_id": "ChIJoexvla61RIYRlsmrxuY2pdM",
+          "id": 16,
+          "latitude": -97.718215942383,
+          "longitude": 30.255163192749,
+          "name": "The Vegan Nom",
+          "park_id": 1,
+          "rating": 4.6,
+          "website": null
+        },
+        {
+          "address": "2101 Manor Rd, Austin, TX 78722, USA",
+          "city": "Austin",
+          "cuisine": "Mediterranean",
+          "description": null,
+          "google_id": "ChIJX3x6tOy1RIYRkoyW_Hatrkw",
+          "id": 19,
+          "latitude": -97.719673156738,
+          "longitude": 30.284063339233,
+          "name": "Abo Youssef",
+          "park_id": 1,
+          "rating": 4.7,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "1600 City Park Rd, Austin, TX 78730, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJhe5fV1M0W4YRqGxuZUsZI80",
+      "id": 2,
+      "latitude": -97.835517883301,
+      "longitude": 30.343170166016,
+      "name": "Emma Long Metropolitan Park",
+      "photos": [
+        {
+          "description": "It's a bit of a drive from my neck of the woods but I absolutely love the nature trail at Emma Long Metropolitan Park.",
+          "id": 6,
+          "likes": 31,
+          "park_id": 2,
+          "tag": "# Emma Long Metropolitan Park",
+          "url": "https://farm5.staticflickr.com/4166/33793937804_3e9beb7465_b.jpg"
+        },
+        {
+          "description": "Tropical Leafwing (Anaea aidea) butterfly at Turkey Creek, Emma Long Metropolitan Park, Austin, TX April 26, 2017.  ",
+          "id": 7,
+          "likes": 73,
+          "park_id": 2,
+          "tag": "# Emma Long Metropolitan Park",
+          "url": "https://farm5.staticflickr.com/4177/34621879355_08541fca0a_b.jpg"
+        },
+        {
+          "description": "This is a great place to BBQ, drink, listen to music, float and swim.",
+          "id": 8,
+          "likes": 43,
+          "park_id": 2,
+          "tag": "# Emma Long Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2868/33308808254_dc08aec261_b.jpg"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": [
+        {
+          "content": "Love it and always will! But dog owners are going to make us lose our freedom to let our pups loose on the trail. Take your poop bag with you! Its not gross, its in a non-porous plastic bag!",
+          "id": 6,
+          "park_id": 2
+        },
+        {
+          "content": "We love the Turkey trail on the way there. Its a 3 mile loop along the creek. Lots of dogs though and sometimes not leashed. People are just stupid and dont always pick up even after getting free bags and if they do they leave the bags on the way. Would give it a 5 if not fit stupid dog owners",
+          "id": 7,
+          "park_id": 2
+        },
+        {
+          "content": "Peaceful & great for dogs! You can hike the Turkey Creek trail for some much needed time with nature; a great way to take a break from city life. Very relaxing. Be sure to wear good hiking shoes, bring water, and take your time on the trail (some areas are difficult to distinguish from the non-trail).",
+          "id": 8,
+          "park_id": 2
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "3505 W 35th St, Austin, TX 78703, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJI349t7vKRIYRAB0f414STOk",
+      "id": 3,
+      "latitude": -97.771621704102,
+      "longitude": 30.312973022461,
+      "name": "Mayfield Park and Nature Preserve",
+      "photos": [
+        {
+          "description": "Mayfield Park and Nature Preserve - Thanks to Michael Pepper for a great day exploring Austin\r",
+          "id": 9,
+          "likes": 353,
+          "park_id": 3,
+          "tag": "# A spider and flower...",
+          "url": "https://farm5.staticflickr.com/4378/36979297710_a47eee1a63_b.jpg"
+        },
+        {
+          "description": "We spent a lovely Easter morning on the grounds of Mayfield Park amidst the peacocks, turtles, water lilies, and other Texas flora and fauna.",
+          "id": 10,
+          "likes": 1529,
+          "park_id": 3,
+          "tag": "# MayfieldPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/142dcd6fa7f3fa5bb092e9a50d4f5488/5B67BEC8/t51.2885-15/s640x640/sh0.08/e35/29087604_288180508383323_903428606728863744_n.jpg"
+        },
+        {
+          "description": "If you follow it far enough, the creek trail will take you onto the grounds of Laguna Gloria next door.",
+          "id": 11,
+          "likes": 1537,
+          "park_id": 3,
+          "tag": "# MayfieldPark",
+          "url": "https://farm5.staticflickr.com/4354/35532696543_5e67994d91.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "Beautiful. Not crowded at all. A lot of peacocks freely roaming and friendly. Different trails and great place to take pictures. Theyve got some ponds in the front and a lake on the trail. We had a nice picnic under a tree and next to a peacock. Wonderful place",
+          "id": 9,
+          "park_id": 3
+        },
+        {
+          "content": "Fun, fairly even paths for short hike.  Fantastic Peacocks.  Good shade.  Redbuds and Mountain Laurel bloom in March",
+          "id": 10,
+          "park_id": 3
+        },
+        {
+          "content": "The trail walk was family fun!! We also enjoyed the peacocks and the rate species of plants and flowers.",
+          "id": 11,
+          "park_id": 3
+        }
+      ],
+      "trucks": [
+        {
+          "address": "1704 E Cesar Chavez St, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Mexican",
+          "description": null,
+          "google_id": "ChIJ5TnXj7O1RIYR1QQH8J_paW8",
+          "id": 0,
+          "latitude": -97.725929260254,
+          "longitude": 30.257932662964,
+          "name": "Veracruz All Natural Food Truck",
+          "park_id": 3,
+          "rating": 4.6,
+          "website": null
+        },
+        {
+          "address": "1403 E 7th St, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Brazilian",
+          "description": null,
+          "google_id": "ChIJS42FibC1RIYRJ3vQb4Swqy8",
+          "id": 8,
+          "latitude": -97.727958679199,
+          "longitude": 30.264245986938,
+          "name": "Boteco",
+          "park_id": 3,
+          "rating": 4.8,
+          "website": null
+        },
+        {
+          "address": "6507 Burnet Rd, Austin, TX 78757, USA",
+          "city": "Austin",
+          "cuisine": "Asian",
+          "description": null,
+          "google_id": "ChIJf5a_Mrq1RIYR3yq3E_zoh1A",
+          "id": 9,
+          "latitude": -97.738563537598,
+          "longitude": 30.340297698975,
+          "name": "Three Little Pigs",
+          "park_id": 3,
+          "rating": 4.4,
+          "website": null
+        },
+        {
+          "address": "96 Rainey St, Austin, TX 78701, USA",
+          "city": "Austin",
+          "cuisine": "Mexican",
+          "description": null,
+          "google_id": "ChIJE5kgH9e0RIYRdX0o4wlzWKc",
+          "id": 14,
+          "latitude": -97.738265991211,
+          "longitude": 30.260847091675,
+          "name": "Taco Baby",
+          "park_id": 3,
+          "rating": 4.5,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "4550 Mueller Blvd, Austin, TX 78723, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJKYtScPm1RIYR3XNM9fOKrMY",
+      "id": 4,
+      "latitude": -97.705848693848,
+      "longitude": 30.296770095825,
+      "name": "Mueller Lake Park",
+      "photos": [
+        {
+          "description": "AUSTIN, TX. Mar. 23, 2018. The Black Pumas perform at the first installment of the 2018 KUTX Rock the Park concert series at Mueller Lake Park. Gabriel",
+          "id": 12,
+          "likes": 19,
+          "park_id": 4,
+          "tag": "#  Mueller Lake Park",
+          "url": "https://farm1.staticflickr.com/789/40980205201_4962e78029.jpg"
+        },
+        {
+          "description": "The walking trails run all along the little man-made lake/river, which is full of wildlife.",
+          "id": 13,
+          "likes": 21,
+          "park_id": 4,
+          "tag": "# Mueller Lake Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/6d81f2401b99c4e3a7990d59f90b1fae/5B54F350/t51.2885-15/e35/30087106_166783090817629_3640732863583748096_n.jpg"
+        },
+        {
+          "description": "Beautiful park surrounding the Thinkery, Whichcraft, and Bribery bakery.",
+          "id": 14,
+          "likes": 21,
+          "park_id": 4,
+          "tag": "# Mueller Lake Park",
+          "url": "https://farm1.staticflickr.com/810/40980205061_b55ce9b0d5.jpg"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "content": "Lovely park with lot of space! My dog loves coming here and so do I! There are food trucks on one side and an excellent farmers market on Sunday. The other end of the park has a gated playground and groovy sculpture. Right next the the Thinkery and some delicious eateries! Plenty of picnic tables and ducks.",
+          "id": 12,
+          "park_id": 4
+        },
+        {
+          "content": "It was my first time to the market and aside from the weather it was a pretty good experience. I wouldve liked to see a little more Vegan options for prepared foods as well as organic produce. I got some sweet deals though so maybe we will just wait and see what will be available this coming weekend.",
+          "id": 13,
+          "park_id": 4
+        },
+        {
+          "content": "I love this park. My boys loved coming, they played and skated and before going home we all just relaxed having an ice cream. They just need more parking.",
+          "id": 14,
+          "park_id": 4
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "5808 McKinney Falls Pkwy, Austin, TX 78744, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJi7M4Nb6zRIYRk8YBYI8Jg_s",
+      "id": 5,
+      "latitude": -97.721740722656,
+      "longitude": 30.180358886719,
+      "name": "McKinney Falls State Park",
+      "photos": [
+        {
+          "description": "The Homestead Trail is also interesting and crosses the Lower Falls to the historic McKinney homestead.",
+          "id": 15,
+          "likes": 12,
+          "park_id": 5,
+          "tag": "# McKinney Falls State Park",
+          "url": "https://farm5.staticflickr.com/4795/39948016465_32bb8f0e40.jpg"
+        },
+        {
+          "description": "when camping, each person has to pay the $6 entry fee for each day they camp",
+          "id": 16,
+          "likes": 11,
+          "park_id": 5,
+          "tag": "# McKinney Falls State Park",
+          "url": "https://farm5.staticflickr.com/4780/39032586330_e4dbd36186.jpg"
+        },
+        {
+          "description": "The rock shelter is amazing and if you pack a lunch and just chill there, this can easily be one of those great moments in your life.",
+          "id": 17,
+          "likes": 10,
+          "park_id": 5,
+          "tag": "# McKinney Falls State Park",
+          "url": "https://farm1.staticflickr.com/805/40133684884_1613cd994c.jpg"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": [
+        {
+          "content": "If you want an inexpensive place to stay in Austin, this is the place.  RV sites have electric and water.  A dump station is conveniently located at the beginning of the campground.  The showers were great, but we had a bit of a walk to get there.  Highly recommended.",
+          "id": 15,
+          "park_id": 5
+        },
+        {
+          "content": "Beautiful park... Be prepared to get wet. The only way to get to the northern part of the trails is by jumping over the waterfalls ( please note that there are other trails that dont require you to cross here)... At first glance they dont seem that intimidating until you are right on them. If you are with small children, this will be difficult to jump. There is a low water crossing through the river but, you will need good hiking shoes or, if the weather is good, just go for a nice swim! We went when it was cold and the idea of getting wet was not even an option. We did have good boots so we did do some small river crossings without having to be miserable the rest of the trip. Nothing is worse than being wet and cold. We had our daughter with us and she was not confident about jumping the waterfall so we decided to turn around and check out the southern part of the park instead. We agreed we would go back in the summer. Beautiful trails...great park for families. I would however recommend that the trails be labeled a little better. It was a little confusing. We loved it still and cant wait to come back when we can swim in the pool near the falls.",
+          "id": 16,
+          "park_id": 5
+        },
+        {
+          "content": "Spectacular and quiet place to walk or mountain bike around. Several parking lots make this site easy to get to. But, could be s long line of cars waiting to get through a singular bottleneck entrance point. Worth the wait though. Connoisseurs of geological rock formations will have much to look at. On a hot day, bring water!",
+          "id": 17,
+          "park_id": 5
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "12138 N Lamar Blvd, Austin, TX 78753, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJ5RRjerHORIYR0qHkw2I4CdA",
+      "id": 6,
+      "latitude": -97.680252075195,
+      "longitude": 30.400163650513,
+      "name": "Walnut Creek Metropolitan Park",
+      "photos": [
+        {
+          "description": "When I was out on the trails I did see a lot of bikers and you could hear them whizzing around near by trails.",
+          "id": 18,
+          "likes": 72,
+          "park_id": 6,
+          "tag": "# Walnut Creek Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2850/33937403845_20a5687573.jpg"
+        },
+        {
+          "description": "They have playgrounds, softball fields, a pool, off-leash dog areas, basketball courts, a volleyball court, and tons and tons of beautiful trails for hiking.",
+          "id": 19,
+          "likes": 91,
+          "park_id": 6,
+          "tag": "# Walnut Creek Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2877/33779890772_9c1ed4af85.jpg"
+        },
+        {
+          "description": "Disclaimer: I was not offered anything to write this review. I'm doing it because I want to share what I've discovered. My thought is that it's like someone briefly died and went to doggie heaven, saw what\u2026",
+          "id": 20,
+          "likes": 33,
+          "park_id": 6,
+          "tag": "# Walnut Creek Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2938/33779890252_8508618dbb.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "Gem of a park on the north side of Austin. Baseball fields, covered picnic areas, etc. Multiple mountain bike trials that require only intermediate level of skill to ride.\n\nOne caveat: Recently, the City of Austin parks department thought it wise to put a paved 10ft. wide path through the middle of dozens of mountain bike trails, instead of looping the paved trail around closer to the perimeter of the park. \n\nThe result: both pedestrians and cyclists WATCH OUT! \n\nIf you are walking on the paved path, be aware that mountain bike trails intersect frequently and at all angles. Pay attention or you might get blindsided.\n\nAlternatively, if you are riding on some rough terrain, watch out for pedestrians and/or their pets around a blind corner.",
+          "id": 18,
+          "park_id": 6
+        },
+        {
+          "content": "Who needs to spirit walk across the country with a place this beautiful and peaceful to explore? My kid loves sailing his scooter down the winding paths and beautiful bridges while I stroll casually behind taking in the air and magnificent views. Make sure you don your comfy walking shoes, as it is very easy to journey for several miles without realizing it. This place is naturally magical.",
+          "id": 19,
+          "park_id": 6
+        },
+        {
+          "content": "Great place for almost any outdoor activities! Great hiking, biking, and dog walking opportunities as well as sports equipment, pool, and playground. Great place to delve deep into to get away from the ruckus of the city.",
+          "id": 20,
+          "park_id": 6
+        }
+      ],
+      "trucks": [
+        {
+          "address": "121 Pickle Rd, Austin, TX 78704, USA",
+          "city": "Austin",
+          "cuisine": "Mexican",
+          "description": null,
+          "google_id": "ChIJAXKi97S1RIYRDv6TyxGvAFg",
+          "id": 18,
+          "latitude": -97.762512207031,
+          "longitude": 30.226936340332,
+          "name": "Pueblo Viejo Taco Truck",
+          "park_id": 6,
+          "rating": 4.8,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "6701 Lakewood Dr, Austin, TX 78731, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJIUFEFrU0W4YRv9xvw4rIO6o",
+      "id": 7,
+      "latitude": -97.784461975098,
+      "longitude": 30.368671417236,
+      "name": "Bull Creek District Park",
+      "photos": [
+        {
+          "description": "There are tons of excellent swimming holes on this trail, and eventually, it lets out at Lakewood and 360, just NW of the dog park.",
+          "id": 21,
+          "likes": 35,
+          "park_id": 7,
+          "tag": "# Bull Creek District Park",
+          "url": "https://farm5.staticflickr.com/4647/27624228699_dbc4f89e7c.jpg"
+        },
+        {
+          "description": "Pack a light lunch/snacks, your own trash bags, small towel to wipe off and a towel to sit on, water shoes, water.",
+          "id": 22,
+          "likes": 51,
+          "park_id": 7,
+          "tag": "# wildflower in winter  Bull Creek District Park",
+          "url": "https://farm5.staticflickr.com/4646/27624206449_014db34cb2.jpg"
+        },
+        {
+          "description": "Went here for my bday, wasn't sure what to expect...at first arrival, i noticed the place was nice, great view, staff very friendly & helpful. There is a boat ride to get across the lake, brief, but nice.\u2026",
+          "id": 23,
+          "likes": 8,
+          "park_id": 7,
+          "tag": "# Bull Creek",
+          "url": "https://farm5.staticflickr.com/4541/24902393108_9c7604b494.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "Serene landscape. Cold refreshing water. Great place for family hikes, solo trail running and mountain biking. Free parking and easy access. Highly recommended.",
+          "id": 21,
+          "park_id": 7
+        },
+        {
+          "content": "Wow stunning! I was at peace within when installed up to the first biggest rock I had ever seen.  This place is so breathtaking it will blow your mind if you havent seen it.  I never knew anything so beautiful existed here in Austin I loved it ...",
+          "id": 22,
+          "park_id": 7
+        },
+        {
+          "content": "One of my favorite places to do some urban hiking in Austin. You can walk the trail along the creek or sit by the water and chill. Ive seen lots of turtles here, and sometimes snakes in the water. I especially like to visit after a good rainfall.",
+          "id": 23,
+          "park_id": 7
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "900 W Riverside Dr, Austin, TX 78704, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJSfh_QgW1RIYRMGJ2BEpGG1c",
+      "id": 8,
+      "latitude": -97.753547668457,
+      "longitude": 30.262027740479,
+      "name": "Auditorium Shores at Town Lake Metropolitan Park",
+      "photos": [
+        {
+          "description": "There\u2019s no bunny like me Auditorium Shores at Town Lake Metropolitan Park",
+          "id": 24,
+          "likes": 898,
+          "park_id": 8,
+          "tag": "# Auditorium Shores at Town Lake Metropolitan Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/9e1829e99d0a53c6f1ac8171eed553be/5B4FF486/t51.2885-15/e35/29402120_161977637842121_90796291537240064_n.jpg"
+        },
+        {
+          "description": "one year ago today at Auditorium Shores at Town Lake Metropolitan Park",
+          "id": 25,
+          "likes": 624,
+          "park_id": 8,
+          "tag": "# Auditorium Shores at Town Lake Metropolitan Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/473f1d5d16f2925773368fac15fd91aa/5B70D7A1/t51.2885-15/e35/30076377_2110800805835105_8513654340735467520_n.jpg"
+        },
+        {
+          "description": "You can do as little as a 1.6 mile loop, 3.2 miles or mix and match a multitude of loops to get just the desired distance.",
+          "id": 26,
+          "likes": 1933,
+          "park_id": 8,
+          "tag": "# Town Lake Metropolitan Parks",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/97233b7ef7a976f559244c41f2d3512a/5B73794B/t51.2885-15/e35/30077185_164612764236941_8564768012085755904_n.jpg"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "content": "Nice venue with some truly beautiful downtown views! Seats are comfortable and only the topmost seats are \"bad\" from a viewing standpoint. There is limited refreshment service but drinks can be taken into the theater. Bottled water is available as well as wine and beer.  The sound quality has always been great four every event.",
+          "id": 24,
+          "park_id": 8
+        },
+        {
+          "content": "I love this place. Its a great place to spend time with family. Has a great view of the lake and DT Austin.",
+          "id": 25,
+          "park_id": 8
+        },
+        {
+          "content": "Love everything about the Long Center!  Excellent acoustics, friendly volunteer ushers. The view from the terrace at night must be seen! We used valet parking for $18, but there was the option of parking in the circular driveway for $30 to get out quicker. Also, self-parking in garage is available for $10.",
+          "id": 26,
+          "park_id": 8
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "3401 Redbud Trail, Austin, TX 78746, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJw5DRkKxKW4YR39xiQOzTrcQ",
+      "id": 9,
+      "latitude": -97.786842346191,
+      "longitude": 30.290819168091,
+      "name": "Red Bud Isle",
+      "photos": [
+        {
+          "description": "Took the dogs out but made time for myself",
+          "id": 27,
+          "likes": 13361,
+          "park_id": 9,
+          "tag": "# Red Bud Isle",
+          "url": "https://farm5.staticflickr.com/4628/40086226522_012618f855.jpg"
+        },
+        {
+          "description": "Autumn came to Austin a little slow so you could say the seasons are FALLing behind...\r",
+          "id": 28,
+          "likes": 510,
+          "park_id": 9,
+          "tag": "# Red Bud Isle",
+          "url": "https://farm5.staticflickr.com/4675/39841896741_ff8fe59c11.jpg"
+        },
+        {
+          "description": "Being wooded it has more shade than other off-leash areas in Austin (think Auditorium Shores) and during holiday marathons/festivals is never closed.",
+          "id": 29,
+          "likes": 1509,
+          "park_id": 9,
+          "tag": "# Red Bud Isle",
+          "url": "https://farm5.staticflickr.com/4677/39104345924_26fa86b1c4.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "Awesome spot to take the dog. Close to downtown, hula hut, and easy to get to.\nProbably about .5 mile loop if you stay on the main path.  Lots of little outlets where the dogs can jump in the water or explore the banks.\nPicturesque, relaxing, pretty hard to lose your dog because its confined by water.\nThe only drawback is that there is enough land for 100 dogs to play but only enough spots for about 20 cars. It seems that some locals avoid it due to having to wait in line for a spot. I still suggest giving it a shot if you dont mind waiting in line for a few minutes. Its worth it as long as you stay for a while.",
+          "id": 27,
+          "park_id": 9
+        },
+        {
+          "content": "Years ago 15 or so we used to swim here it was a beautiful place to have a bbq, swim and even fish all day during the summer. The water was awesome because it is just below Lake Austin Dam where the flowing water was cool and clean. Now  due to the number of people with dogs during the summer months the park smells of dog urine. The park is unsafe to swim. In addition, all of this pollution with the addition of rain washes into town lake and into downtown Austin. I love my dog but there needs to be a point at which beautiful places like this should be enjoyed by children and adults without them being worried about Bacterial Infections because of dog urine and feces. I know this review will be unpopular but it is how I feel.  This park is also one of the closest places to downtown to enjoy the water without having to pay for Barton Springs.  Finally, people complain about the poison Ivy... Well it just so happens dog urine lowers soil pH. Makes it acidic, Poison ivy loves acidic soil. If u want a dog park with water, make it past Town Lake..Stop polluting our lakes please..",
+          "id": 28,
+          "park_id": 9
+        },
+        {
+          "content": "This is doggie heaven, the only problem I have is that some people go here to fish and have no regard for the dogs swimming in the water. This doesnt happen often and besides that, this place is perfect. The parking is rough but it makes it so it doesnt get overcrowded. The dogs are so sweet and the owners are pretty chill. If I put on sneakers and grab a towel my yellow lab starts sobbing out of excitement because he loves this place so much.",
+          "id": 29,
+          "park_id": 9
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "3755 S Capital of Texas Hwy, Austin, TX 78704, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJabb0sdZKW4YR7Rlal52tALI",
+      "id": 10,
+      "latitude": -97.812690734863,
+      "longitude": 30.24716758728,
+      "name": "Barton Creek Greenbelt",
+      "photos": [
+        {
+          "description": "The Barton Creek Greenbelt is known for several popular locations,however there are others like the one seen here,that are lesser known .\rThe area in which this photo was taken,is found on the way to Sculpture Falls as if you were entering from the Hill of Life entrance.",
+          "id": 30,
+          "likes": 18,
+          "park_id": 10,
+          "tag": "# Early signs of Autumn along Barton Creek.",
+          "url": "https://farm5.staticflickr.com/4605/26690607128_0d22c783f1.jpg"
+        },
+        {
+          "description": "From this entrance it is about a half mile in to Twin Falls and then about 2.75 miles or so in to Sculpture Falls.",
+          "id": 31,
+          "likes": 181,
+          "park_id": 10,
+          "tag": "# Barton Creek Greenbelt",
+          "url": "https://farm5.staticflickr.com/4762/40308165091_f3523408b0.jpg"
+        },
+        {
+          "description": "From this entrance it is about a half mile in to Twin Falls and then about 2.75 miles or so in to Sculpture Falls.",
+          "id": 32,
+          "likes": 126,
+          "park_id": 10,
+          "tag": "# Barton Creek Greenbelt",
+          "url": "https://farm5.staticflickr.com/4713/27883050759_89db7709cc.jpg"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "content": "Beautiful trail.  Tends to get busy especially when the weather is nice.\nI parked at the Trailhead to Sculpture falls.  Early in the day it wasnt very busy, but quickly fills up.\nThe trail is rather steep.  Be sure you are confident in your strength or have hiking/walking sticks.  Its an enjoyable trail and the steep descent is part of the fun.\nDont think the Cairn stones have any purpose to guide your path.  People seem to just stack rocks.\nSculpture Falls is a pretty location.\nIts very popular.\nThe trail has a canopy over much of it from where I started.\nIn glad the day was cooler as the beginning of the trail is in the sun and is very warm when you are there later in the day.",
+          "id": 30,
+          "park_id": 10
+        },
+        {
+          "content": "11-12 mile round trip! So be prepared for a long day. \nThe main trail along the \"creek\" with plenty of awesome side trails..\nTake plenty of water and food / snacks for a picnic or whatever you feel like\nDry during Feb/Mar, so you can walk along the creek\nI am looking forward to making another trip during the wet season",
+          "id": 31,
+          "park_id": 10
+        },
+        {
+          "content": "Great short hiking spot! On the trail, we encountered a young lady peacefully enjoy the woods while playing her guitar and singing, her little dog by her side. It was awesome. \nBarton springs pool looks amazing for swimming, we came to hike, but I definitely would love to go back someday! Perfect combination of nature with man-made amenities.",
+          "id": 32,
+          "park_id": 10
+        }
+      ],
+      "trucks": [
+        {
+          "address": "1016 E 6th St, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Cajun",
+          "description": null,
+          "google_id": "ChIJT_axYqW1RIYR3y2IoBI5FOc",
+          "id": 4,
+          "latitude": -97.731575012207,
+          "longitude": 30.265047073364,
+          "name": "Baton Creole",
+          "park_id": 10,
+          "rating": 4.3,
+          "website": null
+        },
+        {
+          "address": "2512 Rio Grande St, Austin, TX 78705, USA",
+          "city": "Austin",
+          "cuisine": "Korean",
+          "description": null,
+          "google_id": "ChIJEYnxA3m1RIYR6FRfRFd_JTk",
+          "id": 17,
+          "latitude": -97.744834899902,
+          "longitude": 30.290571212769,
+          "name": "Korean Komfort",
+          "park_id": 10,
+          "rating": 4.1,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "4370 Mansfield Dam Park Rd., Austin, TX 78732, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJFeXp-iQxW4YRRAeSYlLITFc",
+      "id": 11,
+      "latitude": -97.907669067383,
+      "longitude": 30.395708084106,
+      "name": "Mansfield Dam Park",
+      "photos": [
+        {
+          "description": "Here fishy fishy. Mansfield Dam Park, Travis Co., TX",
+          "id": 33,
+          "likes": 31,
+          "park_id": 11,
+          "tag": "# Mansfield Dam Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/943340eaaea359ea9c9f84eb363100b1/5B568632/t51.2885-15/e35/30078297_187395028720257_6613240245510995968_n.jpg"
+        },
+        {
+          "description": "Good Tuesday morning y'all! Here's a shot of the Mansfield Dam from @joesnow12! #kvue #texas #atx",
+          "id": 34,
+          "likes": 56,
+          "park_id": 11,
+          "tag": "# Mansfield Dam Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/6286d65106ec60402ae4e3d07aa77aba/5B576671/t51.2885-15/e35/19120985_1877554332483788_4968013032337702912_n.jpg"
+        },
+        {
+          "description": "Me. Myself. and I.",
+          "id": 35,
+          "likes": 103,
+          "park_id": 11,
+          "tag": "# Mansfield Dam Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/4c31885ddb464ffbfa12fe3bb1728482/5B6B067D/t51.2885-15/e35/20481837_128186144458196_4324786944698482688_n.jpg"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": [
+        {
+          "content": "This is a must visit place in Austin, TX. I feel that Austin has lot more to offer than Houston and Dallas. It has culture and art! This dam is a scenic beauty and a cool place to chill in hot summer. Get some food and ample sunscreen, it could be a great place to hang out. Saw many families enjoying the cool Waters",
+          "id": 33,
+          "park_id": 11
+        },
+        {
+          "content": "Excellent park with plenty of picnic areas, tables, grills, and play scapes. Small beach area for swimming or fishing in the lake. Only $10 per car",
+          "id": 34,
+          "park_id": 11
+        },
+        {
+          "content": "Great family adventure! Boating, canoeing, picnicking. Safe and clean play ground.",
+          "id": 35,
+          "park_id": 11
+        }
+      ],
+      "trucks": [
+        {
+          "address": "1720 Barton Springs Rd, Austin, TX 78704, USA",
+          "city": "Austin",
+          "cuisine": "Fried Chicken",
+          "description": null,
+          "google_id": "ChIJXy5QHRi1RIYR9thzVoou58w",
+          "id": 3,
+          "latitude": -97.76277923584,
+          "longitude": 30.263410568237,
+          "name": "The Mighty Cone",
+          "park_id": 11,
+          "rating": 4.1,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "400 Grove Blvd, Austin, TX 78741, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJu2YX6yi0RIYRrBTvYTY-yCM",
+      "id": 12,
+      "latitude": -97.704437255859,
+      "longitude": 30.244451522827,
+      "name": "Roy G. Guerrero Colorado River Metro Park",
+      "photos": [
+        {
+          "description": "Trees in bloom.",
+          "id": 169,
+          "likes": 25,
+          "park_id": 12,
+          "tag": "# RoyGuerreroPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/7355d535528c7a3c263426262f1273c1/5B5474BD/t51.2885-15/e35/29095509_1675138859218791_2628062871782686720_n.jpg"
+        },
+        {
+          "description": "Pay attention to what you wish you were doing when you're doing something else.",
+          "id": 170,
+          "likes": 51,
+          "park_id": 12,
+          "tag": "# RoyGuerreroPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/d4e6ff1d1db640d269e17c8e8c5b0786/5B37C655/t51.2885-15/e35/29089039_1913514792291838_1260713192187756544_n.jpg"
+        },
+        {
+          "description": "It is spring again. The earth is like a child that knows poems by heart.",
+          "id": 171,
+          "likes": 54,
+          "park_id": 12,
+          "tag": "# RoyGuerreroPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/be5c32f961f255f39e5d4e158fe87547/5B378962/t51.2885-15/e35/27891315_222558881654425_9038223452787441664_n.jpg"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": [
+        {
+          "content": "This is a great Park for lots of reasons but I really come here to play one of the best disc golf courses in Texas. If you park near the softball field be warned that the bridge is washed out and you have to walk across the ravine and then will be at the #1 tee box. Else Park on the other side and start on hole 2. Enjoy!",
+          "id": 36,
+          "park_id": 12
+        },
+        {
+          "content": "The Beast!  Youll feel special if you get a bird on a hole. This course will humble you. The destroyer is my go to disc for this course.  Some holes are very long. Woodsy course. No water hazards.",
+          "id": 37,
+          "park_id": 12
+        },
+        {
+          "content": "Very nice park, I came for birdwatching and was not disappointed. Several overlooks to the Colorado River. Think the trails could have been labeled better and there were several closed due to damage, so I could not figure out how to get to Lady Bird Lake.",
+          "id": 38,
+          "park_id": 12
+        }
+      ],
+      "trucks": [
+        {
+          "address": "1503 S 1st St, Austin, TX 78704, USA",
+          "city": "Austin",
+          "cuisine": "Taco",
+          "description": null,
+          "google_id": "ChIJs3xnAuO0RIYRX4SoGqTFENo",
+          "id": 6,
+          "latitude": -97.754943847656,
+          "longitude": 30.249368667603,
+          "name": "Mellizoz Tacos",
+          "park_id": 12,
+          "rating": 4.2,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "8011 Beckett Rd, Austin, TX 78749, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJ8wDHlu9LW4YR1Ekf_5ldE7E",
+      "id": 13,
+      "latitude": -97.85986328125,
+      "longitude": 30.212440490723,
+      "name": "Dick Nichols District Park",
+      "photos": [
+        {
+          "description": "A LONG AND WINDING ROAD",
+          "id": 172,
+          "likes": 23,
+          "park_id": 13,
+          "tag": "# DickNicholsPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/9e1ae1d3cace9d5261b570bb444122ad/5B3967FB/t51.2885-15/e15/11176495_1666941940202995_1332431459_n.jpg"
+        },
+        {
+          "description": "\"Under the Bridge\"",
+          "id": 173,
+          "likes": 56,
+          "park_id": 13,
+          "tag": "# DickNicholsPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/f9ea2cf8744baac999ea9b3fd31383d6/5B507D45/t51.2885-15/e35/23824939_156212401661627_2700724789193998336_n.jpg"
+        },
+        {
+          "description": "After lots of back-and-forth about whether to cancel last night's boot camp with the storm rolling in, we went for it and were rewarded with a double rainbow. I can't help but smile when I see stuff like this! Nature brings a peace unlike anything else. ",
+          "id": 174,
+          "likes": 65,
+          "park_id": 13,
+          "tag": "# DickNicholsPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/866cfa6a65c7eb0686b9283b0601828f/5B715EF9/t51.2885-15/e35/18645505_646069515590101_8148048823076257792_n.jpg"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": [
+        {
+          "content": "A great park with something for everyone. Great walking trails, plenty of picnic tables, swimming pools, play ground, volleyball courts etc. Playground has perfect shade canopy. Wonderful loop for a nice walk.",
+          "id": 39,
+          "park_id": 13
+        },
+        {
+          "content": "One of my favorite parks. Theres a large loop trail that has woods in the middle. In those woods are trails as well that my dog loves to run along. Has a large playscape and a huge field for activities. Plenty of parking and has a pool and restroom facilities. I cant say enough good things about this park.",
+          "id": 40,
+          "park_id": 13
+        },
+        {
+          "content": "Good place for a bike trail beginner. Like myself. Also has work out station along the way on the  trail.",
+          "id": 41,
+          "park_id": 13
+        }
+      ],
+      "trucks": [
+        {
+          "address": "11500 Manchaca Rd, Austin, TX 78745, USA",
+          "city": "Austin",
+          "cuisine": "Barbecue",
+          "description": null,
+          "google_id": "ChIJQX0zIAy1RIYRHoEdJsdw-I8",
+          "id": 13,
+          "latitude": -97.833831787109,
+          "longitude": 30.153026580811,
+          "name": "Valentinas Tex Mex BBQ",
+          "park_id": 13,
+          "rating": 4.7,
+          "website": null
+        },
+        {
+          "address": "1320 S Lamar Blvd, Austin, TX 78704, USA",
+          "city": "Austin",
+          "cuisine": "Italian",
+          "description": null,
+          "google_id": "ChIJ_____-a0RIYR9BzjX-Y_itE",
+          "id": 15,
+          "latitude": -97.763557434082,
+          "longitude": 30.253551483154,
+          "name": "Mama Mals Italian Cuisine Food Truck",
+          "park_id": 13,
+          "rating": 4.5,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "1317 W 10th St, Austin, TX 78703, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJhcgsmmy1RIYRv1YxwgGLM7g",
+      "id": 14,
+      "latitude": -97.757461547852,
+      "longitude": 30.276983261108,
+      "name": "West Austin Neighborhood Park",
+      "photos": [
+        {
+          "description": "Showing us how it's done!! #zaraolivia",
+          "id": 36,
+          "likes": 3441,
+          "park_id": 14,
+          "tag": "# West Austin Neighborhood Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/284b9ae8322deb91d8698692e6a5407f/5B6B9C6C/t51.2885-15/e35/12797876_1667985133465037_2030937272_n.jpg"
+        },
+        {
+          "description": "Love these girls! @alisonvaclav @woohoo_chickens",
+          "id": 37,
+          "likes": 611,
+          "park_id": 14,
+          "tag": "# West Austin Neighborhood Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/8f8d17aee047e3826d692aefe858b585/5B6A3D91/t51.2885-15/e15/10919601_1627459844144481_320105243_n.jpg"
+        },
+        {
+          "description": "This place was easy to find, easy to park and I loved the double gate at the entrance.",
+          "id": 38,
+          "likes": 602,
+          "park_id": 14,
+          "tag": "# West Austin Neighborhood Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/bb4f1c356ba2bf8a9a1a0d08aa3ec217/5B51CE12/t51.2885-15/e35/12627836_159477967766827_1188869044_n.jpg"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": [
+        {
+          "content": "Had a blast with my puppy. He is super playful and very interested in other dogs. This was a great environment for him and the people I met there were nothing short of welcoming and friendly.",
+          "id": 42,
+          "park_id": 14
+        },
+        {
+          "content": "Great place for my dog to play in a fenced in area. The only downfall is that there isnt much grass, so he gets very dirty/muddy anytime we go.",
+          "id": 43,
+          "park_id": 14
+        },
+        {
+          "content": "Its across the street from my house so Im there basically daily.  Please be kind and cleanup after your pup so we can all stay healthy and have fun.",
+          "id": 44,
+          "park_id": 14
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "907 West Slaughter Lane, Austin, TX 78748, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJBeV_R9xMW4YRq9GzR-xx_q8",
+      "id": 15,
+      "latitude": -97.808242797852,
+      "longitude": 30.158735275269,
+      "name": "Mary Moore Searight Metropolitan Park",
+      "photos": [
+        {
+          "description": "6.11 mi evening run",
+          "id": 39,
+          "likes": 27,
+          "park_id": 15,
+          "tag": "# Mary Moore Searight Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2923/33737852891_5af922d9da.jpg"
+        },
+        {
+          "description": "There are also some tennis balls and plenty of water bowls to fill up for your furry friend.",
+          "id": 40,
+          "likes": 41,
+          "park_id": 15,
+          "tag": "# Mary Moore Searight Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2950/33482499160_6352b920ca.jpg"
+        },
+        {
+          "description": "The park does also have a nice disc golf course, clean picnic areas, and some new-looking playscapes for the kids.",
+          "id": 41,
+          "likes": 7,
+          "park_id": 15,
+          "tag": "# Mary Moore Searight Metropolitan Park",
+          "url": "https://farm3.staticflickr.com/2922/33737631741_8200049e54.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "We enjoy this park for nature hikes with our dog. We love seeing the wildlife, trees, and streams. It is beautiful and sometimes peaceful. Too many people let their dogs run loose as if the rules dont apply to them. The main park is not an off leash area. There is a separate part for that.",
+          "id": 45,
+          "park_id": 15
+        },
+        {
+          "content": "The trail system is awesome. We only covered a bit of it and it was still a decent length. Be careful though the trails shown on Google Maps arent truly accurate.",
+          "id": 46,
+          "park_id": 15
+        },
+        {
+          "content": "Shaded Walking Trail. Lots of cedar trees and a dirt path, plenty of space to run around but no big open areas, just the trail. Lots of friendly dogs! gets really muddy after it rains. All in all, a good place to walk your pup!",
+          "id": 47,
+          "park_id": 15
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+      "address": "4301 Rosedale Ave, Austin, TX 78756, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJcdzIsonKRIYR8Kbj7TtGg0c",
+      "id": 16,
+      "latitude": -97.743537902832,
+      "longitude": 30.313272476196,
+      "name": "Ramsey Neighborhood Park",
+      "photos": [
+        {
+          "description": "The soul has no secret that behaviour does not reveal. I don\u2019t know what that says about my obsession with sunrises and sunsets but I\u2019m sure one day it will all make sense..",
+          "id": 42,
+          "likes": 175,
+          "park_id": 16,
+          "tag": "# Ramsey Park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/a65d6be815f06ad0266d914d1bcb9962/5B5E36AC/t51.2885-15/e35/24845580_194913701058108_1197559421836722176_n.jpg"
+        },
+        {
+          "description": "Did you know that in 2013, funds from the fans of #ACLFest went to improve Ramsey Park off Burnet Road? Together with @austinparksfdn, you added basketball court shade structure, tennis court improvements and a limestone amphitheater to make this park\u2019s amenities even better.",
+          "id": 43,
+          "likes": 178,
+          "park_id": 16,
+          "tag": "# ramsey",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/46bf2bb4494fe3cc6032d4ae4ac284ad/5B67B2BE/t51.2885-15/s750x750/sh0.08/e35/13739543_309583732717076_528140707_n.jpg"
+        },
+        {
+          "description": "I was on the swim team here as a kid. #austin #texas #summertime #swimming #hometown",
+          "id": 44,
+          "likes": 28,
+          "park_id": 16,
+          "tag": "# Ramsey park",
+          "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/3f9af86c5c190aa559a4f9e19e255ee1/5B5B0D69/t51.2885-15/e35/11325005_1453392261652757_951937284_n.jpg"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": [
+        {
+          "content": "Great park. Inventive theme. Kids can play for hours on the rope jungle gym alone. Also has tennis courts. Bathrooms may be shut down due to \"weather \" which is inconvenient but livable as theres a store up the street.",
+          "id": 48,
+          "park_id": 16
+        },
+        {
+          "content": "Clean wide open park, with a large play area for kids with a very large rope climbing thing, which is sure to either wear out your kid or give them an injury bad enough that they sleep anyways.  Bathrooms & water fountain are closed during freezing weather, & so is the pool.",
+          "id": 49,
+          "park_id": 16
+        },
+        {
+          "content": "Wonderful playscape for kids of all ages from baby to adolescent. Really unique elements like a modern Merry-Go-Round and a large climbing station for older kids.",
+          "id": 50,
+          "park_id": 16
+        }
+      ],
+      "trucks": [
+        {
+          "address": "14735 Bratton Ln, Austin, TX 78728, USA",
+          "city": "Austin",
+          "cuisine": "Seafood",
+          "description": null,
+          "google_id": "ChIJP8lmlmTORIYRG8HIXYRaxUo",
+          "id": 12,
+          "latitude": -97.685821533203,
+          "longitude": 30.446434020996,
+          "name": "Garbos",
+          "park_id": 16,
+          "rating": 4.3,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "4400 Avenue G, Austin, TX 78751, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJ66uMEHHKRIYRrY7uT7UPs-Q",
+      "id": 17,
+      "latitude": -97.72737121582,
+      "longitude": 30.307415008545,
+      "name": "Shipe Neighborhood Park",
+      "photos": [
+        {
+          "description": "Log cabin protected by creation of Hyde Park Local Historic District in 2010; implements Recommendation 5a of the Hyde Park Neighborhood Plan. ",
+          "id": 45,
+          "likes": 21,
+          "park_id": 17,
+          "tag": "# Shipe Park Log Cabin",
+          "url": "https://farm2.staticflickr.com/1494/23697393273_f155f259b0.jpg"
+        },
+        {
+          "description": "Completed in 2010; implements Recommendation 33 from the Hyde Park Neighborhood Plan. ",
+          "id": 46,
+          "likes": 20,
+          "park_id": 17,
+          "tag": "# 45th Street Pedestrian Hybrid Beacon at Shipe Park",
+          "url": "https://farm2.staticflickr.com/1476/23961423000_363af1166e.jpg"
+        },
+        {
+          "description": "Photo taken by me while swinging in my neighborhood park.",
+          "id": 47,
+          "likes": 217,
+          "park_id": 17,
+          "tag": "# Swinging Sky and Feet Shipe Neighborhood Park",
+          "url": "https://farm6.staticflickr.com/5061/5673316853_4e4974804a.jpg"
+        }
+      ],
+      "rating": 4.2,
+      "reviews": [
+        {
+          "content": "The Shipe Park is great! It\u2019s got tennis, basketball and more. The best part is easily the Elizabeth Net museum. You have to pop in and check out the home \u201cFormosa\u201d of the esteemed artist. Her statues are even in the capital building. We learned a lot about her life and work.",
+          "id": 51,
+          "park_id": 17
+        },
+        {
+          "content": "So lovely! This Park is great for family walks, playing tennis, Theres a swing set! This is a great and beautiful place to go for all!",
+          "id": 52,
+          "park_id": 17
+        },
+        {
+          "content": "Good park to have within walking proximity! My son seemed to enjoy the swing, playscape and other kids!",
+          "id": 53,
+          "park_id": 17
+        }
+      ],
+      "trucks": [
+        {
+          "address": "5520 Burnet Rd #100, Austin, TX 78756, USA",
+          "city": "Austin",
+          "cuisine": "Asian",
+          "description": null,
+          "google_id": "ChIJXTEtzVjKRIYRPP089y9v_4A",
+          "id": 1,
+          "latitude": -97.740272521973,
+          "longitude": 30.330703735352,
+          "name": "The Peached Tortilla",
+          "park_id": 17,
+          "rating": 4.5,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "700 E Live Oak St, Austin, TX 78704, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJBZ4MS_e0RIYRr9Iq622RvAo",
+      "id": 18,
+      "latitude": -97.747100830078,
+      "longitude": 30.240211486816,
+      "name": "Big Stacy Neighborhood Park",
+      "photos": [
+        {
+          "description": "Wow, what a wonderful experience we had today (01/30/2016) at Wee Warhols as they hosted DSACT for a morning of fun and art.",
+          "id": 48,
+          "likes": 684,
+          "park_id": 18,
+          "tag": "# Big Stacy Neighborhood Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/9f697d55298d994e250be8b180ad33bf/5B4F7CE9/t51.2885-15/e35/16122993_246052872527698_6832990932950843392_n.jpg"
+        },
+        {
+          "description": "The Earth's cool #EarthDay # Big Stacy Neighborhood Park",
+          "id": 49,
+          "likes": 118,
+          "park_id": 18,
+          "tag": "# EarthDay Big Stacy Neighborhood Park",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/b370bafb7e1734b96793bccab4f03773/5B5E911E/t51.2885-15/e35/17586652_443286089338363_7385684912491200512_n.jpg"
+        },
+        {
+          "description": "Who knew #bigstacypark was so magical So thankful to live in this neighborhood.",
+          "id": 175,
+          "likes": 22,
+          "park_id": 18,
+          "tag": "# BigStacyPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/24b8ebfb98905c765e3ef459aca1db49/5B50B0DB/t51.2885-15/e15/1168649_1470478843178049_186052814_n.jpg"
+        },
+        {
+          "description": "Exploring Austin like whut. #illustration #doodle #sunnyday #morningrun #thegreatoutdoors #austin #happy",
+          "id": 176,
+          "likes": 23,
+          "park_id": 18,
+          "tag": "# BigStacyPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/9b7c40325b73c153a6a650fcc2a1e41d/5B40ABC0/t51.2885-15/e35/18513226_1524262014259826_4832158578200543232_n.jpg"
+        },
+        {
+          "description": "The longest Texas winter has finally ended. First park workout of the spring.",
+          "id": 177,
+          "likes": 59,
+          "park_id": 18,
+          "tag": "# BigStacyPark",
+          "url": "https://scontent-dfw5-1.cdninstagram.com/vp/d3505ce622c08379ee68e466b2277a0f/5B386560/t51.2885-15/e35/29089295_388336175006666_8108903907024961536_n.jpg"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": [
+        {
+          "content": "I always stop to use the bathroom here, nice and clean, swimming pool.  One should walk down to the creek, and check out some nature.",
+          "id": 54,
+          "park_id": 18
+        },
+        {
+          "content": "The pool is small but great water temperature",
+          "id": 55,
+          "park_id": 18
+        },
+        {
+          "content": "Great walking and free public pool with a nice deep end (nice and deep good for swimming around under water)",
+          "id": 56,
+          "park_id": 18
+        }
+      ],
+      "trucks": [
+        {
+          "address": "2500 E 6th St, Austin, TX 78702, USA",
+          "city": "Austin",
+          "cuisine": "Thai",
+          "description": null,
+          "google_id": "ChIJ8eNIXrS1RIYRjetT7niWlmo",
+          "id": 5,
+          "latitude": -97.714347839355,
+          "longitude": 30.259162902832,
+          "name": "DEE DEE - Northern Thai Street Food",
+          "park_id": 18,
+          "rating": 4.8,
+          "website": null
+        },
+        {
+          "address": "3505 N Interstate 35 Frontage Rd, Austin, TX 78722, USA",
+          "city": "Austin",
+          "cuisine": "Chinese",
+          "description": null,
+          "google_id": "ChIJmTIa0qu1RIYROy42V8fG78E",
+          "id": 10,
+          "latitude": -97.72013092041,
+          "longitude": 30.293008804321,
+          "name": "DFG Noodles",
+          "park_id": 18,
+          "rating": 4.4,
+          "website": null
+        }
+      ],
+      "website": null
+    },
+    {
+      "address": "3800 Mt Bonnell Rd, Austin, TX 78731, USA",
+      "city": "Austin",
+      "description": null,
+      "google_id": "ChIJecsZp8jKRIYR_WvZ0OYk9q0",
+      "id": 19,
+      "latitude": -97.773231506348,
+      "longitude": 30.321636199951,
+      "name": "Covert Park at Mount Bonnell",
+      "photos": [
+        {
+          "description": "Actually located in Covert Park, Mount Bonnell is generally considered the highest point in Austin at 775 feet! The peak is named for George Bonnell, who served as Commissioner of Indian Affairs for the Texas Republic. It overlooks the Colorado River. Sandra Bullock lives here, and I believe Willie Nelson has a place here too.",
+          "id": 50,
+          "likes": 154,
+          "park_id": 19,
+          "tag": "# Covert Park at Mount Bonnell ",
+          "url": "https://farm5.staticflickr.com/4499/37704123221_64b153b2bb.jpg"
+        },
+        {
+          "description": "Ah listen to the peaceful sounds of nature...if everyone else would be quiet. ",
+          "id": 51,
+          "likes": 439,
+          "park_id": 19,
+          "tag": "# Mountain Sound  Covert Park At Mount Bonnell",
+          "url": "https://farm5.staticflickr.com/4306/35881013821_28523c8975.jpg"
+        },
+        {
+          "description": "The sun sets over Austin, after a hot and humid day and a brief rain.  From Covert Park on Mount Bonnell, the skyline can be seen in the distance.",
+          "id": 52,
+          "likes": 411,
+          "park_id": 19,
+          "tag": "# Sunsets in Central Texas Covert Park At Mount Bonnell",
+          "url": "https://farm5.staticflickr.com/4228/34240286584_6f51c10785.jpg"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "content": "Great park near Austin proper.  Incredible views of downtown and the river.  Easy hike up a slow grade or a quick walk up a hundred stairs (or so) to get to the viewpoint.  Tons of parking, even with the moderate traffic of visitors.",
+          "id": 57,
+          "park_id": 19
+        },
+        {
+          "content": "Beautiful views and clean if you stay on the main paths. Have found a few interesting things walking through the woods on small trails. Great for kids and adults alike.",
+          "id": 58,
+          "park_id": 19
+        },
+        {
+          "content": "For Austin, it is five stars... for overlooks compared to places like youll find in the Rockies or Appalachians.... one star. Ill average (roughly) to a three. Thats generous. Flatlanders think its totally cool.  Otherwise, the view of a lake lined with rich people homes is pretty cool... if you are into whole coveting thing.",
+          "id": 59,
+          "park_id": 19
+        }
+      ],
+      "trucks": [],
+      "website": null
+    },
+    {
+     "address": "56 SW Taylor St, Portland, OR 97204, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJ5aJvEA8KlVQRf_H2D-kqjIc",
+     "id": 20,
+     "latitude": -122.673271179199,
+     "longitude": 45.516204833984,
+     "name": "Mill Ends Park",
+     "photos": [
+       {
+         "description": "The first grist mill in Setauket was constructed in 1665 at the south end of the pond. It was moved north as the pond silted in. Over the years, it became abandoned and dilapidated. In 1936, Mr. and Mrs. Everett Hawkins turned over title of the mill and the miller\u2019s cottage to the Melville family. Richard Haviland Smythe was commissioned to build a simulated mill with a working water wheel to represent the long line of mills that had existed on our pond. Today the mill wheel is operational and the building now serves as the park headquarters.",
+         "id": 53,
+         "likes": 174,
+         "park_id": 20,
+         "tag": "# The Mill House",
+         "url": "https://farm1.staticflickr.com/807/26095769267_75382fc497.jpg"
+       },
+       {
+         "description": "It's a tiny plot of land that you could easily straddle with both your legs, and at different times of the year it's covered by some sort of shrubbery that's too small even for a dog to pee on.",
+         "id": 54,
+         "likes": 200,
+         "park_id": 20,
+         "tag": "# Mill Ends Park",
+         "url": "https://farm1.staticflickr.com/809/27089194998_7fc17a0dd2.jpg"
+       },
+       {
+         "description": "Some more pictures from Portland. I took my parents to see Mill Ends Park - smallest park in the world - it sits in the middle of the road. My parents are obsessed with Segway tours so we did that. Had to make a trip to voodoo doughnuts but I couldn\u2019t finish my doughnut, don\u2019t seem to have a sweet tooth anymore",
+         "id": 55,
+         "likes": 232,
+         "park_id": 20,
+         "tag": "# Mill Ends Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/ea5565fbffba453c8c274e3208ee6e5e/5B6D1834/t51.2885-15/sh0.08/e35/p750x750/30077522_351322295357022_7216918789684723712_n.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "If you play along and find funny the fact that this park has been designated as being the smallest park that ever existed in a city and hunt for a \"cool\" attraction for a selfie, you will enjoy taking the detour to find this small city attraction... However, if you dont have much time in town and are searching gems within Portland while you visit, dont spend your time looking for this place because there is really nothing to see here... Pictures available on Google photo will do the job more than enough...",
+         "id": 60,
+         "park_id": 20
+       },
+       {
+         "content": "This is supposed to be the smallest park in the world and it\u2019s amazing! Blink and you\u2019ll miss it while crossing the road! \nOnly in a city like Portland you\u2019d find something creative and witty like this! It\u2019s a fun landmark and I hope it keeps being the smallest public park for a long time! \nDefinitely worth visiting as it seems to change throughout seasons!",
+         "id": 61,
+         "park_id": 20
+       },
+       {
+         "content": "The best park I have ever been to! Quick and easy to see the whole park. The kid loved it.",
+         "id": 62,
+         "park_id": 20
+       }
+     ],
+     "trucks": [
+       {
+         "address": "1003 SW Alder St, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Sandwich",
+         "description": null,
+         "google_id": "ChIJFVKvnQQKlVQRDUQ3rDuAdOE",
+         "id": 38,
+         "latitude": -122.681922912598,
+         "longitude": 45.520820617676,
+         "name": "Savor Soup House",
+         "park_id": 20,
+         "rating": 4.6,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "4033 Southwest Canyon Road, Portland, OR 97221, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJGfTXCycKlVQRe9loilMSQG4",
+     "id": 21,
+     "latitude": -122.712738037109,
+     "longitude": 45.512641906738,
+     "name": "Washington Park",
+     "photos": [
+       {
+         "description": "Portland Japanese Garden, Washington Park, Portland, Oregon, USA",
+         "id": 56,
+         "likes": 4,
+         "park_id": 21,
+         "tag": "# Washington Park",
+         "url": "https://farm1.staticflickr.com/795/40990893811_49d599546d.jpg"
+       },
+       {
+         "description": "International Rose Test Garden  at Washington Park / Portland / Jun 2017\r",
+         "id": 57,
+         "likes": 218,
+         "park_id": 21,
+         "tag": "# Washington Park ",
+         "url": "https://farm1.staticflickr.com/784/39163410440_26eb534795.jpg"
+       },
+       {
+         "description": "We went in May so not all of the roses were in full bloom, but it was still very beautiful with great views of Portland. Washington Park",
+         "id": 58,
+         "likes": 179,
+         "park_id": 21,
+         "tag": "# International Rose Test Garden",
+         "url": "https://farm1.staticflickr.com/793/39163410500_00f59ba49b.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Among the first of Portland\u2019s many great parks, Washington Park is truly one of the greatest. The International test gardens are truly world-class in the collection of roses. Check out the charming Shakespeare garden in the southeast corner of the park near downtown. A delightful amphitheater area is used in summer for plays, operas, symphonic performances, etc. Tennis courts are popular in summer, and the park enjoys spectacular views of downtown and even of Mount Hood on clear days. It\u2019s a truly huge area, as well, stretching from downtown all the way to the Oregon Zoo. Hikes of various degrees of difficulty can allow you to wander for hours through deep woods or open meadows; an archery range is one treasure among many in this magical place. Explore!",
+         "id": 63,
+         "park_id": 21
+       },
+       {
+         "content": "A very cool Park that includes the Rose Garden, the Japanese garden, the Portland Zoo, and the Hoyt Arboretum. It would take more than just one day to explore all of Washington Park, I would argue it would take you at least a week. Theres always fun events going on all the time especially in the warmer months during spring summer and fall. The zoo often hosts different concerts and other events. The Japanese garden always has a lot going on, and the Arboretum is always a lot of fun to hike around. Lots to see and lots to do, endless amounts list of fun in Washington Park.",
+         "id": 64,
+         "park_id": 21
+       },
+       {
+         "content": "A patch of green within a city, thats always nice! (If you like green and walking). The fact that within this park you can visit the Japanese Garden, and the Rose Test garden. Note that, March is not the best time to visit the Rose Garden because the flowers are not out yet (just a few flowers in trees here and there).",
+         "id": 65,
+         "park_id": 21
+       }
+     ],
+     "trucks": [
+       {
+         "address": "8145 SE 82nd Ave, Portland, OR 97266, USA",
+         "city": "Portland",
+         "cuisine": "Food Court",
+         "description": null,
+         "google_id": "ChIJdZ-Bu_qflVQRwLE2hbKAt5k",
+         "id": 28,
+         "latitude": -122.579475402832,
+         "longitude": 45.463516235352,
+         "name": "Cartlandia- 32 Food Carts and The Blue Room Bar",
+         "park_id": 21,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "SE Cesar E Chavez Blvd & Stark St, Portland, OR 97214, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJLbTuxOqglVQRXgWNWDb3baI",
+     "id": 22,
+     "latitude": -122.627143859863,
+     "longitude": 45.521175384521,
+     "name": "Laurelhurst Park",
+     "photos": [
+       {
+         "description": "There is a nice off leash dog area and the dogs that were there today seemed to be having a blast.",
+         "id": 59,
+         "likes": 141,
+         "park_id": 22,
+         "tag": "# Laurelhurst Park",
+         "url": "https://farm1.staticflickr.com/792/26016141957_afc74686de.jpg"
+       },
+       {
+         "description": "It's the perfect place for a leisurely walk, a picnic next to the duck pond, or to take your dog to stretch its legs.",
+         "id": 60,
+         "likes": 357,
+         "park_id": 22,
+         "tag": "# Laurelhurst Park, Portland",
+         "url": "https://farm5.staticflickr.com/4759/39759014634_29c14943dc.jpg"
+       },
+       {
+         "description": "There was more snow overnight, but not that much. The February sun did a good job of melting it during the day. I walked the three miles to work today. There was lingering snow in Laurelhurst Park and it was pretty. It's supposed to snow tomorrow. I hope that's the end of it. __ #pdxsnow",
+         "id": 61,
+         "likes": 207,
+         "park_id": 22,
+         "tag": "# Snow in Laurelhurst Park",
+         "url": "https://farm5.staticflickr.com/4603/38620945470_5d2cd4217a.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Really nice neighborhood park. Busy at the typical busy times. But beautiful Oregon greenery to see. Decent restrooms could be better but the Park Dept. In Portland is lazy. They are always on break or driving from one park to another but they do what any unsupervised no consequence for poor performance employee would do.  Basic maintenance just enough to keep it usable. Go figure. This patk is in an upscale neighborhood so its better than some. You wont be disappointed I can assure you of that . Just the natural beauty is incredible.",
+         "id": 66,
+         "park_id": 22
+       },
+       {
+         "content": "What A true gem for the neighborhood and beyond.  A beautiful natural setting in a very Urban community.  A small lake for many variety of ducks and geese.  Massive trees to bend your neck back for a good stretch.  Plenty of room to let the dogs off leash.  A loop trail to walk the entire perimeter of the park.  Bathrooms and picnic areas everywhere.  I come here constantly to get away.",
+         "id": 67,
+         "park_id": 22
+       },
+       {
+         "content": "This is a great place to walk your dog. Many dog owners usually and a newer playground for the kids. Lots of homeless people. I felt scared walking past the homeless drug addicts. Dont take your eyes off the kids! Pack your concealed weapon and an extra magazine!",
+         "id": 68,
+         "park_id": 22
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "Portland, OR 97231, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJqcSquG0IlVQRTffmVCThZ1k",
+     "id": 23,
+     "latitude": -122.774566650391,
+     "longitude": 45.575370788574,
+     "name": "Forest Park",
+     "photos": [
+       {
+         "description": "Anyway, if you're visiting, you can definitely find the Wildwood Trail by going on the Wild Cherry Trail or the Dogwood Trail.",
+         "id": 62,
+         "likes": 0,
+         "park_id": 23,
+         "tag": "# Forest Park",
+         "url": "https://farm1.staticflickr.com/822/40305523314_f5577a0df7.jpg"
+       },
+       {
+         "description": "My favorite is the stone house that is secluded in the middle of this enchanted forest...love it!",
+         "id": 63,
+         "likes": 0,
+         "park_id": 23,
+         "tag": "# Forest Park",
+         "url": "https://farm1.staticflickr.com/813/26143902997_7b94bc4284.jpg"
+       },
+       {
+         "description": "I took my 8 year old daughter to Fiddlestix for a Sunday afternoon trail ride (not the wine tour one). We are both novices and they put us on chill horses.",
+         "id": 64,
+         "likes": 5,
+         "park_id": 23,
+         "tag": "# Forest Park",
+         "url": "https://farm1.staticflickr.com/822/40121128295_8a90aa56a7.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Wonderful park, with myriad trails for every type of hiker. Very tree/fern based environment. Wear decent hiking shoes as it gets steep in parts. Take a bottle of water & a map of the trails as its such a nice hike you may end up further from the car than you thought!",
+         "id": 69,
+         "park_id": 23
+       },
+       {
+         "content": "A brisk but wonderful day in Forest Park for early February! No rain for one week. So it wasnt muddy except some spots we could walk around. Lovely sunlight on the moss of the trees. Everybody very happy and friendly. And still not too many people even at noon. Well, the parking was 90 % occupied.",
+         "id": 70,
+         "park_id": 23
+       },
+       {
+         "content": "One of the premier wild city parks in the world. You might need good shoes and lots of time to enjoy this treasure. Miles of trails, easy to strenuous. Bus service to many spots. Loved this park for 50 plus years.",
+         "id": 71,
+         "park_id": 23
+       }
+     ],
+     "trucks": [
+       {
+         "address": "1027 NE Alberta St, Portland, OR 97211, USA",
+         "city": "Portland",
+         "cuisine": "Sandwich",
+         "description": null,
+         "google_id": "ChIJeRbHFxmnlVQR5ouQctGJ5g4",
+         "id": 30,
+         "latitude": -122.654846191406,
+         "longitude": 45.559375762939,
+         "name": "The Grilled Cheese Grill",
+         "park_id": 23,
+         "rating": 4.5,
+         "website": null
+       },
+       {
+         "address": "804 SW 12th Ave, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Indian",
+         "description": null,
+         "google_id": "ChIJ37AQVhsKlVQRpcnQ05k38vA",
+         "id": 36,
+         "latitude": -122.684432983398,
+         "longitude": 45.519733428955,
+         "name": "Bombay Chaat House",
+         "park_id": 23,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1120 SW Council Crest Dr, Portland, OR 97239, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJVxwSAjUKlVQRO7flVL8N8m4",
+     "id": 24,
+     "latitude": -122.707908630371,
+     "longitude": 45.49861907959,
+     "name": "Council Crest Park",
+     "photos": [
+       {
+         "description": "Council Crest Park is the highest point in the city, and as long as the clouds are not too low, it feels as if you can see forever around the peak.",
+         "id": 65,
+         "likes": 1295,
+         "park_id": 24,
+         "tag": "# Council Crest Park",
+         "url": "https://farm1.staticflickr.com/789/40028721525_b7e3b1e200.jpg"
+       },
+       {
+         "description": "It's amazing to have a view of a city full of people and be the only ones here.",
+         "id": 66,
+         "likes": 518,
+         "park_id": 24,
+         "tag": "# Council Crest Park",
+         "url": "https://farm1.staticflickr.com/788/25989495957_a8c672d4ec.jpg"
+       },
+       {
+         "description": "Mount Hood from Portland's Council Crest. Sunny Sunday March 11th with a near record high temperature of 68 degrees. At Council Crest Park Portland Oregon.\r",
+         "id": 67,
+         "likes": 108,
+         "park_id": 24,
+         "tag": "# Mount Hood from Council Crest",
+         "url": "https://farm5.staticflickr.com/4772/39899221895_b4de144644.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Epic views, but please respect the common areas by keeping your dogs leashed until they are in the no leash zone. Pick up after your cute pupper there are normally bags by the off leash area. Also, the park *does* close! If you leave a car parked there it will be stuck behind a locked gate until the park opens in the morning.\n\nGood hiking trails, but again please respect the land. Do not leave your aluminum cans on the forest floor, or leave any trash behind.\n\nTry and leave the place better than you found it.\n\nPS: Reduce, Reuse, Recycle!",
+         "id": 72,
+         "park_id": 24
+       },
+       {
+         "content": "Such great views! View of the East shows Columbia and Willamette Rivers, some bridges and the Rockies, but the West shows hills and hills of trees before the horizon. Cant decide which side I like more! Lots of room to park your car, but also makes a good hike or bike ride up to the summit! Great place for a picnic!",
+         "id": 73,
+         "park_id": 24
+       },
+       {
+         "content": "It is a great and easy to find park to visit for a view on a clear day.  If its not clear, it feels as if your in the clouds.  There are views of the East and West, and it can be breathtaking.  I happen by every how an then to make sure its still there.",
+         "id": 74,
+         "park_id": 24
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "1599 N Fremont St, Portland, OR 97227, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJBa0HbWinlVQRpstaBx75aMs",
+     "id": 25,
+     "latitude": -122.682563781738,
+     "longitude": 45.548522949219,
+     "name": "Overlook Park",
+     "photos": [
+       {
+         "description": " The Park consists of a variety of habitats including palmetto-oak scrub, pine flatwoods, and seasonal wetlands. ",
+         "id": 68,
+         "likes": 0,
+         "park_id": 25,
+         "tag": "# Overlook Park",
+         "url": "https://farm1.staticflickr.com/821/26139775017_573f249a8b.jpg"
+       },
+       {
+         "description": "This is a great park right next to the MAX stop that is named after it.  There is lots of grass,  some trees, a nice playground.",
+         "id": 69,
+         "likes": 0,
+         "park_id": 25,
+         "tag": "# Overlook Park",
+         "url": "https://farm1.staticflickr.com/820/40117426375_f025abc2fe.jpg"
+       },
+       {
+         "description": "Decent sized park with a single path around a softball field & a baseball field.",
+         "id": 70,
+         "likes": 8,
+         "park_id": 25,
+         "tag": "# Overlook Park",
+         "url": "https://farm1.staticflickr.com/785/40301361844_03c67b06ab.jpg"
+       }
+     ],
+     "rating": 4.2,
+     "reviews": [
+       {
+         "content": "Portland true Central Park. It has great basketball and tennis courts, extensive hiking trails, and one of the best places to ride bikes in the inner city. In the summer, the lower lawns  are full of people on picnic blankets; in winter, if we get snow, it\u2019s crowded with sledders and even snowboarders! \n\nMt. Tabor is an invaluable resource for the center of Portland. After dark, you can expect to encounter teens out late, as the park has long been a popular place for local kids to go and escape parental supervision.",
+         "id": 75,
+         "park_id": 25
+       },
+       {
+         "content": "This is a magical place where lives are transformed. Whether you want a casual stroll or a hard challenge, this dormant volcano has it all. Hosts a giant playground, gazebo, multiple picnic areas and plenty of scenic views. There are three trails you can walk for various levels of challenge and scenery, but easy to mix it up as well. The stairs are usually covered in chalk art, filled with encouraging words and motivation, for they are steep and long. If you crave getting healthy and want to start changing your life, this is a great place to get started.",
+         "id": 76,
+         "park_id": 25
+       },
+       {
+         "content": "Off-leash park. Entrance on 68th above Warner Pacific College.  Not completely fenced, so be warned. Some dogs love running.  It can be intimidating if you are not used to it. I went with a friend who has pretty severe balance issues and she was able to navigate the trails fine. There is a faucet for the dogs. Poop trash can frequently is overflowing. Otherwise,  a very nice park.",
+         "id": 77,
+         "park_id": 25
+       }
+     ],
+     "trucks": [
+       {
+         "address": "1207 SE Hawthorne Blvd, Portland, OR 97214, USA",
+         "city": "Portland",
+         "cuisine": "Canadian",
+         "description": null,
+         "google_id": "ChIJX5NbuZ-glVQRN-uJwEWUPJ0",
+         "id": 22,
+         "latitude": -122.653373718262,
+         "longitude": 45.512420654297,
+         "name": "Potato Champion",
+         "park_id": 25,
+         "rating": 4.4,
+         "website": null
+       },
+       {
+         "address": "427 SW Stark St, Portland, OR 97204, USA",
+         "city": "Portland",
+         "cuisine": "Asian",
+         "description": null,
+         "google_id": "ChIJeaJ06UCnlVQRRj_LJe6JbWk",
+         "id": 26,
+         "latitude": -122.675918579102,
+         "longitude": 45.520893096924,
+         "name": "Chez Dodo",
+         "park_id": 25,
+         "rating": 4.6,
+         "website": null
+       },
+       {
+         "address": "4233 N Mississippi Ave, Portland, OR 97217, USA",
+         "city": "Portland",
+         "cuisine": "Food Court",
+         "description": null,
+         "google_id": "ChIJt7ECoGynlVQRBxk9MmyuLsg",
+         "id": 37,
+         "latitude": -122.675819396973,
+         "longitude": 45.554447174072,
+         "name": "Mississippi Marketplace",
+         "park_id": 25,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "SE Salmon St, Portland, OR 97215, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJNVdWgfiglVQRSuD8w0aQGrk",
+     "id": 26,
+     "latitude": -122.597686767578,
+     "longitude": 45.514003753662,
+     "name": "Mt. Tabor Park",
+     "photos": [
+       {
+         "description": "Even if you're not an outdoorsy person, you should enjoy the hike up the side of this extinct volcano.",
+         "id": 71,
+         "likes": 211,
+         "park_id": 26,
+         "tag": "# Mt. Tabor Park",
+         "url": "https://farm5.staticflickr.com/4800/25844195937_59e6a7f7ea.jpg"
+       },
+       {
+         "description": "Chronic neglect of Portland's streets is manifesting in the burgeoning number and size of dangerously large potholes across the city.  Here pothole road damage is seen in Mount Tabor Park",
+         "id": 72,
+         "likes": 304,
+         "park_id": 26,
+         "tag": "# Mount Tabor Park",
+         "url": "https://farm5.staticflickr.com/4709/39685051574_2e1cc0ef57.jpg"
+       },
+       {
+         "description": "A mini-series following my 44mm-high Homies character Pelon where he poses for photo ops at potholes on the streets of Mount Tabor Park.\r",
+         "id": 73,
+         "likes": 604,
+         "park_id": 26,
+         "tag": "# Mount Tabor Park",
+         "url": "https://farm5.staticflickr.com/4664/40281241122_9a9546745b.jpg"
+       }
+     ],
+     "rating": 4.8,
+     "reviews": [
+       {
+         "content": "An open little park thats great for letting your dog run or catching a view of the train depot and the 405 bridge. There are some play structures for kids but they are pretty minimal. We mostly visit to see the trains.",
+         "id": 78,
+         "park_id": 26
+       },
+       {
+         "content": "This  park for me is perfect, access froom yellow line max train. Very clean resrooms(public) green grass dog friendly",
+         "id": 79,
+         "park_id": 26
+       },
+       {
+         "content": "Awesome view of the city decent playground for the kiddos and a great covered picnic area and if youre a jogger nice path",
+         "id": 80,
+         "park_id": 26
+       }
+     ],
+     "trucks": [
+       {
+         "address": "9 SW Alder St, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Fish & Chips",
+         "description": null,
+         "google_id": "ChIJxal2jwQKlVQR1SboGyHdEVQ",
+         "id": 27,
+         "latitude": -122.680732727051,
+         "longitude": 45.520771026611,
+         "name": "The Frying Scotsman",
+         "park_id": 26,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "98 SW Naito Pkwy, Portland, OR 97204, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJdQ2FZAcKlVQR_yugz8TaIP0",
+     "id": 27,
+     "latitude": -122.669998168945,
+     "longitude": 45.522754669189,
+     "name": "Tom McCall Waterfront Park",
+     "photos": [
+       {
+         "description": "The Cherry blossoms are blooming at Tom McCall Waterfront Park in Portland. It had rained recently, so the normal crowds hadn't gathered in any numbers yet, allowing a much more natural shot!",
+         "id": 74,
+         "likes": 539,
+         "park_id": 27,
+         "tag": "# Stroll through the blossoms",
+         "url": "https://farm1.staticflickr.com/809/40979284511_40f287997d.jpg"
+       },
+       {
+         "description": "The cherry blossom display brings out the painters as well as the photographers. On his lunch hour Monday Jason Zeringue begins a watercolor painting of the blossoming trees and the Steel Bridge. Hope he gets most of it done by the end of the day Tuesday. Rain is in the weather forcast begining Wednesday and continuing through the weekend.At Tom McCall Waterfront Park, Portland, Oregon",
+         "id": 75,
+         "likes": 68,
+         "park_id": 27,
+         "tag": "# Jason paints Tom McCall Waterfront Park",
+         "url": "https://farm5.staticflickr.com/4782/26085343297_1f6f5fbe6d.jpg"
+       },
+       {
+         "description": "Here is the view Monday in front of watercolor painter Jason Zeringue in Tom McCall Waterfront Park\r",
+         "id": 76,
+         "likes": 52,
+         "park_id": 27,
+         "tag": "# Tom McCall Waterfront Park",
+         "url": "https://farm1.staticflickr.com/814/40248647164_2c9c7d438e.jpg"
+       }
+     ],
+     "rating": 4.8,
+     "reviews": [
+       {
+         "content": "Great views of the river & city. Running& walking path along the river.",
+         "id": 81,
+         "park_id": 27
+       },
+       {
+         "content": "Great place for a sunny day walk on the water front",
+         "id": 82,
+         "park_id": 27
+       },
+       {
+         "content": "The drum circle  at Vera Katz is where its at. Sunday night .",
+         "id": 83,
+         "park_id": 27
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "Northwest 10th Avenue & Marshall Street, Portland, OR 97209, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJE-AuCv4JlVQR5ZQW0fPD244",
+     "id": 28,
+     "latitude": -122.681938171387,
+     "longitude": 45.531162261963,
+     "name": "Tanner Springs Park",
+     "photos": [
+       {
+         "description": "Tanner Springs #tannerspringspark #pearldistrict @turosb",
+         "id": 77,
+         "likes": 263,
+         "park_id": 28,
+         "tag": "# tannerspringspark ",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/bc674424e53cf6c02fdfa311d65c0753/5B5E9377/t51.2885-15/e35/29415149_1388726354566432_4059966236254011392_n.jpg"
+       },
+       {
+         "description": "I know this park!\n#thisislandscapearchitecture #thisislandarch #design #landscapearchitecture #tannerspringspark #portland #pdx #pnw #thepearl #stormwater #stormwatermanagement",
+         "id": 78,
+         "likes": 257,
+         "park_id": 28,
+         "tag": "# tannerspringspark ",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/29976266bec59f510a198797770f7939/5B728C14/t51.2885-15/e35/30076234_417041308756254_8236381585797021696_n.jpg"
+       },
+       {
+         "description": "Just a stroll through the Pearl\n\n#portland #oregon #pdx #portlandia #portlandnw #portlandpdx #cityofportland #pearldistrict #pnw #westcoast #upperleftusa #tannerspringspark #thisispdx",
+         "id": 79,
+         "likes": 671,
+         "park_id": 28,
+         "tag": "# tannerspringspark ",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/73f574a913e85ebd440c995e0b817d01/5B54C86A/t51.2885-15/e15/11324365_1407184722940658_1536056266_n.jpg"
+       }
+     ],
+     "rating": 4.5,
+     "reviews": [
+       {
+         "content": "peaceful spot with sustainable ponds, subtle landscaping.. a square block undeveloped in the Pearl.. perfect to bring a book and enjoy a gentle breeze",
+         "id": 84,
+         "park_id": 28
+       },
+       {
+         "content": "I love the location. Its a beautiful park setting in an urban environment. Coffee shops and beauty as offered up in a city-scape.",
+         "id": 85,
+         "park_id": 28
+       },
+       {
+         "content": "One of my favorite parks in Portland. Very peaceful and there is often some cool wildlife to see. I used to eat lunch here often in the summer. It is beautifully designed. The only way it could be better is if they turned all the roads surrounding it into pedestrian only plazas. ",
+         "id": 86,
+         "park_id": 28
+       }
+     ],
+     "trucks": [
+       {
+         "address": "7316 N Lombard St, Portland, OR 97203, USA",
+         "city": "Portland",
+         "cuisine": "Cafe",
+         "description": null,
+         "google_id": "ChIJ34M91z-nlVQRXH1KMsGN4Lw",
+         "id": 39,
+         "latitude": -122.742584228516,
+         "longitude": 45.587730407715,
+         "name": "Che Cafe",
+         "park_id": 28,
+         "rating": 4.6,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1212 SE Spokane St, Portland, OR 97202, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJIeDfZ94KlVQRQ6u9CacgIy0",
+     "id": 29,
+     "latitude": -122.661903381348,
+     "longitude": 45.465045928955,
+     "name": "Sellwood Riverfront Park",
+     "photos": [
+       {
+         "description": "There's a great off leash area for dogs, walking paths, and it is directly on the river where ever more fun abounds!",
+         "id": 80,
+         "likes": 32,
+         "park_id": 29,
+         "tag": "# Sellwood Riverfront Park",
+         "url": "https://farm5.staticflickr.com/4299/36171547705_85dfeb461e.jpg"
+       },
+       {
+         "description": "This area makes you feel like you're playing on the beach but you're actually just on the east side of Willamette River.",
+         "id": 81,
+         "likes": 21,
+         "park_id": 29,
+         "tag": "# Sellwood Riverfront Park",
+         "url": "https://farm5.staticflickr.com/4326/35366562183_6f4b1d5317.jpg"
+       },
+       {
+         "description": "Great if your dog likes to swim and play fetch.",
+         "id": 82,
+         "likes": 24,
+         "park_id": 29,
+         "tag": "# Sellwood Riverfront Park",
+         "url": "https://farm5.staticflickr.com/4302/36039056091_b1d9975729.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "Wonderful place for off leash fun! The waterfront is beautiful and the trails behind it are nice. One of my favorite places to take my pup.",
+         "id": 87,
+         "park_id": 29
+       },
+       {
+         "content": "So many things are great about this amazing South Portland park. For one, it is huge, with lots of great trails, paved and not, all with a view of the river. Theres a boat dock for day use, with a view of the city upriver that is breathtaking. Want to see Portland from a rare perspective? Check out that dock!",
+         "id": 88,
+         "park_id": 29
+       },
+       {
+         "content": "Basic dog park with good parking and public restrooms. I dont have a dog but park here to start runs on the spring water corridor. The park always seems low key with happy folks and dogs.",
+         "id": 89,
+         "park_id": 29
+       }
+     ],
+     "trucks": [
+       {
+         "address": "1003 SW Alder St, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Thai",
+         "description": null,
+         "google_id": "ChIJFVKvnQQKlVQRHxy8hJZXsZ8",
+         "id": 24,
+         "latitude": -122.681999206543,
+         "longitude": 45.520839691162,
+         "name": "Nongs Khao Man Gai",
+         "park_id": 29,
+         "rating": 4.5,
+         "website": null
+       },
+       {
+         "address": "6238 SW Capitol Hwy, Portland, OR 97239, USA",
+         "city": "Portland",
+         "cuisine": "Fast Food",
+         "description": null,
+         "google_id": "ChIJxf0DxQALlVQRmmuiuvhsrxQ",
+         "id": 29,
+         "latitude": -122.692985534668,
+         "longitude": 45.478584289551,
+         "name": "Burger Stevens - Hillsdale",
+         "park_id": 29,
+         "rating": 4.5,
+         "website": null
+       },
+       {
+         "address": "4233 N Mississippi Ave, Portland, OR 97217, USA",
+         "city": "Portland",
+         "cuisine": "Vegan",
+         "description": null,
+         "google_id": "ChIJt7ECoGynlVQRgA6o5_Ef3N4",
+         "id": 31,
+         "latitude": -122.675811767578,
+         "longitude": 45.554374694824,
+         "name": "Native Bowl",
+         "park_id": 29,
+         "rating": 4.9,
+         "website": null
+       },
+       {
+         "address": "1331 N Killingsworth St, Portland, OR 97217, USA",
+         "city": "Portland",
+         "cuisine": "European",
+         "description": null,
+         "google_id": "ChIJgQ4knQQKlVQRBFvIJCYLd_E",
+         "id": 32,
+         "latitude": -122.680839538574,
+         "longitude": 45.562915802002,
+         "name": "Euro Dish",
+         "park_id": 29,
+         "rating": 5.0,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "815 SW Park Ave, Portland, OR 97205, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJSSza0AQKlVQRe3zUTjsBp2E",
+     "id": 30,
+     "latitude": -122.681465148926,
+     "longitude": 45.518688201904,
+     "name": "Director Park",
+     "photos": [
+       {
+         "description": "Downtown Portland,OR. Director Park Plaza. Place has really amazing lighting at night. Love the architecture. - Opened in 2009. Designed by Laurie Olin and ZGF Architect's. - Urban Parks. Part of Portland Parks & Rec.",
+         "id": 83,
+         "likes": 24,
+         "park_id": 30,
+         "tag": "# Director Park Plaza",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/34c512dd184dda2e0f1872d485d01600/5B52D5F8/t51.2885-15/s750x750/sh0.08/e35/29740727_1480569172053071_6801865957791760384_n.jpg"
+       },
+       {
+         "description": "My two loves in one, artist + plants! @portlandtropicalgardens\nI came across this incredible artist run tropical garden in the middle of downtown Portland at directors park.",
+         "id": 84,
+         "likes": 8,
+         "park_id": 30,
+         "tag": "# director park",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/eef012d0fe67e3d38327db890ddaabd4/5B737809/t51.2885-15/s750x750/sh0.08/e35/30076336_192703457901424_829483142636109824_n.jpg"
+       },
+       {
+         "description": "Summer memories at Director park",
+         "id": 85,
+         "likes": 6,
+         "park_id": 30,
+         "tag": "# portlandparks director park",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/78f1a3611cd76d6fc9f56f5ea9e3684e/5B711C5D/t51.2885-15/e15/11330782_637502843050899_1299131509_n.jpg"
+       }
+     ],
+     "rating": 4.3,
+     "reviews": [
+       {
+         "content": "Fox Regal is great. Clean, nice seats and have great indie movies that other theatres have stopped showing. Saw Lady Bird tonight. Great!",
+         "id": 90,
+         "park_id": 30
+       },
+       {
+         "content": "Just saw the Tonya Harding movie\nTheater very clean and modern. The movie is very enjoyable and entertaining. The only thing about going to downtown Portland is being in traffic on the way home.",
+         "id": 91,
+         "park_id": 30
+       },
+       {
+         "content": "Really enjoy coming here in the summer with the family. We can splash in the fountain, listen to some tunes, grab a snack from the kiosk, then stroll over to the library for story time for the kiddos. The oversized chess board is fun to let the kids play with. Definitely need to keep a close eye on your belongings here. Sometimes kids do get rowdy with the water splashing, which is to be expected.",
+         "id": 92,
+         "park_id": 30
+       }
+     ],
+     "trucks": [
+       {
+         "address": "SW 5th Ave & SW Oak St, Portland, OR 97204, USA",
+         "city": "Portland",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJReU0ogYKlVQRF0meq1HHgZI",
+         "id": 33,
+         "latitude": -122.676071166992,
+         "longitude": 45.521297454834,
+         "name": "La Jarochita",
+         "park_id": 30,
+         "rating": 4.5,
+         "website": null
+       },
+       {
+         "address": "1204 SE Hawthorne Blvd, Portland, OR 97214, USA",
+         "city": "Portland",
+         "cuisine": "Pizza",
+         "description": null,
+         "google_id": "ChIJwVG1vp-glVQRopbp3Ha79Vk",
+         "id": 34,
+         "latitude": -122.653511047363,
+         "longitude": 45.512489318848,
+         "name": "Pyro Pizza",
+         "park_id": 30,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "SW 45th Ave & Vermont Street, Portland, OR 97219, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJQb4pLp4LlVQRs1uPXaO6Wno",
+     "id": 31,
+     "latitude": -122.719108581543,
+     "longitude": 45.474296569824,
+     "name": "Gabriel Park",
+     "photos": [
+       {
+         "description": "+92 acre of park hosting tennis courts, playgrounds, community gardens, basketball, baseball field and more.",
+         "id": 86,
+         "likes": 20,
+         "park_id": 31,
+         "tag": "# Gabriel Park",
+         "url": "https://farm1.staticflickr.com/814/40092412515_75c5c29cdb.jpg"
+       },
+       {
+         "description": "A laughing planet and a sunny's yogurt are walking distance and are a frequent part of our park loop.",
+         "id": 87,
+         "likes": 19,
+         "park_id": 31,
+         "tag": "# Gabriel Park",
+         "url": "https://farm1.staticflickr.com/789/40980205201_4962e78029.jpg"
+       },
+       {
+         "description": "I took my 8 year old daughter to Fiddlestix for a Sunday afternoon trail ride (not the wine tour one). We are both novices and they put us on chill horses. ",
+         "id": 88,
+         "likes": 21,
+         "park_id": 31,
+         "tag": "# Gabriel Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/e294bf0488c1eb615302377931cc0b1e/5B63D836/t51.2885-15/e35/29415087_583160928710440_8453708700501147648_n.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Nice park with lots of walking trails, many of which wonder through the woods. It also has ball parks for baseball and soccer, a playground, tennis courts,  a skateboard park, a large community garden, and a recreation center.\n The recreation center has two swimming pools, a water slide and a hot tub. There is a gym with various workout equipment, a basketball court, an indoor play ground, and several rooms for exercise classes and parties.\nIn summer there is a big off leash dog area on the northwest side of the park which is fenced with lots of grass, and trees. In winter the grass gets a chance to rest and the off leash area is moved to the south end next to the community garden. This area is also fenced. It has a thick layer of sand and a slope that keeps the large play area from getting muddy.",
+         "id": 93,
+         "park_id": 31
+       },
+       {
+         "content": "A very well maintained park with a really nice skate zone and a picturesque trail that goes into the woods and it feels like we are walking straight into the Jungle set of the Planet of the Apes. A delightful experience and loved that the trail isnt monotonous and goes up and down so you get a nice workout!",
+         "id": 94,
+         "park_id": 31
+       },
+       {
+         "content": "One of my favorite Portland parks. Huge. Good paved stroller walkways. Little kids play area could be bigger, but a fun time is still had by all.",
+         "id": 95,
+         "park_id": 31
+       }
+     ],
+     "trucks": [
+       {
+         "address": "4255 SE Belmont St, Portland, OR 97215, USA",
+         "city": "Portland",
+         "cuisine": "Norwegian",
+         "description": null,
+         "google_id": "ChIJ3XX7MbqglVQRnB1FRgD4aWg",
+         "id": 25,
+         "latitude": -122.618339538574,
+         "longitude": 45.516872406006,
+         "name": "Viking Soul Food",
+         "park_id": 31,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "6805 SW Macadam Ave, Portland, OR 97219, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJy_Do8uQKlVQR8GUphid31lQ",
+     "id": 32,
+     "latitude": -122.669723510742,
+     "longitude": 45.474346160889,
+     "name": "Willamette Park",
+     "photos": [
+       {
+         "description": "This path is on the north bank of the Willamette River in Eugene, Oregon.",
+         "id": 89,
+         "likes": 1,
+         "park_id": 32,
+         "tag": "# Willamette Park",
+         "url": "https://farm1.staticflickr.com/794/40283876904_e6a67e5fd7.jpg"
+       },
+       {
+         "description": "This pedestrian bridge crosses the Willamette River in Greenwaters Willamette Park",
+         "id": 90,
+         "likes": 4,
+         "park_id": 32,
+         "tag": "# Willamette Park",
+         "url": "https://farm5.staticflickr.com/4784/26122152997_ff3bcbdab3.jpg"
+       },
+       {
+         "description": "The Willamette River flows through Greenwaters Park in Oakridge on its way to Eugene and north to Portland and the Columbia River.",
+         "id": 91,
+         "likes": 3,
+         "park_id": 32,
+         "tag": "# Willamette Park",
+         "url": "https://farm5.staticflickr.com/4786/40099982955_4c4fd94f22.jpg"
+       }
+     ],
+     "rating": 4.3,
+     "reviews": [
+       {
+         "content": "Good sized boat ramp with plenty of parking. Newly remodeled dog park and walking trails along the waterfront. Keep your belongings / valuables out of sight if your don\u2019t want your window broken out.",
+         "id": 96,
+         "park_id": 32
+       },
+       {
+         "content": "This is my new place for my dog and me. When I am walking on the pathway while my dogi doing chases birds or come to me and chase birds and come to me.... breathable air and open space, little play ground, and two dog park.  One is sandy, but other is to muddy. Good place to start for weekend morning if you are not living near by here.",
+         "id": 97,
+         "park_id": 32
+       },
+       {
+         "content": "Great park with river views and access.  Also has newly built gated dog area.  Highly recommend this place.",
+         "id": 98,
+         "park_id": 32
+       }
+     ],
+     "trucks": [
+       {
+         "address": "200 NE 28th Ave, Portland, OR 97232, USA",
+         "city": "Portland",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJ2yLaV76glVQRZvH4GMoeBTY",
+         "id": 35,
+         "latitude": -122.637031555176,
+         "longitude": 45.524463653564,
+         "name": "G\u00fcero",
+         "park_id": 32,
+         "rating": 4.7,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1905 NE Killingsworth St, Portland, OR 97211, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJaUIa1-OmlVQR1XPvq2xBnHc",
+     "id": 33,
+     "latitude": -122.64510345459,
+     "longitude": 45.564476013184,
+     "name": "Alberta Park",
+     "photos": [
+       {
+         "description": "How lucky are we to spend our mornings here? ! Even on these cold, crisp mornings I\u2019m thankful and still in disbelief that THIS IS MY JOB! I get to train awesome people in the most beautiful space. ",
+         "id": 92,
+         "likes": 100,
+         "park_id": 33,
+         "tag": "# Alberata park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/ea4d3d840908309f589f23e94a281d50/5B54028F/t51.2885-15/e35/25010209_133952313937110_4305094562595995648_n.jpg"
+       },
+       {
+         "description": "Have you spied the weather report this week?! Holy cow! Sunshine and (almost) 60 all week! ",
+         "id": 93,
+         "likes": 22,
+         "park_id": 33,
+         "tag": "# alberata",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/390cfed4293c8f209551c13992cf0abb/5B72CA6C/t51.2885-15/s640x640/sh0.08/e35/30085171_2362421833775864_284114380142936064_n.jpg"
+       },
+       {
+         "description": "Babes of booty after our morning workout which included: hill sprints, sausage squats, glute bridges, hollow holds, jumprope a and lunges! Best way to start the weekend! There's still some spaces available for summer, it's never too late to get started! #bootycamppdx #bootycampbabes #fitnesssausage #lovelifebefit",
+         "id": 94,
+         "likes": 231,
+         "park_id": 33,
+         "tag": "# alberata",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/c44c687db08eb49d343a0efca383bc9e/5B6CBE96/t51.2885-15/e15/11376580_1645664685701168_52164192_n.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "Great place to hike, run, or mountain bike on the east side. Tip - start from the bottom as the parking lot on top can get ridiculously busy. Sometimes I like Powell Butte better than Forest Park as the views are better and it has better quality single track. Good amount of elevation too if youre looking for a workout.",
+         "id": 99,
+         "park_id": 33
+       },
+       {
+         "content": "Beautiful park and trails. A popular park on the weekends. The one bathroom that was accessible did not have toilet paper, was in need of a good cleaning, and the sink did not work. There was broken glass in the parking lot. The trails were well maintained and the views are breathtaking-just bring your own tissue paper and wet wipes and you\"ll be all set!",
+         "id": 100,
+         "park_id": 33
+       },
+       {
+         "content": "Nice tranquil place for a walk. The only reason that I took one star away is because there are several piles of broken glass from smash and grab style break-ins. Just be sure not to bring anything valuable with you and you should be fine. The educational area is very cool and I recommend taking the time to learn about your water sources and ways you can conserve.",
+         "id": 101,
+         "park_id": 33
+       }
+     ],
+     "trucks": [
+       {
+         "address": "5235 NE Sandy Blvd, Portland, OR 97213, USA",
+         "city": "Portland",
+         "cuisine": "Takeout",
+         "description": null,
+         "google_id": "ChIJh6SRfoaglVQREA3k57wJkrY",
+         "id": 20,
+         "latitude": -122.609848022461,
+         "longitude": 45.540546417236,
+         "name": "PDX671",
+         "park_id": 33,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "707 NE Fremont St, Portland, OR 97212, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJDUa4nTmnlVQRfjqbTL6VaXM",
+     "id": 34,
+     "latitude": -122.658615112305,
+     "longitude": 45.548267364502,
+     "name": "Irving Park",
+     "photos": [
+       {
+         "description": "Place to play kickball or softball and open areas for playing with the dog too!",
+         "id": 95,
+         "likes": 206,
+         "park_id": 34,
+         "tag": "# Irving Park",
+         "url": "https://farm5.staticflickr.com/4772/27078135398_a12120efb8.jpg"
+       },
+       {
+         "description": "There is an open area on top of the hill for dogs to play, but it is not fenced in.",
+         "id": 96,
+         "likes": 22,
+         "park_id": 34,
+         "tag": "# Goodbye Irving Park, I Love You",
+         "url": "https://farm5.staticflickr.com/4777/40239267304_d7ba3f5ba9.jpg"
+       },
+       {
+         "description": "There is even spaces where you could play soccer or just sit.",
+         "id": 97,
+         "likes": 6,
+         "park_id": 34,
+         "tag": "# Irving Park",
+         "url": "https://farm1.staticflickr.com/795/27014320878_da8347427b.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "So gorgeous and amazing!\nEspecially in spring and summer, its so nice to just take walk and inhal all the wonderful rose sent in the air, everyone should go there at least once in there life!\nAlso, great park for kids on the other side of the field from the garden",
+         "id": 102,
+         "park_id": 34
+       },
+       {
+         "content": "This beautiful park has it all! A playground, basketball and tennis courts, rose garden, and a community center. In the summer you can enjoy the splash pad, fountain, and the pool. A little something for everyone.",
+         "id": 103,
+         "park_id": 34
+       },
+       {
+         "content": "Park is on way to lots of places. One of Portlands oldest parks as it just turned 100. Roses. Roses. Everywhere. A very popular place for wedding photos. Parks dept just made it required to schedule your time to make professional photos at all parks, so this one must be busy. \n\nSwimming pool at same end as the childrens swings and teeter totter play area. That is the north end. South and east side of park have the roses in stair like surroundings. Go for the beauty, stay for the walk under the trees. No camping. No camping. \n\nNo off leash for pets. Do take your bag for your pets refuse. Parking on street. Next to bus line. Occasionally works as place to stop and text or make phone calls. Nice to look at green. Calms the mind from the traffic grind.",
+         "id": 104,
+         "park_id": 34
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "700 N Rosa Parks Way, Portland, OR 97217, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJG3ungAinlVQRY4qQAC-c6SM",
+     "id": 35,
+     "latitude": -122.673385620117,
+     "longitude": 45.567371368408,
+     "name": "Peninsula Park Rose Garden",
+     "photos": [
+       {
+         "description": "One of my favorite parks in Portland with a fountain, gazebo, tons of space for any activity or sport, and a beautiful rose garden.",
+         "id": 98,
+         "likes": 18222,
+         "park_id": 35,
+         "tag": "# Peninsula Park Rose Garden",
+         "url": "https://farm5.staticflickr.com/4687/39439102882_9da378fd84.jpg"
+       },
+       {
+         "description": "Add in some water features for the kiddos, and you have a solid combination that draws families and various groups down on warm summer days for outdoor recreation.",
+         "id": 99,
+         "likes": 1149,
+         "park_id": 35,
+         "tag": "# Peninsula Park ",
+         "url": "https://farm5.staticflickr.com/4601/27572746239_2e29f0d44d.jpg"
+       },
+       {
+         "description": "I swear I have radar or something. #randomkitty #peninsulaparkrosegarden #sunnysunday #pets",
+         "id": 100,
+         "likes": 226,
+         "park_id": 35,
+         "tag": "# Peninsula Park Rose Garden",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/eebc81583c2fad71e9bd49fe865149ce/5B6388B9/t51.2885-15/sh0.08/e35/p750x750/13437350_1109041852489944_696047571_n.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "A big green space with off leash for the doggies and big old trees that the squirrels run up and a  playground for the kids swings slides and forts to go into.Lots of spaces to hide ina tennis court and an old tennis court that they use for bike polo.A covered basketball court that Ive seen people use as a dance practice space also fire dancing space.",
+         "id": 105,
+         "park_id": 35
+       },
+       {
+         "content": "We especially enjoyed the walking paths (paved and dirt), playgrounds, and grassy spaces all among tall trees. A great place to take a kiddo or your dog.",
+         "id": 106,
+         "park_id": 35
+       },
+       {
+         "content": "Beautiful park. Lots of trees and shade. This place smell awesome. All the playground equipment is in great shape. There are lots of things you can do here. The park is quiet and clean.",
+         "id": 107,
+         "park_id": 35
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "SW Park Ave, Portland, OR 97204, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJCc5QthAKlVQRKekOJ9xx9z0",
+     "id": 36,
+     "latitude": -122.684425354004,
+     "longitude": 45.513149261475,
+     "name": "South Park Blocks",
+     "photos": [
+       {
+         "description": "On Wed and Sat there is even a farmers market with lots of fresh produce, cheese, and a host of other delectables.",
+         "id": 101,
+         "likes": 193,
+         "park_id": 36,
+         "tag": "# southparkblocks",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/01adc19cdf437e00914a5848ad524d97/5B6F1BF9/t51.2885-15/e15/11078355_922105831143633_1141076633_n.jpg"
+       },
+       {
+         "description": "this is worth not having a/c jacobspence #pdx #southparkblocks",
+         "id": 102,
+         "likes": 89,
+         "park_id": 36,
+         "tag": "# southparkblocks",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/10b848f2c0d1bfde7e01d0f257ceca66/5B5D04B7/t51.2885-15/e15/11084747_1464172870540784_1202658410_n.jpg"
+       },
+       {
+         "description": "Explosions of fall in downtown Portland @downtownpdx #southparkblocks #dolcevida",
+         "id": 103,
+         "likes": 83,
+         "park_id": 36,
+         "tag": "# southparkblocks",
+         "url": "https://instagram.fftw1-1.fna.fbcdn.net/vp/682f755508423704f31de3be693b3855/5B75A0AE/t51.2885-15/e35/23735073_1750433081642725_3435626189262159872_n.jpg"
+       }
+     ],
+     "rating": 4.1,
+     "reviews": [
+       {
+         "content": "Cool and decently sized park, with covered and uncovered basketball courts. Seems like a great place to walk to the dog, jog and or take the kids. There is a playground, as well as bathrooms for guest use. Its tucked away in a nice location, in a lovely neighborhood.",
+         "id": 108,
+         "park_id": 36
+       },
+       {
+         "content": "I grew up going to this park I met my high school sweet heart (aka my husband) at the basketball courts,I used to coach a youth basketball camp at this park they are very good to the community and they splash pond is convenient in the hot summer days",
+         "id": 109,
+         "park_id": 36
+       },
+       {
+         "content": "Small hill doubles as a dog run, and mudpit in the winter. There are also covered basketball courts, open-air basketball courts, and two baseball fields, where the outfield also doubles as a soccer pitch.  In the summer, locals play Frisbee soccer on these pitches, alongside three fenced tennis courts, which like the basketball courts are illuminated by floodlights after dusk.  There is a barkdust scattered playarea for younger kids near several picnic tables with both BBQ grills and horseshoe pitches.  Nearby is a covered stone table tennis arena, and all facilities are within ready access to public toilets that are accessible only in the Spring to Fall seasons.",
+         "id": 110,
+         "park_id": 36
+       }
+     ],
+     "trucks": [
+       {
+         "address": "1071 SW Alder St, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Dim Sum",
+         "description": null,
+         "google_id": "ChIJwQw6YgMKlVQRjbynzzv0MN8",
+         "id": 21,
+         "latitude": -122.682220458984,
+         "longitude": 45.520950317383,
+         "name": "The Dump Truck",
+         "park_id": 36,
+         "rating": 4.0,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "4220 SE Rhone St, Portland, OR 97206, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJ13bTMWWglVQRmzQ9mfXYiww",
+     "id": 37,
+     "latitude": -122.618087768555,
+     "longitude": 45.496131896973,
+     "name": "Creston Park",
+     "photos": [
+       {
+         "description": "Let's start by saying I live about 10 mins from here. I pass by thinking it's a small gym. Oh how very wrong I was. I took a tour and found out it used to be a Costco (17,000 sq ft). They offer 125\u2026",
+         "id": 104,
+         "likes": 183,
+         "park_id": 37,
+         "tag": "# Creston Park",
+         "url": "https://farm5.staticflickr.com/4716/25847847048_ecdb8f2a7e.jpg"
+       },
+       {
+         "description": "I am an 80+ \"older-adult\" and was looking for an exercise activity that would help improve my endurance, muscle strength, flexibility and cardio vascular performance. The majority of others in the\u2026",
+         "id": 105,
+         "likes": 156,
+         "park_id": 37,
+         "tag": "# Creston Park",
+         "url": "https://farm5.staticflickr.com/4729/38605653904_9607797cbc.jpg"
+       },
+       {
+         "description": "This is a very little park encompassing the Town Hall. ",
+         "id": 106,
+         "likes": 179,
+         "park_id": 37,
+         "tag": "# Creston Park",
+         "url": "https://farm5.staticflickr.com/4638/39312801721_16d3bd3632.jpg"
+       }
+     ],
+     "rating": 4.1,
+     "reviews": [
+       {
+         "content": "Grew up in Kenton Park and its had a tasteful rehabilitation.   There is a childrens play area with and without water.  There are several benches lining a paved path around the eternally green Park.  There is a tee ball field for the youngsters along with two baseball fields. Nike donated a basketball court built out of repurposed rubber from athletic shoes.  There are a few large picnic tables that friends and family can use when the weather is pleasant.  Downtown Kenton has stores to match Portlands casual lifestyle.  Have a good day, bring the kids to one of the many city parks in Kenton.",
+         "id": 111,
+         "park_id": 37
+       },
+       {
+         "content": "Nice park. A lot of RVs lately. Bathrooms locked during the winter. Few picnic tables. Decent play area with swings. Not many people obey the leash law...",
+         "id": 112,
+         "park_id": 37
+       },
+       {
+         "content": "It used to be a beautiful, clean park. Now the disgusting RVs and cars camp here, they leave trash sitting around to blow all over the park and drop their needles everywhere. They get chased off but just pull around to a different side. I picked up a kitchen knife a month ago from the middle of the  street on the west side of the park. Dont bring your kids here! Go a few blocks south to arbor lodge park (Harpers playground) which is next to a school. No RVs, clean, fun playground and 3 pokestops you can hit without moving, if youre into that.",
+         "id": 113,
+         "park_id": 37
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "NE 33rd Ave, Portland, OR 97212, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJBS2AQ9emlVQRcQL3PwLU3Wk",
+     "id": 38,
+     "latitude": -122.627937316895,
+     "longitude": 45.552837371826,
+     "name": "Wilshire Park",
+     "photos": [
+       {
+         "description": "photography #nature #spring #wilshirepark",
+         "id": 107,
+         "likes": 234,
+         "park_id": 38,
+         "tag": "# Wilshire Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/bb2a47a2e9c9010b936903039b6dd819/5B618C9D/t51.2885-15/e35/29416240_134529343932309_5618861458566676480_n.jpg"
+       },
+       {
+         "description": "We had plenty of room for badminton, corn hole, tug-of-war, 3-legged race and Frisbee.",
+         "id": 108,
+         "likes": 343,
+         "park_id": 38,
+         "tag": "# Wilshire Park",
+         "url": "https://farm3.staticflickr.com/2901/14575382714_ffc79e9c50.jpg"
+       },
+       {
+         "description": "Hometown favorite park to spend time with the family or walk the dog.",
+         "id": 109,
+         "likes": 781,
+         "park_id": 38,
+         "tag": "# Wilshire Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/5ba3a0625fed7f25ce61de7e562f30f9/5B6B932C/t51.2885-15/e35/29714992_900602706767823_813617700948410368_n.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "This park is vital to the neighborhood.  Its has an existing playground that appears outdated.  Open space for the famiky to run or have picnics.  The bathroom is located near the playground as well.  Adjacent to Madison High school and nearby to 82nd Ave for ease of access of driving.",
+         "id": 114,
+         "park_id": 38
+       },
+       {
+         "content": "I love this park due to the open space for every person to find their own activity. There is restrooms here & also places to play baseball. There is also playgrounds for the little ones as well as benches to rest for anyone. It is a wonderful place to take the family!",
+         "id": 115,
+         "park_id": 38
+       },
+       {
+         "content": "This park has a skate/bike area, is in a safe neighborhood, and has playground equipment, big tennis courts and sports fields.  The swing set is off limits for lead issues.  Next door is the school, which has a little play area for toddlers.",
+         "id": 116,
+         "park_id": 38
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "16160 SE Powell Blvd, Portland, OR 97236, USA",
+     "city": "Portland",
+     "description": null,
+     "google_id": "ChIJEd07m0SflVQR3z0qWDWqj6M",
+     "id": 39,
+     "latitude": -122.496994018555,
+     "longitude": 45.490695953369,
+     "name": "Powell Butte Nature Park",
+     "photos": [
+       {
+         "description": "Wonderful place to go for a nature walk in town with the family.\"",
+         "id": 110,
+         "likes": 68,
+         "park_id": 39,
+         "tag": "# Powell Butte Nature Park, Portland",
+         "url": "https://farm5.staticflickr.com/4356/37295112972_07c9518dd8.jpg"
+       },
+       {
+         "description": "Beautiful day for an open house and a short hike!",
+         "id": 111,
+         "likes": 15,
+         "park_id": 39,
+         "tag": "# Powell Butte Nature Park",
+         "url": "https://farm5.staticflickr.com/4327/35944245466_256c2d8a80.jpg"
+       },
+       {
+         "description": "With the wind chill it wasn\u2019t the most fun hike but it sure was beautiful! #powellbutte #powellbuttenaturepark #portlandoregon #portland #portlandor #portlandpdx #portlandparks #portlandlife #oregon #oregonliving #oregonians #oregonparks #seportland #pdx #pnw #pnwonderland #pacificnorthwest #portlandrealty #realestate #oregonrealestate #pdxrealestate #pdxrealtor #pdxrealty #portlandviews",
+         "id": 112,
+         "likes": 23,
+         "park_id": 39,
+         "tag": "# portland Powell Butte Nature Park",
+         "url": "https://farm5.staticflickr.com/4293/35944245146_713fc68981.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Nice park in SE Portland. I take my dogs to the off leash area once or twice a week. It can get a little muddy from the dogs and rain, but they have a path around the dog area. Also has a punlic pool and also tennis courts (which area unusable due to the debris from surrounding trees).",
+         "id": 117,
+         "park_id": 39
+       },
+       {
+         "content": "Good big open park with fields, play structures, off leash dog area, and pool. A little dark at night with some pockets of homeless sleepers. No need to be concerned in the day time.",
+         "id": 118,
+         "park_id": 39
+       },
+       {
+         "content": "Great for the kids and dogs. Also, they have an outdoor pool for dinner swimming.",
+         "id": 119,
+         "park_id": 39
+       }
+     ],
+     "trucks": [
+       {
+         "address": "950 SW Alder St, Portland, OR 97205, USA",
+         "city": "Portland",
+         "cuisine": "Mediterranean",
+         "description": null,
+         "google_id": "ChIJTXYThQQKlVQRPeOQKmwC8io",
+         "id": 23,
+         "latitude": -122.68132019043,
+         "longitude": 45.520511627197,
+         "name": "Aybla Grill",
+         "park_id": 39,
+         "rating": 4.3,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "3801 Discovery Park Blvd, Seattle, WA 98199, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJn0CO4fAVkFQRIGP6pMpCmFE",
+     "id": 40,
+     "latitude": -122.405494689941,
+     "longitude": 47.657302856445,
+     "name": "Discovery Park",
+     "photos": [
+       {
+         "description": "We took a trip #windyday #fieldtripday #seniors\r",
+         "id": 113,
+         "likes": 23,
+         "park_id": 40,
+         "tag": "# Discovery Park of America",
+         "url": "https://farm1.staticflickr.com/794/39204830030_f88642abe7.jpg"
+       },
+       {
+         "description": "Can I go back to last week #springbreak in #tennessee please  #missmydad",
+         "id": 114,
+         "likes": 193,
+         "park_id": 40,
+         "tag": "# Discovery Park of America",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/f3e115e2edf9afa18a4617bde05d9916/5B5FA84A/t51.2885-15/s750x750/sh0.08/e35/22430076_864037643763128_7653661249372160000_n.jpg"
+       },
+       {
+         "description": "Also a great place to bring your furry babies (dogs)",
+         "id": 115,
+         "likes": 2963,
+         "park_id": 40,
+         "tag": "# Discovery Park Seattle ",
+         "url": "https://farm5.staticflickr.com/4772/40274633684_004610bbc3.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "A great, big park thats perfect if you want a long venture in nature away from the city, without the long travel. Lots of different habitats and environments, beautiful views of the Sound and Rainier, a beach, historical buildings, and an educational center. Plenty of trails, marked and unmarked, through wide fields and dense woods. Access by bike, bus, and car is easy and theres so much to see and do that its worth more than just one trip. Look in the right places and youll find this park has that special, magical thing about nature your soul wants.",
+         "id": 120,
+         "park_id": 40
+       },
+       {
+         "content": "I cant believe Ive been to Seattle 500 times and no one has ever told me to come here. GORGEOUS. Beautiful mountain views, cute little light house. Awesome rocks on the beach. Paradise in the city.",
+         "id": 121,
+         "park_id": 40
+       },
+       {
+         "content": "Love that this park is so close to the city... its HUGE! So many trails and open areas. Also cool forest walks and a long bluff and beach to walk along. The lighthouse is interesting if you get a chance.",
+         "id": 122,
+         "park_id": 40
+       }
+     ],
+     "trucks": [
+       {
+         "address": "922 Occidental Ave S, Seattle, WA 98134, USA",
+         "city": "Seattle",
+         "cuisine": "Hamburger",
+         "description": null,
+         "google_id": "ChIJH0QOyKNqkFQRq5APhP43fcE",
+         "id": 49,
+         "latitude": -122.333374023438,
+         "longitude": 47.594303131104,
+         "name": "The People\u2019s Burger",
+         "park_id": 40,
+         "rating": 4.4,
+         "website": null
+       },
+       {
+         "address": "1412 Harvard Ave, Seattle, WA 98122, USA",
+         "city": "Seattle",
+         "cuisine": "Hawaiian",
+         "description": null,
+         "google_id": "ChIJ4-WtcMxqkFQRysuEOGl8-ng",
+         "id": 59,
+         "latitude": -122.321144104004,
+         "longitude": 47.613903045654,
+         "name": "Marination Station",
+         "park_id": 40,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1247 15th Ave E, Seattle, WA 98112, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJ3TTM_CcVkFQRtMStux6Hvyw",
+     "id": 41,
+     "latitude": -122.315048217773,
+     "longitude": 47.630027770996,
+     "name": "Volunteer Park",
+     "photos": [
+       {
+         "description": "Great place to walk, run, go with your dogs or kids or just sit atlnd relax.",
+         "id": 116,
+         "likes": 0,
+         "park_id": 41,
+         "tag": "# Volunteer Park",
+         "url": "https://farm1.staticflickr.com/819/40972188712_0fc7a5a65d.jpg"
+       },
+       {
+         "description": "Small tower to climb (107 stairs).",
+         "id": 117,
+         "likes": 0,
+         "park_id": 41,
+         "tag": "# Volunteer Park",
+         "url": "https://farm1.staticflickr.com/794/26143511637_16e4460b1a.jpg"
+       },
+       {
+         "description": "Birds and fish at home, Look out the water tower, Peaceful walking paths",
+         "id": 118,
+         "likes": 0,
+         "park_id": 41,
+         "tag": "# Volunteer Park",
+         "url": "https://farm1.staticflickr.com/803/26143512017_1d62cb3924.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Beautiful walking trails. Wheelchair accessible. The Museum was closed the day we went and we didnt find any public restrooms. Small $4.00 per adult charge to go through the hothouse gardens which have a large variety of tropical plants. Small gift store with a few plants, variety of books, some T-shirts, coffee mugs, etc. Money goes towards maintaining the gardens. Free parking. Roads leading in to the park are very narrow and need repair. Still worth the visit.",
+         "id": 123,
+         "park_id": 41
+       },
+       {
+         "content": "Love this park. It has a lot of offer - running trails, picnic areas, museum, green house, childrens park. And the best - lots of dogs playing and having a good time. The evening sunsets from this park are very picturesque. Dont miss it if you are an out of towner.",
+         "id": 124,
+         "park_id": 41
+       },
+       {
+         "content": "Great for everyone. Young, old, adults, children and/or animals. Great views, walking paths, exploring/ picnic areas, water playground for kids. I could go on all day about this place! Loved It!",
+         "id": 125,
+         "park_id": 41
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "3130 Alaskan Way, Seattle, WA 98121, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJ4yjQRVwVkFQRGgpA_cetS70",
+     "id": 42,
+     "latitude": -122.36181640625,
+     "longitude": 47.619438171387,
+     "name": "Myrtle Edwards Park",
+     "photos": [
+       {
+         "description": "An alternate look at an alternate history",
+         "id": 119,
+         "likes": 8,
+         "park_id": 42,
+         "tag": "# Myrtle Edwards Park",
+         "url": "https://farm5.staticflickr.com/4577/24777082658_0b69065230.jpg"
+       },
+       {
+         "description": "Trees in Myrtle Edwards Park obscure Puget Sound.",
+         "id": 120,
+         "likes": 31,
+         "park_id": 42,
+         "tag": "# Myrtle Edwards Park",
+         "url": "https://farm5.staticflickr.com/4512/23729663658_d9927cdd13.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Some of the shoreline is being restored. Not enough but it\u2019s a start. Nice that we are getting back our shoreline for public use.",
+         "id": 126,
+         "park_id": 42
+       },
+       {
+         "content": "Excellent park and perfect spot for festivals and such. Love it",
+         "id": 127,
+         "park_id": 42
+       },
+       {
+         "content": "Nice place to jog run see the sea lol",
+         "id": 128,
+         "park_id": 42
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "8011 Fauntleroy Way SW, Seattle, WA 98136, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJnRb12DlBkFQR_SuL0fockuc",
+     "id": 43,
+     "latitude": -122.395988464355,
+     "longitude": 47.530570983887,
+     "name": "Lincoln Park",
+     "photos": [
+       {
+         "description": "I lassoed the sign and changed the hue so it looked green. I thought this looked cool and was a cool way to do it.",
+         "id": 121,
+         "likes": 0,
+         "park_id": 43,
+         "tag": "# Lincoln Park",
+         "url": "https://farm1.staticflickr.com/795/40121996555_a5c3c127f8.jpg"
+       },
+       {
+         "description": "I added the sign from my first picture into this picture of a bridge in Lincoln Park ",
+         "id": 122,
+         "likes": 0,
+         "park_id": 43,
+         "tag": "# lincolnparklayer",
+         "url": "https://farm1.staticflickr.com/788/41015057531_2db8cd3a6b.jpg"
+       },
+       {
+         "description": "Under The Canopy is on vacation, gathering inspiration, soaking in the northwest beauty.",
+         "id": 178,
+         "likes": 24,
+         "park_id": 43,
+         "tag": "# Lincoin Park Seattle",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/c420cf6184aef679b9d5782c4e0e1194/5B513F36/t51.2885-15/e35/28766781_357631071416046_6663282064822894592_n.jpg"
+       },
+       {
+         "description": "#pugetsound #lincolnparkseattle #fremonttroll #mopopseattle #museumofpopculture",
+         "id": 179,
+         "likes": 8,
+         "park_id": 43,
+         "tag": "# Lincoin Park Seattle",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/6a22375d841f38598f0d16614f236dc6/5B36DD47/t51.2885-15/e35/28765376_762199353970596_8305473294463664128_n.jpg"
+       },
+       {
+         "description": "Sunday\u2019s wind rolled in some low-flying, ominous gray clouds that reminded me of scenes from Close Encounters of the Third Kind. I\u2019m still waiting for the giant spaceship to arrive. I\u2019ll post pics if I see it.",
+         "id": 180,
+         "likes": 43,
+         "park_id": 43,
+         "tag": "#LincolnParkSeattle",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/fde8d9237b04a59fcfdf66262a7e8908/5B3A4A3B/t51.2885-15/e35/27576041_280495825815792_9105084471404658688_n.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "What a beautiful park! We didnt get to spend a whole lot of time here due to weather, but we took a few trails, including the Bluff Trail, down the hill to walk along the water. It was lovely! Spacious and picturesque. I can imagine spending lots of time there when the rain fades away, hiking the different trails and taking in the greenery!",
+         "id": 129,
+         "park_id": 43
+       },
+       {
+         "content": "Beautiful park. Only thing its lacking is a paved trail for skateboards/ roller skates. Seems entirely devoted to bicycles and walking/running. Multiple paths throughout the large park. Makes for a very nice piece of nature on the edge of town.\nP.S. Its a Pokemon Go hotspot for those needing a place to walk and hatch eggs while gathering items and taking on one of the 5 gyms I saw whilst here.",
+         "id": 130,
+         "park_id": 43
+       },
+       {
+         "content": "So much natural playground. Inspiring and relaxing. Had to tell my thirteen years old to stop trying for wifi reception and just enjoy. Once the phone was put away he had fun too.",
+         "id": 131,
+         "park_id": 43
+       }
+     ],
+     "trucks": [
+       {
+         "address": "3204 15th Ave W, Seattle, WA 98119, USA",
+         "city": "Seattle",
+         "cuisine": "Sandwich",
+         "description": null,
+         "google_id": "ChIJN40rWJ8VkFQRHJ8XUlmQZWg",
+         "id": 44,
+         "latitude": -122.376022338867,
+         "longitude": 47.648746490479,
+         "name": "The Cheese Wizards",
+         "park_id": 43,
+         "rating": 4.7,
+         "website": null
+       },
+       {
+         "address": "9811 15th Ave SW, Seattle, WA 98106, USA",
+         "city": "Seattle",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJpXnxQt5DkFQR9N3bOgj-piU",
+         "id": 57,
+         "latitude": -122.354446411133,
+         "longitude": 47.51530456543,
+         "name": "Taqueria la Fondita",
+         "park_id": 43,
+         "rating": 4.7,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "5900 Lake Washington Blvd S, Seattle, WA 98118, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJ8fB3DCFqkFQRuPuGyAgceTw",
+     "id": 44,
+     "latitude": -122.257354736328,
+     "longitude": 47.549606323242,
+     "name": "Seward Park",
+     "photos": [
+       {
+         "description": "Floating into the weekend like...  #k5summer #Repost @hola_moto.  Time to duck out for the weekend!",
+         "id": 123,
+         "likes": 14,
+         "park_id": 44,
+         "tag": "# Seward Park",
+         "url": "https://farm1.staticflickr.com/801/26053612027_75cbbacf0e.jpg"
+       },
+       {
+         "description": "There had been forest fires / lots of ash in the air, and everything had an orangey-yellow haze. It was an eerie but very beautiful light -- especially here in Seward Park.",
+         "id": 124,
+         "likes": 5,
+         "park_id": 44,
+         "tag": "# Seward Park",
+         "url": "https://farm5.staticflickr.com/4789/38892727590_7ee7df833b.jpg"
+       },
+       {
+         "description": "Spring is here, but the sun only glimpses.",
+         "id": 125,
+         "likes": 331,
+         "park_id": 44,
+         "tag": "# Seward Park",
+         "url": "https://farm5.staticflickr.com/4758/26798694798_a08750a93e.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "This is one beautiful park that is renowned in Seattle. It has wonderful views of Mt. Rainer as well as the downtown skyline. For a nice 3 mile walk or bike ride around the waters edge that paved and mostly flat or  you can go for a hike in the old growth forest. The summer you can swim and there is a play area for kids. Lots of dog walkers and people enjoy this park . You can picnic or bbq. It is huge so plenty of space and parking on site.",
+         "id": 132,
+         "park_id": 44
+       },
+       {
+         "content": "Seward Park is a lovely Seattle Park. The park is a peninsula jutting into Lake Washington. There are interior trails through an old growth forest, as well as a trail around the exterior of the forest that follows the water. All are lovely and maintained well. The playground is large and fun for kids of all ages. The trails as are long enough to be interesting for a few hours, but you are see quite a bit in 30 minutes too. There are swimming areas with lifeguards during the summer.",
+         "id": 133,
+         "park_id": 44
+       },
+       {
+         "content": "Excellent place for the family to play and picnic. The park is right on Lake Washington. There is a trail that old growth trees can be found. Lots of parking still a lot people frequent.",
+         "id": 134,
+         "park_id": 44
+       }
+     ],
+     "trucks": [
+       {
+         "address": "2217 NW Market St suite 21, Seattle, WA 98107, USA",
+         "city": "Seattle",
+         "cuisine": "Caterer",
+         "description": null,
+         "google_id": "ChIJDTVV1sUVkFQRQtIZlMXYK_c",
+         "id": 40,
+         "latitude": -122.385749816895,
+         "longitude": 47.668495178223,
+         "name": "Seattle Food Truck",
+         "park_id": 44,
+         "rating": 4.3,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "2101 N Northlake Way, Seattle, WA 98103, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJf7BbsgIVkFQRlmFJ7KtVbh4",
+     "id": 45,
+     "latitude": -122.334350585938,
+     "longitude": 47.645629882812,
+     "name": "Gas Works Park",
+     "photos": [
+       {
+         "description": "Fun play structures for kiddos, plenty of space to lay down a blanket, and an amazing view of the city and space needle.",
+         "id": 126,
+         "likes": 13,
+         "park_id": 45,
+         "tag": "# Ross, Gas Works Park",
+         "url": "https://farm1.staticflickr.com/786/40242812894_6f5813a6cd.jpg"
+       },
+       {
+         "description": "Flying a Kite~ It's a great park to just lay on the grass, sit on the grass and run around on the grass on sunny days.",
+         "id": 127,
+         "likes": 13,
+         "park_id": 45,
+         "tag": "#  Gas Works Park",
+         "url": "https://farm5.staticflickr.com/4783/40242597604_0d2eff30af.jpg"
+       },
+       {
+         "description": "Flying a Kite at Gas Works Park",
+         "id": 128,
+         "likes": 21,
+         "park_id": 45,
+         "tag": "# Gas Works Park",
+         "url": "https://farm1.staticflickr.com/788/40242585894_09f0531401.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "This is an ideal location to get out of the car and stretch your legs and take a short but beautiful walk through the now defunct Gas Works (see the great rusted pipe gas works which now looks like art sculptures) climb a short grassy knoll and see Seattle in the distance as it glimmers from the backdrop of beautiful lake Union. Dogs are OK, bring the leach and the pickup bag. Great place for a picnic lunch too. The crowd on top of the hill is usually thick with people taking photos and group pictures. Worth the trip. Parking is free. Great for dates, couples, families, solo runs or walks, etc. Also a great bike ride if you dont mind the steep hill assent.",
+         "id": 135,
+         "park_id": 45
+       },
+       {
+         "content": "This park has fantastic views. You can see the space needle and Seattle skylines. Seems like abandoned gas works factory. Great location for taking plenty of pictures. I guess best would be summer so that the sun is in the northern sky so that it illuminates Seattle nicely. \nThis one does have a restroom but highly recommended not to use.\nParking is plenty and free.",
+         "id": 136,
+         "park_id": 45
+       },
+       {
+         "content": "It used to be an oil refinery and the city did a great job of making new friends but keeping the old.  Lake union has changed much over the years so it\u2019s no longer poisonous to swim here but I still would not. Just enjoy this great park from the land. \nClint the hill in any day but July 4 then come back July 4 and remember what it was like to climb then. Lots and lots of picnic spots any day of the week",
+         "id": 137,
+         "park_id": 45
+       }
+     ],
+     "trucks": [
+       {
+         "address": "401 Pine St, Seattle, WA 98101, USA",
+         "city": "Seattle",
+         "cuisine": "Fish & Chips",
+         "description": null,
+         "google_id": "ChIJOcmmobRqkFQRYn23H5QEiCk",
+         "id": 41,
+         "latitude": -122.336990356445,
+         "longitude": 47.611824035645,
+         "name": "Nosh Food Truck",
+         "park_id": 45,
+         "rating": 4.1,
+         "website": null
+       },
+       {
+         "address": "2000 9th Ave, Seattle, WA 98121, USA",
+         "city": "Seattle",
+         "cuisine": "Fast Food",
+         "description": null,
+         "google_id": "ChIJ5VJ1c0oVkFQRtAATvTrdTfc",
+         "id": 55,
+         "latitude": -122.33576965332,
+         "longitude": 47.61674118042,
+         "name": "Yumbit",
+         "park_id": 45,
+         "rating": 4.0,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "950 NW Carkeek Park Rd, Seattle, WA 98177, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJyVw29LsWkFQRtWZ3uO0R9hA",
+     "id": 46,
+     "latitude": -122.372169494629,
+     "longitude": 47.711624145508,
+     "name": "Carkeek Park",
+     "photos": [
+       {
+         "description": "Trying this place out and impressed with quality of service, speed and price.",
+         "id": 129,
+         "likes": 423,
+         "park_id": 46,
+         "tag": "# Carkeek Park, Seattle",
+         "url": "https://farm5.staticflickr.com/4622/24810759737_984a984723.jpg"
+       },
+       {
+         "description": "Hiking with Dad on a Sunday morning ",
+         "id": 181,
+         "likes": 20,
+         "park_id": 46,
+         "tag": "# CarkeekPark",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/678572c97d90dc977b58da5cd7e6371b/5B3FC658/t51.2885-15/e35/29094737_156173081868292_5306792914410536960_n.jpg"
+       },
+       {
+         "description": "It snowed it hailed the north wind blew - and then this happened!",
+         "id": 182,
+         "likes": 48,
+         "park_id": 46,
+         "tag": "# CarkeekPark",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/eabc5e85d679c161743fa7684c8884e9/5B52D50E/t51.2885-15/e35/29401154_177680536365887_5658707098532315136_n.jpg"
+       },
+       {
+         "description": "The overlook at Carkeek Park has one of the best views of Puget Sound. In addition to beauty, it\u2019s one of the easiest hikes close to the city.",
+         "id": 183,
+         "likes": 72,
+         "park_id": 46,
+         "tag": "# CarkeekPark",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/4e83c155f813ac8b9a34c87a3f6030b6/5B3EE62C/t51.2885-15/e35/29093201_2032330390424296_6426166665691529216_n.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "It was a beautiful sunny day in mid February and this was our first visit to this Seattle park. It was delightful, filled with everything natural that is Northwest. The small strip of beach was pleasant and on the day we visited.there was a stiff north wind blowing so there whitecap waves out on Puget Sound, gorgeous and a perfect view of the snow capped Olympics mountains. Later, on our way out we visited the demonstration Garden located at the park entrance which was very informative and appeared to be loaded with programs centered around Community involvement. One mark against the visit were the few dog owners that allowed their dogs to be out without leashes and I wouldnt mind seeing rules on pet restrictions on the beach enforced.",
+         "id": 138,
+         "park_id": 46
+       },
+       {
+         "content": "Carkeek is one of the best spots in Seattle.  Yes, there is a beach.  Yes, there is a cool overlook and a playground and lots of room for picnics and gatherings.  And!  Dont forget, there are a ton of trails.  I didnt discover these for a few years after I started going to Carkeek.  But there are so fun.  You feel like you are not in the city.  Perhaps steer clear of the park and trails after dark - it is not uncommon to find the remnants of homeless camps there.",
+         "id": 139,
+         "park_id": 46
+       },
+       {
+         "content": "These are my favorite running trails in the city and some of the uphill climbs are pretty challenging. Particularly along the North and South bluffs overlooking the Puget Sound. I always bring my dog with me and we can easily do 4 or 5 miles and climb over 1000ft and still not have hit every trail. The only downside to Carkeek is the trails can get pretty crowded on nice summer days, or on holidays even in the middle of the winter, and Ill constantly have to slow down or walk to get around large groups of families and kids. The beach is pretty sweet too, but very rocky.",
+         "id": 140,
+         "park_id": 46
+       }
+     ],
+     "trucks": [
+       {
+         "address": "3 W Nickerson St, Seattle, WA 98119, USA",
+         "city": "Seattle",
+         "cuisine": "Fish & Chips",
+         "description": null,
+         "google_id": "ChIJOTqG_6cVkFQRdLAIpb-Won0",
+         "id": 47,
+         "latitude": -122.357818603516,
+         "longitude": 47.649639129639,
+         "name": "Curbside",
+         "park_id": 46,
+         "rating": 4.7,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "211 W Highland Dr, Seattle, WA 98119, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJUS2ELmoVkFQRjrUkJB5o9zM",
+     "id": 47,
+     "latitude": -122.359924316406,
+     "longitude": 47.629470825195,
+     "name": "Kerry Park",
+     "photos": [
+       {
+         "description": "Seattle Skyline !!!  #Seattle #ColdAF",
+         "id": 130,
+         "likes": 8,
+         "park_id": 47,
+         "tag": "# Kerry Park",
+         "url": "https://farm5.staticflickr.com/4785/39184756290_c36c8e52ac.jpg"
+       },
+       {
+         "description": "That classic view: The Mountain is not out right now but we are hoping for some Rainier watching later today. ",
+         "id": 131,
+         "likes": 9,
+         "park_id": 47,
+         "tag": "# Kerry Park",
+         "url": "https://farm5.staticflickr.com/4771/27123411408_190edc739d.jpg"
+       },
+       {
+         "description": "Pretty location, clean, great view, close to walk to other tourist stuff",
+         "id": 132,
+         "likes": 13,
+         "park_id": 47,
+         "tag": "# Kerry Park",
+         "url": "https://farm1.staticflickr.com/799/40994235931_0b0470054a.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "This is an awesome place to get a view of Seattle. I love bringing out of town guests here. The view at night and during the day are really cool as long as the weather is clear. It can get busy during the day, making it slightly difficult to find parking. I love this spot.",
+         "id": 141,
+         "park_id": 47
+       },
+       {
+         "content": "Everybody and their dog goes here but that does not mean you should not. It\u2019s beautiful. Day or night. \nBring a coffee or a soda and enjoy the view. At night you can watch the lights on the Ferris wheel do their  kaleidoscopic show. \nIf you are up for an adventure hike down the hill and take a ride down the super steep slide, bobble on the bobble chair and try your hand at cliff climbing.",
+         "id": 142,
+         "park_id": 47
+       },
+       {
+         "content": "Family friendly park. So many great areas to enjoy the outdoors. To bring your pets, have a picnic, big party, or nice get away hike.  I have yet explored the whole park, but a classic Seattle MUST visit.",
+         "id": 143,
+         "park_id": 47
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "2901 Western Ave, Seattle, WA 98121, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJc88dJ1AVkFQRmZ_S-xv-_Hs",
+     "id": 48,
+     "latitude": -122.355308532715,
+     "longitude": 47.616596221924,
+     "name": "Olympic Sculpture Park",
+     "photos": [
+       {
+         "description": "Stunning place to walk, rest, and people watch.",
+         "id": 133,
+         "likes": 28,
+         "park_id": 48,
+         "tag": "# Olympic Sculpture Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/1e6fa39551babeee16431846f782f6ea/5B716394/t51.2885-15/s640x640/sh0.08/e35/30077750_157462161591517_1103886159341158400_n.jpg"
+       },
+       {
+         "description": "The location is awesome, with benches to sit on, overlooking the water.",
+         "id": 134,
+         "likes": 13,
+         "park_id": 48,
+         "tag": "# Olympic Sculpture Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/a83116c3b7bc71849210980654ebbb39/5B5F6E08/t51.2885-15/e35/30079331_1800969396633746_7084161131522031616_n.jpg"
+       },
+       {
+         "description": "Catering staff was very friendly and the food served was quite good.",
+         "id": 135,
+         "likes": 19,
+         "park_id": 48,
+         "tag": "# Olympic Sculpture Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/557f5a12233cf9af56da486dc4f3c2d4/5B5FC500/t51.2885-15/e35/30589972_160483114623571_5323049348446027776_n.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "Prominent public art is an awesome addition to/improvement upon any place, in my opinion. I absolutely love to see artwork in cities, and each of the lovely sculptures available here for public admiration are truly one of a kind. But dont just take my word for it- go have a look for yourself! Time well spent, guaranteed.",
+         "id": 144,
+         "park_id": 48
+       },
+       {
+         "content": "Good for a nice walk around some modern art. Good views of the Sound. The explanations for the sculptures are interesting enough and the main piece, which is a classic Richard Serra piece is amazing. Cant be beaten at the price (free).",
+         "id": 145,
+         "park_id": 48
+       },
+       {
+         "content": "Beautiful water front walk. Great views of Mt. Rainer and Olympics on clear days. Great trails as well as atmosphere. Awsome place to stroll with friends or a loved one.",
+         "id": 146,
+         "park_id": 48
+       }
+     ],
+     "trucks": [
+       {
+         "address": "500-554 Boren Ave N, Seattle, WA 98109, USA",
+         "city": "Seattle",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJc7BeWTcVkFQRXFv9ClNYcH4",
+         "id": 46,
+         "latitude": -122.335731506348,
+         "longitude": 47.62345123291,
+         "name": "Tacos El Tajin Food Truck",
+         "park_id": 48,
+         "rating": 4.0,
+         "website": null
+       },
+       {
+         "address": "390 Westlake Ave N, Seattle, WA 98109, USA",
+         "city": "Seattle",
+         "cuisine": "Asian",
+         "description": null,
+         "google_id": "ChIJtc6BvjcVkFQRZOXhGugeDNs",
+         "id": 50,
+         "latitude": -122.338088989258,
+         "longitude": 47.621479034424,
+         "name": "Buddha Bruddah",
+         "park_id": 48,
+         "rating": 4.0,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "8498 Seaview Pl NW, Seattle, WA 98117, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJ72JgjmQWkFQRygp_TI2DLFs",
+     "id": 49,
+     "latitude": -122.403091430664,
+     "longitude": 47.691753387451,
+     "name": "Golden Gardens Park",
+     "photos": [
+       {
+         "description": "Great place to take your dog or just to watch other people's dogs.",
+         "id": 136,
+         "likes": 70,
+         "park_id": 49,
+         "tag": "# Golden Gardens Park",
+         "url": "https://farm1.staticflickr.com/817/26144644767_501d9577a2.jpg"
+       },
+       {
+         "description": "Lovely place, you can bring food or buy something there.",
+         "id": 137,
+         "likes": 20,
+         "park_id": 49,
+         "tag": "# golden gate park",
+         "url": "https://farm1.staticflickr.com/783/27138248118_96e408d150.jpg"
+       },
+       {
+         "description": "It\u2019s a sunny day in Seattle! Let\u2019s go to the beach! But wait... HAHA #seattle #seattlelife",
+         "id": 138,
+         "likes": 29,
+         "park_id": 49,
+         "tag": "#seattle seattlelife Golden Gardens Park",
+         "url": "https://farm5.staticflickr.com/4776/40115841765_85ed470dc4.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Park or walk as far down as you can. Go to the north most point of the circle at the end of the parking lot. Step over the trees and walk around the pond on the path. Let your jaw drop at the power of beavers. \n\nWhen you find your way out of the beaver pond walk along the shore. If the tide is just right you can heat the waves talking in pebbles.  \n\nSummer nights join a bonfire or watch the magic of fire from afar.\n\nNote: DO NOT park in the boat area parking lot just outside the  entrance unless you are okay with a ticket.",
+         "id": 147,
+         "park_id": 49
+       },
+       {
+         "content": "Golden Gardens is a popular beach and park in Seattle. There is parking available and if full there is alternative parking in two lots above the beach and park. There are volleyball courts and a convenience store on site. The views are sweet looking west to the Olympic mountain range. It is especially popular as sunset nears as fires are allowed in pits. The beach front is long and the park holds a lot people. There is a trail with benches and a few picnic tables. While crowded it is not over bearing. Once sunset happens there is not a better place to view in Seattle than on the trail above Puget Sound or on the beach walking north.",
+         "id": 148,
+         "park_id": 49
+       },
+       {
+         "content": "I really liked this park.  There were people flying kites here... there were all sorts of dogs out, and an off leash dog park near by.  There was a lot of parking though Im not sure how a lot measures up during the summer time.  This place does have bathroom... and did I mention really cute dogs?",
+         "id": 149,
+         "park_id": 49
+       }
+     ],
+     "trucks": [
+       {
+         "address": "315 N 36th St, Seattle, WA 98103, USA",
+         "city": "Seattle",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJ40LyuKkVkFQR6zD3MdrGhzo",
+         "id": 52,
+         "latitude": -122.35474395752,
+         "longitude": 47.652099609375,
+         "name": "Flair Taco",
+         "park_id": 49,
+         "rating": 4.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "7201 East Green Lake Dr N, Seattle, WA 98115, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJEbIG9xUUkFQReKeuJo4qVKk",
+     "id": 50,
+     "latitude": -122.328315734863,
+     "longitude": 47.680213928223,
+     "name": "Green Lake Park",
+     "photos": [
+       {
+         "description": "S E A T T L E. Place is great for a stroll or a run, tons of places to eat and great people watching.",
+         "id": 139,
+         "likes": 9,
+         "park_id": 50,
+         "tag": "# Green Lake Park",
+         "url": "https://farm1.staticflickr.com/787/40299176514_1da88f2f97.jpg"
+       },
+       {
+         "description": "This is so relaxing, at Green Lake Park... Isn't this gorgeous? People walking, running, fishing, enjoying this beautiful weather... #seattle #greenlakepark #seattlelove #sobeautiful #inadifferentworld #thankyallfortherecommendation",
+         "id": 140,
+         "likes": 2,
+         "park_id": 50,
+         "tag": "# Greenlake ",
+         "url": "https://farm1.staticflickr.com/799/26133175377_0a4773d5ff.jpg"
+       },
+       {
+         "description": "At three miles around, it is the perfect length for a jog/walk on a sunny day, and the paths are well maintained and roomy.",
+         "id": 141,
+         "likes": 165,
+         "park_id": 50,
+         "tag": "# Green Lake Park",
+         "url": "https://farm5.staticflickr.com/4774/26123748997_57f7f404c9.jpg"
+       }
+     ],
+     "rating": 4.8,
+     "reviews": [
+       {
+         "content": "Living 2 blocks from here helps with my rating. But really its a great park. Eagles, turtles, herons and lots of birds to watch. Great 3 mile walk around the lake with a dog park and mini trails on one end. Great for people watching too. Spring time is amazing as you are sure to see lots of goslings and ducklings growing up at the lake.",
+         "id": 150,
+         "park_id": 50
+       },
+       {
+         "content": "Great urban park. Common park animals that are seen at Green Lake are eagles, blue herons, turtles, red wing black birds, and many types of water fowls.  Asphalt walking path around the lake. Its a 2.8 mile walk around the lake. There are five different restrooms, one is  seasonally open. Many good restaurants in the area.",
+         "id": 151,
+         "park_id": 50
+       },
+       {
+         "content": "One of Seattles best parks.  The 2.8 mile loop makes for an excellent run.  There are sports fields including football, baseball, basketball and tennis fields and some more for water sports such as rowing and swimming.  Good to spend time in the sun with the ducks too.",
+         "id": 152,
+         "park_id": 50
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "5520 Ravenna Ave NE, Seattle, WA 98105, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJGdxLn3wUkFQRDkH8l-Ix8WM",
+     "id": 51,
+     "latitude": -122.308036804199,
+     "longitude": 47.672462463379,
+     "name": "Ravenna Park",
+     "photos": [
+       {
+         "description": "I can't believe March is almost over! It's been a crazy month. At least it's spring now, so all the greenery should start appearing soon",
+         "id": 142,
+         "likes": 200,
+         "park_id": 51,
+         "tag": "# ravennapark",
+         "url": "https://farm1.staticflickr.com/787/39996617045_9c6f7c6204.jpg"
+       },
+       {
+         "description": "View from Ravenna Park",
+         "id": 143,
+         "likes": 101,
+         "park_id": 51,
+         "tag": "# Ravenna Park",
+         "url": "https://farm5.staticflickr.com/4767/25698650447_6b639028f7.jpg"
+       },
+       {
+         "description": "Nice but creepy people hangout there.",
+         "id": 144,
+         "likes": 41,
+         "park_id": 51,
+         "tag": "# Ravenna Park",
+         "url": "https://farm5.staticflickr.com/4716/38704280990_7c3faebdf2.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Great place for dogs. Plenty of trails, and while there is no fencing most of the park is isolated enough for off leash running and play. Most dogs here are very well behaved, and people who come seem pretty good about only letting well trained dogs off leash. Ive run into a few people who let dogs with poor recall off leash, but those dogs are very friendly with other dogs. (No aggression.)",
+         "id": 153,
+         "park_id": 51
+       },
+       {
+         "content": "Lovely park with many trails / jogging paths for light hiking. Kids & dogs friendly, and has a nice playground for kids. Picnic tables are around the playground. There\u2019s bathrooms behind the playground with flush toilets, water (ice cold), soap and warm hand dryers.",
+         "id": 154,
+         "park_id": 51
+       },
+       {
+         "content": "A pretty cool park with tons of paths and area to picnic or enjoy sports. Also it has a large covered entertaining area, three bathrooms located at both ends and one in the middle, and multiple paths leading in and out on all surrounding streets.",
+         "id": 155,
+         "park_id": 51
+       }
+     ],
+     "trucks": [
+       {
+         "address": "93 Pike St, Seattle, WA 98101, USA",
+         "city": "Seattle",
+         "cuisine": "Indian",
+         "description": null,
+         "google_id": "ChIJI2kVWLJqkFQRu8QtBQy_krc",
+         "id": 54,
+         "latitude": -122.340141296387,
+         "longitude": 47.608631134033,
+         "name": "Saffron Spice",
+         "park_id": 51,
+         "rating": 3.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1401 Alaskan Way, Seattle, WA 98101, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJL7yqjK1qkFQRDj6HS3N-GiA",
+     "id": 52,
+     "latitude": -122.341827392578,
+     "longitude": 47.607040405273,
+     "name": "Waterfront Park",
+     "photos": [
+       {
+         "description": "Great area to walk around and check out the shops and attractions.",
+         "id": 145,
+         "likes": 0,
+         "park_id": 52,
+         "tag": "# Waterfront Park ",
+         "url": "https://farm1.staticflickr.com/802/40121114395_f7b84c7fb7.jpg"
+       },
+       {
+         "description": "Nice little park to hangout for a bit while you wait for the boat.",
+         "id": 146,
+         "likes": 15,
+         "park_id": 52,
+         "tag": "# Waterfront Park  seattle",
+         "url": "https://farm1.staticflickr.com/810/26138927377_bc71b700e5.jpg"
+       },
+       {
+         "description": "A preview of my next chapter ",
+         "id": 147,
+         "likes": 11,
+         "park_id": 52,
+         "tag": "# Waterfront Park",
+         "url": "https://farm1.staticflickr.com/811/41009697161_498d7d9d74.jpg"
+       }
+     ],
+     "rating": 4.4,
+     "reviews": [
+       {
+         "content": "Im not a city person. This is amazing.  You have many choices  of food to eat.  Basically  every turn there is food.  My kids loved the officer on horseback. They never seen before.  Was kind to let them pet and take pictures. The Great Wheel!  Is Awesome!  High up over the water.  The view  is phenomenal! A must do when there.  The Market Place is a must go too!",
+         "id": 156,
+         "park_id": 52
+       },
+       {
+         "content": "Quite a nice waterfront area, with the Lime Bikes all around we were able to get around the area easily. We went to the flight over Washington attraction, which was OK, not good as some I have been to, but the price was good. There are a few reasonable looking restaurants and bars, but we didnt frequent any. There are various ways to walk or elevator up to Pikes Market",
+         "id": 157,
+         "park_id": 52
+       },
+       {
+         "content": "First time heading down to the waterfront. We spent the morning there going on the Ferry Tour and then enjoyed lunch, people watching and th beautiful waterfront features and flowers. There is plenty to do down here and to eat. If on a tight budget you can just enjoy walking around and seeing the sights.",
+         "id": 158,
+         "park_id": 52
+       }
+     ],
+     "trucks": [
+       {
+         "address": "2015 E Uni\u00f3n St, Seattle, WA 98122, USA",
+         "city": "Seattle",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJC8nnjNBqkFQR6lo5RnYoalo",
+         "id": 51,
+         "latitude": -122.305168151855,
+         "longitude": 47.612827301025,
+         "name": "Taqueria Sotelo Taco Truck",
+         "park_id": 52,
+         "rating": 5.0,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "7400 Sand Point Way NE, Seattle, WA 98115, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJTSbT3aATkFQRHymm3sgqcb8",
+     "id": 53,
+     "latitude": -122.253204345703,
+     "longitude": 47.680255889893,
+     "name": "Magnuson Park",
+     "photos": [
+       {
+         "description": "Good place to walk dog, play soccer, & swim.",
+         "id": 148,
+         "likes": 2,
+         "park_id": 53,
+         "tag": "# Magnuson Park",
+         "url": "https://farm5.staticflickr.com/4794/40083094764_d48a3c524f.jpg"
+       },
+       {
+         "description": "Magnuson offers tons of walking area, scenic views and open parking all over!",
+         "id": 149,
+         "likes": 1,
+         "park_id": 53,
+         "tag": "# Magnuson Park",
+         "url": "https://farm5.staticflickr.com/4775/40083025974_f026d56af0.jpg"
+       },
+       {
+         "description": "Husband served on one of the subs they used for the project.",
+         "id": 150,
+         "likes": 1,
+         "park_id": 53,
+         "tag": "# Magnuson Park",
+         "url": "https://farm5.staticflickr.com/4774/40750586672_4b538b8797.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "This place is huge.  I take my dog to the dog park and he loves it.  The dog park is gigantic and has access to the water.  I have been coming here for years and have only a few weird interactions with other dogs.  Most of the people are vigilant.  The rest of the park is great.  Tons of water access and trails.  It is a bit of a hall to get across the city, but it is totally worth it.",
+         "id": 159,
+         "park_id": 53
+       },
+       {
+         "content": "Beautiful park all season .\nYou can reach to the beach.\nAll decorated by greenery.\nNice track and really great for walking around.\nLove to see the kids playing here.\nYou can spend all day in the summer near the beach, you can find lots of reason to smile ...\nHave fun \nBring fitness .\n\nFree parking",
+         "id": 160,
+         "park_id": 53
+       },
+       {
+         "content": "Poorly maintained park with nice views across the lake.  The off-leash area is nice but I prefer the one in Marymoor park.  This place is better suited for sports than casual walking.",
+         "id": 161,
+         "park_id": 53
+       }
+     ],
+     "trucks": [
+       {
+         "address": "3136 NE 130th St, Seattle, WA 98125, USA",
+         "city": "Seattle",
+         "cuisine": "Thai",
+         "description": null,
+         "google_id": "ChIJQ-HyW3oRkFQRp1CBP3Sm2Y0",
+         "id": 58,
+         "latitude": -122.293609619141,
+         "longitude": 47.723064422607,
+         "name": "Bangkok Food Truck",
+         "park_id": 53,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "2300 Arboretum Dr E, Seattle, WA 98112, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJgTy59sYUkFQRin5kehZcTqI",
+     "id": 54,
+     "latitude": -122.294471740723,
+     "longitude": 47.639793395996,
+     "name": "Washington Park Arboretum UW Botanic Gardens",
+     "photos": [
+       {
+         "description": "On New Year's morning I drove to the UW Arboretum.  It's become my tradition to start the year with a stroll through the Winter Garden.  Some years there's not a bloom in sight others the witch hazels and other winter bloomers are well on their way.",
+         "id": 151,
+         "likes": 1249,
+         "park_id": 54,
+         "tag": "# Washington Park Arboretum UW Botanic Gardens",
+         "url": "https://farm1.staticflickr.com/357/32101946185_8b9a5f73cc.jpg"
+       },
+       {
+         "description": "soft landing",
+         "id": 152,
+         "likes": 228,
+         "park_id": 54,
+         "tag": "# washington park arboretum, seattle",
+         "url": "https://farm6.staticflickr.com/5495/31490767085_4b92f75414.jpg"
+       },
+       {
+         "description": "New Zealand collection - Hebe and sedge",
+         "id": 153,
+         "likes": 25,
+         "park_id": 54,
+         "tag": "# Washington Park Arboretum UW Botanic Gardens",
+         "url": "https://farm2.staticflickr.com/1704/25922754765_9d8d73c03d.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "This is one of the greatest jewels that the PNW has to offer. It shows a broad range of trees and plants that thrive in this area, and highlights collections from New Zealand, Chile, Japan and China.  Regardless of the season, the arboretum has something to wow you and they have a great visitors center and docent lead tours. They have made some unreal changes in the last couple of years to make the arboretum more accessible. Every trip to the arboretum gives you a chance to explore and see something new. Yes, I love it and look forward to visiting with each changing season.",
+         "id": 162,
+         "park_id": 54
+       },
+       {
+         "content": "Beautiful park. There is an abundance of flora AND fauna. It is a great place to spend the day or go for a brisk walk. They have a nice visitor center with nice,  knowledgeable people. I got some lovely tea, a neat plant and a rad sticker! Love this park. The seasons are all different and change the scenery.",
+         "id": 163,
+         "park_id": 54
+       },
+       {
+         "content": "The ambience/ setting is gorgeous! Landscaping is well maintained. There many nooks & crannies which give the impression of being small gardens withing the larger garden. The ambiance is one of peace & order. A great place for contemplation or reading or meditation.",
+         "id": 164,
+         "park_id": 54
+       }
+     ],
+     "trucks": [
+       {
+         "address": "5825 Airport Way S, Seattle, WA 98108, USA",
+         "city": "Seattle",
+         "cuisine": "Middle Eastern",
+         "description": null,
+         "google_id": "ChIJLzKNLepBkFQRLqa-dS_plGw",
+         "id": 42,
+         "latitude": -122.318023681641,
+         "longitude": 47.55016708374,
+         "name": "Hallava Falafel",
+         "park_id": 54,
+         "rating": 4.6,
+         "website": null
+       },
+       {
+         "address": "11728 Aurora Ave N, Seattle, WA 98133, USA",
+         "city": "Seattle",
+         "cuisine": "Mexican",
+         "description": null,
+         "google_id": "ChIJi6mbT0sRkFQR-w-uKcJt0cY",
+         "id": 48,
+         "latitude": -122.343887329102,
+         "longitude": 47.714893341064,
+         "name": "El Camion",
+         "park_id": 54,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "1400 E Galer St, Seattle, WA 98112, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJW1CAetgUkFQRPxHiXgoMMi4",
+     "id": 55,
+     "latitude": -122.315727233887,
+     "longitude": 47.632122039795,
+     "name": "Volunteer Park Conservatory",
+     "photos": [
+       {
+         "description": "Taken outside the Volunteer Park Conservatory, Seattle, WA",
+         "id": 154,
+         "likes": 52,
+         "park_id": 55,
+         "tag": "# Volunteer Park Conservatory",
+         "url": "https://farm5.staticflickr.com/4625/40463494151_3cde297186.jpg"
+       },
+       {
+         "description": "The \"featured cocktail\" tasted like fruit water, with strawberries and mint.",
+         "id": 155,
+         "likes": 118,
+         "park_id": 55,
+         "tag": "# Volunteer Park Conservatory",
+         "url": "https://farm5.staticflickr.com/4715/40463488431_99b5fd6fbc.jpg"
+       },
+       {
+         "description": "Taken outside the Volunteer Park Conservatory, Seattle, WA",
+         "id": 156,
+         "likes": 31,
+         "park_id": 55,
+         "tag": "# Volunteer Park Conservatory",
+         "url": "https://farm5.staticflickr.com/4740/40463486341_febc2550bf.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "For $4 admission, this place is great. However, we attended the valentines day event at night and completely regretted wasting our time and money. For $30, you get one plastic cup of your drink choice and admission waived. The \"featured cocktail\" tasted like fruit water, with strawberries and mint. The bottle of red wine they were serving could be bought for $15 at the store! This is supposed to be worth $30 We were in and out in half an hour and went to a nearby restaurant instead. \n\nI have attended many wine and garden events here in Seattle and this was hands-down the worst one. The host wasnt even ready to start serving the \"cocktails\" until 20 minutes after the start time. \n\nThe plants are a sight, especially the cactus room. It would no doubt be more beautiful in the daylight but there was little light when we went. I would advise to just go during the day and avoid paying too much for an event hosted here.",
+         "id": 165,
+         "park_id": 55
+       },
+       {
+         "content": "This place is so cool to come to in winter. Snow on the ground, tropical inside. The people here do a wonderful job of balancing the indoor space with he outdoor space. I like that the building is small, but it its still there with a very neat display of many plants we just dont get to know about on a regular day. The seasonal display is very cool, this time its the Christmas train!  Thanks to all who make this happen!",
+         "id": 166,
+         "park_id": 55
+       },
+       {
+         "content": "It\u2019s not free anymore and for some reason that spoils it for me. Maybe I\u2019ll get over it. The cactus room is a total trip for a Seattleite. The ponds are dreamy. The room with antler air plants hosts a music maker. The orchids are mind-blowing cause that is what orchids do. Even behind bars.  But my favorite is the zen garden area. Bring your sketchbook or a thermos of tea  and enjoy.",
+         "id": 167,
+         "park_id": 55
+       }
+     ],
+     "trucks": [],
+     "website": null
+   },
+   {
+     "address": "750 N 50th St, Seattle, WA 98103, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJ32Y4eU4UkFQRKkREv_kZBDA",
+     "id": 56,
+     "latitude": -122.349342346191,
+     "longitude": 47.665767669678,
+     "name": "Woodland Park Rose Garden",
+     "photos": [
+       {
+         "description": "Great place for family photos!",
+         "id": 157,
+         "likes": 13,
+         "park_id": 56,
+         "tag": "# Woodland Park Rose Garden",
+         "url": "https://farm5.staticflickr.com/4003/35598291241_2937e4f4de.jpg"
+       },
+       {
+         "description": "Small but beautiful and parking is cheap!",
+         "id": 158,
+         "likes": 17,
+         "park_id": 56,
+         "tag": "# Rose Garden",
+         "url": "https://farm5.staticflickr.com/4220/34861930902_3063c3ef7f.jpg"
+       },
+       {
+         "description": "Benches to sit and sip a coffee and enjoy the various types of roses.",
+         "id": 159,
+         "likes": 11,
+         "park_id": 56,
+         "tag": "# Rose Garden",
+         "url": "https://farm5.staticflickr.com/4244/34215088323_ffff1ffa9c.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "I am not a huge fan of walking through gardens, but they keep the Rose garden really nice. There are lots of beautiful blooms as well as some bushes and other evergreens. We tend to stop here in the summer as we walk to the zoo from down by Woodland Park. My girls enjoy it and it is free, so why not  I seem to recall they label the plants, but I tend to be chasing after toddlers, so I dont normally have the opportunity to benefit from the labels.",
+         "id": 168,
+         "park_id": 56
+       },
+       {
+         "content": "One of my favorite places in Seattle. Back when people were taking about Pauline\u2019s this place was supposed to be a hot spot.  Regardless it\u2019s a lucky serene place where if your lucky you might see a bunny.",
+         "id": 169,
+         "park_id": 56
+       },
+       {
+         "content": "Visit this place every month of the year! Theres always something beautiful to see.",
+         "id": 170,
+         "park_id": 56
+       }
+     ],
+     "trucks": [
+       {
+         "address": "434 Yale Ave N, Seattle, WA 98109, USA",
+         "city": "Seattle",
+         "cuisine": "American",
+         "description": null,
+         "google_id": "ChIJVb6j4zAVkFQRHzw5SCC1i5c",
+         "id": 45,
+         "latitude": -122.330184936523,
+         "longitude": 47.623001098633,
+         "name": "The Grilled Cheese Experience Restaurant and Food Truck",
+         "park_id": 56,
+         "rating": 3.7,
+         "website": null
+       },
+       {
+         "address": "401 N 36th St, Seattle, WA 98103, USA",
+         "city": "Seattle",
+         "cuisine": "Cajun",
+         "description": null,
+         "google_id": "ChIJb18SwakVkFQRIVT7RyjIBsw",
+         "id": 56,
+         "latitude": -122.354133605957,
+         "longitude": 47.651996612549,
+         "name": "Where Ya At Matt",
+         "park_id": 56,
+         "rating": 3.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "9817 55th Ave S, Seattle, WA 98118, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJA2y97GVCkFQRLhpMnRq2Nd8",
+     "id": 57,
+     "latitude": -122.26628112793,
+     "longitude": 47.513156890869,
+     "name": "Kubota Garden",
+     "photos": [
+       {
+         "description": "Kubota Japanese Garden, Seattle, WA",
+         "id": 160,
+         "likes": 308,
+         "park_id": 57,
+         "tag": "# Kubota Garden",
+         "url": "https://farm1.staticflickr.com/799/39173000980_e974ccbfec.jpg"
+       },
+       {
+         "description": "Beats the arboretum Japanese garden hands-down.",
+         "id": 161,
+         "likes": 862,
+         "park_id": 57,
+         "tag": "# Kubota Garden",
+         "url": "https://farm5.staticflickr.com/4778/40214400644_f3e70a07a8.jpg"
+       },
+       {
+         "description": "Really enjoyed the walk, seeing the waterfalls and fish.",
+         "id": 162,
+         "likes": 36,
+         "park_id": 57,
+         "tag": "# Kubota Garden",
+         "url": "https://farm1.staticflickr.com/806/40015001225_6227242c42_b.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Great garden. Quiet and charming with many trails to explore. We spent 2.5 there at a slowish pace and were able to see most of it. Went early spring so not too much blooming but still very pretty and relaxing. Grab a map at the beginning but if you want to just wander youll have fun discovering path and little gems.",
+         "id": 171,
+         "park_id": 57
+       },
+       {
+         "content": "Great garden hidden away in the Rainier Beach area. Even in February, it was beautiful. Theres also, beautiful terrace that looks like a fantastic venue for a small outdoor wedding with a nearby great area where a reception could be held.\n\nOnly negative is that apparently there is a lot of cat prowling in the parking lot. There are several signs warning of this, so be sure to either not bring valuables or at least make sure they arent visible.",
+         "id": 172,
+         "park_id": 57
+       },
+       {
+         "content": "I think we missed the peak days to catch the fall colors in all their glory, but it was still beautiful. There are so many trails in this garden that Im sure it would be easy to get lost. Great for walks or jogging in the morning and some beautiful spots for pictures. There are maintained lawns that are good spots for a picnic if you bring one. Just remember not to feed the animals and to clean up after yourself!",
+         "id": 173,
+         "park_id": 57
+       }
+     ],
+     "trucks": [
+       {
+         "address": "5300 Rainier Ave S, Seattle, WA 98118, USA",
+         "city": "Seattle",
+         "cuisine": "Hawaiian",
+         "description": null,
+         "google_id": "ChIJMSG7ZA9qkFQRCn8iYSD0tJg",
+         "id": 43,
+         "latitude": -122.280319213867,
+         "longitude": 47.5539894104,
+         "name": "Sam Choys Poke to the Max",
+         "park_id": 57,
+         "rating": 4.4,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "219 2nd Ave S, Seattle, WA 98104, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJPUN72LpqkFQRCP8C8t0okEw",
+     "id": 58,
+     "latitude": -122.331741333008,
+     "longitude": 47.600131988525,
+     "name": "UPS Waterfall Garden Park",
+     "photos": [
+       {
+         "description": "Right in the middle of pioneer square #upswaterfallgardenpark #upswaterfall #pioneersquare #seattle #exploringseattle #seattleonfoot",
+         "id": 163,
+         "likes": 41,
+         "park_id": 58,
+         "tag": "# upswaterfall",
+         "url": "https://farm1.staticflickr.com/810/40295261154_0d6d11db99.jpg"
+       },
+       {
+         "description": "Morning Sun at UPS Waterfall Garden Park, Seattle, WA",
+         "id": 164,
+         "likes": 6,
+         "park_id": 58,
+         "tag": "# UPS Waterfall Garden Park",
+         "url": "https://farm1.staticflickr.com/784/40928875172_b7db42ca0b.jpg"
+       },
+       {
+         "description": "Sharing an adventurous day in Seattle with @apexms #fremonttroll #thegreatwheelseattle #pikeplacemarket #starbucksreserveroastery #upswaterfallgardenpark",
+         "id": 165,
+         "likes": 1343,
+         "park_id": 58,
+         "tag": "# Nature, The Artist? upswaterfallgardenpark",
+         "url": "https://farm5.staticflickr.com/4783/40913652981_f76666129f.jpg"
+       }
+     ],
+     "rating": 4.6,
+     "reviews": [
+       {
+         "content": "Beautiful hidden gem in Pioneer Square, right in the middle of downtown Seattle. Minutes away from transit stations in Pioneer Square and the International District. Cool and shady and secluded from traffic, with a small waterfall and other features. Great place to stop in if youre walking around the area or work nearby.",
+         "id": 174,
+         "park_id": 58
+       },
+       {
+         "content": "If you plan on going to Occidental Park you Must stop here! My husband and I picked up food at a local place in Occidental Park to go and walked here to enjoy it! what a great place to stop and enjoy lunch! We loved it so much! Such a Diamond of Peace inside a bustling city!",
+         "id": 175,
+         "park_id": 58
+       },
+       {
+         "content": "Amazingly beautiful man made \"falls\" in the city. Water drowns out the surrounding city noise, and there is covered seating to enjoy a  meal",
+         "id": 176,
+         "park_id": 58
+       }
+     ],
+     "trucks": [
+       {
+         "address": "200 Occidental Ave S, Seattle, WA 98104, USA",
+         "city": "Seattle",
+         "cuisine": "Fast Food",
+         "description": null,
+         "google_id": "ChIJxwfy0bpqkFQRn0gSuiEzmio",
+         "id": 53,
+         "latitude": -122.332870483398,
+         "longitude": 47.600635528564,
+         "name": "Occidental Park Food Truck Pod",
+         "park_id": 58,
+         "rating": 2.5,
+         "website": null
+       }
+     ],
+     "website": null
+   },
+   {
+     "address": "7531 34th Ave NW, Seattle, WA 98117, USA",
+     "city": "Seattle",
+     "description": null,
+     "google_id": "ChIJE9gx3XkWkFQRYHYw6I07hnA",
+     "id": 59,
+     "latitude": -122.400428771973,
+     "longitude": 47.683498382568,
+     "name": "Sunset Hill Park",
+     "photos": [
+       {
+         "description": "Sunset Hill is part of Seattle's Ballard neighborhood. It is on the the furthest West tip of Ballard and stretches from Golden Gardens Park in the North all the way down to Salmon Bay and then 10 to 15 blocks to the East of the Puget Sound. ",
+         "id": 166,
+         "likes": 70,
+         "park_id": 59,
+         "tag": "# Sunset Hill",
+         "url": "https://farm1.staticflickr.com/817/26144644767_501d9577a2.jpg"
+       },
+       {
+         "description": "From the Chittenden Locks to the sands of Golden Gardens, this place is a true oasis! ",
+         "id": 167,
+         "likes": 286,
+         "park_id": 59,
+         "tag": "# Sunset Hill Park",
+         "url": "https://farm1.staticflickr.com/787/39194294040_31d70e69c5.jpg"
+       },
+       {
+         "description": "It's a tiny, serene little place, basically right on top of Golden Gardens, perfect for a sunset or lunch picnic.",
+         "id": 168,
+         "likes": 232,
+         "park_id": 59,
+         "tag": "# Sunset Hill Park",
+         "url": "https://scontent-dfw5-1.cdninstagram.com/vp/4b7e113527b9a43d724578115b860665/5B6AAD8D/t51.2885-15/e35/28434933_2062074090719572_1050457930115055616_n.jpg"
+       }
+     ],
+     "rating": 4.7,
+     "reviews": [
+       {
+         "content": "Ive always known about Golden Gardens - but never knew this was here. Cozier, more private and a WAY better view than GG.",
+         "id": 177,
+         "park_id": 59
+       },
+       {
+         "content": "This little park is great for a walk, looking at the view, playing a little catch or frisbee, a grass picnic, and star gazing from the lawn.  Looks down to Shilshole Bay, Marina, Golden Gardens Park, and across the water.  Beautiful any time of year.  No playground or restrooms.",
+         "id": 178,
+         "park_id": 59
+       },
+       {
+         "content": "Beautiful views, but rather small, no play structure, 1 picnic table.",
+         "id": 179,
+         "park_id": 59
+       }
+     ],
+     "trucks": [],
+     "website": null
+   }
+]
