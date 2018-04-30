@@ -64,7 +64,7 @@
 +++
 
 ### Postman Tests
-![frontend](pitchimages/postmantests.png)
+![postman](pitchimages/postmantests.png)
 
 +++
 
