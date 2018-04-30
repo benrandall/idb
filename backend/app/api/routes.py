@@ -10,19 +10,19 @@ from app.api.github import GithubApiWrapper
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@bp.route("/static/images/<path:image_name>")
+@bp.route("/images/<path:image_name>")
 def image(image_name):
     return send_from_directory("static/img", image_name)
 
-@bp.route("/static/json/<path:json_name>")
+@bp.route("/json/<path:json_name>")
 def json(json_name):
     return send_from_directory("static/json", json_name)
 
-@bp.route("/static/css/<path:css_name>")
+@bp.route("/css/<path:css_name>")
 def css(css_name):
     return send_from_directory("static/css", css_name)
 
-@bp.route("/static/js/<path:js_name>")
+@bp.route("/js/<path:js_name>")
 def js(js_name):
     return send_from_directory("static/js", js_name)
 
