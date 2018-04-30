@@ -1,6 +1,6 @@
 import json
 import os
-from flask import request, jsonify, current_app, send_from_directory
+from flask import request, jsonify, current_app, send_from_directory, render_template
 from app import db, cached
 from app.models import Item, Skill, Video, Reddit
 from app.api import bp
@@ -14,13 +14,9 @@ def favicon():
 def image(image_name):
     return send_from_directory("static/img", image_name)
 
-@bp.route("/json/<path:json_name>")
-def json(json_name):
-    return send_from_directory("static/json", json_name)
-
-@bp.route("/js/<path:js_name>")
-def js(js_name):
-    return send_from_directory("static/js", js_name)
+@bp.route("/parkd/dataviz")
+def dataviz():
+    return render_template("index.html")
 
 @bp.route('/search')
 def search():

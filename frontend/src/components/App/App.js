@@ -29,7 +29,6 @@ import CommunityGrid from '../CommunityGrid/CommunityGrid';
 import RSVideoDetailPage from '../RSVideoDetailPage/RSVideoDetailPage';
 import RSSearchDetailPage from "../RSSearchDetailPage/RSSearchDetailPage";
 import RSSearchBar from "../RSSearchBar/RSSearchBar";
-import DataVizPage from "../DataViz/DataVizPage";
 
 class App extends Component {
 
@@ -135,7 +134,6 @@ class App extends Component {
               <Route exact path="/about" component={RSAboutPage}/>
               <Route exact path="/search" component={RSSearchDetailPage}/>
               <Route path="/search/:query" component={RSSearchDetailPage} />
-              <Route exact path="/dataviz" component={DataVizPage}/>
           </Switch>
         </div>
       </BrowserRouter>
