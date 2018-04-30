@@ -69,6 +69,7 @@
 +++
 
 ### Selenium Tests
+![selenium](pitchimages/seleniumtests.png)
 
 ---
 
