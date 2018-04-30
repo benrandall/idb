@@ -32,14 +32,14 @@
 
     }
 
-    d3.json("http://api.runescrape.lol/static/json/us-states.json", function(collection) {
+    d3.json("http://api.runescrape.lol/json/us-states.json", function(collection) {
       states.selectAll("path")
           .data(collection.features)
         .enter().append("svg:path")
           .attr("d", path);
     });
 
-    d3.json("http://api.runescrape.lol/static/json/parks.json", function(parks) {
+    d3.json("http://api.runescrape.lol/json/parks.json", function(parks) {
       var positions = [];
       parks.forEach(function(park) {
         var location = [+park.latitude, +park.longitude];

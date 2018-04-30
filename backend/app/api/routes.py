@@ -14,6 +14,14 @@ def favicon():
 def image(image_name):
     return send_from_directory("static/img", image_name)
 
+@bp.route("/json/<path:json_name>")
+def json(json_name):
+    return send_from_directory("static/json", json_name)
+
+@bp.route("/js/<path:js_name>")
+def js(js_name):
+    return send_from_directory("static/js", js_name)
+
 @bp.route('/search')
 def search():
     page = request.args.get('page', 1, type=int)
