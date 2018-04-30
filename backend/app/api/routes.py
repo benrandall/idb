@@ -15,7 +15,7 @@ def image(image_name):
     return send_from_directory("static/img", image_name)
 
 @bp.route("/json/<path:json_name>")
-def json(json_name):
+def json_endpoint(json_name):
     return send_from_directory("static/json", json_name)
 
 @bp.route("/css/<path:css_name>")
